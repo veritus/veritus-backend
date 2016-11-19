@@ -68,3 +68,10 @@ After adding a new model or making a change in the model you should
 `pip install <PACKAGE NAME>`
 3. Add to requirements.txt
 `pip freeze > requirements.txt`
+
+## Cron jobs
+1. Open crontab
+`crontab -e
+2. Add cronscript. For Ari on Ubuntu this worked:
+`SHELL=/bin/bash */5 * * * * cd home/path/to/project/directory source env/bin/activate && python manage.py runcrons
+3. Write correct path
