@@ -1,4 +1,4 @@
-import logging, traceback, requests
+import logging, traceback, requests, datetime
 from django_cron import CronJobBase, Schedule
 from bs4 import BeautifulSoup
 from bill_gather.models import ParliamentSession, Bill
@@ -38,11 +38,15 @@ class gather_bills(CronJobBase):
             for bill_row in bill_rows:
                 columns = bill_row.find_all('td')
                 bill_number = int(columns[0].getText())
-                bill_date = columns[1].getText()
+                bill_date = columns[1].getText().split('.')
                 bill_name = columns[2].getText()
                 if bill_number not in bill_number_list:
                     cron_logger.info('Created: '+ columns[0].getText())
-                    Bill.objects.create(number=bill_number, name=bill_name, session=parliament_session, description='')
+                    Bill.objects.create(number=bill_number,
+                                        name=bill_name,
+                                        session=parliament_session,
+                                        description='',
+                                        created_date=datetime.date(int(bill_date[2]), int(bill_date[1]), int(bill_date[0])))
 
 
 
