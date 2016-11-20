@@ -69,7 +69,7 @@ def identify_and_save_tags(bill_process_soup, bill):
     tag_list = tag_ul.find_all('li')
 
     for new_tag in tag_list:
-        tag_name = new_tag.getText()
+        tag_name = new_tag.getText().capitalize()
         if Tag.objects.filter(name = tag_name).count() == 0:
             # Tag doesnt exist, we create it and tie to bill
             created_tag = Tag.objects.create(name=tag_name)
