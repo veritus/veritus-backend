@@ -9,7 +9,7 @@ class ParliamentSession(models.Model):
 
 class Bill(models.Model):
     name = models.TextField()
-    description = models.TextField()
+    description_link = models.TextField()
     created_date = models.DateField(null=True)
     number = models.IntegerField(null=True)
     session = models.ForeignKey(ParliamentSession)

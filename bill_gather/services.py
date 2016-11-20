@@ -31,26 +31,27 @@ def scrape_by_parliament_session_number(parliament_session_number):
         cron_logger.info('www.althingi.is'+bill_name_link)
 
         if bill_number not in bill_number_list:
-            cron_logger.info('Created: '+ columns[0].getText())
+            cron_logger.info('Creating: '+ columns[0].getText())
 
-            bill_process_page = requests.get('www.althingi.is'+bill_name_link)
+            bill_process_page = requests.get('http://www.althingi.is'+bill_name_link)
             bill_process_content = bill_process_page.content
             bill_process_soup = BeautifulSoup(bill_process_content, 'html.parser')
-            divs_tablewrap = bill_process_soup.find_all('div', 'tablewrap')
-            cron_logger.info(divs_tablewrap)
-            parliament_document_table_body = divs_tablewrap.find('tbody')
-            cron_logger.info(parliament_document_table_body)
-            parliament_document_rows = parliament_document_table_body.find_all('tr')
+            divs_table = bill_process_soup.find('table')
+            cron_logger.info(divs_table)
+            parliament_document_rows = divs_table.find_all('tr')
+            document_link = ''
 
             for row in parliament_document_rows:
+                cron_logger.info(row)
                 columns = row.find_all('td')
-                document_date = columns[0].getText().split('.')
-                document_link_column =  columns[1]
-                document_link = document_link_column.find('a')['href']
-                cron_logger.info('www.althingi.is'+document_link)
+                if len(columns) != 0:
+                    document_date = columns[0].getText().split('.')
+                    document_link_column =  columns[1]
+                    document_link = document_link_column.find('a')['href']
+                    cron_logger.info('http://www.althingi.is'+document_link)
 
             Bill.objects.create(number=bill_number,
-                                name=bill_name,
-                                session=parliament_session,
-                                description='',
+                               name=bill_name,
+                               session=parliament_session,
+                                description_link='http://www.althingi.is'+document_link,
                                 created_date=datetime.date(int(bill_date[2]), int(bill_date[1]), int(bill_date[0])))
