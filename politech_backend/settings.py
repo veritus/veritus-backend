@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bill_gather',
+    'django_cron'
+
 ]
 
 MIDDLEWARE = [
@@ -102,6 +105,39 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+]
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt': "%d/%b/%Y %H:%M:%S"
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'cronJobHandler': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'logs/cronJobs.log',
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'cronJobs': {
+            'handlers': ['cronJobHandler'],
+            'propagate': True,
+            'level': 'DEBUG',
+        },
+    }
+}
+
+CRON_CLASSES = [
+    "bill_gather.cronJobs.gather_bills",
 ]
 
 

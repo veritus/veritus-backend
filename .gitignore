@@ -79,7 +79,7 @@ celerybeat-schedule
 .env
 
 # virtualenv
-venv/
+env/
 ENV/
 
 # Spyder project settings
@@ -89,4 +89,4 @@ ENV/
 .ropeproject
 
 # Pycharm
-.idea/workspace.xml
+.idea/
