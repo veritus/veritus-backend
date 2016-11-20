@@ -2,7 +2,8 @@
 #  -*- coding: utf-8 -*-
 import requests, datetime, logging
 from bs4 import BeautifulSoup
-from bill_gather.models import ParliamentSession, Bill, Tag, BillTags
+from bill_gather.models import ParliamentSession, Bill
+from tags.models import Bill, BillTags
 
 cron_logger = logging.getLogger('cronJobs')
 

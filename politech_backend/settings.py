@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bill_gather',
-    'django_cron'
+    'django_cron',
+    'promises',
+    'tags'
 
 ]
 
