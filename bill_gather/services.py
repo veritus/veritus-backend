@@ -3,7 +3,7 @@
 import requests, datetime, logging
 from bs4 import BeautifulSoup
 from bill_gather.models import ParliamentSession, Bill
-from tags.models import Bill, BillTags
+from tags.models import Tag, BillTags
 
 cron_logger = logging.getLogger('cronJobs')
 
