@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bill_gather',
     'django_cron',
-    'promises'
+    'promises',
+    'tags'
 
 ]
 
