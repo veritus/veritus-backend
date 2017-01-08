@@ -1,20 +1,14 @@
 from django.contrib import admin
 from django.conf.urls import url, include
-from rest_framework import routers
-from bill_gather.serializers import BillViewSet, ParliamentSessionViewSet, ParliamentViewSet
-from promises.serializers import PromiseViewSet
+from rest_framework.urlpatterns import format_suffix_patterns
+from promises import views as promise_views
 
-# Routers provide an easy way of automatically determining the URL conf.
-router = routers.DefaultRouter()
-router.register(r'bills', BillViewSet)
-router.register(r'parliament_session', ParliamentSessionViewSet)
-router.register(r'parliament', ParliamentViewSet)
-router.register(r'promise', PromiseViewSet)
 
-# Wire up our API using automatic URL routing.
-# Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^promises/$', promise_views.promise_list),
+    url(r'^promises/(?P<pk>[0-9]+)$', promise_views.promise_detail),
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
