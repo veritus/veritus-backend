@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'promises',
     'tags',
     'rest_framework',
+    'main',
 
 ]
 
