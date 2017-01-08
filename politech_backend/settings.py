@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'bill_gather',
     'django_cron',
     'promises',
-    'tags'
+    'tags',
+    'rest_framework',
 
 ]
 
@@ -142,6 +143,14 @@ CRON_CLASSES = [
     "bill_gather.cronJobs.gather_bills",
     "promises.cronJobs.connect_bills_and_promises"
 ]
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 
 # Internationalization
