@@ -16,5 +16,5 @@ class Bill(models.Model):
     description_link = models.TextField()
     created_date = models.DateField()
     number = models.IntegerField()
-    session = models.ForeignKey(ParliamentSession)
+    parliament_session = models.ForeignKey(ParliamentSession)
 
