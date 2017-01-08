@@ -1,7 +1,8 @@
 import logging
 
 from promises.models import Promise, PromiseBill, SuggestedPromiseBill
-from bill_gather.models import Bill, Parliament, ParliamentSession
+from bill_gather.models import Bill
+from parliament.models import Parliament, ParliamentSession
 from tags.models import Tag, BillTags, PromiseTags
 
 cron_logger = logging.getLogger('cronJobs')

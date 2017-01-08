@@ -2,7 +2,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from .models import Promise
-from .serializers import PromiseSerializer_read, PromiseSerializer_write
+from .serializers import PromiseSerializerRead, PromiseSerializerWrite
 from rest_framework import permissions
 
 
@@ -12,11 +12,11 @@ def promise_list(request):
 
     if request.method == 'GET':
         promises = Promise.objects.all()
-        serializer = PromiseSerializer_read(promises, many=True)
+        serializer = PromiseSerializerRead(promises, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = PromiseSerializer_write(data=request.data)
+        serializer = PromiseSerializerWrite(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -32,11 +32,11 @@ def promise_detail(request, pk):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        serializer = PromiseSerializer_read(promise)
+        serializer = PromiseSerializerRead(promise)
         return Response(serializer.data)
 
     elif request.method == 'PUT':
-        serializer = PromiseSerializer_write(promise, data=request.data)
+        serializer = PromiseSerializerWrite(promise, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
