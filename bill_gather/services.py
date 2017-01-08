@@ -17,7 +17,7 @@ def scrape_by_parliament_session_number(parliament_session_number):
 
     parliament_session = ParliamentSession.objects.get(session_number=parliament_session_number)
 
-    current_parliament_session_bills = Bill.objects.filter(session=parliament_session)
+    current_parliament_session_bills = Bill.objects.filter(parliament_session=parliament_session)
     # We use this list to determine whether to create a new bill or if it exists already
     bill_number_list = []
     for bill in current_parliament_session_bills:
@@ -42,9 +42,9 @@ def scrape_by_parliament_session_number(parliament_session_number):
 
             bill = Bill.objects.create(number=bill_number,
                                name=bill_name,
-                               session=parliament_session,
+                               parliament_session=parliament_session,
                                 description_link='http://www.althingi.is'+document_link,
-                                created_date=datetime.date(int(bill_date[2]), int(bill_date[1]), int(bill_date[0])))
+                                althingi_created=datetime.date(int(bill_date[2]), int(bill_date[1]), int(bill_date[0])))
 
             # Identify and save tags for bill
             identify_and_save_tags(bill_process_soup, bill)
