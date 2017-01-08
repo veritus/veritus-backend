@@ -7,7 +7,7 @@
       "created": "2017-1-7",
       "modified": "2017-1-7"
     },
-    "model": "bill_gather.parliament",
+    "model": "parliament.parliament",
     "pk": 1
   },
   {
@@ -18,7 +18,7 @@
       "created": "2017-1-7",
       "modified": "2017-1-7"
     },
-    "model": "bill_gather.parliamentsession",
+    "model": "parliament.parliamentsession",
     "pk": 1
   }
 ]

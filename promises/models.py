@@ -1,7 +1,8 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from bill_gather.models import Bill, Parliament
+from bill_gather.models import Bill
+from parliament.models import Parliament
 from main.models import Entity
 
 

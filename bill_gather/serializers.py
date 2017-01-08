@@ -1,26 +1,11 @@
-from rest_framework import serializers, viewsets
-from .models import Bill, ParliamentSession, Parliament
-
-
-class ParliamentSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Parliament
-        fields = ('name','id')
-
-
-class ParliamentSessionSerializer(serializers.ModelSerializer):
-
-    parliament = ParliamentSerializer()
-
-    class Meta:
-        model = ParliamentSession
-        fields = ('session_number', 'parliament', 'name', 'created', 'modified')
+from rest_framework import serializers
+from .models import Bill
+from parliament.serializers import ParliamentSessionSerializerRead
 
 
 class BillSerializer(serializers.ModelSerializer):
 
-    parliament_session = ParliamentSessionSerializer()
+    parliament_session = ParliamentSessionSerializerRead()
 
     class Meta:
         model = Bill
