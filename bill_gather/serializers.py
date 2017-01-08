@@ -14,9 +14,6 @@ class ParliamentViewSet(viewsets.ModelViewSet):
     serializer_class = ParliamentSerializer
 
 
-
-
-
 class ParliamentSessionSerializer(serializers.HyperlinkedModelSerializer):
 
     parliament = ParliamentSerializer()
@@ -29,9 +26,6 @@ class ParliamentSessionSerializer(serializers.HyperlinkedModelSerializer):
 class ParliamentSessionViewSet(viewsets.ModelViewSet):
     queryset = ParliamentSession.objects.all()
     serializer_class = ParliamentSessionSerializer
-
-
-
 
 
 class BillSerializer(serializers.HyperlinkedModelSerializer):

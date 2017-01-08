@@ -23,7 +23,6 @@ def scrape_by_parliament_session_number(parliament_session_number):
     for bill in current_parliament_session_bills:
         bill_number_list.append(bill.number)
 
-
     for bill_row in bill_rows:
         columns = bill_row.find_all('td')
         bill_number = int(columns[0].getText())
@@ -49,6 +48,7 @@ def scrape_by_parliament_session_number(parliament_session_number):
 
             # Identify and save tags for bill
             identify_and_save_tags(bill_process_soup, bill)
+
 
 def get_beautifulsoup_from_link(link):
     page = requests.get('http://www.althingi.is'+link)
