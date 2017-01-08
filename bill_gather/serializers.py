@@ -2,43 +2,32 @@ from rest_framework import serializers, viewsets
 from .models import Bill, ParliamentSession, Parliament
 
 
-class ParliamentSerializer(serializers.HyperlinkedModelSerializer):
+class ParliamentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Parliament
         fields = ('name','id')
 
 
-class ParliamentViewSet(viewsets.ModelViewSet):
-    queryset = Parliament.objects.all()
-    serializer_class = ParliamentSerializer
-
-
-class ParliamentSessionSerializer(serializers.HyperlinkedModelSerializer):
+class ParliamentSessionSerializer(serializers.ModelSerializer):
 
     parliament = ParliamentSerializer()
 
     class Meta:
         model = ParliamentSession
-        fields = ('session_number', 'parliament')
+        fields = ('session_number', 'parliament', 'name', 'created', 'modified')
 
 
-class ParliamentSessionViewSet(viewsets.ModelViewSet):
-    queryset = ParliamentSession.objects.all()
-    serializer_class = ParliamentSessionSerializer
+class BillSerializer(serializers.ModelSerializer):
 
-
-class BillSerializer(serializers.HyperlinkedModelSerializer):
-
-    session = ParliamentSessionSerializer()
+    parliament_session = ParliamentSessionSerializer()
 
     class Meta:
         model = Bill
-        fields = ('name', 'description_link', 'created_date', 'number', 'id', 'session')
+        fields = ('name', 'description_link', 'althingi_created', 'number', 'id', 'parliament_session', 'created', 'modified')
 
 
-class BillViewSet(viewsets.ModelViewSet):
-    queryset = Bill.objects.all()
-    serializer_class = BillSerializer
+
+
 
 

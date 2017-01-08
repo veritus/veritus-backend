@@ -2,17 +2,16 @@ from __future__ import unicode_literals
 
 from django.db import models
 from bill_gather.models import Bill, Parliament
+from main.models import Entity
 
-# Create your models here.
 
-class Promise(models.Model):
-    name = models.TextField()
+class Promise(Entity):
     small_description = models.TextField()
     long_description = models.TextField()
     parliament = models.ForeignKey(Parliament)
 
 
-class PromiseBill(models.Model):
+class PromiseBill(Entity):
     bill = models.ForeignKey(Bill)
     promise = models.ForeignKey(Promise)
 
@@ -21,7 +20,7 @@ class PromiseBill(models.Model):
         unique_together = ('promise', 'bill',)
 
 
-class SuggestedPromiseBill(models.Model):
+class SuggestedPromiseBill(Entity):
     bill = models.ForeignKey(Bill)
     promise = models.ForeignKey(Promise)
 

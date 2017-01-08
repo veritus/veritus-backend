@@ -1,20 +1,21 @@
 from __future__ import unicode_literals
 from django.db import models
+from main.models import Entity
 
 
-class Parliament(models.Model):
-    name = models.TextField()
+class Parliament(Entity):
+    start_date = models.DateField()
+    end_date = models.DateField()
 
 
-class ParliamentSession(models.Model):
+class ParliamentSession(Entity):
     session_number = models.IntegerField()
     parliament = models.ForeignKey(Parliament)
 
 
-class Bill(models.Model):
-    name = models.TextField()
+class Bill(Entity):
     description_link = models.TextField()
-    created_date = models.DateField()
+    althingi_created = models.DateField()
     number = models.IntegerField()
     parliament_session = models.ForeignKey(ParliamentSession)
 
