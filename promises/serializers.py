@@ -5,11 +5,11 @@ from bill_gather.serializers import ParliamentSerializer
 
 class PromiseSerializer(serializers.HyperlinkedModelSerializer):
 
-    parliament_session = ParliamentSerializer()
+    parliament = ParliamentSerializer()
 
     class Meta:
         model = Promise
-        fields = ('name', 'small_description', 'long_description', 'parliament_session')
+        fields = ('name', 'small_description', 'long_description', 'parliament')
 
 
 class PromiseViewSet(viewsets.ModelViewSet):
