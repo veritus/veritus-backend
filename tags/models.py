@@ -24,5 +24,5 @@ class PromiseTags(models.Model):
     tag = models.ForeignKey(Tag)
 
     class Meta:
-        # Dont want bill related to same tag multiple times
+        # Dont want promise related to same tag multiple times
         unique_together = ('promise', 'tag',)

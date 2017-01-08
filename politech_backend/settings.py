@@ -140,6 +140,7 @@ LOGGING = {
 
 CRON_CLASSES = [
     "bill_gather.cronJobs.gather_bills",
+    "promises.cronJobs.connect_bills_and_promises"
 ]
 
 
