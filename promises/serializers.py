@@ -3,17 +3,21 @@ from .models import Promise
 from bill_gather.serializers import ParliamentSerializer
 
 
-class PromiseSerializer(serializers.HyperlinkedModelSerializer):
+class PromiseSerializer_read(serializers.ModelSerializer):
 
-    parliament = ParliamentSerializer()
+    parliament = ParliamentSerializer(read_only=True)
 
     class Meta:
         model = Promise
-        fields = ('name', 'small_description', 'long_description', 'parliament')
+        fields = ('name', 'small_description', 'long_description', 'parliament', 'id')
 
 
-class PromiseViewSet(viewsets.ModelViewSet):
-    queryset = Promise.objects.all()
-    serializer_class = PromiseSerializer
+class PromiseSerializer_write(serializers.ModelSerializer):
+
+    class Meta:
+        model = Promise
+        fields = ('name', 'small_description', 'long_description', 'parliament', 'id')
+
+
 
 
