@@ -54,7 +54,7 @@ class PromiseBillFilter(django_filters.rest_framework.FilterSet):
         fields = ['bill', 'promise']
 
 
-class PromiseBillBillList(generics.ListAPIView):
+class PromiseBillList(generics.ListAPIView):
     queryset = PromiseBill.objects.all()
     serializer_class = PromiseBillSerializer
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
