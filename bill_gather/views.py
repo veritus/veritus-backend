@@ -16,7 +16,6 @@ def bill_list(request):
         return Response(serializer.data)
 
 
-
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes((permissions.AllowAny,))
 def bill_detail(request, pk):
