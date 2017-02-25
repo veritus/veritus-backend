@@ -1,6 +1,6 @@
 import logging, traceback
 from django_cron import CronJobBase, Schedule
-import services as promise_services
+import promises.services as promise_services
 
 cron_logger = logging.getLogger('cronJobs')
 
