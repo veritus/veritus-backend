@@ -1,10 +1,10 @@
+""" Bill serializer """
 from rest_framework import serializers
-from .models import Bill
 from parliament.serializers import ParliamentSessionSerializerRead
-
+from .models import Bill
 
 class BillSerializer(serializers.ModelSerializer):
-
+    """ Bill serializer """
     parliament_session = ParliamentSessionSerializerRead()
 
     class Meta:

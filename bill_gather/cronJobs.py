@@ -1,6 +1,6 @@
 import logging, traceback
 from django_cron import CronJobBase, Schedule
-import services as bill_gathering_services
+import bill_gather.services as bill_gathering_services
 
 cron_logger = logging.getLogger('cronJobs')
 
@@ -17,6 +17,6 @@ class gather_bills(CronJobBase):
             cron_logger.info('Starting bill gather')
             session_number = 145
             bill_gathering_services.scrape_by_parliament_session_number(session_number)
-
+            
         except Exception as e:
             cron_logger.error(e.message + " - " + traceback.format_exc())

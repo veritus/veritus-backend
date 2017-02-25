@@ -90,3 +90,6 @@ ENV/
 
 # Pycharm
 .idea/
+
+#Visual studio code
+.vscode/

@@ -42,10 +42,16 @@ INSTALLED_APPS = [
     'promises',
     'tags',
     'rest_framework',
+    'rest_framework.authtoken',
     'main',
     'parliament',
-
+    'rest_auth',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
 ]
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -131,10 +137,21 @@ LOGGING = {
             'filename': 'logs/cronJobs.log',
             'formatter': 'verbose'
         },
+        'promiseHandler': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'logs/promise.log',
+            'formatter': 'verbose'
+        },
     },
     'loggers': {
         'cronJobs': {
             'handlers': ['cronJobHandler'],
+            'propagate': True,
+            'level': 'DEBUG',
+        },
+        'promise': {
+            'handlers': ['promiseHandler'],
             'propagate': True,
             'level': 'DEBUG',
         },
@@ -150,8 +167,12 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly'
     ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ),
     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
 }
 
@@ -174,3 +195,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+REST_SESSION_LOGIN = False
