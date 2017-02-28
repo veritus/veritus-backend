@@ -10,11 +10,9 @@ class Bill(Entity):
 
 class Case(Entity):
     # althingi_created = models.DateField()
-    name = models.TextField()
     number = models.IntegerField()
     parliament_session = models.ForeignKey(ParliamentSession)
     case_type = models.TextField()
-
     case_status = models.TextField()
     # related_case_numbers = models.CommaSeparatedIntegerField()
     # subject_numbers = models.CommaSeparatedIntegerField()
@@ -25,7 +23,6 @@ class Subject(Entity):
     major_group_number = models.IntegerField()
     major_group_name = models.TextField()
     number = models.IntegerField()
-    name = models.TextField()
     description = models.TextField()
     # associated_cases = models.CommaSeparatedIntegerField()
 
