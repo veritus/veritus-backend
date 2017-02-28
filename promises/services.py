@@ -1,9 +1,9 @@
 import logging
 
-from promises.models import Promise, PromiseBill, SuggestedPromiseBill
-from bill_gather.models import Bill
+from promises.models import Promise, PromiseCase, SuggestedPromiseCase
+from case_gather.models import Case
 from parliament.models import Parliament, ParliamentSession
-from tags.models import Tag, BillTags, PromiseTags
+from tags.models import Tag, CaseTags, PromiseTags
 
 cron_logger = logging.getLogger('cronJobs')
 

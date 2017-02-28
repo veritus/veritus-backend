@@ -1,7 +1,5 @@
-from __future__ import unicode_literals
-
 from django.db import models
-from bill_gather.models import Bill
+from case_gather.models import Case
 from promises.models import Promise
 
 
@@ -10,13 +8,13 @@ class Tag(models.Model):
     name = models.TextField()
 
 
-class BillTags(models.Model):
-    bill = models.ForeignKey(Bill)
+class CaseTags(models.Model):
+    case = models.ForeignKey(Case)
     tag = models.ForeignKey(Tag)
 
     class Meta:
-        # Dont want bill related to same tag multiple times
-        unique_together = ('bill', 'tag',)
+        # Dont want case related to same tag multiple times
+        unique_together = ('case', 'tag',)
 
 
 class PromiseTags(models.Model):

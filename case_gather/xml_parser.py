@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import logging
 
-import xml_helper
+import case_gather.xml_helper
 
 xml_logger = logging.getLogger('xmlParser')
 

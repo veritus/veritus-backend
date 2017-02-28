@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class BillGatherConfig(AppConfig):
-    name = 'bill_gather'
+class CaseGatherConfig(AppConfig):
+    name = 'case_gather'

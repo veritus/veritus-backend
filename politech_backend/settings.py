@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bill_gather',
+    'case_gather',
     'django_cron',
     'promises',
     'tags',
@@ -131,7 +131,7 @@ LOGGING = {
             'filename': 'logs/cronJobs.log',
             'formatter': 'verbose'
         },
-        'cronJobServices': {
+        'cronJobServicesHandler': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
             'filename': 'logs/cronJobServices.log',
@@ -164,8 +164,8 @@ LOGGING = {
 }
 
 CRON_CLASSES = [
-    "bill_gather.cronJobs.gather_bills",
-    "promises.cronJobs.connect_bills_and_promises"
+    "case_gather.cronJobs.gather_cases"
+    # "promises.cronJobs.connect_cases_and_promises"
 ]
 
 REST_FRAMEWORK = {

@@ -1,18 +1,13 @@
 from rest_framework import serializers
-from .models import Bill
+from .models import Case
 from parliament.serializers import ParliamentSessionSerializerRead
 
 
-class BillSerializer(serializers.ModelSerializer):
+class CaseSerializer(serializers.ModelSerializer):
 
     parliament_session = ParliamentSessionSerializerRead()
 
     class Meta:
-        model = Bill
-        fields = ('name', 'description_link', 'althingi_created', 'number', 'id', 'parliament_session', 'created', 'modified')
-
-
-
-
-
-
+        model = Case
+        fields = ('name', 'number', 'case_type', 'case_status',
+                  'id', 'parliament_session', 'created', 'modified')

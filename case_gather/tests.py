@@ -1,5 +1,5 @@
 from django.test import TestCase
-from bill_gather.xml_parser import get_case_data
+from case_gather.xml_parser import get_case_data
 
 # Create your tests here.
 

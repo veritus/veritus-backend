@@ -1,29 +1,29 @@
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
-from .models import Bill
-from .serializers import BillSerializer
+from .models import Case
+from .serializers import CaseSerializer
 from rest_framework import permissions
 
 
 @api_view(['GET', 'POST'])
 @permission_classes((permissions.AllowAny,))
-def bill_list(request):
+def case_list(request):
 
     if request.method == 'GET':
-        bills = Bill.objects.all()
-        serializer = BillSerializer(bills, many=True)
+        cases = Case.objects.all()
+        serializer = CaseSerializer(cases, many=True)
         return Response(serializer.data)
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes((permissions.AllowAny,))
-def bill_detail(request, pk):
+def case_detail(request, pk):
     try:
-        bill = Bill.objects.get(pk=pk)
-    except Bill.DoesNotExist:
+        case = Case.objects.get(pk=pk)
+    except Case.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        serializer = BillSerializer(bill)
+        serializer = CaseSerializer(case)
         return Response(serializer.data)
