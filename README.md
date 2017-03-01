@@ -7,12 +7,14 @@
 4. Ubuntu / Mac (That's what we are using!)
 
 ## Initial setup
-1. Download [virtualenv](https://pypi.python.org/pypi/virtualenv)
-2. Create a virtual env in the project directory (politech_backend) called env
+1. Install **PostgreSQL** with your favourite package installer
+`sudo aptitude install postgresql postgresql-contrib`
+2. Download [virtualenv](https://pypi.python.org/pypi/virtualenv)
+3. Create a virtual env in the project directory (politech_backend) called env
 `virtualenv env`
-3. Start your virtual environment
+4. Start your virtual environment
 `source env/bin/activate`
-4. Install required dependencies in requirements.txt with pip
+5. Install required dependencies in requirements.txt with pip
 `pip install -r requirements.txt`
 
 ## Developing
@@ -32,7 +34,7 @@ f.x
 4. You have just created a new user in postgres. Very nice!
 
 ## Create server in pgadmin3
-1. Download pgadmin3 - Great GUI tool for postgres.
+1. Download [pgadmin3](https://www.pgadmin.org/download/) - Great GUI tool for postgres.
 2. Click add server
 3. Fill in the information needed (name (I used politech), host, port, username, password) -
 That information can be found in the settings.py file.
