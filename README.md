@@ -41,7 +41,7 @@ That information can be found in the settings.py file.
 
 ## Create database in pgadmin3
 1. Click the newly created server.
-2. Right click "Databases" and create one called 'politech' with the owner being the moccasin user we created earlier.
+2. Right click "Databases" and create one called 'politech' with the owner being the politech user we created earlier.
 3. Run the django server = Should detect the database you just created.
 
 ## Migration
