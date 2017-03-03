@@ -1,5 +1,6 @@
 #!/usr/bin/python
 #  -*- coding: utf-8 -*-
+
 import requests, datetime, logging
 from bs4 import BeautifulSoup
 from bill_gather.models import Bill
@@ -49,6 +50,7 @@ def scrape_by_parliament_session_number(parliament_session_number):
 
             # Identify and save tags for bill
             identify_and_save_tags(bill_process_soup, bill)
+
 
 
 def get_beautifulsoup_from_link(link):

@@ -1,4 +1,5 @@
-import logging, traceback
+import logging
+import traceback
 from django_cron import CronJobBase, Schedule
 import promises.services as promise_services
 

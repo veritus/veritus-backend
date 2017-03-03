@@ -81,6 +81,7 @@ celerybeat-schedule
 # virtualenv
 env/
 ENV/
+venv/
 
 # Spyder project settings
 .spyderproject
@@ -90,4 +91,6 @@ ENV/
 
 # Pycharm
 .idea/
-venv/
+
+#Visual studio code
+.vscode/
