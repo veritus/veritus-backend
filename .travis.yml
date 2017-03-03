@@ -15,3 +15,6 @@ install:
 
 script:
 pytest promises/tests.py 
+
+notifications:
+  slack: polidevelopers:b2ilF8FkLWBCps2rGq0gOqjr
