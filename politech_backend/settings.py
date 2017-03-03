@@ -50,12 +50,14 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'rest_auth.registration',
+    'corsheaders',
 ]
 SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -83,6 +85,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'politech_backend.wsgi.application'
 
+CORS_ORIGIN_WHITELIST = (
+    'localhost:3000',
+)
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
