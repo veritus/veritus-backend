@@ -10,6 +10,8 @@ python:
   - "3.7-dev" # 3.7 development branch
   - "nightly" # currently points to 3.7-dev
 
-install: "pip install -r requirements.txt"
+install: 
+"pip install -r requirements.txt"
 
-script: pytest --ignore=venv
+script:
+pytest promises/tests.py 
