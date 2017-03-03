@@ -92,5 +92,5 @@ venv/
 # Pycharm
 .idea/
 
-#VSCode
-.vscode
+#Visual studio code
+.vscode/
