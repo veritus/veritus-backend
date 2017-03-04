@@ -13,11 +13,12 @@ def get_attribute_value(soup, element, attribute):
     logger = logging.getLogger('xmlHelper')
 
     logger.info('looking for values')
-    d = {element : attribute}
+    d = {element: attribute}
     try:
         values = soup.findAll(d)
-        logger.info('have values, fx: ' + str(values[0]))
+        logger.info('have values')
         for value in values:
+            logger.info('yielding value: ' + value[attribute])
             yield value[attribute]
     except Exception as e:
         logger.error(e.message)
@@ -31,7 +32,7 @@ def get_element_text(soup, element):
     interesting elements:
         - málsheiti
         - heiti
-        - heiti2 
+        - heiti2
         - xml
     """
     logger = logging.getLogger('xmlHelper')
@@ -39,9 +40,13 @@ def get_element_text(soup, element):
     logger.info('looking for elements')
     try:
         elements = soup.findAll(element)
-        logger.info('have elements, fx: ' + elements[0].text)
-        for element in elements:
-            yield element.text
+        logger.info('have elements')
+        try:
+            for element in elements:
+                logger.info('yielding element: ' + element.text)
+                yield element.text
+        except Exception as e:
+            logger.error(e)
     except Exception as e:
         logger.error(e.message)
 
@@ -58,7 +63,17 @@ def get_case_details(soup):
     logger = logging.getLogger('xmlHelper')
     logger.info('starting get_case_details')
 
-    status_gen = get_element_text(soup, "staðamáls")
+    status_flag = True
+    try:
+        status_gen_ = get_element_text(soup, "staðamáls")
+        test = next(status_gen_)
+        assert test is not None
+        status_flag = True
+        status_gen = get_element_text(soup, 'staðamáls')
+    except:
+        logger.info('Case has no status')
+        status_flag = False
+
     rel_cases_gen = get_attribute_value(soup, "mál", "málsnúmer")
     subj_id_gen = get_attribute_value(soup, "efnisflokkur", "id")
 
@@ -76,8 +91,11 @@ def get_case_details(soup):
     for subj_id in subj_id_gen:
         subj_ids.append(subj_id)
 
-    logger.info('creating case status generator')
-    status = next(status_gen)
+    if status_flag:
+        logger.info('creating case status generator')
+        status = next(status_gen)
+    else:
+        status = ''
 
     output = [status, rel_cases, subj_ids]
     logger.info('returning case details output')

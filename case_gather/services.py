@@ -5,20 +5,26 @@ from case_gather.models import Case
 from parliament.models import ParliamentSession
 import case_gather.xml_parser as xml_parser
 
-#TODO: update Subjects in db
+# TODO: update Subjects in db
+
 
 def update_case_db(session_number):
     logger = logging.getLogger('cronJobServices')
     logger.info('update started')
 
+    logger.info('getting parliament session object')
+    parliament_session = ParliamentSession.objects.get(
+        session_number=session_number)
+
     try:
         cases_in_db = Case.objects.filter(
-            parliament_session=session_number)
+            parliament_session=parliament_session)
+        logger.info(cases_in_db)
     except Exception as e:
         logger.error('Failed to create objects, error raised:' + '-' +
                      e.message, traceback.format_exc())
 
-    # logger.info('Have cases in database')
+    logger.info('Have cases in database')
 
     case_numbers = []
     for case in cases_in_db:
@@ -50,7 +56,7 @@ def update_case_db(session_number):
             try:
                 Case.objects.create(name=case['name'],
                                     number=int(case['number']),
-                                    parliament_session=int(case['session']),
+                                    parliament_session=parliament_session,
                                     case_type=case['case_type'],
                                     case_status=case['case_status'])
             except Exception as e:

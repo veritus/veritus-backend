@@ -40,6 +40,7 @@ def get_case_data(parliament_session_number):
         xml_logger.info('have detail soup')
 
         try:
+            xml_logger.info('getting details from soup')
             details = xml_helper.get_case_details(details_soup)
         # summary = xml_helper.get_case_summary(summary_soup)
         except Exception as e:

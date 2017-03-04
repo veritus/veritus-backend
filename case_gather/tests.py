@@ -6,12 +6,16 @@ from django.conf import settings
 import case_gather.xml_helper as x_h
 import case_gather.xml_parser as x_p
 import case_gather.models as cgm
+import parliament.models as parliament_models
 
 case_path = os.path.join(
     settings.BASE_DIR, 'case_gather', 'test_data', 'caselist.txt')
 
 details_path = os.path.join(
     settings.BASE_DIR, 'case_gather', 'test_data', 'casedetails.txt')
+
+details3_path = os.path.join(
+    settings.BASE_DIR, 'case_gather', 'test_data', 'case3details.txt')
 
 # Create your tests here.
 
@@ -29,16 +33,20 @@ class XMLHelperGAVTestCase(TestCase):
 
         cases = x_h.get_attribute_value(case_soup, 'mál', 'málsnúmer')
         self.case_number = next(cases)
+        self.case_number = next(cases)
+        self.case_number = next(cases)
 
         case_types_sh = x_h.get_attribute_value(
             case_soup, "málstegund", "málstegund")
         self.case_type_sh = next(case_types_sh)
+        self.case_type_sh = next(case_types_sh)
+        self.case_type_sh = next(case_types_sh)
 
     def test_case_number(self):
-        self.assertEqual(self.case_number, '1')
+        self.assertEqual(self.case_number, '3')
 
     def test_case_types_sh(self):
-        self.assertEqual(self.case_type_sh, 'l')
+        self.assertEqual(self.case_type_sh, 'a')
 
 
 class XMLHelperGETTestCase(TestCase):
@@ -53,15 +61,19 @@ class XMLHelperGETTestCase(TestCase):
 
         case_names = x_h.get_element_text(case_soup, 'málsheiti')
         self.case_name = next(case_names)
+        self.case_name = next(case_names)
+        self.case_name = next(case_names)
 
         case_types = x_h.get_element_text(case_soup, 'heiti')
         self.case_type = next(case_types)
+        self.case_type = next(case_types)
+        self.case_type = next(case_types)
 
     def test_case_name(self):
-        self.assertEqual(self.case_name, 'fjárlög 2017')
+        self.assertEqual(self.case_name, 'sálfræðiþjónusta í framhaldsskólum')
 
     def test_case_type(self):
-        self.assertEqual(self.case_type, 'Frumvarp til laga')
+        self.assertEqual(self.case_type, 'Tillaga til þingsályktunar')
 
 
 class XMLHelperGCDTestCase(TestCase):
@@ -112,6 +124,55 @@ class XMLHelperGCDTestCase(TestCase):
         self.assertEqual(status, 'Samþykkt sem lög frá Alþingi.')
         self.assertEqual(rel_cases, ['2', "2"])
         self.assertEqual(subj_ids, ['6'])
+
+class XMLHelperGCDTestCase3(TestCase):
+    """
+    Test get_case_details in xml_helper
+    """
+
+    def setUp(self):
+        with open(details3_path, 'rb') as f:
+            details_xml = f.read()
+
+        details_soup = BeautifulSoup(details_xml, features='xml')
+
+        # status_gen = x_h.get_element_text(details_soup, 'staðamáls')
+        rel_cases_gen = x_h.get_attribute_value(
+            details_soup, 'mál', 'málsnúmer')
+        # rel_cases_gen = x_h.get_attribute_value(
+        #     details_soup, 'þingskjal', 'málsnúmer')
+        subj_id_gen = x_h.get_attribute_value(
+            details_soup, 'efnisflokkur', 'id')
+
+        self.output = x_h.get_case_details(details_soup)
+
+        self.status = ''
+
+        rel_cases = []
+        subj_ids = []
+        for rel_case in rel_cases_gen:
+            rel_cases.append(rel_case)
+        for subj_id in subj_id_gen:
+            subj_ids.append(subj_id)
+
+        rel_cases.pop(0)
+        self.rel_cases = rel_cases
+        self.subj_ids = subj_ids
+
+    def test_status(self):
+        self.assertEqual(self.status, '')
+
+    def test_related_cases(self):
+        self.assertEqual(self.rel_cases, ['629'])
+
+    def test_subj_id(self):
+        self.assertEqual(self.subj_ids, ['6', '17', '20'])
+
+    def test_get_gase_details(self):
+        status, rel_cases, subj_ids = self.output
+        self.assertEqual(status, '')
+        self.assertEqual(rel_cases, ['629'])
+        self.assertEqual(subj_ids, ['6', '17', '20'])
 
 
 class XMLParserCaseCollectorTestCase(TestCase):
@@ -202,15 +263,26 @@ class ServicesTestCase(TestCase):
 
     def setUp(self):
         case_data_gen = x_p.get_case_data(146)
+        PS = parliament_models.ParliamentSession
+        P = parliament_models.Parliament
+        P.objects.create(start_date="2016-08-01",
+                         end_date="2020-08-01")
+        parliament = P.objects.get(start_date="2016-08-01")
+        PS.objects.create(session_number=146,
+                          parliament=parliament)
+        self.parliament_session = PS.objects.get(session_number=146)
 
         self.case_data = next(case_data_gen)
 
     def test_object_creation(self):
         cgm.Case.objects.create(name=self.case_data['name'],
                                 number=int(self.case_data['number']),
-                                parliament_session=int(self.case_data['session']),
+                                parliament_session=self.parliament_session,
                                 case_type=self.case_data['case_type'],
                                 case_status=self.case_data['case_status'])
 
         number = cgm.Case.objects.filter(number=1)
-        self.assertEqual(number, 1)
+
+        for num in list(number):
+
+            self.assertEqual(num.number, 1)
