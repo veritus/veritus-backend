@@ -13,6 +13,7 @@ install:
 
 script: 
     - pytest promises/tests.py 
+    - ./manage.py test
 
 notifications:
   slack: polidevelopers:b2ilF8FkLWBCps2rGq0gOqjr
