@@ -1,0 +1,1961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<málaskrá>
+<mál málsnúmer='1' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fjárlög 2017</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=1</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=1</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=1&amp;lthing=146</rss>
+</mál><mál málsnúmer='2' þingnúmer='146' málsflokkur='A'>
+<málsheiti>ýmsar forsendur fjárlagafrumvarps 2017</málsheiti>
+<efnisgreining>breyting ýmissa laga</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=2</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=2</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=2&amp;lthing=146</rss>
+</mál><mál málsnúmer='3' þingnúmer='146' málsflokkur='A'>
+<málsheiti>sálfræðiþjónusta í framhaldsskólum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=3</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=3</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=3&amp;lthing=146</rss>
+</mál><mál málsnúmer='4' þingnúmer='146' málsflokkur='A'>
+<málsheiti>sjúkratryggingar</málsheiti>
+<efnisgreining>samningar um heilbrigðisþjónustu</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=4</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=4</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=4&amp;lthing=146</rss>
+</mál><mál málsnúmer='5' þingnúmer='146' málsflokkur='A'>
+<málsheiti>málefni Brúneggja ehf. og upplýsingagjöf til almennings um brot á reglum um dýravelferð</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>sjávarútvegs- og landbúnaðarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=5</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=5</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=5&amp;lthing=146</rss>
+</mál><mál málsnúmer='6' þingnúmer='146' málsflokkur='A'>
+<málsheiti>Lífeyrissjóður starfsmanna ríkisins</málsheiti>
+<efnisgreining>breyting á A-deild sjóðsins</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=6</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=6</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=6&amp;lthing=146</rss>
+</mál><mál málsnúmer='7' þingnúmer='146' málsflokkur='A'>
+<málsheiti>kjararáð</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=7</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=7</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=7&amp;lthing=146</rss>
+</mál><mál málsnúmer='8' þingnúmer='146' málsflokkur='A'>
+<málsheiti>lokafjárlög 2015</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=8</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=8</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=8&amp;lthing=146</rss>
+</mál><mál málsnúmer='9' þingnúmer='146' málsflokkur='A'>
+<málsheiti>breyting á ályktun Alþingis um rannsókn á kaupum á 45,8% eignarhlut í Búnaðarbanka Íslands hf. o.fl.</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=9</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=9</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=9&amp;lthing=146</rss>
+</mál><mál málsnúmer='10' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fjáraukalög 2016</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=10</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=10</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=10&amp;lthing=146</rss>
+</mál><mál málsnúmer='11' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fjöldi lífeyrisþega sem fá skertar greiðslur vegna búsetu erlendis</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>félags- og húsnæðismálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=11</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=11</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=11&amp;lthing=146</rss>
+</mál><mál málsnúmer='12' þingnúmer='146' málsflokkur='A'>
+<málsheiti>aðgerðaáætlun gegn mansali og vinnulag við mansalsmál</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>innanríkisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=12</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=12</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=12&amp;lthing=146</rss>
+</mál><mál málsnúmer='13' þingnúmer='146' málsflokkur='A'>
+<málsheiti>málefni fatlaðs fólks og aðbúnaður, hollustuhættir og öryggi á vinnustöðum</málsheiti>
+<efnisgreining>framlenging samninga um notendastýrða persónulega aðstoð, skipun nefndar</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=13</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=13</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=13&amp;lthing=146</rss>
+</mál><mál málsnúmer='14' þingnúmer='146' málsflokkur='A'>
+<málsheiti>borgarastyrjöldin í Sýrlandi</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>utanríkisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=14</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=14</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=14&amp;lthing=146</rss>
+</mál><mál málsnúmer='15' þingnúmer='146' málsflokkur='A'>
+<málsheiti>orkukostnaður heimilanna</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>iðnaðar- og viðskiptaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=15</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=15</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=15&amp;lthing=146</rss>
+</mál><mál málsnúmer='16' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>forsætisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=16</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=16</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=16&amp;lthing=146</rss>
+</mál><mál málsnúmer='17' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=17</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=17</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=17&amp;lthing=146</rss>
+</mál><mál málsnúmer='18' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>innanríkisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=18</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=18</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=18&amp;lthing=146</rss>
+</mál><mál málsnúmer='19' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>félags- og húsnæðismálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=19</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=19</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=19&amp;lthing=146</rss>
+</mál><mál málsnúmer='20' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>heilbrigðisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=20</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=20</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=20&amp;lthing=146</rss>
+</mál><mál málsnúmer='21' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>sjávarútvegs- og landbúnaðarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=21</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=21</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=21&amp;lthing=146</rss>
+</mál><mál málsnúmer='22' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>iðnaðar- og viðskiptaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=22</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=22</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=22&amp;lthing=146</rss>
+</mál><mál málsnúmer='23' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>mennta- og menningarmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=23</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=23</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=23&amp;lthing=146</rss>
+</mál><mál málsnúmer='24' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>umhverfis- og auðlindaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=24</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=24</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=24&amp;lthing=146</rss>
+</mál><mál málsnúmer='25' þingnúmer='146' málsflokkur='A'>
+<málsheiti>ónýttur persónuafsláttur</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=25</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=25</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=25&amp;lthing=146</rss>
+</mál><mál málsnúmer='26' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fjöldi starfsmanna Stjórnarráðsins</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>forsætisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=26</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=26</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=26&amp;lthing=146</rss>
+</mál><mál málsnúmer='27' þingnúmer='146' málsflokkur='A'>
+<málsheiti>launakostnaður og fjöldi starfsmanna</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=27</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=27</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=27&amp;lthing=146</rss>
+</mál><mál málsnúmer='28' þingnúmer='146' málsflokkur='A'>
+<málsheiti>veiting ríkisborgararéttar</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=28</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=28</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=28&amp;lthing=146</rss>
+</mál><mál málsnúmer='29' þingnúmer='146' málsflokkur='A'>
+<málsheiti>útlendingar</málsheiti>
+<efnisgreining>frestun réttaráhrifa</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=29</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=29</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=29&amp;lthing=146</rss>
+</mál><mál málsnúmer='30' þingnúmer='146' málsflokkur='A'>
+<málsheiti>frestun á fundum Alþingis</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='f'><heiti>Tillaga til þingsályktunar</heiti><heiti2>frestun funda</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=30</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=30</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=30&amp;lthing=146</rss>
+</mál><mál málsnúmer='31' þingnúmer='146' málsflokkur='A'>
+<málsheiti>meðferð og framkvæmd ályktana Alþingis 2015</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='s'><heiti>Skýrsla</heiti><heiti2>skýrsla</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=31</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=31</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=31&amp;lthing=146</rss>
+</mál><mál málsnúmer='32' þingnúmer='146' málsflokkur='A'>
+<málsheiti>málefni Brúneggja ehf. og upplýsingagjöf til almennings um brot á reglum um dýravelferð</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>sjávarútvegs- og landbúnaðarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=32</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=32</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=32&amp;lthing=146</rss>
+</mál><mál málsnúmer='33' þingnúmer='146' málsflokkur='A'>
+<málsheiti>aðgerðaáætlun gegn mansali og vinnulag við mansalsmál</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=33</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=33</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=33&amp;lthing=146</rss>
+</mál><mál málsnúmer='34' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fjöldi lífeyrisþega sem fá skertar greiðslur vegna búsetu erlendis</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>félags- og jafnréttismálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=34</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=34</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=34&amp;lthing=146</rss>
+</mál><mál málsnúmer='35' þingnúmer='146' málsflokkur='A'>
+<málsheiti>borgarastyrjöldin í Sýrlandi</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>utanríkisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=35</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=35</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=35&amp;lthing=146</rss>
+</mál><mál málsnúmer='36' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>forsætisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=36</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=36</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=36&amp;lthing=146</rss>
+</mál><mál málsnúmer='37' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=37</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=37</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=37&amp;lthing=146</rss>
+</mál><mál málsnúmer='38' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=38</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=38</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=38&amp;lthing=146</rss>
+</mál><mál málsnúmer='39' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=39</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=39</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=39&amp;lthing=146</rss>
+</mál><mál málsnúmer='40' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>félags- og jafnréttismálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=40</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=40</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=40&amp;lthing=146</rss>
+</mál><mál málsnúmer='41' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>heilbrigðisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=41</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=41</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=41&amp;lthing=146</rss>
+</mál><mál málsnúmer='42' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>sjávarútvegs- og landbúnaðarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=42</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=42</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=42&amp;lthing=146</rss>
+</mál><mál málsnúmer='43' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>ferðamála-, iðnaðar- og nýsköpunarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=43</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=43</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=43&amp;lthing=146</rss>
+</mál><mál málsnúmer='44' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>mennta- og menningarmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=44</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=44</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=44&amp;lthing=146</rss>
+</mál><mál málsnúmer='45' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirlitsstofnanir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>umhverfis- og auðlindaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=45</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=45</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=45&amp;lthing=146</rss>
+</mál><mál málsnúmer='46' þingnúmer='146' málsflokkur='A'>
+<málsheiti>ónýttur persónuafsláttur</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=46</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=46</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=46&amp;lthing=146</rss>
+</mál><mál málsnúmer='47' þingnúmer='146' málsflokkur='A'>
+<málsheiti>launakostnaður og fjöldi starfsmanna</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=47</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=47</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=47&amp;lthing=146</rss>
+</mál><mál málsnúmer='48' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fjöldi starfsmanna Stjórnarráðsins</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=48</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=48</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=48&amp;lthing=146</rss>
+</mál><mál málsnúmer='49' þingnúmer='146' málsflokkur='A'>
+<málsheiti>greiðsluþátttaka sjúklinga</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=49</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=49</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=49&amp;lthing=146</rss>
+</mál><mál málsnúmer='50' þingnúmer='146' málsflokkur='A'>
+<málsheiti>stefna í almannavarna- og öryggismálum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=50</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=50</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=50&amp;lthing=146</rss>
+</mál><mál málsnúmer='51' þingnúmer='146' málsflokkur='A'>
+<málsheiti>skipun loftslagsráðs</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>umhverfis- og auðlindaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=51</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=51</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=51&amp;lthing=146</rss>
+</mál><mál málsnúmer='52' þingnúmer='146' málsflokkur='A'>
+<málsheiti>eftirfylgni við þingsályktun nr. 45/145</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>utanríkisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=52</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=52</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=52&amp;lthing=146</rss>
+</mál><mál málsnúmer='53' þingnúmer='146' málsflokkur='A'>
+<málsheiti>bann við kjarnorkuvopnum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>utanríkisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=53</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=53</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=53&amp;lthing=146</rss>
+</mál><mál málsnúmer='54' þingnúmer='146' málsflokkur='A'>
+<málsheiti>meðferð kynferðisbrota</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=54</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=54</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=54&amp;lthing=146</rss>
+</mál><mál málsnúmer='55' þingnúmer='146' málsflokkur='A'>
+<málsheiti>niðurfærsla verðtryggðra fasteignalána</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='s'><heiti>Skýrsla</heiti><heiti2>skýrsla</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=55</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=55</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=55&amp;lthing=146</rss>
+</mál><mál málsnúmer='56' þingnúmer='146' málsflokkur='A'>
+<málsheiti>skráning trúar- og lífsskoðana</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=56</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=56</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=56&amp;lthing=146</rss>
+</mál><mál málsnúmer='57' þingnúmer='146' málsflokkur='A'>
+<málsheiti>heilbrigðisáætlun</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=57</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=57</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=57&amp;lthing=146</rss>
+</mál><mál málsnúmer='58' þingnúmer='146' málsflokkur='A'>
+<málsheiti>upptaka samræmdrar vísitölu neysluverðs</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=58</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=58</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=58&amp;lthing=146</rss>
+</mál><mál málsnúmer='59' þingnúmer='146' málsflokkur='A'>
+<málsheiti>sáttameðferð</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=59</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=59</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=59&amp;lthing=146</rss>
+</mál><mál málsnúmer='60' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fasteignir Þróunarfélags Keflavíkurflugvallar, Kadeco</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=60</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=60</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=60&amp;lthing=146</rss>
+</mál><mál málsnúmer='61' þingnúmer='146' málsflokkur='A'>
+<málsheiti>losun kolefnisgasa frá orkufrekum iðnaði og íslenskum flugflota</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>umhverfis- og auðlindaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=61</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=61</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=61&amp;lthing=146</rss>
+</mál><mál málsnúmer='62' þingnúmer='146' málsflokkur='A'>
+<málsheiti>heildstæð stefna í málefnum einstaklinga með heilabilun</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=62</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=62</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=62&amp;lthing=146</rss>
+</mál><mál málsnúmer='63' þingnúmer='146' málsflokkur='A'>
+<málsheiti>skyldutrygging lífeyrisréttinda og starfsemi lífeyrissjóða</málsheiti>
+<efnisgreining>upplýsingaskylda endurskoðenda</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=63</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=63</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=63&amp;lthing=146</rss>
+</mál><mál málsnúmer='64' þingnúmer='146' málsflokkur='A'>
+<málsheiti>hlutafélög</málsheiti>
+<efnisgreining>upplýsingaskylda endurskoðenda</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=64</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=64</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=64&amp;lthing=146</rss>
+</mál><mál málsnúmer='65' þingnúmer='146' málsflokkur='A'>
+<málsheiti>minning tveggja alda afmælis Jóns Árnasonar</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=65</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=65</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=65&amp;lthing=146</rss>
+</mál><mál málsnúmer='66' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fjármálastefna 2017--2022</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=66</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=66</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=66&amp;lthing=146</rss>
+</mál><mál málsnúmer='67' þingnúmer='146' málsflokkur='A'>
+<málsheiti>Lífeyrissjóður bænda</málsheiti>
+<efnisgreining>brottfall laganna</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=67</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=67</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=67&amp;lthing=146</rss>
+</mál><mál málsnúmer='68' þingnúmer='146' málsflokkur='A'>
+<málsheiti>breytt skipan ráðuneyta í Stjórnarráði Íslands</málsheiti>
+<efnisgreining>fjölgun ráðuneyta</efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=68</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=68</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=68&amp;lthing=146</rss>
+</mál><mál málsnúmer='69' þingnúmer='146' málsflokkur='A'>
+<málsheiti>starfshópur um keðjuábyrgð</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=69</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=69</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=69&amp;lthing=146</rss>
+</mál><mál málsnúmer='70' þingnúmer='146' málsflokkur='A'>
+<málsheiti>upplýsinga- og sannleiksskylda ráðherra</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=70</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=70</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=70&amp;lthing=146</rss>
+</mál><mál málsnúmer='71' þingnúmer='146' málsflokkur='A'>
+<málsheiti>orkukostnaður heimilanna</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>ferðamála-, iðnaðar- og nýsköpunarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=71</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=71</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=71&amp;lthing=146</rss>
+</mál><mál málsnúmer='72' þingnúmer='146' málsflokkur='A'>
+<málsheiti>framsals- og fangaskiptasamningar</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>utanríkisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=72</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=72</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=72&amp;lthing=146</rss>
+</mál><mál málsnúmer='73' þingnúmer='146' málsflokkur='A'>
+<málsheiti>framsal íslenskra fanga</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=73</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=73</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=73&amp;lthing=146</rss>
+</mál><mál málsnúmer='74' þingnúmer='146' málsflokkur='A'>
+<málsheiti>byggingarkostnaður og endurskoðun laga</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>umhverfis- og auðlindaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=74</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=74</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=74&amp;lthing=146</rss>
+</mál><mál málsnúmer='75' þingnúmer='146' málsflokkur='A'>
+<málsheiti>kostnaður við sjúkraflug og fæðingarþjónustu í Vestmannaeyjum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>heilbrigðisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=75</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=75</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=75&amp;lthing=146</rss>
+</mál><mál málsnúmer='76' þingnúmer='146' málsflokkur='A'>
+<málsheiti>merking á vörum frá hernumdum svæðum Palestínu</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=76</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=76</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=76&amp;lthing=146</rss>
+</mál><mál málsnúmer='77' þingnúmer='146' málsflokkur='A'>
+<málsheiti>úttekt á starfsemi fjölmiðla utan höfuðborgarsvæðisins og leiðir til að tryggja stöðu þeirra</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=77</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=77</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=77&amp;lthing=146</rss>
+</mál><mál málsnúmer='78' þingnúmer='146' málsflokkur='A'>
+<málsheiti>aðskilnaður fjárfestingarbanka og viðskiptabanka</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=78</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=78</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=78&amp;lthing=146</rss>
+</mál><mál málsnúmer='79' þingnúmer='146' málsflokkur='A'>
+<málsheiti>þingnefnd um alþjóðlega fríverslunarsamninga</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=79</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=79</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=79&amp;lthing=146</rss>
+</mál><mál málsnúmer='80' þingnúmer='146' málsflokkur='A'>
+<málsheiti>sjúkratryggingar</málsheiti>
+<efnisgreining>frestun gildistöku</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=80</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=80</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=80&amp;lthing=146</rss>
+</mál><mál málsnúmer='81' þingnúmer='146' málsflokkur='A'>
+<málsheiti>tannvernd aldraðra</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>heilbrigðisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=81</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=81</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=81&amp;lthing=146</rss>
+</mál><mál málsnúmer='82' þingnúmer='146' málsflokkur='A'>
+<málsheiti>rafrænt eftirlit við afplánun refsinga</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=82</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=82</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=82&amp;lthing=146</rss>
+</mál><mál málsnúmer='83' þingnúmer='146' málsflokkur='A'>
+<málsheiti>stjórn fiskveiða</málsheiti>
+<efnisgreining>útboð viðbótarþorskkvóta</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=83</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=83</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=83&amp;lthing=146</rss>
+</mál><mál málsnúmer='84' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fæðingar- og foreldraorlof og tryggingagjald</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=84</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=84</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=84&amp;lthing=146</rss>
+</mál><mál málsnúmer='85' þingnúmer='146' málsflokkur='A'>
+<málsheiti>tekjuskattur</málsheiti>
+<efnisgreining>afnám rúmmálsreglu</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=85</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=85</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=85&amp;lthing=146</rss>
+</mál><mál málsnúmer='86' þingnúmer='146' málsflokkur='A'>
+<málsheiti>tekjuskattur</málsheiti>
+<efnisgreining>gengishagnaður</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=86</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=86</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=86&amp;lthing=146</rss>
+</mál><mál málsnúmer='87' þingnúmer='146' málsflokkur='A'>
+<málsheiti>skipun starfshóps til að endurbæta löggjöf um vernd, velferð og veiðar villtra fugla og spendýra</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=87</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=87</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=87&amp;lthing=146</rss>
+</mál><mál málsnúmer='88' þingnúmer='146' málsflokkur='A'>
+<málsheiti>sala ríkiseigna, lækkun skulda ríkissjóðs og fjárfesting í innviðum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=88</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=88</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=88&amp;lthing=146</rss>
+</mál><mál málsnúmer='89' þingnúmer='146' málsflokkur='A'>
+<málsheiti>framkvæmd þingsályktunar um undirbúning að gerð þjóðhagsáætlana til langs tíma</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>forsætisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=89</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=89</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=89&amp;lthing=146</rss>
+</mál><mál málsnúmer='90' þingnúmer='146' málsflokkur='A'>
+<málsheiti>málefni lánsveðshóps</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=90</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=90</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=90&amp;lthing=146</rss>
+</mál><mál málsnúmer='91' þingnúmer='146' málsflokkur='A'>
+<málsheiti>íblöndunarefni í bifreiðaeldsneyti</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>ferðamála-, iðnaðar- og nýsköpunarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=91</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=91</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=91&amp;lthing=146</rss>
+</mál><mál málsnúmer='92' þingnúmer='146' málsflokkur='A'>
+<málsheiti>endurskoðun samgönguáætlunar</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=92</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=92</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=92&amp;lthing=146</rss>
+</mál><mál málsnúmer='93' þingnúmer='146' málsflokkur='A'>
+<málsheiti>hagir og viðhorf aldraðra</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='b'><heiti>Beiðni um skýrslu</heiti><heiti2>beiðni um skýrslu</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=93</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=93</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=93&amp;lthing=146</rss>
+</mál><mál málsnúmer='94' þingnúmer='146' málsflokkur='A'>
+<málsheiti>umsóknarferli hjá sýslumönnum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=94</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=94</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=94&amp;lthing=146</rss>
+</mál><mál málsnúmer='95' þingnúmer='146' málsflokkur='A'>
+<málsheiti>kvíði barna og unglinga</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>heilbrigðisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=95</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=95</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=95&amp;lthing=146</rss>
+</mál><mál málsnúmer='96' þingnúmer='146' málsflokkur='A'>
+<málsheiti>styrkir úr menningarsjóðum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>mennta- og menningarmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=96</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=96</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=96&amp;lthing=146</rss>
+</mál><mál málsnúmer='97' þingnúmer='146' málsflokkur='A'>
+<málsheiti>dreif- og fjarnám</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>mennta- og menningarmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=97</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=97</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=97&amp;lthing=146</rss>
+</mál><mál málsnúmer='98' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fjárlagaliðurinn Sjúkrahús, óskipt</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>heilbrigðisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=98</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=98</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=98&amp;lthing=146</rss>
+</mál><mál málsnúmer='99' þingnúmer='146' málsflokkur='A'>
+<málsheiti>nýsköpunarverkefni fyrir fatlað fólk</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>félags- og jafnréttismálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=99</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=99</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=99&amp;lthing=146</rss>
+</mál><mál málsnúmer='100' þingnúmer='146' málsflokkur='A'>
+<málsheiti>tilvísunarkerfi í barnalækningum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>heilbrigðisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=100</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=100</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=100&amp;lthing=146</rss>
+</mál><mál málsnúmer='101' þingnúmer='146' málsflokkur='A'>
+<málsheiti>almenn hegningarlög</málsheiti>
+<efnisgreining>móðgun við erlenda þjóðhöfðingja</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=101</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=101</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=101&amp;lthing=146</rss>
+</mál><mál málsnúmer='102' þingnúmer='146' málsflokkur='A'>
+<málsheiti>jafnræði í skráningu foreldratengsla</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=102</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=102</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=102&amp;lthing=146</rss>
+</mál><mál málsnúmer='103' þingnúmer='146' málsflokkur='A'>
+<málsheiti>tekjuskattur</málsheiti>
+<efnisgreining>fæðispeningar sjómanna</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=103</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=103</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=103&amp;lthing=146</rss>
+</mál><mál málsnúmer='104' þingnúmer='146' málsflokkur='A'>
+<málsheiti>umsagnir um atvinnuleyfi útlendinga</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>félags- og jafnréttismálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=104</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=104</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=104&amp;lthing=146</rss>
+</mál><mál málsnúmer='105' þingnúmer='146' málsflokkur='A'>
+<málsheiti>lækkun virðisaukaskatts á gleraugum og linsum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=105</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=105</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=105&amp;lthing=146</rss>
+</mál><mál málsnúmer='106' þingnúmer='146' málsflokkur='A'>
+<málsheiti>verslun með áfengi og tóbak o.fl.</málsheiti>
+<efnisgreining>smásala áfengis</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=106</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=106</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=106&amp;lthing=146</rss>
+</mál><mál málsnúmer='107' þingnúmer='146' málsflokkur='A'>
+<málsheiti>innviða- og byggingarréttargjald</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=107</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=107</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=107&amp;lthing=146</rss>
+</mál><mál málsnúmer='108' þingnúmer='146' málsflokkur='A'>
+<málsheiti>viðbrögð við lokun neyðarbrautar</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=108</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=108</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=108&amp;lthing=146</rss>
+</mál><mál málsnúmer='109' þingnúmer='146' málsflokkur='A'>
+<málsheiti>uppbygging innviða til verndar náttúru og menningarsögulegum minjum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>umhverfis- og auðlindaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=109</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=109</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=109&amp;lthing=146</rss>
+</mál><mál málsnúmer='110' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fæðingar- og foreldraorlof</málsheiti>
+<efnisgreining>fæðingarhjálp</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=110</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=110</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=110&amp;lthing=146</rss>
+</mál><mál málsnúmer='111' þingnúmer='146' málsflokkur='A'>
+<málsheiti>viðbótareftirlit með fjármálasamsteypum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=111</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=111</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=111&amp;lthing=146</rss>
+</mál><mál málsnúmer='112' þingnúmer='146' málsflokkur='A'>
+<málsheiti>brottnám líffæra</málsheiti>
+<efnisgreining>ætlað samþykki</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=112</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=112</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=112&amp;lthing=146</rss>
+</mál><mál málsnúmer='113' þingnúmer='146' málsflokkur='A'>
+<málsheiti>dómstólar</málsheiti>
+<efnisgreining>nefnd um hæfni dómaraefna, aðsetur Landsréttar</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=113</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=113</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=113&amp;lthing=146</rss>
+</mál><mál málsnúmer='114' þingnúmer='146' málsflokkur='A'>
+<málsheiti>stefnumörkun og aðgerðaáætlun um kolefnishlutlaust Ísland</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=114</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=114</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=114&amp;lthing=146</rss>
+</mál><mál málsnúmer='115' þingnúmer='146' málsflokkur='A'>
+<málsheiti>stytting biðlista á kvennadeildum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=115</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=115</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=115&amp;lthing=146</rss>
+</mál><mál málsnúmer='116' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fyrirtækjaskrá</málsheiti>
+<efnisgreining>aukinn aðgangur að fyrirtækjaskrá</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=116</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=116</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=116&amp;lthing=146</rss>
+</mál><mál málsnúmer='117' þingnúmer='146' málsflokkur='A'>
+<málsheiti>þjóðfáni Íslendinga og ríkisskjaldarmerkið</málsheiti>
+<efnisgreining>fánatími</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=117</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=117</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=117&amp;lthing=146</rss>
+</mál><mál málsnúmer='118' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fordæming aðgerða Bandaríkjaforseta gegn múslimum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=118</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=118</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=118&amp;lthing=146</rss>
+</mál><mál málsnúmer='119' þingnúmer='146' málsflokkur='A'>
+<málsheiti>orlof húsmæðra</málsheiti>
+<efnisgreining>afnám laganna</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=119</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=119</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=119&amp;lthing=146</rss>
+</mál><mál málsnúmer='120' þingnúmer='146' málsflokkur='A'>
+<málsheiti>tekjustofnar sveitarfélaga</málsheiti>
+<efnisgreining>afnám lágmarksútsvars</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=120</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=120</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=120&amp;lthing=146</rss>
+</mál><mál málsnúmer='121' þingnúmer='146' málsflokkur='A'>
+<málsheiti>atvinnuleysistryggingar</málsheiti>
+<efnisgreining>bótaréttur fanga</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=121</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=121</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=121&amp;lthing=146</rss>
+</mál><mál málsnúmer='122' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fjárveitingar til sóknaráætlana landshluta og hlutverk þeirra</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=122</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=122</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=122&amp;lthing=146</rss>
+</mál><mál málsnúmer='123' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fjöldi vínveitingaleyfa</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>ferðamála-, iðnaðar- og nýsköpunarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=123</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=123</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=123&amp;lthing=146</rss>
+</mál><mál málsnúmer='124' þingnúmer='146' málsflokkur='A'>
+<málsheiti>rannsókn á fangaflugi bandarískra yfirvalda um Ísland</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>utanríkisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=124</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=124</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=124&amp;lthing=146</rss>
+</mál><mál málsnúmer='125' þingnúmer='146' málsflokkur='A'>
+<málsheiti>kjör og staða myndlistarmanna</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>mennta- og menningarmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=125</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=125</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=125&amp;lthing=146</rss>
+</mál><mál málsnúmer='126' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fjármálafyrirtæki og opinbert eftirlit með fjármálastarfsemi</málsheiti>
+<efnisgreining>tilkynningar um brot á fjármálamarkaði</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=126</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=126</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=126&amp;lthing=146</rss>
+</mál><mál málsnúmer='127' þingnúmer='146' málsflokkur='A'>
+<málsheiti>málefni Háskóla Íslands</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>mennta- og menningarmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=127</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=127</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=127&amp;lthing=146</rss>
+</mál><mál málsnúmer='128' þingnúmer='146' málsflokkur='A'>
+<málsheiti>farþegaflutningar og farmflutningar</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=128</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=128</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=128&amp;lthing=146</rss>
+</mál><mál málsnúmer='129' þingnúmer='146' málsflokkur='A'>
+<málsheiti>hjónavígslur og nafngiftir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=129</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=129</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=129&amp;lthing=146</rss>
+</mál><mál málsnúmer='130' þingnúmer='146' málsflokkur='A'>
+<málsheiti>ákvörðun EES-nefndarinnar nr. 39/2016 um breytingu á XXII. viðauka við EES-samninginn</málsheiti>
+<efnisgreining>félagaréttur, EES-reglur</efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=130</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=130</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=130&amp;lthing=146</rss>
+</mál><mál málsnúmer='131' þingnúmer='146' málsflokkur='A'>
+<málsheiti>byggðaáætlun</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=131</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=131</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=131&amp;lthing=146</rss>
+</mál><mál málsnúmer='132' þingnúmer='146' málsflokkur='A'>
+<málsheiti>lífeyrisgreiðslur almannatrygginga</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>félags- og jafnréttismálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=132</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=132</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=132&amp;lthing=146</rss>
+</mál><mál málsnúmer='133' þingnúmer='146' málsflokkur='A'>
+<málsheiti>spár um íbúðafjárfestingu</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>forsætisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=133</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=133</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=133&amp;lthing=146</rss>
+</mál><mál málsnúmer='134' þingnúmer='146' málsflokkur='A'>
+<málsheiti>spár um íbúðafjárfestingu</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=134</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=134</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=134&amp;lthing=146</rss>
+</mál><mál málsnúmer='135' þingnúmer='146' málsflokkur='A'>
+<málsheiti>flutningur Landhelgisgæslunnar til Reykjanesbæjar</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=135</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=135</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=135&amp;lthing=146</rss>
+</mál><mál málsnúmer='136' þingnúmer='146' málsflokkur='A'>
+<málsheiti>stytting biðlista</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>heilbrigðisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=136</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=136</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=136&amp;lthing=146</rss>
+</mál><mál málsnúmer='137' þingnúmer='146' málsflokkur='A'>
+<málsheiti>radíókerfi og fjarskiptakerfi</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=137</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=137</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=137&amp;lthing=146</rss>
+</mál><mál málsnúmer='138' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fjármagnstekjur einstaklinga</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=138</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=138</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=138&amp;lthing=146</rss>
+</mál><mál málsnúmer='139' þingnúmer='146' málsflokkur='A'>
+<málsheiti>starfsumhverfi bókaútgáfu</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>mennta- og menningarmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=139</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=139</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=139&amp;lthing=146</rss>
+</mál><mál málsnúmer='140' þingnúmer='146' málsflokkur='A'>
+<málsheiti>yfirferð kosningalaga</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=140</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=140</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=140&amp;lthing=146</rss>
+</mál><mál málsnúmer='141' þingnúmer='146' málsflokkur='A'>
+<málsheiti>úthaldsdagar Landhelgisgæslunnar</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=141</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=141</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=141&amp;lthing=146</rss>
+</mál><mál málsnúmer='142' þingnúmer='146' málsflokkur='A'>
+<málsheiti>almenningssamgöngur</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=142</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=142</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=142&amp;lthing=146</rss>
+</mál><mál málsnúmer='143' þingnúmer='146' málsflokkur='A'>
+<málsheiti>húsnæði Listaháskóla Íslands</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=143</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=143</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=143&amp;lthing=146</rss>
+</mál><mál málsnúmer='144' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fjölmiðlar</málsheiti>
+<efnisgreining>textun myndefnis</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=144</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=144</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=144&amp;lthing=146</rss>
+</mál><mál málsnúmer='145' þingnúmer='146' málsflokkur='A'>
+<málsheiti>könnun á gæðum skólamáltíða í leik- og grunnskólum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=145</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=145</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=145&amp;lthing=146</rss>
+</mál><mál málsnúmer='146' þingnúmer='146' málsflokkur='A'>
+<málsheiti>orkuskipti</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=146</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=146</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=146&amp;lthing=146</rss>
+</mál><mál málsnúmer='147' þingnúmer='146' málsflokkur='A'>
+<málsheiti>skipun nefndar er geri tillögur um atvinnulýðræði</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=147</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=147</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=147&amp;lthing=146</rss>
+</mál><mál málsnúmer='148' þingnúmer='146' málsflokkur='A'>
+<málsheiti>meginþættir í störfum fjármálastöðugleikaráðs 2016</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='s'><heiti>Skýrsla</heiti><heiti2>skýrsla</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=148</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=148</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=148&amp;lthing=146</rss>
+</mál><mál málsnúmer='149' þingnúmer='146' málsflokkur='A'>
+<málsheiti>ívilnanir til nýfjárfestinga á Íslandi</málsheiti>
+<efnisgreining>markmið í loftslagsmálum</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=149</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=149</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=149&amp;lthing=146</rss>
+</mál><mál málsnúmer='150' þingnúmer='146' málsflokkur='A'>
+<málsheiti>almannatryggingar</málsheiti>
+<efnisgreining>leiðrétting</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=150</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=150</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=150&amp;lthing=146</rss>
+</mál><mál málsnúmer='151' þingnúmer='146' málsflokkur='A'>
+<málsheiti>húsnæði ríkisstofnana</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=151</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=151</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=151&amp;lthing=146</rss>
+</mál><mál málsnúmer='152' þingnúmer='146' málsflokkur='A'>
+<málsheiti>vistunarúrræði fyrir börn með fötlun</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>félags- og jafnréttismálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=152</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=152</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=152&amp;lthing=146</rss>
+</mál><mál málsnúmer='153' þingnúmer='146' málsflokkur='A'>
+<málsheiti>viðhald vegakerfisins</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=153</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=153</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=153&amp;lthing=146</rss>
+</mál><mál málsnúmer='154' þingnúmer='146' málsflokkur='A'>
+<málsheiti>auðlindir og auðlindagjald</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>umhverfis- og auðlindaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=154</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=154</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=154&amp;lthing=146</rss>
+</mál><mál málsnúmer='155' þingnúmer='146' málsflokkur='A'>
+<málsheiti>sala eigna á Ásbrú</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=155</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=155</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=155&amp;lthing=146</rss>
+</mál><mál málsnúmer='156' þingnúmer='146' málsflokkur='A'>
+<málsheiti>opnun neyðarbrautarinnar á Reykjavíkurflugvelli</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=156</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=156</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=156&amp;lthing=146</rss>
+</mál><mál málsnúmer='157' þingnúmer='146' málsflokkur='A'>
+<málsheiti>biðlistar eftir greiningu</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>félags- og jafnréttismálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=157</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=157</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=157&amp;lthing=146</rss>
+</mál><mál málsnúmer='158' þingnúmer='146' málsflokkur='A'>
+<málsheiti>framkvæmd þingsályktunartillögu um áningarstaði Vegagerðarinnar</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=158</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=158</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=158&amp;lthing=146</rss>
+</mál><mál málsnúmer='159' þingnúmer='146' málsflokkur='A'>
+<málsheiti>frádráttarbær ferðakostnaður</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=159</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=159</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=159&amp;lthing=146</rss>
+</mál><mál málsnúmer='160' þingnúmer='146' málsflokkur='A'>
+<málsheiti>áfengisfrumvarp</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>heilbrigðisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=160</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=160</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=160&amp;lthing=146</rss>
+</mál><mál málsnúmer='161' þingnúmer='146' málsflokkur='A'>
+<málsheiti>gjöld sem tengjast umferð</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=161</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=161</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=161&amp;lthing=146</rss>
+</mál><mál málsnúmer='162' þingnúmer='146' málsflokkur='A'>
+<málsheiti>flugfargjöld innan lands</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=162</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=162</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=162&amp;lthing=146</rss>
+</mál><mál málsnúmer='163' þingnúmer='146' málsflokkur='A'>
+<málsheiti>framkvæmd Menntamálastofnunar á PISA-könnunum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>mennta- og menningarmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=163</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=163</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=163&amp;lthing=146</rss>
+</mál><mál málsnúmer='164' þingnúmer='146' málsflokkur='A'>
+<málsheiti>Landsvirkjun</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=164</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=164</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=164&amp;lthing=146</rss>
+</mál><mál málsnúmer='165' þingnúmer='146' málsflokkur='A'>
+<málsheiti>útflutningur á raforku</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>ferðamála-, iðnaðar- og nýsköpunarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=165</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=165</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=165&amp;lthing=146</rss>
+</mál><mál málsnúmer='166' þingnúmer='146' málsflokkur='A'>
+<málsheiti>ríkisjarðir</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=166</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=166</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=166&amp;lthing=146</rss>
+</mál><mál málsnúmer='167' þingnúmer='146' málsflokkur='A'>
+<málsheiti>málsmeðferð hælisleitenda samkvæmt Dyflinnarreglugerðinni</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=167</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=167</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=167&amp;lthing=146</rss>
+</mál><mál málsnúmer='168' þingnúmer='146' málsflokkur='A'>
+<málsheiti>gerð samnings um vegabréfsáritanafrelsi við Kósóvó</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>utanríkisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=168</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=168</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=168&amp;lthing=146</rss>
+</mál><mál málsnúmer='169' þingnúmer='146' málsflokkur='A'>
+<málsheiti>valfrjáls bókun við samning Sameinuðu þjóðanna gegn pyndingum (OPCAT)</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=169</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=169</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=169&amp;lthing=146</rss>
+</mál><mál málsnúmer='170' þingnúmer='146' málsflokkur='A'>
+<málsheiti>valfrjáls bókun við samning Sameinuðu þjóðanna gegn pyndingum (OPCAT)</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>utanríkisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=170</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=170</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=170&amp;lthing=146</rss>
+</mál><mál málsnúmer='171' þingnúmer='146' málsflokkur='A'>
+<málsheiti>heilbrigðisþjónusta veitt erlendum ferðamönnum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>heilbrigðisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=171</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=171</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=171&amp;lthing=146</rss>
+</mál><mál málsnúmer='172' þingnúmer='146' málsflokkur='A'>
+<málsheiti>úrskurðir um umgengni barna við umgengnisforeldra</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=172</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=172</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=172&amp;lthing=146</rss>
+</mál><mál málsnúmer='173' þingnúmer='146' málsflokkur='A'>
+<málsheiti>framlagning frumvarpa er varða upplýsinga- og tjáningarfrelsi</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>mennta- og menningarmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=173</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=173</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=173&amp;lthing=146</rss>
+</mál><mál málsnúmer='174' þingnúmer='146' málsflokkur='A'>
+<málsheiti>framhaldsskólar</málsheiti>
+<efnisgreining>heilsugæsla í framhaldsskólum</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=174</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=174</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=174&amp;lthing=146</rss>
+</mál><mál málsnúmer='175' þingnúmer='146' málsflokkur='A'>
+<málsheiti>rafræn birting málaskráa og gagna ráðuneyta</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=175</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=175</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=175&amp;lthing=146</rss>
+</mál><mál málsnúmer='176' þingnúmer='146' málsflokkur='A'>
+<málsheiti>stjórn fiskveiða</málsheiti>
+<efnisgreining>strandveiðar</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=176</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=176</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=176&amp;lthing=146</rss>
+</mál><mál málsnúmer='177' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fullgilding fríverslunarsamnings milli EFTA-ríkjanna og Georgíu</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=177</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=177</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=177&amp;lthing=146</rss>
+</mál><mál málsnúmer='178' þingnúmer='146' málsflokkur='A'>
+<málsheiti>æskulýðsmál</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>mennta- og menningarmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=178</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=178</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=178&amp;lthing=146</rss>
+</mál><mál málsnúmer='179' þingnúmer='146' málsflokkur='A'>
+<málsheiti>Alexandersflugvöllur</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=179</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=179</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=179&amp;lthing=146</rss>
+</mál><mál málsnúmer='180' þingnúmer='146' málsflokkur='A'>
+<málsheiti>Fab Lab smiðjur</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>ferðamála-, iðnaðar- og nýsköpunarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=180</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=180</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=180&amp;lthing=146</rss>
+</mál><mál málsnúmer='181' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fjarskiptasjóður, staða ljósleiðaravæðingar o.fl.</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=181</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=181</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=181&amp;lthing=146</rss>
+</mál><mál málsnúmer='182' þingnúmer='146' málsflokkur='A'>
+<málsheiti>vegarlagning um Teigsskóg</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=182</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=182</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=182&amp;lthing=146</rss>
+</mál><mál málsnúmer='183' þingnúmer='146' málsflokkur='A'>
+<málsheiti>jafnt búsetuform barna sem búa á tveimur heimilum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=183</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=183</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=183&amp;lthing=146</rss>
+</mál><mál málsnúmer='184' þingnúmer='146' málsflokkur='A'>
+<málsheiti>sveitarstjórnarlög</málsheiti>
+<efnisgreining>íbúakosningar</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=184</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=184</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=184&amp;lthing=146</rss>
+</mál><mál málsnúmer='185' þingnúmer='146' málsflokkur='A'>
+<málsheiti>málefni aldraðra</málsheiti>
+<efnisgreining>réttur til sambúðar á stofnunum</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=185</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=185</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=185&amp;lthing=146</rss>
+</mál><mál málsnúmer='186' þingnúmer='146' málsflokkur='A'>
+<málsheiti>starfsemi Nýsköpunarmiðstöðvar Íslands á landsbyggðinni</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>ferðamála-, iðnaðar- og nýsköpunarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=186</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=186</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=186&amp;lthing=146</rss>
+</mál><mál málsnúmer='187' þingnúmer='146' málsflokkur='A'>
+<málsheiti>hamfarasjóður</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>umhverfis- og auðlindaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=187</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=187</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=187&amp;lthing=146</rss>
+</mál><mál málsnúmer='188' þingnúmer='146' málsflokkur='A'>
+<málsheiti>rekstur innanlandsflugvalla</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=188</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=188</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=188&amp;lthing=146</rss>
+</mál><mál málsnúmer='189' þingnúmer='146' málsflokkur='A'>
+<málsheiti>kjararáð</málsheiti>
+<efnisgreining>lækkun launa til samræmis við launaþróun frá 2013</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=189</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=189</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=189&amp;lthing=146</rss>
+</mál><mál málsnúmer='190' þingnúmer='146' málsflokkur='A'>
+<málsheiti>kosningar til sveitarstjórna</málsheiti>
+<efnisgreining>kosningaaldur</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=190</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=190</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=190&amp;lthing=146</rss>
+</mál><mál málsnúmer='191' þingnúmer='146' málsflokkur='A'>
+<málsheiti>framhaldsskóladeild á Reykhólum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>mennta- og menningarmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=191</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=191</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=191&amp;lthing=146</rss>
+</mál><mál málsnúmer='192' þingnúmer='146' málsflokkur='A'>
+<málsheiti>nám í hjúkrunarfræði</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>mennta- og menningarmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=192</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=192</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=192&amp;lthing=146</rss>
+</mál><mál málsnúmer='193' þingnúmer='146' málsflokkur='A'>
+<málsheiti>uppbygging að Hrauni í Öxnadal</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=193</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=193</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=193&amp;lthing=146</rss>
+</mál><mál málsnúmer='194' þingnúmer='146' málsflokkur='A'>
+<málsheiti>sóknaráætlanir landshluta</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>samgöngu- og sveitarstjórnarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=194</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=194</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=194&amp;lthing=146</rss>
+</mál><mál málsnúmer='195' þingnúmer='146' málsflokkur='A'>
+<málsheiti>þingsköp Alþingis</málsheiti>
+<efnisgreining>þingseta ráðherra</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=195</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=195</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=195&amp;lthing=146</rss>
+</mál><mál málsnúmer='196' þingnúmer='146' málsflokkur='A'>
+<málsheiti>staða lýðræðis í stafrænum heimi, ógnir við friðhelgi einkalífs og einstaklingsfrelsi</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='b'><heiti>Beiðni um skýrslu</heiti><heiti2>beiðni um skýrslu</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=196</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=196</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=196&amp;lthing=146</rss>
+</mál><mál málsnúmer='197' þingnúmer='146' málsflokkur='A'>
+<málsheiti>húsnæðismál</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>félags- og jafnréttismálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=197</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=197</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=197&amp;lthing=146</rss>
+</mál><mál málsnúmer='198' þingnúmer='146' málsflokkur='A'>
+<málsheiti>efling brothættra byggða og byggðafestu veiðiheimilda</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=198</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=198</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=198&amp;lthing=146</rss>
+</mál><mál málsnúmer='199' þingnúmer='146' málsflokkur='A'>
+<málsheiti>Þjóðhagsstofnun</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=199</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=199</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=199&amp;lthing=146</rss>
+</mál><mál málsnúmer='200' þingnúmer='146' málsflokkur='A'>
+<málsheiti>mótun klasastefnu</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=200</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=200</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=200&amp;lthing=146</rss>
+</mál><mál málsnúmer='201' þingnúmer='146' málsflokkur='A'>
+<málsheiti>uppsögn samkomulags við þjóðkirkjuna um kirkjujarðir o.fl. frá 1997</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=201</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=201</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=201&amp;lthing=146</rss>
+</mál><mál málsnúmer='202' þingnúmer='146' málsflokkur='A'>
+<málsheiti>þingsköp Alþingis</málsheiti>
+<efnisgreining>líftími þingmála</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=202</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=202</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=202&amp;lthing=146</rss>
+</mál><mál málsnúmer='203' þingnúmer='146' málsflokkur='A'>
+<málsheiti>kosningar til Alþingis</málsheiti>
+<efnisgreining>skipting þingsæta</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=203</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=203</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=203&amp;lthing=146</rss>
+</mál><mál málsnúmer='204' þingnúmer='146' málsflokkur='A'>
+<málsheiti>Umhverfisstofnun</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=204</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=204</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=204&amp;lthing=146</rss>
+</mál><mál málsnúmer='205' þingnúmer='146' málsflokkur='A'>
+<málsheiti>staða og stefna í loftslagsmálum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='s'><heiti>Skýrsla</heiti><heiti2>skýrsla</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=205</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=205</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=205&amp;lthing=146</rss>
+</mál><mál málsnúmer='206' þingnúmer='146' málsflokkur='A'>
+<málsheiti>fyrirhugaður flutningur á aðsetri Hafrannsóknastofnunar -- ráðgjafarstofnunar hafs og vatna</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='s'><heiti>Skýrsla</heiti><heiti2>skýrsla</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=206</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=206</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=206&amp;lthing=146</rss>
+</mál><mál málsnúmer='207' þingnúmer='146' málsflokkur='A'>
+<málsheiti>áætlun um vernd og orkunýtingu landsvæða</málsheiti>
+<efnisgreining>rammaáætlun</efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=207</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=207</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=207&amp;lthing=146</rss>
+</mál><mál málsnúmer='208' þingnúmer='146' málsflokkur='A'>
+<málsheiti>kosningar til Alþingis</málsheiti>
+<efnisgreining>persónukjör þvert á flokka</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=208</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=208</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=208&amp;lthing=146</rss>
+</mál><mál málsnúmer='209' þingnúmer='146' málsflokkur='A'>
+<málsheiti>ábendingar til barnaverndarnefnda um ofbeldi gegn börnum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>félags- og jafnréttismálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=209</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=209</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=209&amp;lthing=146</rss>
+</mál><mál málsnúmer='210' þingnúmer='146' málsflokkur='A'>
+<málsheiti>kærur um ofbeldi gegn börnum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=210</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=210</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=210&amp;lthing=146</rss>
+</mál><mál málsnúmer='211' þingnúmer='146' málsflokkur='A'>
+<málsheiti>kærur um kynferðisbrot</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>dómsmálaráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=211</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=211</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=211&amp;lthing=146</rss>
+</mál><mál málsnúmer='212' þingnúmer='146' málsflokkur='A'>
+<málsheiti>mótun stefnu og framkvæmdaáætlunar um ferðamannaleiðir á Vestfjörðum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=212</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=212</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=212&amp;lthing=146</rss>
+</mál><mál málsnúmer='213' þingnúmer='146' málsflokkur='A'>
+<málsheiti>mótun stefnu stjórnvalda um flokkun, vernd og skráningu ræktunarlands</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=213</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=213</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=213&amp;lthing=146</rss>
+</mál><mál málsnúmer='214' þingnúmer='146' málsflokkur='A'>
+<málsheiti>tíðni kynsjúkdóma hjá börnum og ungmennum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>heilbrigðisráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=214</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=214</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=214&amp;lthing=146</rss>
+</mál><mál málsnúmer='215' þingnúmer='146' málsflokkur='A'>
+<málsheiti>þjónustu- og þekkingarmiðstöð fyrir blinda, sjónskerta og daufblinda einstaklinga</málsheiti>
+<efnisgreining>endurgreiðsla vegna gleraugnakaupa barna</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=215</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=215</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=215&amp;lthing=146</rss>
+</mál><mál málsnúmer='216' þingnúmer='146' málsflokkur='A'>
+<málsheiti>vextir og verðtrygging o.fl.</málsheiti>
+<efnisgreining>lán tengd erlendum gjaldmiðlum</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=216</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=216</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=216&amp;lthing=146</rss>
+</mál><mál málsnúmer='217' þingnúmer='146' málsflokkur='A'>
+<málsheiti>evrópskt eftirlitskerfi á fjármálamarkaði</málsheiti>
+<efnisgreining>EES-reglur</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=217</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=217</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=217&amp;lthing=146</rss>
+</mál><mál málsnúmer='218' þingnúmer='146' málsflokkur='A'>
+<málsheiti>hrefnuveiðar</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='q'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn til skrifl. svars</heiti2></málstegund>
+<fyrirspurntil>sjávarútvegs- og landbúnaðarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=218</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=218</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=218&amp;lthing=146</rss>
+</mál><mál málsnúmer='219' þingnúmer='146' málsflokkur='A'>
+<málsheiti>kjötrækt</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=219</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=219</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=219&amp;lthing=146</rss>
+</mál><mál málsnúmer='220' þingnúmer='146' málsflokkur='A'>
+<málsheiti>vextir og gengi krónunnar</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=220</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=220</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=220&amp;lthing=146</rss>
+</mál><mál málsnúmer='221' þingnúmer='146' málsflokkur='A'>
+<málsheiti>tryggingagjald</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>fjármála- og efnahagsráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=221</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=221</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=221&amp;lthing=146</rss>
+</mál><mál málsnúmer='222' þingnúmer='146' málsflokkur='A'>
+<málsheiti>millilandaflug um Hornafjarðarflugvöll</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'><heiti>Tillaga til þingsályktunar</heiti><heiti2>þingsályktunartillaga</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=222</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=222</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=222&amp;lthing=146</rss>
+</mál><mál málsnúmer='223' þingnúmer='146' málsflokkur='A'>
+<málsheiti>málefni aldraðra</málsheiti>
+<efnisgreining>akstursþjónusta</efnisgreining>
+<málstegund málstegund='l'><heiti>Frumvarp til laga</heiti><heiti2>lagafrumvarp</heiti2></málstegund>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=223</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=223</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=223&amp;lthing=146</rss>
+</mál><mál málsnúmer='224' þingnúmer='146' málsflokkur='A'>
+<málsheiti>heimaslátrun og aukinn fjölbreytileiki í matvælaframleiðslu</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='m'><heiti>Fyrirspurn</heiti><heiti2>fyrirspurn</heiti2></málstegund>
+<fyrirspurntil>sjávarútvegs- og landbúnaðarráðherra</fyrirspurntil><html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=224</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=224</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=224&amp;lthing=146</rss>
+</mál><mál málsnúmer='109' þingnúmer='146' málsflokkur='B'>
+<málsheiti>óundirbúinn fyrirspurnatími</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=109</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=109</xml>
+</mál><mál málsnúmer='110' þingnúmer='146' málsflokkur='B'>
+<málsheiti>framkvæmd og fjármögnun heilbrigðisstefnu</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=110</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=110</xml>
+</mál><mál málsnúmer='111' þingnúmer='146' málsflokkur='B'>
+<málsheiti>skýrsla um aflandseignir og brot á siðareglum</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=111</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=111</xml>
+</mál><mál málsnúmer='112' þingnúmer='146' málsflokkur='B'>
+<málsheiti>uppfylling kosningaloforða</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=112</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=112</xml>
+</mál><mál málsnúmer='113' þingnúmer='146' málsflokkur='B'>
+<málsheiti>innflutningur á landbúnaðarafurðum og loftslagsmál</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=113</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=113</xml>
+</mál><mál málsnúmer='114' þingnúmer='146' málsflokkur='B'>
+<málsheiti>aðgerðaáætlun í loftslagsmálum</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=114</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=114</xml>
+</mál><mál málsnúmer='116' þingnúmer='146' málsflokkur='B'>
+<málsheiti>skýrsla starfshóps um eignir Íslendinga á aflandssvæðum og tekjutap hins opinbera</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=116</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=116</xml>
+</mál><mál málsnúmer='117' þingnúmer='146' málsflokkur='B'>
+<málsheiti>húsnæðismál</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=117</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=117</xml>
+</mál><mál málsnúmer='125' þingnúmer='146' málsflokkur='B'>
+<málsheiti>óundirbúinn fyrirspurnatími</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=125</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=125</xml>
+</mál><mál málsnúmer='126' þingnúmer='146' málsflokkur='B'>
+<málsheiti>takmörkun á ferðafrelsi íslensks ríkisborgara</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=126</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=126</xml>
+</mál><mál málsnúmer='127' þingnúmer='146' málsflokkur='B'>
+<málsheiti>yfirlýsingar Bandaríkjaforseta um meðferð á föngum</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=127</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=127</xml>
+</mál><mál málsnúmer='128' þingnúmer='146' málsflokkur='B'>
+<málsheiti>yfirlýsingar Bandaríkjaforseta og framtíð NATO</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=128</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=128</xml>
+</mál><mál málsnúmer='129' þingnúmer='146' málsflokkur='B'>
+<málsheiti>mengun frá kísilverum</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=129</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=129</xml>
+</mál><mál málsnúmer='130' þingnúmer='146' málsflokkur='B'>
+<málsheiti>sjómannaverkfallið</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=130</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=130</xml>
+</mál><mál málsnúmer='132' þingnúmer='146' málsflokkur='B'>
+<málsheiti>stjórnmálaástandið í Bandaríkjunum</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=132</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=132</xml>
+</mál><mál málsnúmer='147' þingnúmer='146' málsflokkur='B'>
+<málsheiti>kjör öryrkja</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=147</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=147</xml>
+</mál><mál málsnúmer='152' þingnúmer='146' málsflokkur='B'>
+<málsheiti>óundirbúinn fyrirspurnatími</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=152</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=152</xml>
+</mál><mál málsnúmer='153' þingnúmer='146' málsflokkur='B'>
+<málsheiti>einkarekstur í heilbrigðisþjónustu</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=153</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=153</xml>
+</mál><mál málsnúmer='154' þingnúmer='146' málsflokkur='B'>
+<málsheiti>stefnumótun um einkavæðingu í heilbrigðisþjónustu</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=154</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=154</xml>
+</mál><mál málsnúmer='155' þingnúmer='146' málsflokkur='B'>
+<málsheiti>raforkukostnaður garðyrkjubænda</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=155</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=155</xml>
+</mál><mál málsnúmer='156' þingnúmer='146' málsflokkur='B'>
+<málsheiti>einkarekin sjúkrahússþjónusta</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=156</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=156</xml>
+</mál><mál málsnúmer='157' þingnúmer='146' málsflokkur='B'>
+<málsheiti>könnun á hagkvæmni lestarsamgangna</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=157</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=157</xml>
+</mál><mál málsnúmer='158' þingnúmer='146' málsflokkur='B'>
+<málsheiti>óundirbúinn fyrirspurnatími</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=158</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=158</xml>
+</mál><mál málsnúmer='159' þingnúmer='146' málsflokkur='B'>
+<málsheiti>framlagning tveggja skýrslna</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=159</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=159</xml>
+</mál><mál málsnúmer='160' þingnúmer='146' málsflokkur='B'>
+<málsheiti>breytingar á Dyflinnarreglugerðinni</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=160</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=160</xml>
+</mál><mál málsnúmer='161' þingnúmer='146' málsflokkur='B'>
+<málsheiti>sjómannadeilan</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=161</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=161</xml>
+</mál><mál málsnúmer='162' þingnúmer='146' málsflokkur='B'>
+<málsheiti>dráttur á birtingu tveggja skýrslna</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=162</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=162</xml>
+</mál><mál málsnúmer='163' þingnúmer='146' málsflokkur='B'>
+<málsheiti>málefni innanlandsflugvalla</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=163</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=163</xml>
+</mál><mál málsnúmer='165' þingnúmer='146' málsflokkur='B'>
+<málsheiti>verklag við opinber fjármál</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=165</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=165</xml>
+</mál><mál málsnúmer='171' þingnúmer='146' málsflokkur='B'>
+<málsheiti>heilsugæslan í landinu</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=171</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=171</xml>
+</mál><mál málsnúmer='175' þingnúmer='146' málsflokkur='B'>
+<málsheiti>skil á skýrslu um eignir Íslendinga á aflandssvæðum</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=175</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=175</xml>
+</mál><mál málsnúmer='180' þingnúmer='146' málsflokkur='B'>
+<málsheiti>óundirbúinn fyrirspurnatími</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=180</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=180</xml>
+</mál><mál málsnúmer='181' þingnúmer='146' málsflokkur='B'>
+<málsheiti>heilbrigðisáætlun og hjúkrunarheimili</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=181</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=181</xml>
+</mál><mál málsnúmer='182' þingnúmer='146' málsflokkur='B'>
+<málsheiti>viðbrögð við skýrslu um Kópavogshæli</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=182</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=182</xml>
+</mál><mál málsnúmer='183' þingnúmer='146' málsflokkur='B'>
+<málsheiti>stefnumörkun í fiskeldi</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=183</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=183</xml>
+</mál><mál málsnúmer='184' þingnúmer='146' málsflokkur='B'>
+<málsheiti>ívilnandi samningar vegna mengandi stóriðju</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=184</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=184</xml>
+</mál><mál málsnúmer='185' þingnúmer='146' málsflokkur='B'>
+<málsheiti>reglur um atvinnuleysisbætur</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=185</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=185</xml>
+</mál><mál málsnúmer='191' þingnúmer='146' málsflokkur='B'>
+<málsheiti>óundirbúinn fyrirspurnatími</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=191</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=191</xml>
+</mál><mál málsnúmer='192' þingnúmer='146' málsflokkur='B'>
+<málsheiti>fjárframlög í samgöngumál</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=192</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=192</xml>
+</mál><mál málsnúmer='193' þingnúmer='146' málsflokkur='B'>
+<málsheiti>stuðningur við ríkisstjórnina</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=193</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=193</xml>
+</mál><mál málsnúmer='194' þingnúmer='146' málsflokkur='B'>
+<málsheiti>kynjahalli í dómskerfinu</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=194</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=194</xml>
+</mál><mál málsnúmer='195' þingnúmer='146' málsflokkur='B'>
+<málsheiti>úrskurður kjararáðs og komandi kjarasamningar</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=195</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=195</xml>
+</mál><mál málsnúmer='196' þingnúmer='146' málsflokkur='B'>
+<málsheiti>brottvísun bresks ríkisborgara á leið til Bandaríkjanna</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=196</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=196</xml>
+</mál><mál málsnúmer='198' þingnúmer='146' málsflokkur='B'>
+<málsheiti>skýrsla um niðurfærslu verðtryggðra fasteignalána</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=198</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=198</xml>
+</mál><mál málsnúmer='199' þingnúmer='146' málsflokkur='B'>
+<málsheiti>skil á skýrslu um eignir Íslendinga á aflandssvæðum</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=199</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=199</xml>
+</mál><mál málsnúmer='209' þingnúmer='146' málsflokkur='B'>
+<málsheiti>matvælaframleiðsla og matvælaöryggi</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=209</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=209</xml>
+</mál><mál málsnúmer='216' þingnúmer='146' málsflokkur='B'>
+<málsheiti>óundirbúinn fyrirspurnatími</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=216</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=216</xml>
+</mál><mál málsnúmer='217' þingnúmer='146' málsflokkur='B'>
+<málsheiti>aðgerðir gegn skattundanskotum og aflandsfélögum</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=217</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=217</xml>
+</mál><mál málsnúmer='218' þingnúmer='146' málsflokkur='B'>
+<málsheiti>aðkoma ráðherra að lausn sjómannaverkfallsins</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=218</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=218</xml>
+</mál><mál málsnúmer='219' þingnúmer='146' málsflokkur='B'>
+<málsheiti>rekstrarvandi hjúkrunarheimila</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=219</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=219</xml>
+</mál><mál málsnúmer='220' þingnúmer='146' málsflokkur='B'>
+<málsheiti>kostnaður við ný krabbameinslyf</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=220</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=220</xml>
+</mál><mál málsnúmer='221' þingnúmer='146' málsflokkur='B'>
+<málsheiti>virðisaukaskattur af íþrótta- og æskulýðsstarfi</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=221</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=221</xml>
+</mál><mál málsnúmer='223' þingnúmer='146' málsflokkur='B'>
+<málsheiti>samgöngur á höfuðborgarsvæðinu</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=223</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=223</xml>
+</mál><mál málsnúmer='224' þingnúmer='146' málsflokkur='B'>
+<málsheiti>staðan í ferðamálum - leiðir til gjaldtöku og skipting tekna</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=224</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=224</xml>
+</mál><mál málsnúmer='233' þingnúmer='146' málsflokkur='B'>
+<málsheiti>æskulýðsmál og samfélagsþátttaka ungs fólks á Íslandi</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=233</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=233</xml>
+</mál><mál málsnúmer='239' þingnúmer='146' málsflokkur='B'>
+<málsheiti>óundirbúinn fyrirspurnatími</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=239</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=239</xml>
+</mál><mál málsnúmer='240' þingnúmer='146' málsflokkur='B'>
+<málsheiti>sala á Arion banka</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=240</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=240</xml>
+</mál><mál málsnúmer='241' þingnúmer='146' málsflokkur='B'>
+<málsheiti>breyting á lögum um almannatryggingar</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=241</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=241</xml>
+</mál><mál málsnúmer='242' þingnúmer='146' málsflokkur='B'>
+<málsheiti>dýraheilbrigði og innflutningur á hráu kjöti</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=242</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=242</xml>
+</mál><mál málsnúmer='243' þingnúmer='146' málsflokkur='B'>
+<málsheiti>samgöngumál í Reykjavík</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=243</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=243</xml>
+</mál><mál málsnúmer='244' þingnúmer='146' málsflokkur='B'>
+<málsheiti>breytingar á námslánakerfinu</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=244</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=244</xml>
+</mál><mál málsnúmer='246' þingnúmer='146' málsflokkur='B'>
+<málsheiti>eigandastefna ríkisins í fjármálafyrirtækjum</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=246</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=246</xml>
+</mál><mál málsnúmer='268' þingnúmer='146' málsflokkur='B'>
+<málsheiti>framtíðarsýn í heilbrigðismálum</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=268</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=268</xml>
+</mál><mál málsnúmer='270' þingnúmer='146' málsflokkur='B'>
+<málsheiti>óundirbúinn fyrirspurnatími</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=270</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=270</xml>
+</mál><mál málsnúmer='271' þingnúmer='146' málsflokkur='B'>
+<málsheiti>kostnaður við breytingu á Stjórnarráðinu</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=271</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=271</xml>
+</mál><mál málsnúmer='272' þingnúmer='146' málsflokkur='B'>
+<málsheiti>samstarf við breytingar á lífeyrissjóðakerfinu</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=272</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=272</xml>
+</mál><mál málsnúmer='273' þingnúmer='146' málsflokkur='B'>
+<málsheiti>greiðsluþátttaka einstaklinga í heilbrigðiskerfinu</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=273</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=273</xml>
+</mál><mál málsnúmer='274' þingnúmer='146' málsflokkur='B'>
+<málsheiti>ívilnandi samningar vegna mengandi stóriðju</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=274</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=274</xml>
+</mál><mál málsnúmer='275' þingnúmer='146' málsflokkur='B'>
+<málsheiti>málefni Seðlabankans og losun hafta</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=275</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=275</xml>
+</mál><mál málsnúmer='295' þingnúmer='146' málsflokkur='B'>
+<málsheiti>skýrsla um könnun á vistun barna á Kópavogshæli</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=295</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=295</xml>
+</mál><mál málsnúmer='296' þingnúmer='146' málsflokkur='B'>
+<málsheiti>matvælaframleiðsla og loftslagsmál</málsheiti>
+<málstegund málstegund='um'><heiti>sérstök umræða</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=296</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=296</xml>
+</mál><mál málsnúmer='299' þingnúmer='146' málsflokkur='B'>
+<málsheiti>óundirbúinn fyrirspurnatími</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=299</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=299</xml>
+</mál><mál málsnúmer='300' þingnúmer='146' málsflokkur='B'>
+<málsheiti>fsp. 1</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=300</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=300</xml>
+</mál><mál málsnúmer='301' þingnúmer='146' málsflokkur='B'>
+<málsheiti>fsp. 2</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=301</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=301</xml>
+</mál><mál málsnúmer='302' þingnúmer='146' málsflokkur='B'>
+<málsheiti>fsp. 3</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=302</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=302</xml>
+</mál><mál málsnúmer='303' þingnúmer='146' málsflokkur='B'>
+<málsheiti>fsp. 4</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=303</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=303</xml>
+</mál><mál málsnúmer='304' þingnúmer='146' málsflokkur='B'>
+<málsheiti>fsp. 5</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=304</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=304</xml>
+</mál><mál málsnúmer='305' þingnúmer='146' málsflokkur='B'>
+<málsheiti>fsp. 6</málsheiti>
+<málstegund málstegund='ft'><heiti>óundirbúinn fyrirspurnatími</heiti></málstegund>
+<html>https://www.althingi.is/thingstorf/thingmalalistar-eftir-thingum/bferill/?ltg=146&amp;mnr=305</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/bmal/?lthing=146&amp;malnr=305</xml>
+</mál></málaskrá>

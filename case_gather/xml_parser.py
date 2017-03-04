@@ -19,9 +19,8 @@ def get_case_data(parliament_session_number):
     """
     # link_summary = "http://www.althingi.is/altext/xml/samantektir\
     #     /samantekt/?lthing=146&malnr="
-    link_details = "http://www.althingi.is/altext/xml/\
-        thingmalalisti/thingmal/?lthing=146&malnr="
-
+    link_details = """http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=%i&malnr=""" % parliament_session_number
+    xml_logger.info(link_details)
     xml_logger.info('Getting case data from get_cases')
     case = get_cases(parliament_session_number)
     xml_logger.info('Have the cases')
@@ -54,11 +53,11 @@ def get_case_data(parliament_session_number):
         subjects = details[2]
 
         xml_logger.info('creating output dictionary')
-        
-        output = {'number': number, 'name': name,
-                  'case_type': case_type, 'case_status': case_status,
-                  'rel_cases': rel_cases, 'subjects': subjects,
-                  'session': parliament_session_number}
+
+        output = {'number': number, 'name': name, 'rel_cases': rel_cases,
+                  'case_type': case_type, 'session': parliament_session_number,
+                  'case_status': case_status, 'subjects': subjects}
+
         xml_logger.info('yielding output to services')
         yield output
 
@@ -77,8 +76,7 @@ def get_subject(subject_id):
     output keys: [subject_id, group_name, subject_name,
              subject_description, case_numbers]
     """
-    link = "http://www.althingi.is/altext/xml/efnisflokkar/\
-        efnisflokkur/?efnisflokkur="
+    link = "http://www.althingi.is/altext/xml/efnisflokkar/efnisflokkur/?efnisflokkur="
     soup = get_xml(link + subject_id)
 
     output = {}
@@ -132,7 +130,6 @@ def get_subjects():
 
 
 def get_cases(parliament_session_number):
-    xml_logger = logging.getLogger('xmlParser')
     """
     Function (generator) to retrieve a case from þingmálalisti
     Interesting information:
@@ -142,22 +139,13 @@ def get_cases(parliament_session_number):
 
     Output format: [case_number, case_name, case_type]
     """
-    link = "http://www.althingi.is/altext/xml/thingmalalisti/?lthing="
-    soup = get_xml(link + str(parliament_session_number))
+    xml_logger = logging.getLogger('xmlParser')
+    xml_logger.info('starting get_cases')
 
-    case_numbers_gen = xml_helper.get_attribute_value(
-        soup, "mál", "málsnúmer")
+    cases = case_collector(parliament_session_number)
 
-    case_names_gen = xml_helper.get_element_text(soup, "heiti")
-
-    case_types_gen = xml_helper.get_attribute_value(
-        soup, "málstegund", "málstegund")
-
-    output = []
     try:
-        for number, name, case_type in zip(
-                case_numbers_gen, case_names_gen, case_types_gen):
-
+        for number, name, case_type in cases:
             xml_logger.info('getting case named: ' + name)
             output = [number, name, case_type]
             xml_logger.info('yielding output')
@@ -165,12 +153,32 @@ def get_cases(parliament_session_number):
     except Exception as e:
         xml_logger.error(e.message)
         xml_logger.info('Iteration over all parliament cases complete')
-    else:
-        pass
-    finally:
-        case_numbers_gen.close()
-        case_names_gen.close()
-        case_types_gen.close()
+
+
+def case_collector(parliament_session_number):
+    xml_logger = logging.getLogger('xmlParser')
+
+    link = "http://www.althingi.is/altext/xml/thingmalalisti/?lthing="
+    soup = get_xml(link + str(parliament_session_number))
+
+    xml_logger.info('have the case soup')
+
+    case_numbers_gen = xml_helper.get_attribute_value(
+        soup, "mál", "málsnúmer")
+
+    xml_logger.info('have the case numbers generator')
+
+    case_names_gen = xml_helper.get_element_text(soup, "málsheiti")
+
+    xml_logger.info('have the case names generator')
+
+    case_types_gen = xml_helper.get_attribute_value(
+        soup, "málstegund", "málstegund")
+
+    xml_logger.info('have the case case_types_gen generator')
+
+    for number, name, case_type in zip(case_numbers_gen, case_names_gen, case_types_gen):
+        yield number, name, case_type
 
 
 def get_xml(link):

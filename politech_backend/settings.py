@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+TEST_DATA_FOLDER = os.path.join(BASE_DIR, 'case_gather','test_data/')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -131,6 +131,12 @@ LOGGING = {
             'filename': 'logs/cronJobs.log',
             'formatter': 'verbose'
         },
+        'xmlHelperHandler': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'logs/xmlHelper.log',
+            'formatter': 'verbose'
+        },
         'cronJobServicesHandler': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
@@ -149,6 +155,11 @@ LOGGING = {
             'handlers': ['cronJobHandler'],
             'propagate': True,
             'level': 'DEBUG',
+        },
+        'xmlHelper': {
+            'handlers': ['xmlHelperHandler'],
+            'propagate': True,
+            'level': 'DEBUG'
         },
         'xmlParser': {
             'handlers': ['xmlParserHandler'],

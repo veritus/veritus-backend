@@ -1,3 +1,6 @@
+import logging
+
+
 def get_attribute_value(soup, element, attribute):
     """ 
     element: name of element as a str
@@ -7,11 +10,18 @@ def get_attribute_value(soup, element, attribute):
     Interesting elements : attribute pairs:
         - mál : málsnúmer
     """
-    d = {element: attribute}
-    values = soup.findAll(d)
+    logger = logging.getLogger('xmlHelper')
 
-    for value in values:
-        yield value[attribute]
+    logger.info('looking for values')
+    d = {element : attribute}
+    try:
+        values = soup.findAll(d)
+        logger.info('have values, fx: ' + str(values[0]))
+        for value in values:
+            yield value[attribute]
+    except Exception as e:
+        logger.error(e.message)
+
 
 def get_element_text(soup, element):
     """
@@ -24,10 +34,17 @@ def get_element_text(soup, element):
         - heiti2 
         - xml
     """
-    elements = soup.findAll(element)
+    logger = logging.getLogger('xmlHelper')
 
-    for element in elements:
-        yield element.text
+    logger.info('looking for elements')
+    try:
+        elements = soup.findAll(element)
+        logger.info('have elements, fx: ' + elements[0].text)
+        for element in elements:
+            yield element.text
+    except Exception as e:
+        logger.error(e.message)
+
 
 def get_case_details(soup):
     """
@@ -38,24 +55,34 @@ def get_case_details(soup):
         - subject id numbers (efnisflokkur : id)
     Output format [status, rel_casenumber, id_numbers]
     """
-    status_gen = xml_helper.get_element_text(soup, "staðamáls")
-    rel_cases_gen = xml_helper.get_attribute_value(soup, "mál", "málsnúmer")
-    subj_id_gen = xml_helper.get_attribute_value(soup, "efnisflokkur", "id")
+    logger = logging.getLogger('xmlHelper')
+    logger.info('starting get_case_details')
+
+    status_gen = get_element_text(soup, "staðamáls")
+    rel_cases_gen = get_attribute_value(soup, "mál", "málsnúmer")
+    subj_id_gen = get_attribute_value(soup, "efnisflokkur", "id")
 
     output = []
     subj_ids = []
     rel_cases = []
-
+    logger.info('Adding related cases to list')
     for rel_case in rel_cases_gen:
         rel_cases.append(rel_case)
 
+    # remove the first rel_case, as it is the actual case
+    rel_cases.pop(0)
+
+    logger.info('adding subject ids to list')
     for subj_id in subj_id_gen:
         subj_ids.append(subj_id)
 
+    logger.info('creating case status generator')
     status = next(status_gen)
 
     output = [status, rel_cases, subj_ids]
+    logger.info('returning case details output')
     return output
+
 
 def get_case_summary(soup):
     """
@@ -68,11 +95,14 @@ def get_case_summary(soup):
         - (afgreiðsla)
     output format [goal, sign_changes, law_changes, costs, resolution]
     """
-    goal_gen = xml_helper.get_element_text(soup, "markmið")
-    changes_gen = xml_helper.get_element_text(soup, "helstuBreytingar")
-    law_changes_gen = xml_helper.get_element_text(soup, "breytingaráLögum")
-    costs_gen = xml_helper.get_element_text(soup, "kostnaðurOgTekjur")
-    resolution_gen = xml_helper.get_element_text(soup, "afgreiðsla")
+    logger = logging.getLogger('xmlHelper')
+    logger.info('starting get_case_summary')
+
+    goal_gen = get_element_text(soup, "markmið")
+    changes_gen = get_element_text(soup, "helstuBreytingar")
+    law_changes_gen = get_element_text(soup, "breytingaráLögum")
+    costs_gen = get_element_text(soup, "kostnaðurOgTekjur")
+    resolution_gen = get_element_text(soup, "afgreiðsla")
 
     goal = next(goal_gen)
     changes = next(changes_gen)
