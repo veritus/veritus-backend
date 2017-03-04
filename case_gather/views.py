@@ -1,3 +1,5 @@
+""" Webservice endpoints for bills """
+
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
@@ -22,6 +24,7 @@ def case_detail(request, pk):
     try:
         case = Case.objects.get(pk=pk)
     except Case.DoesNotExist:
+
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':

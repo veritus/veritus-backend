@@ -20,6 +20,8 @@ urlpatterns = [
     url(r'^parliaments/(?P<pk>[0-9]+)$', parliament_views.parliament_detail),
     url(r'^parliamentSessions/$', parliament_views.parliament_session_list),
     url(r'^parliamentSessions/(?P<pk>[0-9]+)$', parliament_views.parliament_session_detail),
+    url(r'^rest-auth/', include('rest_auth.urls')),
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls'))
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

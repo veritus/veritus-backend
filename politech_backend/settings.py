@@ -42,14 +42,22 @@ INSTALLED_APPS = [
     'promises',
     'tags',
     'rest_framework',
+    'rest_framework.authtoken',
     'main',
     'parliament',
-
+    'rest_auth',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
+    'corsheaders',
 ]
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -77,6 +85,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'politech_backend.wsgi.application'
 
+CORS_ORIGIN_WHITELIST = (
+    'localhost:3000',
+)
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
@@ -148,7 +159,14 @@ LOGGING = {
             'class': 'logging.FileHandler',
             'filename': 'logs/xmlParser.log',
             'formatter': 'verbose'
-        }
+        },
+        'promiseHandler': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'logs/promise.log',
+            'formatter': 'verbose'
+        },
+
     },
     'loggers': {
         'cronJobs': {
@@ -170,7 +188,12 @@ LOGGING = {
             'handlers': ['cronJobServicesHandler'],
             'propagate': True,
             'level': 'DEBUG'
-        }
+        },
+        'promise': {
+            'handlers': ['promiseHandler'],
+            'propagate': True,
+            'level': 'DEBUG',
+        },
     }
 }
 
@@ -183,8 +206,12 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly'
     ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ),
     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
 }
 
@@ -207,3 +234,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+REST_SESSION_LOGIN = False
