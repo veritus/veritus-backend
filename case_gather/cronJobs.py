@@ -21,6 +21,7 @@ class gather_cases(CronJobBase):
             cron_logger.info('Starting case gathering')
 
             case_gathering_services.update_case_db(session_number)
-            cron_logger.info('Case gathering completed')
         except Exception as e:
             cron_logger.error(e.message + " - " + traceback.format_exc())
+        finally:
+            cron_logger.info('Case gathering completed')
