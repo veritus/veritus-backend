@@ -30,7 +30,7 @@ before_script:
   - psql -c "CREATE DATABASE politech;" -U postgres
 
 script: 
-    - python manage.py syncdb --noinput
+    - python manage.py check
     - pytest promises/tests.py 
     - python manage.py test
 
