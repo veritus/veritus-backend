@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from rest_framework.urlpatterns import format_suffix_patterns
 from promises import views as promise_views
-from bill_gather import views as bill_views
+from case_gather import views as case_views
 from parliament import views as parliament_views
 
 urlpatterns = [
@@ -10,12 +10,12 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^promises/$', promise_views.promise_list),
     url(r'^promises/(?P<pk>[0-9]+)$', promise_views.promise_detail),
-    url(r'^promiseBills/$', promise_views.PromiseBillList.as_view()),
-    url(r'^promiseBills/(?P<pk>[0-9]+)$', promise_views.promise_bill_detail),
-    url(r'^suggestedPromiseBills/$', promise_views.SuggestedPromiseBillList.as_view()),
-    url(r'^suggestedPromiseBills/(?P<pk>[0-9]+)$', promise_views.suggested_promise_bill_detail),
-    url(r'^bills/$', bill_views.bill_list),
-    url(r'^bills/(?P<pk>[0-9]+)$', bill_views.bill_detail),
+    url(r'^promiseCases/$', promise_views.PromiseCaseList.as_view()),
+    url(r'^promiseCases/(?P<pk>[0-9]+)$', promise_views.promise_case_detail),
+    url(r'^suggestedPromiseCases/$', promise_views.SuggestedPromiseCaseList.as_view()),
+    url(r'^suggestedPromiseCases/(?P<pk>[0-9]+)$', promise_views.suggested_promise_case_detail),
+    url(r'^cases/$', case_views.case_list),
+    url(r'^cases/(?P<pk>[0-9]+)$', case_views.case_detail),
     url(r'^parliaments/$', parliament_views.parliament_list),
     url(r'^parliaments/(?P<pk>[0-9]+)$', parliament_views.parliament_detail),
     url(r'^parliamentSessions/$', parliament_views.parliament_session_list),

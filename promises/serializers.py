@@ -1,7 +1,7 @@
 from rest_framework import serializers, viewsets
 from .models import Promise
 from parliament.serializers import ParliamentSerializer
-from bill_gather.serializers import BillSerializer
+from case_gather.serializers import CaseSerializer
 
 class PromiseSerializerRead(serializers.ModelSerializer):
 
@@ -19,21 +19,21 @@ class PromiseSerializerWrite(serializers.ModelSerializer):
         fields = ('name', 'small_description', 'long_description', 'parliament', 'id', 'created', 'modified')
 
 
-class PromiseBillSerializer(serializers.ModelSerializer):
+class PromiseCaseSerializer(serializers.ModelSerializer):
 
-    bill = BillSerializer(read_only=True)
+    case = CaseSerializer(read_only=True)
     promise = PromiseSerializerRead(read_only=True)
 
     class Meta:
         model = Promise
-        fields = ('name', 'bill', 'promise', 'id', 'created', 'modified')
+        fields = ('name', 'case', 'promise', 'id', 'created', 'modified')
 
 
-class SuggestedPromiseBillSerializer(serializers.ModelSerializer):
+class SuggestedPromiseCaseSerializer(serializers.ModelSerializer):
 
-    bill = BillSerializer(read_only=True)
+    case = CaseSerializer(read_only=True)
     promise = PromiseSerializerRead(read_only=True)
 
     class Meta:
         model = Promise
-        fields = ('name', 'bill', 'promise', 'id', 'created', 'modified')
+        fields = ('name', 'case', 'promise', 'id', 'created', 'modified')

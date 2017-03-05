@@ -11,54 +11,57 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('case_gather', '0001_initial'),
         ('parliament', '0001_initial'),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Promise',
+            name='Bill',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
-                ('small_description', models.TextField()),
-                ('long_description', models.TextField()),
-                ('parliament', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='parliament.Parliament')),
+                ('description_link', models.TextField()),
+                ('althingi_created', models.DateField()),
+                ('number', models.IntegerField()),
+                ('parliament_session', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='parliament.ParliamentSession')),
             ],
             options={
                 'abstract': False,
             },
         ),
         migrations.CreateModel(
-            name='PromiseCase',
+            name='Case',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
-                ('case', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='case_gather.Case')),
-                ('promise', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='promises.Promise')),
+                ('number', models.IntegerField()),
+                ('case_type', models.TextField()),
+                ('case_status', models.TextField()),
+                ('parliament_session', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='parliament.ParliamentSession')),
             ],
+            options={
+                'abstract': False,
+            },
         ),
         migrations.CreateModel(
-            name='SuggestedPromiseCase',
+            name='Subject',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
-                ('case', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='case_gather.Case')),
-                ('promise', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='promises.Promise')),
+                ('major_group_number', models.IntegerField()),
+                ('major_group_name', models.TextField()),
+                ('number', models.IntegerField()),
+                ('description', models.TextField()),
+                ('parliament_session', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='parliament.ParliamentSession')),
             ],
-        ),
-        migrations.AlterUniqueTogether(
-            name='suggestedpromisecase',
-            unique_together=set([('promise', 'case')]),
-        ),
-        migrations.AlterUniqueTogether(
-            name='promisecase',
-            unique_together=set([('promise', 'case')]),
+            options={
+                'abstract': False,
+            },
         ),
     ]

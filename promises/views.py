@@ -1,13 +1,17 @@
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
-from .models import Promise, PromiseBill, SuggestedPromiseBill
-from .serializers import PromiseSerializerRead, PromiseSerializerWrite, PromiseBillSerializer, SuggestedPromiseBillSerializer
+
+from .models import Promise, PromiseCase, SuggestedPromiseCase
+from .serializers import PromiseSerializerRead, PromiseSerializerWrite, PromiseCaseSerializer, SuggestedPromiseCaseSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
-import django_filters, logging
+import django_filters
+import logging
 from rest_framework import generics
 
+
 promise_logger = logging.getLogger('promise')
+
 
 @api_view(['GET'])
 @permission_classes((AllowAny,))
@@ -52,52 +56,54 @@ def promise_detail(request, pk):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class PromiseBillFilter(django_filters.rest_framework.FilterSet):
+class PromiseCaseFilter(django_filters.rest_framework.FilterSet):
     class Meta:
-        model = PromiseBill
-        fields = ['bill', 'promise']
+        model = PromiseCase
+        fields = ['case', 'promise']
 
 
-class PromiseBillList(generics.ListAPIView):
-    queryset = PromiseBill.objects.all()
-    serializer_class = PromiseBillSerializer
+class PromiseCaseList(generics.ListAPIView):
+    queryset = PromiseCase.objects.all()
+    serializer_class = PromiseCaseSerializer
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
-    filter_class = PromiseBillFilter
+    filter_class = PromiseCaseFilter
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes((AllowAny,))
-def promise_bill_detail(request, pk):
+def promise_case_detail(request, pk):
+
     try:
-        promise_bill = PromiseBill.objects.get(pk=pk)
+        promise_case = PromiseCase.objects.get(pk=pk)
     except Promise.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        serializer = PromiseBillSerializer(promise_bill)
+        serializer = PromiseCaseSerializer(promise_case)
         return Response(serializer.data)
 
 
-class SuggestedPromiseBillFilter(django_filters.rest_framework.FilterSet):
+class SuggestedPromiseCaseFilter(django_filters.rest_framework.FilterSet):
     class Meta:
-        model = SuggestedPromiseBill
-        fields = ['bill', 'promise']
+        model = SuggestedPromiseCase
+        fields = ['case', 'promise']
 
 
-class SuggestedPromiseBillList(generics.ListAPIView):
-    queryset = SuggestedPromiseBill.objects.all()
-    serializer_class = SuggestedPromiseBillSerializer
+class SuggestedPromiseCaseList(generics.ListAPIView):
+    queryset = SuggestedPromiseCase.objects.all()
+    serializer_class = SuggestedPromiseCaseSerializer
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
-    filter_class = SuggestedPromiseBillFilter
+    filter_class = SuggestedPromiseCaseFilter
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes((AllowAny,))
-def suggested_promise_bill_detail(request, pk):
+def suggested_promise_case_detail(request, pk):
+
     try:
-        suggested_promise_bill = SuggestedPromiseBill.objects.get(pk=pk)
+        suggested_promise_case = SuggestedPromiseCase.objects.get(pk=pk)
     except Promise.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
     if request.method == 'GET':
-        serializer = SuggestedPromiseBillSerializer(suggested_promise_bill)
+        serializer = SuggestedPromiseCaseSerializer(suggested_promise_case)
         return Response(serializer.data)

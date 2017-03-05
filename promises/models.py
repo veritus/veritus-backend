@@ -1,7 +1,5 @@
-from __future__ import unicode_literals
-
 from django.db import models
-from bill_gather.models import Bill
+from case_gather.models import Case
 from parliament.models import Parliament
 from main.models import Entity
 
@@ -12,19 +10,19 @@ class Promise(Entity):
     parliament = models.ForeignKey(Parliament)
 
 
-class PromiseBill(Entity):
-    bill = models.ForeignKey(Bill)
+class PromiseCase(Entity):
+    case = models.ForeignKey(Case)
     promise = models.ForeignKey(Promise)
 
     class Meta:
         # Dont want promise related to same tag multiple times
-        unique_together = ('promise', 'bill',)
+        unique_together = ('promise', 'case',)
 
 
-class SuggestedPromiseBill(Entity):
-    bill = models.ForeignKey(Bill)
+class SuggestedPromiseCase(Entity):
+    case = models.ForeignKey(Case)
     promise = models.ForeignKey(Promise)
 
     class Meta:
         # Dont want promise related to same tag multiple times
-        unique_together = ('promise', 'bill',)
+        unique_together = ('promise', 'case',)

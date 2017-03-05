@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<þingmál>
+<mál málsnúmer='3' þingnúmer='146'>
+<málsheiti>sálfræðiþjónusta í framhaldsskólum</málsheiti>
+<efnisgreining></efnisgreining>
+<málstegund málstegund='a'>
+<heiti>Tillaga til þingsályktunar</heiti>
+<heiti2>þingsályktunartillaga</heiti2>
+</málstegund>
+<slóð>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146&amp;mnr=3</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146&amp;malnr=3</xml>
+<rss>http://www.althingi.is/rss/frettir.rss?feed=ferill&amp;malnr=3&amp;lthing=146</rss>
+</slóð>
+</mál>
+<tengdMál>
+<lagtFramÁðurSem>
+<mál málsnúmer='629' þingnúmer='145'>
+<málsheiti>sálfræðiþjónusta í framhaldsskólum</málsheiti>
+<efnisgreining></efnisgreining>
+<html>http://www.althingi.is/dba-bin/ferill.pl?ltg=145&amp;mnr=629</html>
+<xml>http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=145&amp;malnr=629</xml>
+</mál>
+</lagtFramÁðurSem>
+</tengdMál>
+<efnisflokkar>
+	<yfirflokkur id='2'>
+		<heiti>Hagstjórn</heiti>
+		<efnisflokkur id='6'>
+			<heiti>Fjárreiður ríkisins</heiti>
+			<lýsing>þ.m.t. fjárlög, lánamál ríkisins, opinberar stofnanir, ríkiseignir og opinberar framkvæmdir, ríkisreikningur, ríkisrekstur</lýsing>
+			<slóðir>
+				<html>http://www.althingi.is/thingstorf/listar-yfir-mal-a-yfirstandandi-thingi/thingmal-eftir-efnisflokkum/?efnisflokkur=6</html>
+				<xml>http://www.althingi.is/altext/xml/efnisflokkar/efnisflokkur/?efnisflokkur=6</xml>
+			</slóðir>
+		</efnisflokkur>
+	</yfirflokkur>
+	<yfirflokkur id='4'>
+		<heiti>Heilsa og heilbrigði</heiti>
+		<efnisflokkur id='17'>
+			<heiti>Heilbrigðismál</heiti>
+			<lýsing>þ.m.t. áfengis- og fíkniefnavarnir, farsóttir, heilbrigðisstofnanir og læknisþjónusta, heilsuvernd, lyf, mæðravernd og ungbarnaeftirlit</lýsing>
+			<slóðir>
+				<html>http://www.althingi.is/thingstorf/listar-yfir-mal-a-yfirstandandi-thingi/thingmal-eftir-efnisflokkum/?efnisflokkur=17</html>
+				<xml>http://www.althingi.is/altext/xml/efnisflokkar/efnisflokkur/?efnisflokkur=17</xml>
+			</slóðir>
+		</efnisflokkur>
+	</yfirflokkur>
+	<yfirflokkur id='5'>
+		<heiti>Mennta- og menningarmál</heiti>
+		<efnisflokkur id='20'>
+			<heiti>Menntamál</heiti>
+			<lýsing>þ.m.t. endurmenntun, fræðslumál, kennsla, námslán, námsmenn, rannsóknir, skólar, vísindi</lýsing>
+			<slóðir>
+				<html>http://www.althingi.is/thingstorf/listar-yfir-mal-a-yfirstandandi-thingi/thingmal-eftir-efnisflokkum/?efnisflokkur=20</html>
+				<xml>http://www.althingi.is/altext/xml/efnisflokkar/efnisflokkur/?efnisflokkur=20</xml>
+			</slóðir>
+		</efnisflokkur>
+	</yfirflokkur>
+</efnisflokkar><framsögumenn>
+<framsögumaður id='1267'>
+					<nafn>Nichole Leigh Mosty</nafn>
+					<xml>http://www.althingi.is/altext/xml/thingmenn/thingmadur/?nr=1267</xml>
+					</framsögumaður>
+					</framsögumenn>
+
+<þingskjöl>
+<þingskjal skjalsnúmer='3' málsnúmer='3' þingnúmer='146'>
+<útbýting>2016-12-07 13:17</útbýting>
+<skjalategund>þáltill.</skjalategund>
+<uppprentun>1</uppprentun>
+
+<slóð>
+<html>http://www.althingi.is/altext/146/s/0003.html</html>
+<pdf>http://www.althingi.is/altext/pdf/146/s/0003.pdf</pdf>
+<xml>http://www.althingi.is/altext/xml/thingskjol/thingskjal/?lthing=146&amp;skjalnr=3</xml>
+</slóð>
+</þingskjal>
+</þingskjöl><atkvæðagreiðslur><atkvæðagreiðsla  málsnúmer='3' þingnúmer='146' málsflokkur='A' atkvæðagreiðslunúmer='54176'>
+<tími>2017-02-09T17:44:31</tími>
+<tegund>Till. gengur til síðari umr.</tegund><þingskjal skjalsnúmer='3' þingnúmer='146'>
+<slóð>
+<xml>http://www.althingi.is/altext/xml/thingskjol/thingskjal/?lthing=146&amp;skjalnr=3</xml>
+</slóð>
+</þingskjal><nánar><![CDATA[ ]]></nánar>
+<samantekt>
+<aðferð>yfirlýsing forseta/mál gengur</aðferð>
+</samantekt>
+<slóð>
+<html>http://www.althingi.is/dba-bin/atkvgr.pl?nnafnak=54176</html>
+<xml>http://www.althingi.is/altext/xml/atkvaedagreidslur/atkvaedagreidsla/?numer=54176</xml>
+</slóð>
+</atkvæðagreiðsla>
+<atkvæðagreiðsla  málsnúmer='3' þingnúmer='146' málsflokkur='A' atkvæðagreiðslunúmer='54177'>
+<tími>2017-02-09T17:44:32</tími>
+<tegund>Till. gengur</tegund><þingskjal skjalsnúmer='3' þingnúmer='146'>
+<slóð>
+<xml>http://www.althingi.is/altext/xml/thingskjol/thingskjal/?lthing=146&amp;skjalnr=3</xml>
+</slóð>
+</þingskjal><nánar><![CDATA[ ]]></nánar>
+<til id='205'>velferðarnefnd</til>
+<samantekt>
+<aðferð>yfirlýsing forseta/mál gengur</aðferð>
+</samantekt>
+<slóð>
+<html>http://www.althingi.is/dba-bin/atkvgr.pl?nnafnak=54177</html>
+<xml>http://www.althingi.is/altext/xml/atkvaedagreidslur/atkvaedagreidsla/?numer=54177</xml>
+</slóð>
+</atkvæðagreiðsla>
+</atkvæðagreiðslur><umsagnabeiðnir></umsagnabeiðnir><erindaskrá><erindi dagbókarnúmer='164' málsnúmer='3' þingnúmer='146'>
+<sendandi><![CDATA[Samband íslenskra framhaldsskólanema]]></sendandi>
+<viðtakandi>
+<nefnd id='205'>velferðarnefnd</nefnd>
+</viðtakandi>
+<tegunderindis tegund='ub'>umsögn</tegunderindis>
+<komudagur>2017-02-10</komudagur>
+<sendingadagur>2017-02-10</sendingadagur>
+<slóð><pdf>http://www.althingi.is/altext/erindi/146/146-164.pdf</pdf></slóð>
+</erindi>
+<erindi dagbókarnúmer='290' málsnúmer='3' þingnúmer='146'>
+<sendandi><![CDATA[Kvennaskólinn í Reykjavík]]></sendandi>
+<viðtakandi>
+<nefnd id='205'>velferðarnefnd</nefnd>
+</viðtakandi>
+<tegunderindis tegund='ub'>umsögn</tegunderindis>
+<komudagur>2017-03-02</komudagur>
+<sendingadagur>2017-03-02</sendingadagur>
+<slóð><pdf>http://www.althingi.is/altext/erindi/146/146-290.pdf</pdf></slóð>
+</erindi>
+</erindaskrá><ræður><ræða fundarnúmer='28' þingnúmer='146'  þingmaður='1257'>
+<nafn id='1257'>Guðjón S. Brjánsson</nafn>
+<ræðahófst>2017-02-09T17:02:15</ræðahófst>
+<ræðulauk>2017-02-09T17:11:30</ræðulauk>
+<slóðir><xml>http://www.althingi.is/xml/146/raedur/rad20170209T170215.xml</xml><html>http://www.althingi.is/altext/raeda/146/rad20170209T170215.html</html></slóðir><tegundræðu>flutningsræða</tegundræðu>
+<umræða>F</umræða>
+</ræða>
+
+<ræða fundarnúmer='28' þingnúmer='146'  þingmaður='1234'>
+<nafn id='1234'>Andrés Ingi Jónsson</nafn>
+<ræðahófst>2017-02-09T17:11:36</ræðahófst>
+<ræðulauk>2017-02-09T17:13:39</ræðulauk>
+<slóðir><xml>http://www.althingi.is/xml/146/raedur/rad20170209T171136.xml</xml><html>http://www.althingi.is/altext/raeda/146/rad20170209T171136.html</html></slóðir><tegundræðu>andsvar</tegundræðu>
+<umræða>F</umræða>
+</ræða>
+
+<ræða fundarnúmer='28' þingnúmer='146'  þingmaður='1161'>
+<nafn id='1161'>Elsa Lára Arnardóttir</nafn>
+<ræðahófst>2017-02-09T17:13:55</ræðahófst>
+<ræðulauk>2017-02-09T17:15:53</ræðulauk>
+<slóðir><xml>http://www.althingi.is/xml/146/raedur/rad20170209T171355.xml</xml><html>http://www.althingi.is/altext/raeda/146/rad20170209T171355.html</html></slóðir><tegundræðu>andsvar</tegundræðu>
+<umræða>F</umræða>
+</ræða>
+
+<ræða fundarnúmer='28' þingnúmer='146'  þingmaður='1257'>
+<nafn id='1257'>Guðjón S. Brjánsson</nafn>
+<ræðahófst>2017-02-09T17:15:57</ræðahófst>
+<ræðulauk>2017-02-09T17:17:26</ræðulauk>
+<slóðir><xml>http://www.althingi.is/xml/146/raedur/rad20170209T171557.xml</xml><html>http://www.althingi.is/altext/raeda/146/rad20170209T171557.html</html></slóðir><tegundræðu>andsvar</tegundræðu>
+<umræða>F</umræða>
+</ræða>
+
+<ræða fundarnúmer='28' þingnúmer='146'  þingmaður='1161'>
+<nafn id='1161'>Elsa Lára Arnardóttir</nafn>
+<ræðahófst>2017-02-09T17:17:30</ræðahófst>
+<ræðulauk>2017-02-09T17:19:30</ræðulauk>
+<slóðir><xml>http://www.althingi.is/xml/146/raedur/rad20170209T171730.xml</xml><html>http://www.althingi.is/altext/raeda/146/rad20170209T171730.html</html></slóðir><tegundræðu>andsvar</tegundræðu>
+<umræða>F</umræða>
+</ræða>
+
+<ræða fundarnúmer='28' þingnúmer='146'  þingmaður='1174'>
+<nafn id='1174'>Silja Dögg Gunnarsdóttir</nafn>
+<ræðahófst>2017-02-09T17:19:41</ræðahófst>
+<ræðulauk>2017-02-09T17:27:17</ræðulauk>
+<slóðir><xml>http://www.althingi.is/xml/146/raedur/rad20170209T171941.xml</xml><html>http://www.althingi.is/altext/raeda/146/rad20170209T171941.html</html></slóðir><tegundræðu>ræða</tegundræðu>
+<umræða>F</umræða>
+</ræða>
+
+<ræða fundarnúmer='28' þingnúmer='146'  þingmaður='719'>
+<nafn id='719'>Oddný G. Harðardóttir</nafn>
+<ræðahófst>2017-02-09T17:27:26</ræðahófst>
+<ræðulauk>2017-02-09T17:32:25</ræðulauk>
+<slóðir><xml>http://www.althingi.is/xml/146/raedur/rad20170209T172726.xml</xml><html>http://www.althingi.is/altext/raeda/146/rad20170209T172726.html</html></slóðir><tegundræðu>ræða</tegundræðu>
+<umræða>F</umræða>
+</ræða>
+
+<ræða fundarnúmer='28' þingnúmer='146'  þingmaður='1274'>
+<nafn id='1274'>Einar Brynjólfsson</nafn>
+<ræðahófst>2017-02-09T17:32:40</ræðahófst>
+<ræðulauk>2017-02-09T17:37:19</ræðulauk>
+<slóðir><xml>http://www.althingi.is/xml/146/raedur/rad20170209T173240.xml</xml><html>http://www.althingi.is/altext/raeda/146/rad20170209T173240.html</html></slóðir><tegundræðu>ræða</tegundræðu>
+<umræða>F</umræða>
+</ræða>
+
+<ræða fundarnúmer='28' þingnúmer='146'  þingmaður='1286'>
+<nafn id='1286'>Viktor Orri Valgarðsson</nafn>
+<ræðahófst>2017-02-09T17:37:27</ræðahófst>
+<ræðulauk>2017-02-09T17:40:54</ræðulauk>
+<slóðir><xml>http://www.althingi.is/xml/146/raedur/rad20170209T173727.xml</xml><html>http://www.althingi.is/altext/raeda/146/rad20170209T173727.html</html></slóðir><tegundræðu>ræða</tegundræðu>
+<umræða>F</umræða>
+</ræða>
+
+<ræða fundarnúmer='28' þingnúmer='146'  þingmaður='1257'>
+<nafn id='1257'>Guðjón S. Brjánsson</nafn>
+<ræðahófst>2017-02-09T17:41:01</ræðahófst>
+<ræðulauk>2017-02-09T17:44:27</ræðulauk>
+<slóðir><xml>http://www.althingi.is/xml/146/raedur/rad20170209T174101.xml</xml><html>http://www.althingi.is/altext/raeda/146/rad20170209T174101.html</html></slóðir><tegundræðu>ræða</tegundræðu>
+<umræða>F</umræða>
+</ræða>
+
+</ræður>
+</þingmál>
