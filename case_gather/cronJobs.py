@@ -16,20 +16,6 @@ class gather_cases(CronJobBase):
 
     def do(self):
         session_number = 146
-        try:
-            PS_exists = ParliamentSession.objects.exists(
-                session_number=session_number)
-            assert PS_exists is False
-            cron_logger.info('CREATING PARLIAMENT SESSION')
-            Parliament.objects.create(name="current",
-                                      start_date="2016-08-01",
-                                      end_date="2020-08-01")
-
-            parliament = Parliament.objects.get(name="current")
-            ParliamentSession.objects.create(session_number=session_number,
-                                             parliament=parliament)
-        except Exception as e:
-            cron_logger.error(e)
             
         try:
             cron_logger.info('Starting case gathering')
