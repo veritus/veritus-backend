@@ -17,49 +17,47 @@ def get_case_data(parliament_session_number):
     output has keys: 'number', 'name', 'case_type', 'case_status', 'rel_cases'
                                 'subjects', 'sessions'
     """
+    # TODO
     # link_summary = "http://www.althingi.is/altext/xml/samantektir\
     #     /samantekt/?lthing=146&malnr="
+
     link_details = """http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=%i&malnr=""" % parliament_session_number
-    xml_logger.info(link_details)
     xml_logger.info('Getting case data from get_cases')
     case = get_cases(parliament_session_number)
-    xml_logger.info('Have the cases')
+
     # used keys at this point:
     # number, session, name, case_type, case_status, rel_cases, subjects
     # more can be added as models are changed or added
+
     output = {}
 
     for number, name, case_type in case:
-        xml_logger.info('Iterating over the cases')
+        # TODO
         # summary_soup = get_xml(link_summary + str(number))
+
         try:
             details_soup = get_xml(link_details + str(number))
         except Exception as e:
             xml_logger.info('get_case_data failed with error: ' + e)
 
-        xml_logger.info('have detail soup')
-
         try:
-            xml_logger.info('getting details from soup')
             details = xml_helper.get_case_details(details_soup)
+
+        # TODO
         # summary = xml_helper.get_case_summary(summary_soup)
+
         except Exception as e:
             xml_logger.error(e.message)
             xml_logger.info('could not parse soup')
-
-        xml_logger.info('have parsed details')
 
         case_status = details[0]
         rel_cases = details[1]
         subjects = details[2]
 
-        xml_logger.info('creating output dictionary')
-
         output = {'number': number, 'name': name, 'rel_cases': rel_cases,
                   'case_type': case_type, 'session': parliament_session_number,
                   'case_status': case_status, 'subjects': subjects}
 
-        xml_logger.info('yielding output to services')
         yield output
 
 
@@ -147,9 +145,7 @@ def get_cases(parliament_session_number):
 
     try:
         for number, name, case_type in cases:
-            xml_logger.info('getting case named: ' + name)
             output = [number, name, case_type]
-            xml_logger.info('yielding output')
             yield output
     except Exception as e:
         xml_logger.error(e.message)

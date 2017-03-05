@@ -16,9 +16,7 @@ def get_attribute_value(soup, element, attribute):
     d = {element: attribute}
     try:
         values = soup.findAll(d)
-        logger.info('have values')
         for value in values:
-            logger.info('yielding value: ' + value[attribute])
             yield value[attribute]
     except Exception as e:
         logger.error(e.message)
@@ -40,10 +38,8 @@ def get_element_text(soup, element):
     logger.info('looking for elements')
     try:
         elements = soup.findAll(element)
-        logger.info('have elements')
         try:
             for element in elements:
-                logger.info('yielding element: ' + element.text)
                 yield element.text
         except Exception as e:
             logger.error(e)
@@ -80,25 +76,21 @@ def get_case_details(soup):
     output = []
     subj_ids = []
     rel_cases = []
-    logger.info('Adding related cases to list')
     for rel_case in rel_cases_gen:
         rel_cases.append(rel_case)
 
     # remove the first rel_case, as it is the actual case
     rel_cases.pop(0)
 
-    logger.info('adding subject ids to list')
     for subj_id in subj_id_gen:
         subj_ids.append(subj_id)
 
     if status_flag:
-        logger.info('creating case status generator')
         status = next(status_gen)
     else:
         status = ''
 
     output = [status, rel_cases, subj_ids]
-    logger.info('returning case details output')
     return output
 
 
