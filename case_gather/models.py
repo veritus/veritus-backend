@@ -15,10 +15,6 @@ class Case(Entity):
     parliament_session = models.ForeignKey(ParliamentSession)
     case_type = models.TextField()
     case_status = models.TextField()
-    # TODO:
-    # related_case_numbers = models.CharField(
-    #     validators=[validate_comma_separated_integer_list])
-    # subject_numbers = models.CommaSeparatedIntegerField()
 
 
 class Subject(Entity):
@@ -27,4 +23,3 @@ class Subject(Entity):
     major_group_name = models.TextField()
     number = models.IntegerField()
     description = models.TextField()
-    # TODO associated_cases
