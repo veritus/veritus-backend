@@ -17,9 +17,7 @@ def get_case_data(parliament_session_number):
     output has keys: 'number', 'name', 'case_type', 'case_status', 'rel_cases'
                                 'subjects', 'sessions'
     """
-    # TODO
-    # link_summary = "http://www.althingi.is/altext/xml/samantektir\
-    #     /samantekt/?lthing=146&malnr="
+    link_summary = "http://www.althingi.is/altext/xml/samantektir/samantekt/?lthing=146&malnr="
 
     link_details = """http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=%i&malnr=""" % parliament_session_number
     xml_logger.info('Getting case data from get_cases')
@@ -32,8 +30,6 @@ def get_case_data(parliament_session_number):
     output = {}
 
     for number, name, case_type in case:
-        # TODO
-        # summary_soup = get_xml(link_summary + str(number))
 
         try:
             details_soup = get_xml(link_details + str(number))
@@ -42,9 +38,6 @@ def get_case_data(parliament_session_number):
 
         try:
             details = xml_helper.get_case_details(details_soup)
-
-        # TODO
-        # summary = xml_helper.get_case_summary(summary_soup)
 
         except Exception as e:
             xml_logger.error(e.message)
@@ -119,7 +112,7 @@ def get_subjects():
     Function to yield from get_subjects
     Format of output is [subject_id, group_name, subject_name,
                                         subject_description, case_numbers]
-            """
+    """
     for i in range(1, 100):
         output = get_subject(i)
         if output is not None:
