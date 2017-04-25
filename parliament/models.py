@@ -13,7 +13,6 @@ class ParliamentSession(Entity):
     parliament = models.ForeignKey(Parliament)
 
 class ParliamentMember(Entity):
-    name = models.TextField()
     party = models.ForeignKey(Party)
     initials = models.TextField()
     district = models.ForeignKey(District)

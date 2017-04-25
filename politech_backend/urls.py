@@ -4,6 +4,8 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from promises import views as promise_views
 from case_gather import views as case_views
 from parliament import views as parliament_views
+from party import views as party_views
+from district import views as district_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -20,6 +22,9 @@ urlpatterns = [
     url(r'^parliaments/(?P<pk>[0-9]+)$', parliament_views.parliament_detail),
     url(r'^parliamentSessions/$', parliament_views.parliament_session_list),
     url(r'^parliamentSessions/(?P<pk>[0-9]+)$', parliament_views.parliament_session_detail),
+    url(r'^parties/$', party_views.party_list),
+    url(r'^parliamentMember/$', parliament_views.parliamentMember_list),
+    url(r'^districts/$', district_views.district_list),
     url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls'))
 ]

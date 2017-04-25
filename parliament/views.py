@@ -1,8 +1,8 @@
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
-from .models import ParliamentSession, Parliament
-from .serializers import ParliamentSessionSerializerRead, ParliamentSessionSerializerWrite, ParliamentSerializer
+from .models import ParliamentSession, Parliament, ParliamentMember
+from .serializers import ParliamentSessionSerializerRead, ParliamentSessionSerializerWrite, ParliamentSerializer, ParliamentMemberSerializer
 from rest_framework import permissions
 
 
@@ -87,3 +87,13 @@ def parliament_session_detail(request, pk):
     elif request.method == 'DELETE':
         parliament_session.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+@api_view(['GET'])
+@permission_classes((permissions.AllowAny,))
+def parliamentMember_list(request):
+
+    if request.method == 'GET':
+        parliamentMembers = ParliamentMember.objects.all()
+        serializer = ParliamentMemberSerializer(parliamentMembers, many=True)
+        return Response(serializer.data)
+
