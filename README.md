@@ -11,7 +11,7 @@
 `sudo aptitude install postgresql postgresql-contrib`
 2. Download [virtualenv](https://pypi.python.org/pypi/virtualenv)
 3. Create a virtual env in the project directory (politech_backend) called env
-`virtualenv env`
+`virtualenv -p python3.6 env`
 4. Start your virtual environment
 `source env/bin/activate`
 5. Install required dependencies in requirements.txt with pip
