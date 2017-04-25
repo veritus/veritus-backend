@@ -5,8 +5,6 @@ from case_gather.models import Case
 from parliament.models import ParliamentSession
 import case_gather.xml_parser as xml_parser
 
-# TODO: update Subjects in db
-
 
 def update_case_db(session_number):
     logger = logging.getLogger('cronJobServices')
