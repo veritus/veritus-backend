@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'main',
     'parliament',
+    'party',
+    'district',
     'rest_auth',
     'django.contrib.sites',
     'allauth',
