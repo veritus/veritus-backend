@@ -14,3 +14,11 @@ class DistrictAPI(APITestCase):
         self.assertEqual(len(response.data), 1)
         self.assertEqual(response.data[0]['name'], 'Reykjavik South')
 
+class DistrictAPIIcelandic(APITestCase):
+    
+    def setUp(self):
+        district = District(name = 'Reykjavík Suður', abbreviation='RVK S')
+        district.save()
+        
+    def test_get_all(self):
+        self.assertEqual(response.data[0]['name'], 'Reykjavík Suður')
