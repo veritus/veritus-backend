@@ -5,7 +5,7 @@ class TagSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Tag
-        fields = ('name', 'id', 'created', 'modified')
+        fields = ('id', 'name', 'created', 'modified')
 
 
 class CaseTagSerializer(serializers.ModelSerializer):
@@ -14,7 +14,7 @@ class CaseTagSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CaseTags
-        fields = ('tag', 'id', 'created', 'modified')
+        fields = ('id', 'tag', 'created', 'modified')
 
 
 class PromiseTagSerializer(serializers.ModelSerializer):
@@ -23,4 +23,4 @@ class PromiseTagSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = PromiseTags
-        fields = ('tag', 'id', 'created', 'modified')
+        fields = ('id', 'tag', 'created', 'modified')
