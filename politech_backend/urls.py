@@ -6,6 +6,7 @@ from case_gather import views as case_views
 from parliament import views as parliament_views
 from party import views as party_views
 from district import views as district_views
+from tags import views as tag_views
 
 urlpatterns = [
     url(r'^api/v1/admin/', admin.site.urls),
@@ -25,6 +26,8 @@ urlpatterns = [
     url(r'^api/v1/parties/$', party_views.party_list),
     url(r'^api/v1/parliamentMembers/$', parliament_views.parliamentMember_list),
     url(r'^api/v1/districts/$', district_views.district_list),
+    url(r'^api/v1/tags/$', tag_views.tag_list),
+
     url(r'^api/v1/rest-auth/', include('rest_auth.urls')),
     url(r'^api/v1/rest-auth/registration/', include('rest_auth.registration.urls'))
 ]

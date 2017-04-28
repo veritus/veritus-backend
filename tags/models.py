@@ -1,14 +1,15 @@
 from django.db import models
 from case_gather.models import Case
 from promises.models import Promise
+from main.models import Entity
 
 
 # Create your models here.
-class Tag(models.Model):
+class Tag(Entity):
     name = models.TextField()
 
 
-class CaseTags(models.Model):
+class CaseTags(Entity):
     case = models.ForeignKey(Case)
     tag = models.ForeignKey(Tag)
 
@@ -17,7 +18,7 @@ class CaseTags(models.Model):
         unique_together = ('case', 'tag',)
 
 
-class PromiseTags(models.Model):
+class PromiseTags(Entity):
     promise = models.ForeignKey(Promise)
     tag = models.ForeignKey(Tag)
 
