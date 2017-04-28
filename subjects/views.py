@@ -6,33 +6,33 @@ from .models import CaseSubject, PromiseSubject
 from case_gather.models import Subject
 from .serializers import SubjectSerializer, CaseSubjectSerializer, PromiseSubjectSerializerWrite, PromiseSubjectSerializerRead
 from rest_framework.permissions import IsAuthenticated, AllowAny, IsAuthenticatedOrReadOnly
+from rest_framework import generics
+import django_filters
+        
 
-@api_view(['GET', 'POST'])
-@permission_classes((IsAuthenticatedOrReadOnly,))
-def subject_list(request):
-
-    if request.method == 'GET':
-        all_subjects = Subject.objects.all()
-        serializer = SubjectSerializer(all_subjects, many=True)
-        return Response(serializer.data)
-    elif request.method == 'POST':
-        serializer = SubjectSerializer(data=request.data)
+class PromiseSubjectList(generics.ListAPIView):
+    queryset = PromiseSubject.objects.all()
+    serializer_class = PromiseSubjectSerializerRead
+    filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
+    filter_fields = ('promise', 'subject')
+    permission_classes = (IsAuthenticatedOrReadOnly,)
+    
+    def post(self, request):
+        serializer = PromiseSubjectSerializerWrite(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+class SubjectList(generics.ListAPIView):
+    queryset = Subject.objects.all()
+    serializer_class = SubjectSerializer
+    filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
+    filter_fields = ('name', 'parent', 'number', 'parliament_session')
+    permission_classes = (IsAuthenticatedOrReadOnly,)
 
-@api_view(['GET', 'POST'])
-@permission_classes((IsAuthenticatedOrReadOnly,))
-def subject_promises_list(request, pk):
-
-    if request.method == 'GET':
-        all_tags = PromiseSubject.objects.filter(promise=pk)
-        serializer = PromiseSubjectSerializerRead(all_tags, many=True)
-        return Response(serializer.data)
-    elif request.method == 'POST':
-        serializer = PromiseSubjectSerializerWrite(data=request.data)
+    def post(self, request):
+        serializer = SubjectSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
