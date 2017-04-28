@@ -69,7 +69,7 @@ def get_subject(subject_id):
              subject_description, case_numbers]
     """
     link = "http://www.althingi.is/altext/xml/efnisflokkar/efnisflokkur/?efnisflokkur="
-    soup = get_xml(link + subject_id)
+    soup = get_xml(link + str(subject_id))
 
     output = {}
 
