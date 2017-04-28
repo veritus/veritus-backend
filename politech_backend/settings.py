@@ -37,22 +37,27 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'case_gather',
-    'django_cron',
-    'promises',
-    'tags',
+    'django.contrib.sites',
+
     'rest_framework',
     'rest_framework.authtoken',
+    'rest_auth',
+    'rest_auth.registration',
+
+    'allauth',
+    'allauth.account',
+
+    'django_cron',
+    'corsheaders',
+
+    'case_gather',
+    'promises',
+    'tags',
     'main',
     'parliament',
     'party',
-    'district',
-    'rest_auth',
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'rest_auth.registration',
-    'corsheaders',
+    'district',  
+    
 ]
 SITE_ID = 1
 
@@ -105,6 +110,16 @@ DATABASES = {
         'ATOMIC_REQUESTS': True
     }
 }
+
+AUTHENTICATION_BACKENDS = (
+    
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+    
+)
 
 
 # Password validation
@@ -203,7 +218,6 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
     ),
     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
 }
