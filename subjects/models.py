@@ -2,26 +2,22 @@ from django.db import models
 from case_gather.models import Case
 from promises.models import Promise
 from main.models import Entity
+from case_gather.models import Subject
 
 
-# Create your models here.
-class Tag(Entity):
-    name = models.TextField()
-
-
-class CaseTags(Entity):
+class CaseSubject(Entity):
     case = models.ForeignKey(Case)
-    tag = models.ForeignKey(Tag)
+    subject = models.ForeignKey(Subject)
 
     class Meta:
         # Dont want case related to same tag multiple times
-        unique_together = ('case', 'tag',)
+        unique_together = ('case', 'subject',)
 
 
-class PromiseTags(Entity):
+class PromiseSubject(Entity):
     promise = models.ForeignKey(Promise)
-    tag = models.ForeignKey(Tag)
+    subject = models.ForeignKey(Subject)
 
     class Meta:
         # Dont want promise related to same tag multiple times
-        unique_together = ('promise', 'tag',)
+        unique_together = ('promise', 'subject',)
