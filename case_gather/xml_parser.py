@@ -96,7 +96,7 @@ def get_subject(subject_id):
         # Sort the case numbers
         case_numbers.sort()
         output = {'id': subject_id,
-                  'group_name': group_name,
+                  'parent': group_number,
                   'name': subject_name,
                   "description": subject_description,
                   "case_numbers": case_numbers}

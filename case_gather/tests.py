@@ -17,8 +17,6 @@ details_path = os.path.join(
 details3_path = os.path.join(
     settings.BASE_DIR, 'case_gather', 'test_data', 'case3details.txt')
 
-# Create your tests here.
-
 
 class XMLHelperGAVTestCase(TestCase):
     """
@@ -262,19 +260,32 @@ class ServicesTestCase(TestCase):
     """
 
     def setUp(self):
-        case_data_gen = x_p.get_case_data(146)
         PS = parliament_models.ParliamentSession
+
         P = parliament_models.Parliament
+
+        # Create parliament
         P.objects.create(start_date="2016-08-01",
                          end_date="2020-08-01")
+
+        # get parliament
         parliament = P.objects.get(start_date="2016-08-01")
+
+        # Create Parliament session
         PS.objects.create(session_number=146,
                           parliament=parliament)
+
         self.parliament_session = PS.objects.get(session_number=146)
 
+        # set up for Case
+         case_data_gen = x_p.get_case_data(146)
         self.case_data = next(case_data_gen)
 
-    def test_object_creation(self):
+        # Set up for Subject
+        subject_data_gen = x_p.get_subjects()
+        self.subject_data = next(subject_data_gen)
+
+    def test_case_creation(self):
         cgm.Case.objects.create(name=self.case_data['name'],
                                 number=int(self.case_data['number']),
                                 parliament_session=self.parliament_session,
@@ -286,3 +297,19 @@ class ServicesTestCase(TestCase):
         for num in list(number):
 
             self.assertEqual(num.number, 1)
+
+    def test_subject_creation(self):
+        cgm.Subject.object.create(parliament_session = self.parliament_session,
+    name = self.subject_data['name'],
+    parent = int(self.subject_data['parent']),
+    number = self.subject_data['number'],
+    description = self.subject_data['description'])
+
+        parent = cgm.Subject.objects.filter(parent=1)
+        child = cgm.Subject.object.filter(number=5)
+
+        self.assertEqual(child.parent, parent)
+
+
+
+
