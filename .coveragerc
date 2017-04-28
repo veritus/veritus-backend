@@ -1,0 +1,13 @@
+[run]
+omit = *migrations*, *models.py, *apps.py, *urls.py, *serializers.py, *forms.py, *admin.py, *search_indexes.py, *cronJobs.py
+branch = True
+
+[report]
+show_missing = True
+exclude_lines =
+    except Exception as e:
+    administration_logger.error(e.message + " - " + traceback.format_exc())
+    files_logger.error(e.message + " - " + traceback.format_exc())
+    return Response(data={}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    some_uuid = create_unique_id()
