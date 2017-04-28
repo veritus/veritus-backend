@@ -1,0 +1,4 @@
+[pre-commit-hook]
+command=custom_pylint
+params=--rcfile=/path/to/another/pylint.rc
+limit=8.0
