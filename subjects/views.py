@@ -25,10 +25,10 @@ def subject_list(request):
 
 @api_view(['GET', 'POST'])
 @permission_classes((IsAuthenticatedOrReadOnly,))
-def subject_promises_list(request):
+def subject_promises_list(request, pk):
 
     if request.method == 'GET':
-        all_tags = PromiseSubject.objects.all()
+        all_tags = PromiseSubject.objects.filter(promise=pk)
         serializer = PromiseSubjectSerializerRead(all_tags, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':

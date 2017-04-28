@@ -13,7 +13,7 @@ urlpatterns = [
     url(r'^api/v1/api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api/v1/promises/$', promise_views.promise_list),
     url(r'^api/v1/promises/(?P<pk>[0-9]+)$', promise_views.promise_detail),
-    url(r'^api/v1/promises/subjects/$', subject_views.subject_promises_list),
+    url(r'^api/v1/promises/(?P<pk>[0-9]+)/subjects/$', subject_views.subject_promises_list),
     url(r'^api/v1/promiseCases/$', promise_views.PromiseCaseList.as_view()),
     url(r'^api/v1/promiseCases/(?P<pk>[0-9]+)$', promise_views.promise_case_detail),
     url(r'^api/v1/suggestedPromiseCases/$', promise_views.SuggestedPromiseCaseList.as_view()),
