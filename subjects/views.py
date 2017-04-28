@@ -24,11 +24,22 @@ class PromiseSubjectList(generics.ListAPIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
+class SubjectFilter(django_filters.rest_framework.FilterSet):
+    class Meta:
+        model = Subject
+        fields = {
+            'name': ['startswith', 'exact', 'contains'],
+            'parent': ['exact'],
+            'number': ['exact'],
+            'parliament_session': ['exact']
+            }
+
 class SubjectList(generics.ListAPIView):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
-    filter_fields = ('name', 'parent', 'number', 'parliament_session')
+    filter_class = SubjectFilter
     permission_classes = (IsAuthenticatedOrReadOnly,)
 
     def post(self, request):
