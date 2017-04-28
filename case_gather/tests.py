@@ -278,7 +278,7 @@ class ServicesTestCase(TestCase):
         self.parliament_session = PS.objects.get(session_number=146)
 
         # set up for Case
-         case_data_gen = x_p.get_case_data(146)
+        case_data_gen = x_p.get_case_data(146)
         self.case_data = next(case_data_gen)
 
         # Set up for Subject
