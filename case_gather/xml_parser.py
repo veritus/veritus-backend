@@ -76,7 +76,7 @@ def get_subject(subject_id):
     try:
         group_number = xml_helper.get_attribute_value(
             soup, "yfirflokkur", "id")
-        assert group_number is None
+        assert group_number is not None
     except:
         xml_logger.info('No subject found at number:', subject_id)
     else:
