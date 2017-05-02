@@ -1,3 +1,8 @@
+[MASTER]
+ignore=apps.py, admin.py, migrations
+load-plugins=pylint_django
+
+
 [pre-commit-hook]
 command=custom_pylint
 params=--rcfile=/path/to/another/pylint.rc
