@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #Django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,17 +40,22 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
+    # Rest framework
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
     'rest_auth.registration',
 
+    #Auth
     'allauth',
     'allauth.account',
 
+    # Other django libraries
     'django_cron',
     'corsheaders',
+    'django_nose',
 
+    # Our apps
     'case_gather',
     'promises',
     'subjects',
@@ -59,6 +65,19 @@ INSTALLED_APPS = [
     'district',  
     
 ]
+
+# Use nose to run all tests
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+# Tell nose to measure coverage on the 'foo' and 'bar' apps
+NOSE_ARGS = [
+    '--with-coverage',
+    '--cover-package=case_gather, promises, subjects, main, parliament, party, district',
+    '--cover-inclusive',
+    '--cover-erase',
+]
+
+
 SITE_ID = 1
 
 MIDDLEWARE = [

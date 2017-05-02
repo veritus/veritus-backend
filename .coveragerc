@@ -1,0 +1,9 @@
+[run]
+omit = *migrations*, *models.py, *apps.py, *urls.py, *serializers.py, *forms.py, *admin.py
+branch = True
+
+[report]
+show_missing = True
+exclude_lines =
+    except Exception as e:
+
