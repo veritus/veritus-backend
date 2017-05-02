@@ -4,7 +4,7 @@ from rest_framework.response import Response
 
 from .models import Promise, PromiseCase, SuggestedPromiseCase
 from .serializers import PromiseSerializerRead, PromiseSerializerWrite, PromiseCaseSerializer, SuggestedPromiseCaseSerializer
-from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 import django_filters
 import logging
 from rest_framework import generics
@@ -13,27 +13,24 @@ from rest_framework import generics
 promise_logger = logging.getLogger('promise')
 
 
-@api_view(['GET'])
-@permission_classes((AllowAny,))
+@api_view(['GET', 'POST'])
+@permission_classes((IsAuthenticatedOrReadOnly,))
 def promise_list(request):
-    promises = Promise.objects.all()
-    serializer = PromiseSerializerRead(promises, many=True)
-    return Response(serializer.data)
-
-
-@api_view(['POST'])
-@permission_classes((IsAuthenticated,))
-def promise_list(request):
-    promise_logger.info(request.user)
-    serializer = PromiseSerializerWrite(data=request.data)
-    if serializer.is_valid():
-        serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    if request.method == 'GET':
+        promises = Promise.objects.all()
+        serializer = PromiseSerializerRead(promises, many=True)
+        return Response(serializer.data)
+    elif request.method == 'POST':
+        promise_logger.info(request.user)
+        serializer = PromiseSerializerWrite(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-@permission_classes((AllowAny,))
+@permission_classes((IsAuthenticatedOrReadOnly,))
 def promise_detail(request, pk):
     try:
         promise = Promise.objects.get(pk=pk)
@@ -70,7 +67,7 @@ class PromiseCaseList(generics.ListAPIView):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-@permission_classes((AllowAny,))
+@permission_classes((IsAuthenticatedOrReadOnly,))
 def promise_case_detail(request, pk):
 
     try:
@@ -97,7 +94,7 @@ class SuggestedPromiseCaseList(generics.ListAPIView):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-@permission_classes((AllowAny,))
+@permission_classes((IsAuthenticatedOrReadOnly,))
 def suggested_promise_case_detail(request, pk):
 
     try:

@@ -3,11 +3,11 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from .models import ParliamentSession, Parliament, ParliamentMember
 from .serializers import ParliamentSessionSerializerRead, ParliamentSessionSerializerWrite, ParliamentSerializer, ParliamentMemberSerializer
-from rest_framework import permissions
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 
 @api_view(['GET', 'POST'])
-@permission_classes((permissions.AllowAny,))
+@permission_classes((IsAuthenticatedOrReadOnly,))
 def parliament_list(request):
 
     if request.method == 'GET':
@@ -24,7 +24,7 @@ def parliament_list(request):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-@permission_classes((permissions.AllowAny,))
+@permission_classes((IsAuthenticatedOrReadOnly,))
 def parliament_detail(request, pk):
     try:
         parliament = Parliament.objects.get(pk=pk)
@@ -49,7 +49,7 @@ def parliament_detail(request, pk):
 
 
 @api_view(['GET', 'POST'])
-@permission_classes((permissions.AllowAny,))
+@permission_classes((IsAuthenticatedOrReadOnly,))
 def parliament_session_list(request):
 
     if request.method == 'GET':
@@ -66,7 +66,7 @@ def parliament_session_list(request):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-@permission_classes((permissions.AllowAny,))
+@permission_classes((IsAuthenticatedOrReadOnly,))
 def parliament_session_detail(request, pk):
     try:
         parliament_session = ParliamentSession.objects.get(pk=pk)
@@ -89,7 +89,7 @@ def parliament_session_detail(request, pk):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 @api_view(['GET'])
-@permission_classes((permissions.AllowAny,))
+@permission_classes((IsAuthenticatedOrReadOnly,))
 def parliamentMember_list(request):
 
     if request.method == 'GET':
