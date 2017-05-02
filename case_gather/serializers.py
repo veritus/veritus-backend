@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Case
+from .models import Case, SuperSubject, Subject
 from parliament.serializers import ParliamentSessionSerializerRead
 
 
