@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class TagsConfig(AppConfig):
+class SubjectsConfig(AppConfig):
     name = 'subjects'
