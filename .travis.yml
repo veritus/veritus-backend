@@ -24,7 +24,7 @@ before_script:
   - psql -c "CREATE DATABASE politech;" -U postgres
 
 script: 
-    - pylint --load-plugins pylint_django promises, parliament, case_gather, district, party, subjects
+    - pylint --load-plugins pylint_django promises parliament case_gather district party subjects
     - python manage.py check
     - pytest promises/tests.py 
     - python manage.py test
