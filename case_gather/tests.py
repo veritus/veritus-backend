@@ -289,12 +289,14 @@ class ServicesTestCase(TestCase):
 
         cgm.SuperSubject.objects.create(parliament_session=self.parliament_session,
                                                                 name = 'Atvinnuvegir',
-                                                                supersubject_id = 1)
+                                                                number= 1)
+
+        parent = cgm.SuperSubject.objects.get(number=1)
 
         cgm.Subject.objects.create(parliament_session = self.parliament_session,
                                                     name = self.subject_data['name'],
                                                     supersubject = parent,
-                                                    subject_id = self.subject_data['id'],
+                                                    number = self.subject_data['id'],
                                                     description = self.subject_data['description'])
 
 
@@ -313,8 +315,6 @@ class ServicesTestCase(TestCase):
 
     def test_subject_creation(self):
         logger = logging.getLogger('cgTest')
-
-        parent = cgm.SuperSubject.objects.get(subersubject_id=1)
 
         subject = cgm.Subject.objects.get(name=self.subject_data['name'])
         

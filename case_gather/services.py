@@ -82,27 +82,27 @@ def update_subject_db():
             try:
                 SuperSubject.objects.create(parliament_session=parliament_session,
                                                                 name = subject['parent_name'],
-                                                                supersubject_id = subject['parent_number'])
+                                                                number = subject['parent_number'])
 
-                except Exception as e:
-                    logger.error(e.message)
-                    logger.info('supersubject creation failure')
+            except Exception as e:
+                logger.error(e.message)
+                logger.info('supersubject creation failure')
 
         if int(subject['number']) in subject_numbers:
             logger.info('subject is already in db')
         else:
             logger.info('Querying db for supersubject')
-            parent = SuperSubject.objects.get(supersubject_id=subject['parent_number'])
+            parent = SuperSubject.objects.get(number=subject['parent_number'])
 
             logger.info('Creating subject')
 
             try:
                 Subject.objects.create(parliament_session = parliament_session,
                                                 name = subject['name'],
-                                                subject_id = subject['number'],
+                                                number = subject['number'],
                                                 supersubject = parent,
                                                 description = subject['description'])
-                
+
             except Exception as e:
                 logger.error(e.message)
                 logger.info('subject creation failure')

@@ -18,7 +18,7 @@ class SuperSubjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = SuperSubject
-        fields = ('name', 'supersubject_id', 'id', 
+        fields = ('name', 'number', 'id', 
             'parliament_session', 'created', 'modified')
 
 class SubjectSerializer(serializers.ModelSerializer):
@@ -27,5 +27,5 @@ class SubjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Subject
-        fields = ('name', 'subject_id', 'description', 'supersubject',
+        fields = ('name', 'number', 'description', 'supersubject',
                   'id', 'parliament_session', 'created', 'modified')
