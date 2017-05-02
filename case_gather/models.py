@@ -18,8 +18,7 @@ class Case(Entity):
 
 
 class Subject(Entity):
-    parliament_session = models.ForeignKey(ParliamentSession)
-    major_group_number = models.IntegerField()
-    major_group_name = models.TextField()
-    number = models.IntegerField()
-    description = models.TextField()
+    parliament_session = models.ForeignKey(ParliamentSession, null=True, blank=True)
+    number = models.IntegerField(null=True, blank=True)
+    description = models.TextField(null=True, blank=True)
+    parent = models.ForeignKey('Subject', null=True, blank=True)

@@ -5,11 +5,11 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from .models import Case
 from .serializers import CaseSerializer
-from rest_framework import permissions
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 
 @api_view(['GET', 'POST'])
-@permission_classes((permissions.AllowAny,))
+@permission_classes((IsAuthenticatedOrReadOnly,))
 def case_list(request):
 
     if request.method == 'GET':
@@ -19,7 +19,7 @@ def case_list(request):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-@permission_classes((permissions.AllowAny,))
+@permission_classes((IsAuthenticatedOrReadOnly,))
 def case_detail(request, pk):
     try:
         case = Case.objects.get(pk=pk)
