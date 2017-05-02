@@ -299,7 +299,7 @@ class ServicesTestCase(TestCase):
             self.assertEqual(num.number, 1)
 
     def test_subject_creation(self):
-        cgm.Subject.object.create(parliament_session = self.parliament_session,
+        cgm.Subject.objects.create(parliament_session = self.parliament_session,
     name = self.subject_data['name'],
     parent = int(self.subject_data['parent']),
     number = self.subject_data['number'],
