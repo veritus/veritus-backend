@@ -58,7 +58,7 @@ INSTALLED_APPS = [
     # Our apps
     'case_gather',
     'promises',
-    'tags',
+    'subjects',
     'main',
     'parliament',
     'party',
