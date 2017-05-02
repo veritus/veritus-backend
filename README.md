@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/veritus/veritus-backend.svg?branch=master)](https://travis-ci.org/veritus/veritus-backend)
+[![Coverage Status](https://coveralls.io/repos/github/veritus/veritus-backend/badge.svg?branch=master)](https://coveralls.io/github/veritus/veritus-backend?branch=master)
+
+
 # Politech-backend
 
 ## Recommended tools
