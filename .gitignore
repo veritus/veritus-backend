@@ -94,3 +94,6 @@ venv/
 
 #Visual studio code
 .vscode/
+
+#Pylint
+.pylintrc
