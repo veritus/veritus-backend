@@ -96,14 +96,16 @@ def get_subject(subject_id):
         # Sort the case numbers
         case_numbers.sort()
         output = {'id': subject_id,
-                  'parent': group_number,
+                  'parent_name': group_name,
+                  'parent_number': group_number,
                   'name': subject_name,
                   "description": subject_description,
                   "case_numbers": case_numbers}
-    finally:
-        group_number.close()
+
         text.close()
         cases.close()
+    finally:
+        group_number.close()
         return output
 
 

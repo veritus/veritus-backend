@@ -94,3 +94,4 @@ venv/
 
 #Visual studio code
 .vscode/
+*.swp

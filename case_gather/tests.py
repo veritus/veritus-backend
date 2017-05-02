@@ -2,11 +2,13 @@ from django.test import TestCase
 from bs4 import BeautifulSoup
 import os
 from django.conf import settings
+import logging
 
 import case_gather.xml_helper as x_h
 import case_gather.xml_parser as x_p
 import case_gather.models as cgm
 import parliament.models as parliament_models
+
 
 case_path = os.path.join(
     settings.BASE_DIR, 'case_gather', 'test_data', 'caselist.txt')
@@ -285,6 +287,17 @@ class ServicesTestCase(TestCase):
         subject_data_gen = x_p.get_subjects()
         self.subject_data = next(subject_data_gen)
 
+        cgm.SuperSubject.objects.create(parliament_session=self.parliament_session,
+                                                                name = 'Atvinnuvegir',
+                                                                supersubject_id = 1)
+
+        cgm.Subject.objects.create(parliament_session = self.parliament_session,
+                                                    name = self.subject_data['name'],
+                                                    supersubject = parent,
+                                                    subject_id = self.subject_data['id'],
+                                                    description = self.subject_data['description'])
+
+
     def test_case_creation(self):
         cgm.Case.objects.create(name=self.case_data['name'],
                                 number=int(self.case_data['number']),
@@ -299,16 +312,13 @@ class ServicesTestCase(TestCase):
             self.assertEqual(num.number, 1)
 
     def test_subject_creation(self):
-        cgm.Subject.objects.create(parliament_session = self.parliament_session,
-    name = self.subject_data['name'],
-    parent = int(self.subject_data['parent']),
-    number = self.subject_data['number'],
-    description = self.subject_data['description'])
+        logger = logging.getLogger('cgTest')
 
-        parent = cgm.Subject.objects.filter(parent=1)
-        child = cgm.Subject.object.filter(number=5)
+        parent = cgm.SuperSubject.objects.get(subersubject_id=1)
 
-        self.assertEqual(child.parent, parent)
+        subject = cgm.Subject.objects.get(name=self.subject_data['name'])
+        
+        self.assertEqual(subject.number, 1)
 
 
 

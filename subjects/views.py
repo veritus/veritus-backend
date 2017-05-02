@@ -30,8 +30,8 @@ class SubjectFilter(django_filters.rest_framework.FilterSet):
         model = Subject
         fields = {
             'name': ['startswith', 'exact', 'contains'],
-            'parent': ['exact'],
-            'number': ['exact'],
+            'supersubject': ['exact'],
+            'subject_id': ['exact'],
             'parliament_session': ['exact']
             }
 

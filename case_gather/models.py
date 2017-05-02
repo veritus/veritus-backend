@@ -16,9 +16,15 @@ class Case(Entity):
     case_type = models.TextField()
     case_status = models.TextField()
 
+class SuperSubject(Entity):
+    parliament_session = models.ForeignKey(ParliamentSession, null=True, blank=True)
+    supersubject_id = models.IntegerField(null=True, blank=True)
+
 
 class Subject(Entity):
     parliament_session = models.ForeignKey(ParliamentSession, null=True, blank=True)
-    number = models.IntegerField(null=True, blank=True)
+    subject_id = models.IntegerField(null=True, blank=True)
     description = models.TextField(null=True, blank=True)
-    parent = models.ForeignKey('Subject', null=True, blank=True)
+    supersubject = models.ForeignKey(SuperSubject, null=True, blank=True)
+
+
