@@ -10,13 +10,13 @@ cron_logger = logging.getLogger('cronJobs')
 
 class gather_cases(CronJobBase):
     RUN_EVERY_MINS = 30
-
+    nafn = "andrea"
     schedule = Schedule(run_every_mins=RUN_EVERY_MINS)
     code = 'case_gather.gather_cases'    # a unique code
 
     def do(self):
         session_number = 146
-            
+
         try:
             cron_logger.info('Starting case gathering')
 
