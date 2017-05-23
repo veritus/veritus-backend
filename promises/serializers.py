@@ -9,14 +9,14 @@ class PromiseSerializerRead(serializers.ModelSerializer):
 
     class Meta:
         model = Promise
-        fields = ('name', 'small_description', 'long_description', 'parliament', 'id', 'created', 'modified', 'parliamentMember', 'party')
+        fields = ('name', 'small_description', 'long_description', 'parliament', 'id', 'created', 'modified', 'parliament_member', 'party')
 
 
 class PromiseSerializerWrite(serializers.ModelSerializer):
 
     class Meta:
         model = Promise
-        fields = ('name', 'small_description', 'long_description', 'parliament', 'id', 'created', 'modified', 'parliamentMember', 'party')
+        fields = ('name', 'small_description', 'long_description', 'parliament', 'id', 'created', 'modified', 'parliament_member', 'party')
 
 
 class PromiseCaseSerializer(serializers.ModelSerializer):
