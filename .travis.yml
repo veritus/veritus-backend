@@ -30,3 +30,6 @@ script:
 
 notifications:
   slack: polidevelopers:b2ilF8FkLWBCps2rGq0gOqjr
+
+after_success:
+  coveralls
