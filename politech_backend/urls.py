@@ -11,7 +11,7 @@ from subjects import views as subject_views
 urlpatterns = [
     url(r'^api/v1/admin/', admin.site.urls),
     url(r'^api/v1/api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^api/v1/promises/$', promise_views.promise_list),
+    url(r'^api/v1/promises/$', promise_views.PromiseList.as_view()),
     url(r'^api/v1/promises/(?P<pk>[0-9]+)$', promise_views.promise_detail),
     url(r'^api/v1/promises/subjects/$', subject_views.PromiseSubjectList.as_view()),
     url(r'^api/v1/promiseCases/$', promise_views.PromiseCaseList.as_view()),
