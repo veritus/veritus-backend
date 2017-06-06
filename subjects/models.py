@@ -1,8 +1,7 @@
 from django.db import models
-from case_gather.models import Case
+from case_gather.models import Case, Subject
 from promises.models import Promise
 from main.models import Entity
-from case_gather.models import Subject
 
 
 class CaseSubject(Entity):

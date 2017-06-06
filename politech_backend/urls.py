@@ -17,7 +17,10 @@ urlpatterns = [
     url(r'^api/v1/promiseCases/$', promise_views.PromiseCaseList.as_view()),
     url(r'^api/v1/promiseCases/(?P<pk>[0-9]+)$', promise_views.promise_case_detail),
     url(r'^api/v1/suggestedPromiseCases/$', promise_views.SuggestedPromiseCaseList.as_view()),
-    url(r'^api/v1/suggestedPromiseCases/(?P<pk>[0-9]+)$', promise_views.suggested_promise_case_detail),
+    url(
+        r'^api/v1/suggestedPromiseCases/(?P<pk>[0-9]+)$',
+        promise_views.suggested_promise_case_detail
+    ),
     url(r'^api/v1/cases/$', case_views.case_list),
     url(r'^api/v1/cases/(?P<pk>[0-9]+)$', case_views.case_detail),
     url(r'^api/v1/parliaments/$', parliament_views.parliament_list),

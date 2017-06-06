@@ -5,7 +5,7 @@ from case_gather.models import Case
 from parliament.models import Parliament, ParliamentSession
 from subjects.models import CaseSubject, PromiseSubject
 
-CRON_LOGGER = logging.getLogger('cronJobs')
+CRONLOGGER = logging.getLogger('cronJobs')
 
 
 def find_connected_bills_and_promises():
@@ -20,7 +20,7 @@ def find_connected_bills_and_promises():
         session_cases = Case.objects.filter(session=parliament_session)
         # We look at all cases in each parliament session within the current parliament
         for case in session_cases:
-            CRON_LOGGER.info('Case Name: '+case.name)
+            CRONLOGGER.info('Case Name: '+case.name)
             case_subjects = CaseSubject.objects.filter(case=case)
             case_subject_ids = []
             for case_subject in case_subjects:
@@ -29,7 +29,7 @@ def find_connected_bills_and_promises():
 
             # We look at each promise within the same parliament session
             for promise in current_promises:
-                CRON_LOGGER.info('Promise Name: '+promise.name)
+                CRONLOGGER.info('Promise Name: '+promise.name)
                 promise_subjects = PromiseSubject.objects.filter(promise=promise)
                 promise_subject_ids = []
                 for promise_subject in promise_subjects:
@@ -48,30 +48,32 @@ def find_connected_bills_and_promises():
                     # We go through the case subject ids and find any common subjects
                     # in the promise subject id array
                     for case_subject_id in case_subject_ids:
-                        CRON_LOGGER.info('case subject id: '+str(case_subject_id))
-                        CRON_LOGGER.info('promise subject id: '+str(promise_subject_ids))
-                        CRON_LOGGER.info(case_subject_id in promise_subject_ids)
+                        CRONLOGGER.info('case subject id: '+str(case_subject_id))
+                        CRONLOGGER.info('promise subject id: '+str(promise_subject_ids))
+                        CRONLOGGER.info(case_subject_id in promise_subject_ids)
                         if case_subject_id in promise_subject_ids:
                             number_of_common_subjects += 1
 
-                    CRON_LOGGER.info(number_of_common_subjects)
-                    CRON_LOGGER.info(size_of_larger_subject_array)
+                    CRONLOGGER.info(number_of_common_subjects)
+                    CRONLOGGER.info(size_of_larger_subject_array)
 
                     # If the percent between common subjects and the largest array
                     # reaches a certain point we want to connect the case and promise. If
-                    percent_of_common_subjects = float(number_of_common_subjects) / float(size_of_larger_subject_array)
-                    CRON_LOGGER.info( percent_of_common_subjects)
+                    number_of_common_subjects_float = float(number_of_common_subjects)
+                    size_of_larger_subject_array_float = float(size_of_larger_subject_array)
+                    percent_of_common_subjects = number_of_common_subjects_float / size_of_larger_subject_array_float
+                    CRONLOGGER.info(percent_of_common_subjects)
                     # We want at least 4 subjects on both the case and the promise
                     if len(case_subject_ids) > 4 and len(promise_subject_ids) > 4:
-                        CRON_LOGGER.info('case and promise have more than 4 subjects each')
+                        CRONLOGGER.info('case and promise have more than 4 subjects each')
                         # If the percent is 80% or higher we make a connection
                         if percent_of_common_subjects >= 0.8:
                             PromiseCase.objects.create(case=case, promise=promise)
-                            CRON_LOGGER.info('PromiseCase connection created')
+                            CRONLOGGER.info('PromiseCase connection created')
                         # If the percent is between 50% and 79% we create a suggested connection
                         elif percent_of_common_subjects >= 0.5:
                             SuggestedPromiseCase.objects.create(case=case, promise=promise)
-                            CRON_LOGGER.info('SuggestedPromiseBill connection created')
+                            CRONLOGGER.info('SuggestedPromiseBill connection created')
 
 
 

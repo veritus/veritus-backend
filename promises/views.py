@@ -51,10 +51,6 @@ def promise_detail(request, promise_id):
             return Response(write_serializer.data)
         return Response(write_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    elif request.method == 'DELETE':
-        promise.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
-
 
 class PromiseCaseFilter(django_filters.rest_framework.FilterSet):
     ''' filter for promise case '''
