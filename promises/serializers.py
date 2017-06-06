@@ -21,8 +21,9 @@ class PromiseSerializerRead(serializers.ModelSerializer):
             'id',
             'created',
             'modified',
-            'parliament_member',
-            'party'
+            'politician',
+            'party',
+            'fulfilled'
             )
 
 
@@ -39,10 +40,10 @@ class PromiseSerializerWrite(serializers.ModelSerializer):
             'id',
             'created',
             'modified',
-            'parliament_member',
-            'party'
+            'politician',
+            'party',
+            'fulfilled'
             )
-
 
 
 class PromiseCaseSerializer(serializers.ModelSerializer):
