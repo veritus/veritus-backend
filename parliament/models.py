@@ -16,4 +16,4 @@ class ParliamentMember(Entity):
     party = models.ForeignKey(Party)
     initials = models.TextField()
     district = models.ForeignKey(District)
-    districtNumber = models.IntegerField() 
+    districtNumber = models.IntegerField()

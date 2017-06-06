@@ -36,6 +36,22 @@ class PromiseList(generics.ListAPIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+#@api_view(['GET', 'POST'])
+#@permission_classes((IsAuthenticatedOrReadOnly,))
+#def promise_list(request):
+#    if request.method == 'GET':
+#        promises = Promise.objects.all()
+#        serializer = PromiseSerializerRead(promises, many=True)
+#        return Response(serializer.data)
+#    elif request.method == 'POST':
+#        promise_logger.info(request.user)
+#        serializer = PromiseSerializerWrite(data=request.data)
+#        if serializer.is_valid():
+#            serializer.save()
+#            return Response(serializer.data, status=status.HTTP_201_CREATED)
+#        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes((IsAuthenticatedOrReadOnly,))
 def promise_detail(request, pk):
