@@ -30,11 +30,11 @@ class PromiseList(generics.ListAPIView):
 
     def post(self, request):
         PROMISE_LOGGER.info(request.user)
-        serializer = PromiseSerializerWrite(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        ps_write_serializer = PromiseSerializerWrite(data=request.data)
+        if ps_write_serializer.is_valid():
+            ps_write_serializer.save()
+            return Response(ps_write_serializer.data, status=status.HTTP_201_CREATED)
+        return Response(ps_write_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
