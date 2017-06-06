@@ -1,23 +1,20 @@
 #!/usr/bin/python
+# pylint: disable=line-too-long, lost-exception
+import logging
 import requests
 from bs4 import BeautifulSoup
-import logging
 
 import case_gather.xml_helper as xml_helper
 
 
 def get_case_data(parliament_session_number):
     xml_logger = logging.getLogger('xmlParser')
-    """
-    Combines xml_helper.get_case_details and
-    xml_helper.get_case_summary into a list
-    that will suffice to create a Case object for database
-    summary : [goal, changes, law_changes, costs, resolution]
-    details : [status, rel_cases, subj_ids]
-    output has keys: 'number', 'name', 'case_type', 'case_status', 'rel_cases'
-                                'subjects', 'sessions'
-    """
-    link_summary = "http://www.althingi.is/altext/xml/samantektir/samantekt/?lthing=146&malnr="
+    # Combines xml_helper.get_case_details and
+    # xml_helper.get_case_summary into a list
+    # that will suffice to create a Case object for database
+    # summary : [goal, changes, law_changes, costs, resolution]
+    # details : [status, rel_cases, subj_ids]
+    # output has keys: number, name, case_type, case_status, rel_cases, subjects, sessions
 
     link_details = """http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=%i&malnr=""" % parliament_session_number
     xml_logger.info('Getting case data from get_cases')
@@ -56,19 +53,18 @@ def get_case_data(parliament_session_number):
 
 def get_subject(subject_id):
     xml_logger = logging.getLogger('xmlParser')
-    """
-    Function to extract information about subjects (efnisflokkur)
-    Interesting information:
-     - Major group number
-     - Major group name
-     - subject number
-     - subject name
-     - subject description
-     - case numbers associated with subject
-    output keys: [subject_id, group_name, subject_name,
-             subject_description, case_numbers]
-    """
-    link = "http://www.althingi.is/altext/xml/efnisflokkar/efnisflokkur/?efnisflokkur="
+    #  Function to extract information about subjects (efnisflokkur)
+    # Interesting information:
+    #  - Major group number
+    #  - Major group name
+    #  - subject number
+    #  - subject name
+    #  - subject description
+    #  - case numbers associated with subject
+    # output keys: [subject_id, group_name, subject_name,
+    #          subject_description, case_numbers]
+
+    link = 'http://www.althingi.is/altext/xml/efnisflokkar/efnisflokkur/?efnisflokkur='
     soup = get_xml(link + subject_id)
 
     output = {}
@@ -78,7 +74,7 @@ def get_subject(subject_id):
             soup, "yfirflokkur", "id")
         assert group_number is None
     except:
-        xml_logger.info('No subject found at number:', subject_id)
+        xml_logger.info('No subject found at number: ' + subject_id)
     else:
         text = xml_helper.get_element_text(soup, "heiti")
 

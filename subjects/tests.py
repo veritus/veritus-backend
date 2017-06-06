@@ -1,7 +1,6 @@
 from rest_framework.test import APITestCase
-from rest_framework.test import APIClient
-from case_gather.models import Subject
 from rest_framework.authtoken.models import Token
+from case_gather.models import Subject
 from django.contrib.auth.models import User
 from subjects.models import PromiseSubject
 from promises.models import Promise
@@ -15,7 +14,7 @@ class PartyAPI(APITestCase):
         lauren_token = Token(user=lauren)
         lauren_token.save()
 
-        hagstjorn = Subject(name='Hagstjórn', number = 1)
+        hagstjorn = Subject(name='Hagstjórn', number=1)
         hagstjorn.save()
         fjarreidur = Subject(name='Fjárreiður ríkisins', parent=hagstjorn, number=2)
         fjarreidur.save()
@@ -81,13 +80,13 @@ class PartyAPI(APITestCase):
     def test_post_subject_no_name(self):
         token = Token.objects.get(user__username='lauren')
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
-        payload = { }
+        payload = {}
         response = self.client.post('/api/v1/subjects/', data=payload)
         self.assertEqual(response.status_code, 400)
         self.assertEqual(response.data, {"name": ["This field is required."]})
 
-    def test_post_subject_no_authentication(self):
-        payload = { }
+    def test_post_subject_no_auth(self):
+        payload = {}
         response = self.client.post('/api/v1/subjects/', data=payload)
         self.assertEqual(response.status_code, 401)
 
@@ -140,32 +139,34 @@ class PartyAPI(APITestCase):
         }
         response = self.client.post('/api/v1/promises/subjects/', data=payload)
         self.assertEqual(response.status_code, 400)
-        self.assertEqual(response.data, {'non_field_errors': ["The fields promise, subject must make a unique set."]})
+        expected = {'non_field_errors': ["The fields promise, subject must make a unique set."]}
+        self.assertEqual(response.data, expected)
 
     def test_post_subject_and_promise_empty(self):
         token = Token.objects.get(user__username='lauren')
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
-        payload = { }
+        payload = {}
         response = self.client.post('/api/v1/promises/subjects/', data=payload)
         self.assertEqual(response.status_code, 400)
-        self.assertEqual(response.data, {'subject': ['This field is required.'], 'promise': ['This field is required.']})
+        expected = {'subject': ['This field is required.'], 'promise': ['This field is required.']}
+        self.assertEqual(response.data, expected)
 
     def test_post_subject_empty(self):
         token = Token.objects.get(user__username='lauren')
         subject = Subject.objects.filter(name='Hagstjórn').get()
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
-        payload = { 
+        payload = {
             "subject": subject.pk
         }
         response = self.client.post('/api/v1/promises/subjects/', data=payload)
         self.assertEqual(response.status_code, 400)
-        self.assertEqual(response.data, { 'promise': ['This field is required.']})
+        self.assertEqual(response.data, {'promise': ['This field is required.']})
 
     def test_post_promise_empty(self):
         promise = Promise.objects.filter(name='Promise 1').get()
         token = Token.objects.get(user__username='lauren')
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
-        payload = { 
+        payload = {
             "promise": promise.pk
         }
         response = self.client.post('/api/v1/promises/subjects/', data=payload)
@@ -174,6 +175,6 @@ class PartyAPI(APITestCase):
 
 
     def test_post_subject_no_authentication(self):
-        payload = { }
+        payload = {}
         response = self.client.post('/api/v1/promises/subjects/', data=payload)
         self.assertEqual(response.status_code, 401)

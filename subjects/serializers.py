@@ -1,13 +1,22 @@
-from rest_framework import serializers, viewsets
-from .models import CaseSubject, PromiseSubject
+from rest_framework import serializers
 from promises.serializers import PromiseSerializerRead
 from case_gather.models import Subject
+from .models import CaseSubject, PromiseSubject
 
 class SubjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Subject
-        fields = ('id', 'name', 'created', 'modified', 'description', 'parliament_session', 'number', 'parent')
+        fields = (
+            'id',
+            'name',
+            'created',
+            'modified',
+            'description',
+            'parliament_session',
+            'number',
+            'parent'
+            )
 
 
 class CaseSubjectSerializer(serializers.ModelSerializer):
@@ -30,7 +39,7 @@ class PromiseSubjectSerializerRead(serializers.ModelSerializer):
 
     subject = SubjectSerializer()
     promise = PromiseSerializerRead()
-    
+
     class Meta:
         model = PromiseSubject
         fields = ('id', 'subject', 'promise', 'created', 'modified')

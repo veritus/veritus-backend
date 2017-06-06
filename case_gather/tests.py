@@ -1,7 +1,8 @@
-from django.test import TestCase
-from bs4 import BeautifulSoup
+# pylint: disable=too-many-instance-attributes
 import os
+from django.test import TestCase
 from django.conf import settings
+from bs4 import BeautifulSoup
 
 import case_gather.xml_helper as x_h
 import case_gather.xml_parser as x_p
@@ -16,9 +17,6 @@ details_path = os.path.join(
 
 details3_path = os.path.join(
     settings.BASE_DIR, 'case_gather', 'test_data', 'case3details.txt')
-
-# Create your tests here.
-
 
 class XMLHelperGAVTestCase(TestCase):
     """

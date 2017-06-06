@@ -2,7 +2,7 @@ import logging
 
 
 def get_attribute_value(soup, element, attribute):
-    """ 
+    """
     element: name of element as a str
     attribute: name of element attribute as a str
     yield attribute values as is (can be strings or ints, beware!)

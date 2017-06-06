@@ -1,14 +1,13 @@
-from rest_framework import status
-from rest_framework.decorators import api_view, permission_classes
+from rest_framework import status, generics
 from rest_framework.response import Response
-
-from .models import CaseSubject, PromiseSubject
-from case_gather.models import Subject
-from .serializers import SubjectSerializer, CaseSubjectSerializer, PromiseSubjectSerializerWrite, PromiseSubjectSerializerRead
-from rest_framework.permissions import IsAuthenticated, AllowAny, IsAuthenticatedOrReadOnly
-from rest_framework import generics
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 import django_filters
-        
+
+from case_gather.models import Subject
+from .serializers import SubjectSerializer
+from .serializers import PromiseSubjectSerializerWrite
+from .serializers import PromiseSubjectSerializerRead
+from .models import PromiseSubject
 
 class PromiseSubjectList(generics.ListAPIView):
     queryset = PromiseSubject.objects.all()
@@ -16,13 +15,13 @@ class PromiseSubjectList(generics.ListAPIView):
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
     filter_fields = ('promise', 'subject')
     permission_classes = (IsAuthenticatedOrReadOnly,)
-    
+
     def post(self, request):
-        serializer = PromiseSubjectSerializerWrite(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        ps_write_serializer = PromiseSubjectSerializerWrite(data=request.data)
+        if ps_write_serializer.is_valid():
+            ps_write_serializer.save()
+            return Response(ps_write_serializer.data, status=status.HTTP_201_CREATED)
+        return Response(ps_write_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class SubjectFilter(django_filters.rest_framework.FilterSet):
