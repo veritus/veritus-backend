@@ -1,8 +1,7 @@
 from rest_framework.test import APITestCase
-from rest_framework.test import APIClient
-from .models import ParliamentMember
 from party.models import Party
 from district.models import District
+from .models import ParliamentMember
 
 class ParliamentMemberAPI(APITestCase):
 
@@ -12,11 +11,12 @@ class ParliamentMemberAPI(APITestCase):
         d = District(name='District', abbreviation='d')
         d.save()
         pm = ParliamentMember(
-            name = 'John Johnson', 
-            initials = 'jj', 
-            districtNumber = 10, 
-            party = p,
-            district = d)
+            name='John Johnson',
+            initials='jj',
+            districtNumber=10,
+            party=p,
+            district=d
+        )
         pm.save()
 
     def test_get_all(self):
@@ -24,4 +24,3 @@ class ParliamentMemberAPI(APITestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data), 1)
         self.assertEqual(response.data[0]['name'], 'John Johnson')
-

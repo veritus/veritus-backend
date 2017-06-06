@@ -1,3 +1,6 @@
+# pylint: disable=line-too-long, too-many-locals, too-many-nested-blocks, too-many-branches
+
+
 import logging
 
 from promises.models import Promise, PromiseCase, SuggestedPromiseCase
@@ -74,10 +77,3 @@ def find_connected_bills_and_promises():
                         elif percent_of_common_subjects >= 0.5:
                             SuggestedPromiseCase.objects.create(case=case, promise=promise)
                             CRONLOGGER.info('SuggestedPromiseBill connection created')
-
-
-
-
-
-
-

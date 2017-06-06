@@ -13,4 +13,3 @@ def party_list(request):
         parties = Party.objects.all()
         serializer = PartySerializerRead(parties, many=True)
         return Response(serializer.data)
-

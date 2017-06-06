@@ -22,4 +22,3 @@ class GatherCases(CronJobBase):
             CRONLOGGER.error(exception.message + " - " + traceback.format_exc())
         finally:
             CRONLOGGER.info('Case gathering completed')
-

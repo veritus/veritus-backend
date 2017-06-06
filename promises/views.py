@@ -41,15 +41,15 @@ def promise_detail(request, promise_id):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        read_serializer = PromiseSerializerRead(promise)
-        return Response(read_serializer.data)
+        promise_read_serializer = PromiseSerializerRead(promise)
+        return Response(promise_read_serializer.data)
 
     elif request.method == 'PUT':
-        write_serializer = PromiseSerializerWrite(promise, data=request.data)
-        if write_serializer.is_valid():
-            write_serializer.save()
-            return Response(write_serializer.data)
-        return Response(write_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        promise_write_serializer = PromiseSerializerWrite(promise, data=request.data)
+        if promise_write_serializer.is_valid():
+            promise_write_serializer.save()
+            return Response(promise_write_serializer.data)
+        return Response(promise_write_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class PromiseCaseFilter(django_filters.rest_framework.FilterSet):

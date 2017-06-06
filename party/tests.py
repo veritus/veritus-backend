@@ -1,7 +1,5 @@
 from rest_framework.test import APITestCase
-from rest_framework.test import APIClient
 from .models import Party
-
 
 class PartyAPI(APITestCase):
 
