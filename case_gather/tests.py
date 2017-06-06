@@ -2,11 +2,13 @@ from django.test import TestCase
 from bs4 import BeautifulSoup
 import os
 from django.conf import settings
+import logging
 
 import case_gather.xml_helper as x_h
 import case_gather.xml_parser as x_p
 import case_gather.models as cgm
 import parliament.models as parliament_models
+
 
 case_path = os.path.join(
     settings.BASE_DIR, 'case_gather', 'test_data', 'caselist.txt')
@@ -16,8 +18,6 @@ details_path = os.path.join(
 
 details3_path = os.path.join(
     settings.BASE_DIR, 'case_gather', 'test_data', 'case3details.txt')
-
-# Create your tests here.
 
 
 class XMLHelperGAVTestCase(TestCase):
@@ -262,19 +262,45 @@ class ServicesTestCase(TestCase):
     """
 
     def setUp(self):
-        case_data_gen = x_p.get_case_data(146)
         PS = parliament_models.ParliamentSession
+
         P = parliament_models.Parliament
+
+        # Create parliament
         P.objects.create(start_date="2016-08-01",
                          end_date="2020-08-01")
+
+        # get parliament
         parliament = P.objects.get(start_date="2016-08-01")
+
+        # Create Parliament session
         PS.objects.create(session_number=146,
                           parliament=parliament)
+
         self.parliament_session = PS.objects.get(session_number=146)
 
+        # set up for Case
+        case_data_gen = x_p.get_case_data(146)
         self.case_data = next(case_data_gen)
 
-    def test_object_creation(self):
+        # Set up for Subject
+        subject_data_gen = x_p.get_subjects()
+        self.subject_data = next(subject_data_gen)
+
+        cgm.SuperSubject.objects.create(parliament_session=self.parliament_session,
+                                                                name = 'Atvinnuvegir',
+                                                                number= 1)
+
+        parent = cgm.SuperSubject.objects.get(number=1)
+
+        cgm.Subject.objects.create(parliament_session = self.parliament_session,
+                                                    name = self.subject_data['name'],
+                                                    supersubject = parent,
+                                                    number = self.subject_data['id'],
+                                                    description = self.subject_data['description'])
+
+
+    def test_case_creation(self):
         cgm.Case.objects.create(name=self.case_data['name'],
                                 number=int(self.case_data['number']),
                                 parliament_session=self.parliament_session,
@@ -286,3 +312,14 @@ class ServicesTestCase(TestCase):
         for num in list(number):
 
             self.assertEqual(num.number, 1)
+
+    def test_subject_creation(self):
+        logger = logging.getLogger('cgTest')
+
+        subject = cgm.Subject.objects.get(name=self.subject_data['name'])
+        
+        self.assertEqual(subject.number, 1)
+
+
+
+

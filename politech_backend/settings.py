@@ -169,6 +169,12 @@ LOGGING = {
             'filename': 'logs/cronJobs.log',
             'formatter': 'verbose'
         },
+    'cgTestHandler': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'logs/xmlHelper.log',
+            'formatter': 'verbose'
+        },
         'xmlHelperHandler': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
@@ -200,6 +206,11 @@ LOGGING = {
             'handlers': ['cronJobHandler'],
             'propagate': True,
             'level': 'DEBUG',
+        },
+        'cgTest': {
+            'handlers': ['cgTestHandler'],
+            'propagate': True,
+            'level': 'DEBUG'
         },
         'xmlHelper': {
             'handlers': ['xmlHelperHandler'],

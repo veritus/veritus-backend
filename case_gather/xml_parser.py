@@ -69,14 +69,14 @@ def get_subject(subject_id):
              subject_description, case_numbers]
     """
     link = "http://www.althingi.is/altext/xml/efnisflokkar/efnisflokkur/?efnisflokkur="
-    soup = get_xml(link + subject_id)
+    soup = get_xml(link + str(subject_id))
 
     output = {}
 
     try:
         group_number = xml_helper.get_attribute_value(
             soup, "yfirflokkur", "id")
-        assert group_number is None
+        assert group_number is not None
     except:
         xml_logger.info('No subject found at number:', subject_id)
     else:
@@ -96,14 +96,16 @@ def get_subject(subject_id):
         # Sort the case numbers
         case_numbers.sort()
         output = {'id': subject_id,
-                  'group_name': group_name,
+                  'parent_name': group_name,
+                  'parent_number': group_number,
                   'name': subject_name,
                   "description": subject_description,
                   "case_numbers": case_numbers}
-    finally:
-        group_number.close()
+
         text.close()
         cases.close()
+    finally:
+        group_number.close()
         return output
 
 

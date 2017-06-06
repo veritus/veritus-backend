@@ -1,6 +1,6 @@
 from rest_framework.test import APITestCase
 from rest_framework.test import APIClient
-from case_gather.models import Subject
+from case_gather.models import Subject, SuperSubject
 from rest_framework.authtoken.models import Token
 from django.contrib.auth.models import User
 from subjects.models import PromiseSubject
@@ -15,9 +15,9 @@ class PartyAPI(APITestCase):
         lauren_token = Token(user=lauren)
         lauren_token.save()
 
-        hagstjorn = Subject(name='Hagstjórn', number = 1)
+        hagstjorn = SuperSubject(name='Hagstjórn', number = 1)
         hagstjorn.save()
-        fjarreidur = Subject(name='Fjárreiður ríkisins', parent=hagstjorn, number=2)
+        fjarreidur = Subject(name='Fjárreiður ríkisins', supersubject=hagstjorn, number=2)
         fjarreidur.save()
 
         parliament = Parliament(name='Parliament', start_date='2017-01-01', end_date='2017-01-01')
@@ -57,7 +57,7 @@ class PartyAPI(APITestCase):
         self.assertEqual(response.data[0]['name'], 'Hagstjórn')
 
     def test_name_parent_search(self):
-        hagstjorn = Subject.objects.filter(name='Hagstjórn').get()
+        hagstjorn = SuperSubject.objects.filter(name='Hagstjórn').get()
         response = self.client.get('/api/v1/subjects/?parent='+str(hagstjorn.pk))
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data), 1)
@@ -118,7 +118,7 @@ class PartyAPI(APITestCase):
 
     def test_post_promise_subject(self):
         promise = Promise.objects.filter(name='Promise 2').get()
-        subject = Subject.objects.filter(name='Hagstjórn').get()
+        subject = SuperSubject.objects.filter(name='Hagstjórn').get()
         token = Token.objects.get(user__username='lauren')
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
         payload = {
@@ -131,7 +131,7 @@ class PartyAPI(APITestCase):
 
     def test_post_promise_subject_unique(self):
         promise = Promise.objects.filter(name='Promise 1').get()
-        subject = Subject.objects.filter(name='Hagstjórn').get()
+        subject = SuperSubject.objects.filter(name='Hagstjórn').get()
         token = Token.objects.get(user__username='lauren')
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
         payload = {
@@ -152,7 +152,7 @@ class PartyAPI(APITestCase):
 
     def test_post_subject_empty(self):
         token = Token.objects.get(user__username='lauren')
-        subject = Subject.objects.filter(name='Hagstjórn').get()
+        subject = SuperSubject.objects.filter(name='Hagstjórn').get()
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
         payload = { 
             "subject": subject.pk

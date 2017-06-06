@@ -1,9 +1,10 @@
 #!/usr/bin/python
 import logging
 import traceback
-from case_gather.models import Case
+from case_gather.models import Case, Subject, SuperSubject
 from parliament.models import ParliamentSession
 import case_gather.xml_parser as xml_parser
+import case_gather.services_helper as s_h
 
 
 def update_case_db(session_number):
@@ -53,3 +54,61 @@ def update_case_db(session_number):
 
     new_cases.close()
     logger.info('update finished')
+
+def update_subject_db():
+    logger = logging.getLogger('cronJobServices')
+    logger.info('Subject update started')
+
+    subjects_in_db = s_h.get_all_subjects_in_db()
+
+    subject_numbers = s_h.collect_subjects(subjects_in_db)
+
+    parents_in_db = s_h.get_all_parents_in_db()
+
+    parent_numbers = s_h.collect_parents(parents_in_db)
+
+    try:
+        new_subjects = xml_parser.get_subject_data()
+    except Exception as e:
+        logger.error(e.message + '-' + traceback.format_exc())
+
+
+    for subject in new_subjects:
+        logger.info(subject)
+
+        if int(subject['parent_number']) in parent_numbers:
+            logger.info('parent is already in db')
+        else:
+            try:
+                SuperSubject.objects.create(parliament_session=parliament_session,
+                                                                name = subject['parent_name'],
+                                                                number = subject['parent_number'])
+
+            except Exception as e:
+                logger.error(e.message)
+                logger.info('supersubject creation failure')
+
+        if int(subject['number']) in subject_numbers:
+            logger.info('subject is already in db')
+        else:
+            logger.info('Querying db for supersubject')
+            parent = SuperSubject.objects.get(number=subject['parent_number'])
+
+            logger.info('Creating subject')
+
+            try:
+                Subject.objects.create(parliament_session = parliament_session,
+                                                name = subject['name'],
+                                                number = subject['number'],
+                                                supersubject = parent,
+                                                description = subject['description'])
+
+            except Exception as e:
+                logger.error(e.message)
+                logger.info('subject creation failure')
+
+            logger.info('subject entry created')
+
+    new_cases.close()
+    logger.info('subject update finished')
+    
