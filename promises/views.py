@@ -13,22 +13,28 @@ from .serializers import SuggestedPromiseCaseSerializer
 
 PROMISE_LOGGER = logging.getLogger('promise')
 
+class PromiseFilter(django_filters.rest_framework.FilterSet):
+    class Meta:
+        model = Promise
+        fields = {
+            'parliament': ['exact'],
+            'small_description': ['startswith', 'exact', 'contains'],
+            }
 
-@api_view(['GET', 'POST'])
-@permission_classes((IsAuthenticatedOrReadOnly,))
-def promise_list(request):
-    ''' Get all and post endpoints '''
-    if request.method == 'GET':
-        promises = Promise.objects.all()
-        read_serializer = PromiseSerializerRead(promises, many=True)
-        return Response(read_serializer.data)
-    elif request.method == 'POST':
+class PromiseList(generics.ListAPIView):
+    queryset = Promise.objects.all()
+    serializer_class = PromiseSerializerRead
+    filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
+    filter_class = PromiseFilter
+    permission_classes = (IsAuthenticatedOrReadOnly,)
+
+    def post(self, request):
         PROMISE_LOGGER.info(request.user)
-        write_serializer = PromiseSerializerWrite(data=request.data)
-        if write_serializer.is_valid():
-            write_serializer.save()
-            return Response(write_serializer.data, status=status.HTTP_201_CREATED)
-        return Response(write_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        serializer = PromiseSerializerWrite(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
