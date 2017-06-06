@@ -2,8 +2,8 @@
 import logging
 import traceback
 from case_gather.models import Case
-from parliament.models import ParliamentSession
 import case_gather.xml_parser as xml_parser
+from parliament.models import ParliamentSession
 
 
 def update_case_db(session_number):

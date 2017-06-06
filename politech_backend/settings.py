@@ -225,7 +225,7 @@ LOGGING = {
 }
 
 CRON_CLASSES = [
-    "case_gather.cronJobs.gather_cases"
+    "case_gather.cron_jobs.GatherCases"
     # "promises.cronJobs.connect_cases_and_promises"
 ]
 

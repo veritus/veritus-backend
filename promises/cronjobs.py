@@ -4,7 +4,7 @@ import traceback
 from django_cron import CronJobBase, Schedule
 import promises.services as promise_services
 
-CRON_LOGGER = logging.getLogger('cronJobs')
+CRONLOGGER = logging.getLogger('cronJobs')
 
 class ConnectBillsAndPromises(CronJobBase):
     ''' Connects bills and promises together using subjects that are related to both '''
@@ -17,8 +17,8 @@ class ConnectBillsAndPromises(CronJobBase):
     def do(self):
         ''' Executes the cron job '''
         try:
-            CRON_LOGGER.info('Starting bill and promise connection')
+            CRONLOGGER.info('Starting bill and promise connection')
             promise_services.find_connected_bills_and_promises()
 
         except Exception as exp:
-            CRON_LOGGER.error(exp.message + " - " + traceback.format_exc())
+            CRONLOGGER.error(exp.message + " - " + traceback.format_exc())
