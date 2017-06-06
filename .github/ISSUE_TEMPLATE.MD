@@ -12,4 +12,4 @@
 # Logged in as
 
 # Environment
-Development || Test || Pre Production || Production
+Development || Staging || Production
