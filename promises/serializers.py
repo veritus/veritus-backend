@@ -21,7 +21,7 @@ class PromiseSerializerRead(serializers.ModelSerializer):
             'id',
             'created',
             'modified',
-            'parliament_member', 
+            'parliament_member',
             'party'
             )
 
@@ -31,7 +31,6 @@ class PromiseSerializerWrite(serializers.ModelSerializer):
 
     class Meta:
         model = Promise
-<<<<<<< HEAD
         fields = (
             'name',
             'small_description',
@@ -39,11 +38,11 @@ class PromiseSerializerWrite(serializers.ModelSerializer):
             'parliament',
             'id',
             'created',
-            'modified'
+            'modified',
+            'parliament_member',
+            'party'
             )
-=======
-        fields = ('name', 'small_description', 'long_description', 'parliament', 'id', 'created', 'modified', 'parliament_member', 'party')
->>>>>>> master
+
 
 
 class PromiseCaseSerializer(serializers.ModelSerializer):
