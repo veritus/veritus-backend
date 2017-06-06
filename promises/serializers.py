@@ -1,4 +1,3 @@
-''' Serializers for promises '''
 from rest_framework import serializers
 
 from parliament.serializers import ParliamentSerializer
@@ -21,7 +20,9 @@ class PromiseSerializerRead(serializers.ModelSerializer):
             'parliament',
             'id',
             'created',
-            'modified'
+            'modified',
+            'parliament_member', 
+            'party'
             )
 
 
@@ -30,6 +31,7 @@ class PromiseSerializerWrite(serializers.ModelSerializer):
 
     class Meta:
         model = Promise
+<<<<<<< HEAD
         fields = (
             'name',
             'small_description',
@@ -39,6 +41,9 @@ class PromiseSerializerWrite(serializers.ModelSerializer):
             'created',
             'modified'
             )
+=======
+        fields = ('name', 'small_description', 'long_description', 'parliament', 'id', 'created', 'modified', 'parliament_member', 'party')
+>>>>>>> master
 
 
 class PromiseCaseSerializer(serializers.ModelSerializer):
