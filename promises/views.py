@@ -12,15 +12,22 @@ from rest_framework import generics
 
 promise_logger = logging.getLogger('promise')
 
+class PromiseFilter(django_filters.rest_framework.FilterSet):
+    class Meta:
+        model = Promise
+        fields = {
+            'parliament': ['exact'],
+            'small_description': ['startswith', 'exact', 'contains'],
+            }
 
-@api_view(['GET', 'POST'])
-@permission_classes((IsAuthenticatedOrReadOnly,))
-def promise_list(request):
-    if request.method == 'GET':
-        promises = Promise.objects.all()
-        serializer = PromiseSerializerRead(promises, many=True)
-        return Response(serializer.data)
-    elif request.method == 'POST':
+class PromiseList(generics.ListAPIView):
+    queryset = Promise.objects.all()
+    serializer_class = PromiseSerializerRead
+    filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
+    filter_class = PromiseFilter
+    permission_classes = (IsAuthenticatedOrReadOnly,)
+
+    def post(self, request):
         promise_logger.info(request.user)
         serializer = PromiseSerializerWrite(data=request.data)
         if serializer.is_valid():
