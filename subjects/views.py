@@ -28,7 +28,7 @@ class SubjectFilter(django_filters.rest_framework.FilterSet):
     class Meta:
         model = Subject
         fields = {
-            'name': ['startswith', 'exact', 'contains'],
+            'name': ['startswith', 'exact', 'contains', 'istartswith'],
             'parent': ['exact'],
             'number': ['exact'],
             'parliament_session': ['exact']
