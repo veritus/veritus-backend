@@ -44,6 +44,18 @@ class SubjectList(generics.ListAPIView):
     def post(self, request):
         serializer = SubjectSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+            # We capitalize the subject as we only want to have capitalized subjects
+            serializer.validated_data['name'] = serializer.validated_data['name'].capitalize()
+
+            validated_subject = serializer.validated_data
+            subject_exists = Subject.objects.filter(name=validated_subject['name'])
+
+            if subject_exists.exists():
+                # If the subject already exists, we dont want to create a duplicate.
+                # Then we simply return the already existing object with a 200.
+                exists_serializer = SubjectSerializer(subject_exists.get())
+                return Response(exists_serializer.data, status=status.HTTP_200_OK)
+            else:
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
