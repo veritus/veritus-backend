@@ -64,17 +64,21 @@ def get_case_details(soup):
         status_gen_ = get_element_text(soup, "staðamáls")
         test = next(status_gen_)
         assert test is not None
-        status_flag = True
         status_gen = get_element_text(soup, 'staðamáls')
     except:
         logger.info('Case has no status')
         status_flag = False
 
-    rel_cases_gen = get_attribute_value(soup, "mál", "málsnúmer")
-    subj_id_gen = get_attribute_value(soup, "efnisflokkur", "id")
+    # Get case creators
+    case_creators_element = soup.findAll('framsögumenn')
+    case_creators_names = []
+    for case_creator_element in case_creators_element:
+        name = next(get_element_text(case_creator_element, 'nafn'))
+        case_creators_names.append(name)
+    logger.info(case_creators_names)
 
-    output = []
-    subj_ids = []
+    # Get related cases
+    rel_cases_gen = get_attribute_value(soup, "mál", "málsnúmer")
     rel_cases = []
     for rel_case in rel_cases_gen:
         rel_cases.append(rel_case)
@@ -82,6 +86,9 @@ def get_case_details(soup):
     # remove the first rel_case, as it is the actual case
     rel_cases.pop(0)
 
+    # Get case subjects
+    subj_id_gen = get_attribute_value(soup, "efnisflokkur", "id")
+    subj_ids = []
     for subj_id in subj_id_gen:
         subj_ids.append(subj_id)
 
@@ -90,7 +97,12 @@ def get_case_details(soup):
     else:
         status = ''
 
-    output = [status, rel_cases, subj_ids]
+    output = [
+        status,
+        rel_cases,
+        subj_ids,
+        case_creators_names
+    ]
     return output
 
 

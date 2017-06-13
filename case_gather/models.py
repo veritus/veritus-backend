@@ -19,7 +19,7 @@ class Case(Entity):
 
 class CaseCreator(Entity):
     parliament_member = models.ForeignKey(ParliamentMember)
-    case = models.ForeignKey(Case)
+    case = models.ForeignKey(Case, related_name='case_creators')
 
 class Subject(Entity):
     parliament_session = models.ForeignKey(ParliamentSession, null=True, blank=True)

@@ -1,9 +1,9 @@
 #!/usr/bin/python
 import logging
 import traceback
-from case_gather.models import Case
+from case_gather.models import Case, CaseCreator
 import case_gather.xml_parser as xml_parser
-from parliament.models import ParliamentSession
+from parliament.models import ParliamentSession, ParliamentMember
 
 CRONLOGGER = logging.getLogger('cronJobServices')
 
@@ -40,7 +40,7 @@ def update_case_db(session_number):
             CRONLOGGER.info('Creating case')
 
             try:
-                Case.objects.create(
+                new_case = Case.objects.create(
                     name=case['name'],
                     number=int(case['number']),
                     parliament_session=parliament_session,
@@ -48,6 +48,19 @@ def update_case_db(session_number):
                     case_status=case['case_status'],
                     althingi_link=case['althingi_link']
                 )
+                CRONLOGGER.info('case creators')
+                CRONLOGGER.info(case['case_creator_names'])
+                for case_creator_name in case['case_creator_names']:
+                    CRONLOGGER.info(case_creator_name)
+                    parliament_member = ParliamentMember.objects.filter(name=case_creator_name)
+                    if parliament_member.exists():
+                        parliament_member = parliament_member.get()
+                        CaseCreator.objects.create(
+                            case=new_case,
+                            parliament_member=parliament_member
+                        )
+                    else:
+                        CRONLOGGER.error('Parliament member not found: ' + case_creator_name)
             except Exception as e:
                 CRONLOGGER.error(e.message)
                 CRONLOGGER.error('case creation failure')

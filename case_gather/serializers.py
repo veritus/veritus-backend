@@ -1,11 +1,19 @@
 from rest_framework import serializers
-from parliament.serializers import ParliamentSessionSerializerRead
-from .models import Case
+from parliament.serializers import ParliamentSessionSerializerRead, ParliamentMemberSerializer
+from .models import Case, CaseCreator
+
+class CaseCreatorSerializer(serializers.ModelSerializer):
+    parliament_member = ParliamentMemberSerializer()
+    class Meta:
+        model = CaseCreator
+        fields = (
+            'parliament_member',
+        )
 
 class CaseSerializer(serializers.ModelSerializer):
 
     parliament_session = ParliamentSessionSerializerRead()
-
+    case_creators = CaseCreatorSerializer(many=True, read_only=True)
     class Meta:
         model = Case
         fields = (
@@ -17,5 +25,6 @@ class CaseSerializer(serializers.ModelSerializer):
             'parliament_session',
             'created',
             'modified',
-            'althingi_link'
+            'althingi_link',
+            'case_creators'
         )

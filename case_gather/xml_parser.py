@@ -43,6 +43,7 @@ def get_case_data(parliament_session_number):
         case_status = details[0]
         rel_cases = details[1]
         subjects = details[2]
+        case_creator_names = details[3]
 
         output = {
             'number': number,
@@ -52,7 +53,8 @@ def get_case_data(parliament_session_number):
             'session': parliament_session_number,
             'case_status': case_status,
             'subjects': subjects,
-            'althingi_link': althingi_link
+            'althingi_link': althingi_link,
+            'case_creator_names': case_creator_names
         }
 
         yield output
@@ -171,7 +173,7 @@ def case_collector(parliament_session_number):
     )
     XML_LOGGER.info('have the case case_types_gen generator')
 
-    # Slóð element in XML
+    # Link to case on althingi.is is in an element called html
     althingi_link_gen = xml_helper.get_element_text(
         soup, "html"
     )
