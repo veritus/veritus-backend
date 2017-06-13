@@ -751,19 +751,6 @@
   },
   {
     "fields": {
-      "name": "Sigríður Á. Andersen",
-      "party": 1,
-      "initials": "SÁA",
-      "district": 3,
-      "districtNumber": 4,
-      "created": "2017-04-25T17:41:28+00:00",
-      "modified": "2017-04-25T17:41:28+00:00"
-    },
-    "model": "parliament.parliamentMember",
-    "pk": 47
-  },
-  {
-    "fields": {
       "name": "Sigurður Ingi Jóhannsson",
       "party": 2,
       "initials": "SIJ",
@@ -773,7 +760,7 @@
       "modified": "2017-04-25T17:41:28+00:00"
     },
     "model": "parliament.parliamentMember",
-    "pk": 48
+    "pk": 47
   },
   {
     "fields": {
@@ -786,7 +773,7 @@
       "modified": "2017-04-25T17:41:28+00:00"
     },
     "model": "parliament.parliamentMember",
-    "pk": 49
+    "pk": 48
   },
   {
     "fields": {
@@ -799,7 +786,7 @@
       "modified": "2017-04-25T17:41:28+00:00"
     },
     "model": "parliament.parliamentMember",
-    "pk": 50
+    "pk": 49
   },
   {
     "fields": {
@@ -812,7 +799,7 @@
       "modified": "2017-04-25T17:41:28+00:00"
     },
     "model": "parliament.parliamentMember",
-    "pk": 51
+    "pk": 50
   },
   {
     "fields": {
@@ -825,7 +812,7 @@
       "modified": "2017-04-25T17:41:28+00:00"
     },
     "model": "parliament.parliamentMember",
-    "pk": 52
+    "pk": 51
   },
   {
     "fields": {
@@ -894,7 +881,7 @@
   },
   {
     "fields": {
-      "name": "Vilhjálmur Árnasson",
+      "name": "Vilhjálmur Árnason",
       "party": 1,
       "initials": "VilÁ",
       "district": 2,

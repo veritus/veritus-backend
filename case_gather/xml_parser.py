@@ -19,26 +19,26 @@ def get_case_data(parliament_session_number):
     link_details = """http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=%i&malnr=""" % parliament_session_number
     XML_LOGGER.info('Getting case data from get_cases')
     case = get_cases(parliament_session_number)
-    XML_LOGGER.info('Got cases')
     # used keys at this point:
     # number, session, name, case_type, case_status, rel_cases, subjects
     # more can be added as models are changed or added
 
-    output = {}
-
     for number, name, case_type, althingi_link in case:
-
+        XML_LOGGER.info('Looking at case: ' + name)
         try:
             details_soup = get_xml(link_details + str(number))
+            XML_LOGGER.info('Got details soup for: ' + name)
         except Exception as e:
             XML_LOGGER.info('get_case_data failed with error: ' + e)
 
         try:
             details = xml_helper.get_case_details(details_soup)
-
+            XML_LOGGER.info('Got details data for: ' + name)
+            XML_LOGGER.info(details)
         except Exception as e:
             XML_LOGGER.error(e.message)
             XML_LOGGER.info('could not parse soup')
+
 
         case_status = details[0]
         rel_cases = details[1]
@@ -137,11 +137,10 @@ def get_cases(parliament_session_number):
 
     Output format: [case_number, case_name, case_type]
     """
-    XML_LOGGER.info('starting get_cases')
+    XML_LOGGER.info('Starting get_cases')
 
     cases = case_collector(parliament_session_number)
-    XML_LOGGER.info('case collector')
-    XML_LOGGER.info(cases)
+    XML_LOGGER.info('Cases have been collected')
     try:
         for number, name, case_type, althingi_link in cases:
             output = [number, name, case_type, althingi_link]
@@ -177,7 +176,6 @@ def case_collector(parliament_session_number):
     althingi_link_gen = xml_helper.get_element_text(
         soup, "html"
     )
-    XML_LOGGER.info(althingi_link_gen)
     XML_LOGGER.info('have the case althingi_link_gen generator')
 
     for number, name, case_type, althingi_link in zip(case_numbers_gen, case_names_gen, case_types_gen, althingi_link_gen):
