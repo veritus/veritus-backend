@@ -146,21 +146,22 @@ def case_collector(parliament_session_number):
 
     link = "http://www.althingi.is/altext/xml/thingmalalisti/?lthing="
     soup = get_xml(link + str(parliament_session_number))
-
     xml_logger.info('have the case soup')
 
-    case_numbers_gen = xml_helper.get_attribute_value(
-        soup, "mál", "málsnúmer")
 
+    case_numbers_gen = xml_helper.get_attribute_value(
+        soup, "mál", "málsnúmer"
+    )
     xml_logger.info('have the case numbers generator')
 
-    case_names_gen = xml_helper.get_element_text(soup, "málsheiti")
 
+    case_names_gen = xml_helper.get_element_text(soup, "málsheiti")
     xml_logger.info('have the case names generator')
 
-    case_types_gen = xml_helper.get_attribute_value(
-        soup, "málstegund", "málstegund")
 
+    case_types_gen = xml_helper.get_attribute_value(
+        soup, "málstegund", "málstegund"
+    )
     xml_logger.info('have the case case_types_gen generator')
 
     for number, name, case_type in zip(case_numbers_gen, case_names_gen, case_types_gen):

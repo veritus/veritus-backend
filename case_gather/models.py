@@ -1,6 +1,6 @@
 from django.db import models
 from main.models import Entity
-from parliament.models import ParliamentSession
+from parliament.models import ParliamentSession, ParliamentMember
 
 
 class Bill(Entity):
@@ -15,6 +15,11 @@ class Case(Entity):
     parliament_session = models.ForeignKey(ParliamentSession)
     case_type = models.TextField()
     case_status = models.TextField()
+    althingi_link = models.TextField()
+
+class CaseCreator(Entity):
+    parliament_member = models.ForeignKey(ParliamentMember)
+    case = models.ForeignKey(Case)
 
 
 class Subject(Entity):
