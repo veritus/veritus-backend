@@ -15,15 +15,15 @@ def get_case_data(parliament_session_number):
     # summary : [goal, changes, law_changes, costs, resolution]
     # details : [status, rel_cases, subj_ids]
     # output has keys: number, name, case_type, althingi_status, rel_cases, subjects, sessions
+
     XML_LOGGER.info('Getting case data from get_cases')
+    # Gets all cases with some limited data
     case = get_cases(parliament_session_number)
-    # used keys at this point:
-    # number, session, name, case_type, althingi_status, rel_cases, subjects
-    # more can be added as models are changed or added
 
     link_details = """http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=%i&malnr=""" % parliament_session_number
-    
+
     for number, name, case_type, althingi_link in case:
+        # Go through cases and get more details from them
         XML_LOGGER.info('Looking at case: ' + name)
         try:
             details_soup = get_xml(link_details + str(number))
@@ -32,6 +32,8 @@ def get_case_data(parliament_session_number):
             XML_LOGGER.info('get_case_data failed with error: ' + e)
 
         try:
+            # We go to the details page of the case
+            # and get more data
             details = xml_helper.get_case_details(details_soup)
             XML_LOGGER.info('Got details data for: ' + name)
             XML_LOGGER.info(details)
@@ -42,7 +44,7 @@ def get_case_data(parliament_session_number):
 
         althingi_status = details[0]
         rel_cases = details[1]
-        subjects = details[2]
+        subject_names = details[2]
         case_creator_names = details[3]
 
         output = {
@@ -52,7 +54,7 @@ def get_case_data(parliament_session_number):
             'case_type': case_type,
             'session': parliament_session_number,
             'althingi_status': althingi_status,
-            'subjects': subjects,
+            'subject_names': subject_names,
             'althingi_link': althingi_link,
             'case_creator_names': case_creator_names
         }

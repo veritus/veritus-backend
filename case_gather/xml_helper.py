@@ -12,7 +12,7 @@ def get_attribute_value(soup, element, attribute):
     """
     logger = logging.getLogger('xmlHelper')
 
-    logger.info('looking for values')
+    logger.info('looking for values: ' + element +"-" + attribute)
     d = {element: attribute}
     try:
         values = soup.findAll(d)
@@ -35,7 +35,7 @@ def get_element_text(soup, element):
     """
     logger = logging.getLogger('xmlHelper')
 
-    logger.info('looking for elements')
+    logger.info('looking for elements: ' + element)
     try:
         elements = soup.findAll(element)
         try:
@@ -87,10 +87,11 @@ def get_case_details(soup):
     rel_cases.pop(0)
 
     # Get case subjects
-    subj_id_gen = get_attribute_value(soup, "efnisflokkur", "id")
-    subj_ids = []
-    for subj_id in subj_id_gen:
-        subj_ids.append(subj_id)
+    subjects_root_element = soup.find('efnisflokkar')
+    subject_names_gen = get_element_text(subjects_root_element, "heiti")
+    subject_names = []
+    for name in subject_names_gen:
+        subject_names.append(name)
 
     if status_flag:
         status = next(status_gen)
@@ -100,7 +101,7 @@ def get_case_details(soup):
     output = [
         status,
         rel_cases,
-        subj_ids,
+        subject_names,
         case_creators_names
     ]
     return output
