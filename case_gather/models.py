@@ -21,7 +21,6 @@ class CaseCreator(Entity):
     parliament_member = models.ForeignKey(ParliamentMember)
     case = models.ForeignKey(Case)
 
-
 class Subject(Entity):
     parliament_session = models.ForeignKey(ParliamentSession, null=True, blank=True)
     number = models.IntegerField(null=True, blank=True)

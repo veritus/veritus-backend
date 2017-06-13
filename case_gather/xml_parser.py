@@ -6,9 +6,9 @@ from bs4 import BeautifulSoup
 
 import case_gather.xml_helper as xml_helper
 
+XML_LOGGER = logging.getLogger('xmlParser')
 
 def get_case_data(parliament_session_number):
-    xml_logger = logging.getLogger('xmlParser')
     # Combines xml_helper.get_case_details and
     # xml_helper.get_case_summary into a list
     # that will suffice to create a Case object for database
@@ -17,42 +17,48 @@ def get_case_data(parliament_session_number):
     # output has keys: number, name, case_type, case_status, rel_cases, subjects, sessions
 
     link_details = """http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=%i&malnr=""" % parliament_session_number
-    xml_logger.info('Getting case data from get_cases')
+    XML_LOGGER.info('Getting case data from get_cases')
     case = get_cases(parliament_session_number)
-
+    XML_LOGGER.info('Got cases')
     # used keys at this point:
     # number, session, name, case_type, case_status, rel_cases, subjects
     # more can be added as models are changed or added
 
     output = {}
 
-    for number, name, case_type in case:
+    for number, name, case_type, althingi_link in case:
 
         try:
             details_soup = get_xml(link_details + str(number))
         except Exception as e:
-            xml_logger.info('get_case_data failed with error: ' + e)
+            XML_LOGGER.info('get_case_data failed with error: ' + e)
 
         try:
             details = xml_helper.get_case_details(details_soup)
 
         except Exception as e:
-            xml_logger.error(e.message)
-            xml_logger.info('could not parse soup')
+            XML_LOGGER.error(e.message)
+            XML_LOGGER.info('could not parse soup')
 
         case_status = details[0]
         rel_cases = details[1]
         subjects = details[2]
 
-        output = {'number': number, 'name': name, 'rel_cases': rel_cases,
-                  'case_type': case_type, 'session': parliament_session_number,
-                  'case_status': case_status, 'subjects': subjects}
+        output = {
+            'number': number,
+            'name': name,
+            'rel_cases': rel_cases,
+            'case_type': case_type,
+            'session': parliament_session_number,
+            'case_status': case_status,
+            'subjects': subjects,
+            'althingi_link': althingi_link
+        }
 
         yield output
 
 
 def get_subject(subject_id):
-    xml_logger = logging.getLogger('xmlParser')
     #  Function to extract information about subjects (efnisflokkur)
     # Interesting information:
     #  - Major group number
@@ -74,7 +80,7 @@ def get_subject(subject_id):
             soup, "yfirflokkur", "id")
         assert group_number is None
     except:
-        xml_logger.info('No subject found at number: ' + subject_id)
+        XML_LOGGER.info('No subject found at number: ' + subject_id)
     else:
         text = xml_helper.get_element_text(soup, "heiti")
 
@@ -91,11 +97,13 @@ def get_subject(subject_id):
 
         # Sort the case numbers
         case_numbers.sort()
-        output = {'id': subject_id,
-                  'group_name': group_name,
-                  'name': subject_name,
-                  "description": subject_description,
-                  "case_numbers": case_numbers}
+        output = {
+            'id': subject_id,
+            'group_name': group_name,
+            'name': subject_name,
+            "description": subject_description,
+            "case_numbers": case_numbers
+        }
     finally:
         group_number.close()
         text.close()
@@ -127,53 +135,58 @@ def get_cases(parliament_session_number):
 
     Output format: [case_number, case_name, case_type]
     """
-    xml_logger = logging.getLogger('xmlParser')
-    xml_logger.info('starting get_cases')
+    XML_LOGGER.info('starting get_cases')
 
     cases = case_collector(parliament_session_number)
-
+    XML_LOGGER.info('case collector')
+    XML_LOGGER.info(cases)
     try:
-        for number, name, case_type in cases:
-            output = [number, name, case_type]
+        for number, name, case_type, althingi_link in cases:
+            output = [number, name, case_type, althingi_link]
             yield output
     except Exception as e:
-        xml_logger.error(e.message)
-        xml_logger.info('Iteration over all parliament cases complete')
+        XML_LOGGER.error(e.message)
+        XML_LOGGER.info('Iteration over all parliament cases complete')
 
 
 def case_collector(parliament_session_number):
-    xml_logger = logging.getLogger('xmlParser')
 
     link = "http://www.althingi.is/altext/xml/thingmalalisti/?lthing="
     soup = get_xml(link + str(parliament_session_number))
-    xml_logger.info('have the case soup')
+    XML_LOGGER.info('have the case soup')
 
-
+    # Gets number for case
     case_numbers_gen = xml_helper.get_attribute_value(
         soup, "mál", "málsnúmer"
     )
-    xml_logger.info('have the case numbers generator')
+    XML_LOGGER.info('have the case numbers generator')
 
-
+    # Gets case name
     case_names_gen = xml_helper.get_element_text(soup, "málsheiti")
-    xml_logger.info('have the case names generator')
+    XML_LOGGER.info('have the case names generator')
 
-
+    # Gets case type
     case_types_gen = xml_helper.get_attribute_value(
         soup, "málstegund", "málstegund"
     )
-    xml_logger.info('have the case case_types_gen generator')
+    XML_LOGGER.info('have the case case_types_gen generator')
 
-    for number, name, case_type in zip(case_numbers_gen, case_names_gen, case_types_gen):
-        yield number, name, case_type
+    # Slóð element in XML
+    althingi_link_gen = xml_helper.get_element_text(
+        soup, "html"
+    )
+    XML_LOGGER.info(althingi_link_gen)
+    XML_LOGGER.info('have the case althingi_link_gen generator')
+
+    for number, name, case_type, althingi_link in zip(case_numbers_gen, case_names_gen, case_types_gen, althingi_link_gen):
+        yield number, name, case_type, althingi_link
 
 
 def get_xml(link):
-    xml_logger = logging.getLogger('xmlParser')
     try:
         result = requests.get(link)
     except Exception as e:
-        xml_logger.error(e.message)
+        XML_LOGGER.error(e.message)
     else:
         content = result.content
         soup = BeautifulSoup(content, features="xml")

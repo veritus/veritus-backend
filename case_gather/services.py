@@ -8,7 +8,7 @@ from parliament.models import ParliamentSession
 CRONLOGGER = logging.getLogger('cronJobServices')
 
 def update_case_db(session_number):
-    CRONLOGGER.info('update started')
+    CRONLOGGER.info('update cases started')
 
     parliament_session = ParliamentSession.objects.get(
         session_number=session_number
@@ -24,6 +24,7 @@ def update_case_db(session_number):
         case_numbers.append(case.number)
 
     try:
+        CRONLOGGER.info('try parser')
         new_cases = xml_parser.get_case_data(session_number)
     except Exception as e:
         CRONLOGGER.error(e.message + '-' + traceback.format_exc())
@@ -39,11 +40,14 @@ def update_case_db(session_number):
             CRONLOGGER.info('Creating case')
 
             try:
-                Case.objects.create(name=case['name'],
-                                    number=int(case['number']),
-                                    parliament_session=parliament_session,
-                                    case_type=case['case_type'],
-                                    case_status=case['case_status'])
+                Case.objects.create(
+                    name=case['name'],
+                    number=int(case['number']),
+                    parliament_session=parliament_session,
+                    case_type=case['case_type'],
+                    case_status=case['case_status'],
+                    althingi_link=case['althingi_link']
+                )
             except Exception as e:
                 CRONLOGGER.error(e.message)
                 CRONLOGGER.error('case creation failure')

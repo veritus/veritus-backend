@@ -8,5 +8,14 @@ class CaseSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Case
-        fields = ('name', 'number', 'case_type', 'case_status',
-                  'id', 'parliament_session', 'created', 'modified')
+        fields = (
+            'id',
+            'name',
+            'number',
+            'case_type',
+            'case_status',
+            'parliament_session',
+            'created',
+            'modified',
+            'althingi_link'
+        )
