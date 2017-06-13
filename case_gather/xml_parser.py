@@ -14,15 +14,15 @@ def get_case_data(parliament_session_number):
     # that will suffice to create a Case object for database
     # summary : [goal, changes, law_changes, costs, resolution]
     # details : [status, rel_cases, subj_ids]
-    # output has keys: number, name, case_type, case_status, rel_cases, subjects, sessions
-
-    link_details = """http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=%i&malnr=""" % parliament_session_number
+    # output has keys: number, name, case_type, althingi_status, rel_cases, subjects, sessions
     XML_LOGGER.info('Getting case data from get_cases')
     case = get_cases(parliament_session_number)
     # used keys at this point:
-    # number, session, name, case_type, case_status, rel_cases, subjects
+    # number, session, name, case_type, althingi_status, rel_cases, subjects
     # more can be added as models are changed or added
 
+    link_details = """http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=%i&malnr=""" % parliament_session_number
+    
     for number, name, case_type, althingi_link in case:
         XML_LOGGER.info('Looking at case: ' + name)
         try:
@@ -40,7 +40,7 @@ def get_case_data(parliament_session_number):
             XML_LOGGER.info('could not parse soup')
 
 
-        case_status = details[0]
+        althingi_status = details[0]
         rel_cases = details[1]
         subjects = details[2]
         case_creator_names = details[3]
@@ -51,7 +51,7 @@ def get_case_data(parliament_session_number):
             'rel_cases': rel_cases,
             'case_type': case_type,
             'session': parliament_session_number,
-            'case_status': case_status,
+            'althingi_status': althingi_status,
             'subjects': subjects,
             'althingi_link': althingi_link,
             'case_creator_names': case_creator_names

@@ -969,5 +969,93 @@
     },
     "model": "parliament.parliamentMember",
     "pk": 63
+  },
+  {
+    "fields": {
+      "althingi_status": "",
+      "status": "Unknown"
+    },
+    "model": "case_gather.AlthingiStatusToStatusMapper",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "althingi_status": "Samþykkt sem lög frá Alþingi.",
+      "status": "Passed"
+    },
+    "model": "case_gather.AlthingiStatusToStatusMapper",
+    "pk": 2
+  },
+  {
+    "fields": {
+      "althingi_status": "Í nefnd eftir 1. umræðu.",
+      "status": "In progess"
+    },
+    "model": "case_gather.AlthingiStatusToStatusMapper",
+    "pk": 3
+  },
+  {
+    "fields": {
+      "althingi_status": "Bíður 1. umræðu.",
+      "status": "In progess"
+    },
+    "model": "case_gather.AlthingiStatusToStatusMapper",
+    "pk": 4
+  },
+  {
+    "fields": {
+      "althingi_status": "Bíður 2. umræðu.",
+      "status": "In progess"
+    },
+    "model": "case_gather.AlthingiStatusToStatusMapper",
+    "pk": 5
+  },
+  {
+    "fields": {
+      "althingi_status": "Vísað til ríkisstjórnar.",
+      "status": "In progess"
+    },
+    "model": "case_gather.AlthingiStatusToStatusMapper",
+    "pk": 6
+  },
+  {
+    "fields": {
+      "althingi_status": "Fyrirspurnin var felld niður vegna ráðherraskipta.",
+      "status": "Rejected"
+    },
+    "model": "case_gather.AlthingiStatusToStatusMapper",
+    "pk": 7
+  },
+  {
+    "fields": {
+      "althingi_status": "Fyrirspurninni var svarað skriflega.",
+      "status": "Answered"
+    },
+    "model": "case_gather.AlthingiStatusToStatusMapper",
+    "pk": 7
+  },
+  {
+    "fields": {
+      "althingi_status": "Fyrirspurninni var svarað munnlega.",
+      "status": "Answered"
+    },
+    "model": "case_gather.AlthingiStatusToStatusMapper",
+    "pk": 8
+  },
+  {
+    "fields": {
+      "althingi_status": "Fyrirspurninni hefur ekki verið svarað.",
+      "status": "Has not been answered"
+    },
+    "model": "case_gather.AlthingiStatusToStatusMapper",
+    "pk": 9
+  },
+  {
+    "fields": {
+      "althingi_status": "Fyrirspurnin var kölluð aftur.",
+      "status": "Withdrawn"
+    },
+    "model": "case_gather.AlthingiStatusToStatusMapper",
+    "pk": 10
   }
 ]

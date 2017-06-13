@@ -229,7 +229,7 @@ class XMLParserGetCaseData(TestCase):
         self.rel_cases = self.case_data['rel_cases']
         self.case_type = self.case_data['case_type']
         self.session = self.case_data['session']
-        self.case_status = self.case_data['case_status']
+        self.althingi_status = self.case_data['althingi_status']
         self.subjects = self.case_data['subjects']
 
     def test_number(self):
@@ -247,8 +247,8 @@ class XMLParserGetCaseData(TestCase):
     def test_session(self):
         self.assertEqual(self.session, 146)
 
-    def test_case_status(self):
-        self.assertEqual(self.case_status, 'Samþykkt sem lög frá Alþingi.')
+    def test_althingi_status(self):
+        self.assertEqual(self.althingi_status, 'Samþykkt sem lög frá Alþingi.')
 
     def test_subjects(self):
         self.assertEqual(self.subjects, ['6'])
@@ -277,7 +277,7 @@ class ServicesTestCase(TestCase):
                                 number=int(self.case_data['number']),
                                 parliament_session=self.parliament_session,
                                 case_type=self.case_data['case_type'],
-                                case_status=self.case_data['case_status'])
+                                althingi_status=self.case_data['althingi_status'])
 
         number = cgm.Case.objects.filter(number=1)
 

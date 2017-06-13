@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import logging
 import traceback
-from case_gather.models import Case, CaseCreator
+from case_gather.models import Case, CaseCreator, AlthingiStatusToStatusMapper
 import case_gather.xml_parser as xml_parser
 from parliament.models import ParliamentSession, ParliamentMember
 
@@ -29,10 +29,31 @@ def update_case_db(session_number):
     for case in cases_in_db:
         case_numbers.append(case.number)
 
-    #  Case has keys:
-    #  'number', 'name', 'case_type', 'case_status'
-    #  'rel_cases', 'subjects', 'session'
+    # We create a map so that we can easily retrieve the status from the
+    # althingi_status. This is done as the althingi status is too complicated
+    # Map will look something like:
+    # {
+    #    "": "Unknown",
+    #    "Samþykkt sem lög frá Alþingi.": "Passed",
+    #    "Í nefnd eftir 1. umræðu.": "In progess",
+    #    "Bíður 1. umræðu.": "In progess",
+    #    "Bíður 2. umræðu": "In progress",
+    #    "Vísað til ríkisstjórnar.": "In progress"
+    #    "Fyrirspurnin var felld niður vegna ráðherraskipta.": "Rejected",
+    #    "Fyrirspurninni var svarað skriflega.": "Answered",
+    #    "Fyrirspurninni var svarað munnlega.": "Answered",
+    #    "Fyrirspurninni hefur ekki verið svarað.": "Has not been answered",
+    #    "Fyrirspurnin var kölluð aftur.": "Withdrawn",
+    # }
+    althingi_status_to_status = AlthingiStatusToStatusMapper.objects.all()
+    althingi_status_to_status_map = {}
+    for status_map in althingi_status_to_status:
+        althingi_status_to_status_map[status_map.althingi_status] = status_map.status
+
     for case in new_cases:
+        #  Case has keys:
+        #  'number', 'name', 'case_type', 'althingi_status'
+        #  'rel_cases', 'subjects', 'session'
         CRONLOGGER.info('Starting to create/update case: ')
         CRONLOGGER.info(case)
         if int(case['number']) in case_numbers:
@@ -40,14 +61,21 @@ def update_case_db(session_number):
         else:
             CRONLOGGER.info('Creating case')
 
+            # We find the status from the althingi status
+            althingi_status = case['althingi_status']
+            status = 'Unknown'
+            if althingi_status in althingi_status_to_status_map:
+                status = althingi_status_to_status_map[althingi_status]
+
             try:
                 new_case = Case.objects.create(
                     name=case['name'],
                     number=int(case['number']),
                     parliament_session=parliament_session,
                     case_type=case['case_type'],
-                    case_status=case['case_status'],
-                    althingi_link=case['althingi_link']
+                    althingi_status=althingi_status,
+                    althingi_link=case['althingi_link'],
+                    status=status
                 )
                 CRONLOGGER.info('case creators')
                 CRONLOGGER.info(case['case_creator_names'])
