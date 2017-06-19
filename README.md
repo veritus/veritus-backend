@@ -82,15 +82,13 @@ After adding a new model or making a change in the model you should
 `SHELL=/bin/bash */5 * * * * cd home/path/to/project/directory source env/bin/activate && python manage.py runcrons
 3. Write correct path
 
-# Docker
-Recommended to read about Dockerfiles and docker-compose. Its required to install docker-compose. 
+# Docker and docker-compose
+Its required to install docker-compose first (here)[https://docs.docker.com/compose/install/]
 
-To build backend
+To start up backend and database
 ```bash
-$ docker-compose build
+$ docker-compose up
 ```
 
-To run backend
-```bash
-$ docker-compose run backend
-```
+After that visit localhost:8000 in a browser and see that Django is running
+

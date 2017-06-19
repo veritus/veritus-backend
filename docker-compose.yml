@@ -9,6 +9,7 @@ services:
     environment:
     - DB_USER=postgres
     - DB_PASS=pass
+    command: python3 src/manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
