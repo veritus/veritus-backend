@@ -1,0 +1,10 @@
+.github/
+.vscode/
+env/
+logs/
+.coverage
+.coveragerc
+.gitignore
+.pylintrc
+.travis.yml
+
