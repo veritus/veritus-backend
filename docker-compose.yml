@@ -1,9 +1,6 @@
 version: '3'
 
 services:
-  nginx:
-    image: nginx:latest
-  
   db:
     image: postgres:latest
 
@@ -18,4 +15,3 @@ services:
       - "8000:8000"
     depends_on:
       - db
-      - nginx

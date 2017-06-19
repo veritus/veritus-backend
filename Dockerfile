@@ -16,5 +16,6 @@ WORKDIR /code
 # Install requirements
 RUN pip install -r /code/requirements.txt
 
-CMD ["python", "src/manage.py", "migrate"]
-CMD ["python", "src/manage.py", "runserver"]
+CMD ["python3", "src/manage.py", "migrate"]
+CMD ["python3", "src/manage.py", "loaddata", "init_data.json"]
+CMD ["python3", "src/manage.py", "runserver"]
