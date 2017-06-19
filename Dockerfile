@@ -3,12 +3,18 @@ FROM python:3
 ENV PYTHONUNBUFFERED 1
 
 # Creates src folder in container
-RUN mkdir /src
+RUN mkdir /code
+
+# Copy contents of the /src directory into the /code directory of the container
+ADD /src /code/
+# Add requirements.txt to code directory
+ADD requirements.txt /code/
+
 # Makes src dir the working directory
-WORKDIR /src
+WORKDIR /code
 
 # Install requirements
-ADD requirements.txt /src/
-RUN pip install -r requirements.txt
+RUN pip install -r /code/requirements.txt
 
-ADD . /src/
+CMD ["python", "src/manage.py", "migrate"]
+CMD ["python", "src/manage.py", "runserver"]
