@@ -92,3 +92,21 @@ $ docker-compose up
 
 After that visit localhost:8000 in a browser and see that Django is running
 
+## Docker commands
+### Build image
+```
+docker build -t arihrannar/veritus-backend .
+```
+###Login to docker cloud
+```
+docker login
+```
+
+###Push image to docker cloud
+```
+docker push <IMAGE-NAME>:</TAG>
+```
+Example:
+```
+docker push arihrannar/veritus-backend:latest
+```
