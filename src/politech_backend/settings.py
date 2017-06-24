@@ -124,7 +124,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': os.environ["DB_USER"],
         'PASSWORD': os.environ["DB_PASS"],
-        'HOST': 'postgres', #'127.0.0.1',
+        'HOST': os.environ["DB_HOST"], #f.x. 'postgres' OR '127.0.0.1',
         'PORT': '5432',
         'ATOMIC_REQUESTS': True
     }

@@ -2,8 +2,7 @@
 FROM python:3.6
 
 ENV PYTHONUNBUFFERED 1
-ENV DB_USER postgres
-ENV DB_PASS pass
+
 # Creates src folder in container
 RUN mkdir /code
 
