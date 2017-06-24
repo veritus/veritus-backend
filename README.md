@@ -88,7 +88,7 @@ The docker image here is NOT suppose to be run alone. As the backend requires a 
 ## Docker commands
 ### Build image
 ```
-docker build -t arihrannar/veritus-backend .
+docker build -t veritus/backend .
 ```
 ###Login to docker cloud
 ```
@@ -102,5 +102,5 @@ docker push <IMAGE-NAME>:</TAG>
 ```
 Example:
 ```
-docker push arihrannar/veritus-backend:latest
+docker push veritus/backend:latest
 ```
