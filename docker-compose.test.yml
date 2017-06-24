@@ -21,4 +21,3 @@ services:
       - DB_HOST=db
     depends_on:
       - db
-        condition: service_healthy
