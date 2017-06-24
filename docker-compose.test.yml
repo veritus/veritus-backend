@@ -9,7 +9,7 @@ services:
 
   sut:
     build: .
-    command: command: ["./wait-for-postgres.sh", "db:5432", "python3", "src/manage.py", "test"]
+    command: ["./wait-for-postgres.sh", "db:5432", "python3", "src/manage.py", "test"]
     environment:
       - POSTGRES_USER=$POSTGRES_USER
       - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
