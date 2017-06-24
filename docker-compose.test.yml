@@ -4,16 +4,14 @@ services:
   db:
     image: postgres:9.6.3
     environment:
-    - POSTGRES_PASSWORD=pass
+    - POSTGRES_PASSWORD={$POSTGRES_PASSWORD}
     
   sut:
     build: .
     command: python3 src/manage.py test
     environment:
-    - DB_USER=postgres
-    - DB_PASS=pass
-    - DB_HOST=db
-    #ports:
-     # - "8000:8000"
+    - POSTGRES_USER={$POSTGRES_USER}
+    - POSTGRES_PASSWORD={$POSTGRES_PASSWORD}
+    - DB_HOST={$DB_HOST}
     depends_on:
       - db
