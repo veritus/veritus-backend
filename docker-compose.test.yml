@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  postgres:
+  db:
     image: postgres:9.6.3
     environment:
     - POSTGRES_PASSWORD=pass
@@ -12,8 +12,8 @@ services:
     environment:
     - DB_USER=postgres
     - DB_PASS=pass
-    - DB_HOST=postgres
+    - DB_HOST=db
     #ports:
      # - "8000:8000"
     depends_on:
-      - postgres
+      - db
