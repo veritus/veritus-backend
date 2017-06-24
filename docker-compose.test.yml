@@ -6,15 +6,10 @@ services:
     environment:
       - POSTGRES_USER=$POSTGRES_USER
       - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
-    healthcheck:
-      test: ["CMD-SHELL", "psql -h 'db' -U 'postgres' -c '\\l'"]
-      interval: 30s
-      timeout: 30s
-      retries: 3
 
   sut:
     build: .
-    command: python3 src/manage.py test
+    command: command: ["./wait-for-postgres.sh", "db:5432", "python3", "src/manage.py", "test"]
     environment:
       - POSTGRES_USER=$POSTGRES_USER
       - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
