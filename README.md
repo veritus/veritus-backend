@@ -94,6 +94,7 @@ docker build -t arihrannar/veritus-backend .
 ```
 docker login
 ```
+Input credentials.
 
 ###Push image to docker cloud
 ```

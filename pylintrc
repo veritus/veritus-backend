@@ -1,5 +1,5 @@
 [MASTER]
-ignore=apps.py, admin, migrations, bin, lib, man
+ignore=manage.py, apps.py, admin.py, migrations, env
 load-plugins=pylint_django
 
 [MESSAGES CONTROL]
@@ -7,9 +7,3 @@ disable=missing-docstring, broad-except, bare-except, no-self-use, invalid-name,
 
 [TYPECHECK] 
 ignored-classes=WSGIRequest, Exception, Client
-
-
-[pre-commit-hook]
-command=custom_pylint
-params=--rcfile=/path/to/another/pylint.rc
-limit=8.0

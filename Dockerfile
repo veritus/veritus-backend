@@ -1,20 +1,23 @@
-# Start with a python 3 image
-FROM python:3
-ENV PYTHONUNBUFFERED 1
+# Start with a python 3.6 image
+FROM python:3.6
 
+ENV PYTHONUNBUFFERED 1
+ENV DB_USER postgres
+ENV DB_PASS pass
 # Creates src folder in container
 RUN mkdir /code
 
 # Copy everything into the /code directory of the container
 ADD . /code/
 
-# Makes src dir the working directory
+# Makes code dir the working directory
+# and we change directory into it
 WORKDIR /code
 
 # Install requirements
-RUN pip install -r /code/requirements.txt
-#RUN python3 src/manage.py migrate
+RUN pip install -r requirements.txt
 
-#CMD ["python3", "src/manage.py", "migrate"]
-#CMD ["python3", "src/manage.py", "loaddata", "init_data.json"]
-#CMD ["python3", "src/manage.py", "runserver"]
+# Run linter
+RUN pylint **/*.py
+
+
