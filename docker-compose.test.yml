@@ -1,12 +1,5 @@
 version: '3'
 
-sut:
-  build: .
-  command: python3 src/manage.py test
-  depends_on:
-  - postgres
-  - backend
-
 services:
   postgres:
     image: postgres:9.6.3
@@ -14,7 +7,8 @@ services:
     - POSTGRES_PASSWORD=pass
     
   backend:
-    image: arihrannar/veritus-backend:latest
+    build: .
+    command: python3 src/manage.py test
     environment:
     - DB_USER=postgres
     - DB_PASS=pass
