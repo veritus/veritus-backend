@@ -10,10 +10,12 @@ services:
 
   sut:
     build: .
-    command: python3 src/manage.py test
+    command: ["./wait-for-postgres.sh", "db", "python3", "src/manage.py", "test"]
     environment:
       - POSTGRES_USER=$POSTGRES_USER
       - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
       - DB_HOST=db
     depends_on:
+      - db
+    links:
       - db
