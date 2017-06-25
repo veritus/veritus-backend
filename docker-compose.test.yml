@@ -16,7 +16,7 @@ services:
 
   sut:
     build: .
-    command: python src/manage.py test
+    command: python3 src/manage.py test
     environment:
       - POSTGRES_USER=$POSTGRES_USER
       - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
