@@ -1,3 +1,5 @@
+# Docker-compose file for spinning up a database service and building the backend
+# This allows the CI to run our unit tests against the database
 version: '2.1'
 
 services:

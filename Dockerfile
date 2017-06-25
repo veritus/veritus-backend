@@ -1,6 +1,5 @@
 # Start with a python 3.6 image
 FROM python:3.6
-
 ENV PYTHONUNBUFFERED 1
 
 # Creates src folder in container
