@@ -22,4 +22,4 @@ RUN pip install -r requirements.txt
 # Run linter
 RUN pylint **/*.py
 
-#RUN python3 src/manage.py test
+# RUN python3 src/manage.py test
