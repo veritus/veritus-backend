@@ -126,7 +126,10 @@ DATABASES = {
         'PASSWORD': os.environ["POSTGRES_PASSWORD"],
         'HOST': os.environ["DB_HOST"], #f.x. 'db' OR '127.0.0.1',
         'PORT': '5432',
-        'ATOMIC_REQUESTS': True
+        'ATOMIC_REQUESTS': True,
+        'OPTIONS': {
+            'client_encoding': 'UTF8',
+        }
     }
 }
 
