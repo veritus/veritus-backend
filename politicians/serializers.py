@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import Politician
 from party.serializers import PartySerializerRead
 from district.serializers import DistrictSerializer
 from promises.serializers import PromiseSerializerRead
+from .models import Politician
 
 
 class PoliticianSerializer(serializers.ModelSerializer):
@@ -14,8 +14,3 @@ class PoliticianSerializer(serializers.ModelSerializer):
     class Meta:
         model = Politician
         fields = ('name', 'id', 'initials', 'districtNumber', 'party', 'district', 'promises')
-
-
-
-
-
