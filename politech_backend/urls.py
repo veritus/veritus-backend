@@ -7,6 +7,7 @@ from parliament import views as parliament_views
 from party import views as party_views
 from district import views as district_views
 from subjects import views as subject_views
+from politicians import views as politician_views
 
 urlpatterns = [
     url(r'^api/v1/admin/', admin.site.urls),
@@ -29,6 +30,7 @@ urlpatterns = [
     url(r'^api/v1/parliamentSessions/(?P<pk>[0-9]+)$', parliament_views.parliament_session_detail),
     url(r'^api/v1/parties/$', party_views.party_list),
     url(r'^api/v1/parliamentMembers/$', parliament_views.parliamentMember_list),
+    url(r'^api/v1/politicians/$', politician_views.politician_list),
     url(r'^api/v1/districts/$', district_views.district_list),
     url(r'^api/v1/subjects/$', subject_views.SubjectList.as_view()),
 
