@@ -2,12 +2,23 @@ from rest_framework import serializers
 
 from party.serializers import PartySerializerRead
 from politicians.models import Politician
+from promises.models import Promise
 
 from .models import District
+
+class PromiseField(serializers.ModelSerializer):
+    class Meta:
+        model = Promise
+        fields = (
+            'name',
+            'id',
+            'fulfilled'
+        )
 
 class PoliticianSerializer(serializers.ModelSerializer):
 
     party = PartySerializerRead()
+    promises = PromiseField(many=True, read_only=True)
 
     class Meta:
         model = Politician
