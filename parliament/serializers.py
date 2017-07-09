@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from party.serializers import PartySerializerRead
-from district.serializers import DistrictSerializer
+from district.serializers import DistrictSerializerRead
 from .models import ParliamentSession, Parliament, ParliamentMember
 
 class ParliamentSerializer(serializers.ModelSerializer):
@@ -31,7 +31,7 @@ class ParliamentSessionSerializerWrite(serializers.ModelSerializer):
 class ParliamentMemberSerializer(serializers.ModelSerializer):
 
     party = PartySerializerRead()
-    district = DistrictSerializer()
+    district = DistrictSerializerRead()
 
     class Meta:
         model = ParliamentMember
