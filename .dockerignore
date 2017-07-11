@@ -8,3 +8,5 @@ logs/
 .pylintrc
 .travis.yml
 
+#OSX
+.DS_Store
