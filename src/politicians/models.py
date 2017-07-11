@@ -7,5 +7,5 @@ from district.models import District
 class Politician(Entity):
     party = models.ForeignKey(Party)
     initials = models.TextField()
-    district = models.ForeignKey(District)
+    district = models.ForeignKey(District, related_name="politicians")
     districtNumber = models.IntegerField()
