@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
+import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
@@ -10,17 +11,22 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
+        ('party', '0001_initial'),
+        ('district', '0001_initial'),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Party',
+            name='Politician',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
-                ('website', models.TextField()),
+                ('initials', models.TextField()),
+                ('districtNumber', models.IntegerField()),
+                ('district', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='district.District')),
+                ('party', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='party.Party')),
             ],
             options={
                 'abstract': False,
