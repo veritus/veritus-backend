@@ -20,12 +20,12 @@ TEST_DATA_FOLDER = os.path.join(BASE_DIR, 'case_gather', 'test_data/')
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 't8&(jop7)*h!v5eug$iufd8l1(l2dpfjxj=(+2xt5knv+7v-!='
+SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -121,12 +121,15 @@ CORS_ORIGIN_WHITELIST = (
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'politech',
-        'USER': os.environ["DB_USER"],
-        'PASSWORD': os.environ["DB_PASS"],
-        'HOST': '127.0.0.1',
+        'NAME': 'postgres',
+        'USER': os.environ["POSTGRES_USER"],
+        'PASSWORD': os.environ["POSTGRES_PASSWORD"],
+        'HOST': os.environ["DB_HOST"], #f.x. 'db' OR '127.0.0.1',
         'PORT': '5432',
-        'ATOMIC_REQUESTS': True
+        'ATOMIC_REQUESTS': True,
+        'OPTIONS': {
+            'client_encoding': 'UTF8',
+        }
     }
 }
 

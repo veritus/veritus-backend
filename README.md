@@ -81,3 +81,26 @@ After adding a new model or making a change in the model you should
 2. Add cronscript. For Ari on Ubuntu this worked:
 `SHELL=/bin/bash */5 * * * * cd home/path/to/project/directory source env/bin/activate && python manage.py runcrons
 3. Write correct path
+
+# Docker
+The docker image here is NOT suppose to be run alone. As the backend requires a database, there is no use running it alone. See the docker-compose repository for how to run the backend and the whole stack.
+
+## Docker commands
+### Build image
+```
+docker build -t veritus/backend .
+```
+###Login to docker cloud
+```
+docker login
+```
+Input credentials.
+
+###Push image to docker cloud
+```
+docker push <IMAGE-NAME>:</TAG>
+```
+Example:
+```
+docker push veritus/backend:latest
+```
