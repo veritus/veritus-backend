@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from party.serializers import PartySerializerRead
-from district.serializers import DistrictSerializer
+from district.serializers import DistrictSerializerRead
 from promises.serializers import PromiseSerializerRead
 from .models import Politician
 
@@ -8,7 +8,7 @@ from .models import Politician
 class PoliticianSerializer(serializers.ModelSerializer):
 
     party = PartySerializerRead()
-    district = DistrictSerializer()
+    district = DistrictSerializerRead()
     promises = PromiseSerializerRead(many=True, read_only=True)
 
     class Meta:
