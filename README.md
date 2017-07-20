@@ -87,6 +87,7 @@ The docker image here is NOT suppose to be run alone. As the backend requires a 
 
 ## Docker commands
 ### Build image
+Builds a local image of the project with the tag ```latest```
 ```
 docker build -t veritus/backend .
 ```
@@ -97,10 +98,18 @@ docker login
 Input credentials.
 
 ###Push image to docker cloud
+You normally dont have to do this manually as the build process takes care of it.
 ```
 docker push <IMAGE-NAME>:</TAG>
 ```
 Example:
 ```
 docker push veritus/backend:latest
+```
+
+## Docker compose
+Docker compose can be used here to start the backend with a database. Simply run
+
+```
+$ docker-compose up
 ```
