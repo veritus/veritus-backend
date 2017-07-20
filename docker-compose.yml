@@ -1,0 +1,27 @@
+version: '2.1'
+
+services:
+  db:
+    image: postgres:9.6.3
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=kaninei3i3j94jginerign
+    healthcheck:
+      test: ["CMD-SHELL", "psql -h 'localhost' -U 'postgres' -c '\\l'"]
+      interval: 30s
+      timeout: 30s
+      retries: 3
+    
+  backend:
+    image: veritus/backend:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=kaninei3i3j94jginerign
+      - SECRET_KEY=nin3on3inri3nnwoge
+      - DB_HOST=db
+    command: "bash -c 'python3 src/manage.py migrate && python3 src/manage.py loaddata init_data.json && cd src && gunicorn -b 0.0.0.0:8000 politech_backend.wsgi'"
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
