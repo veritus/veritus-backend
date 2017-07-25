@@ -165,31 +165,31 @@ LOGGING = {
         'cronJobHandler': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'logs/cronJobs.log',
+            'filename': '/code/src/logs/cronJobs.log',
             'formatter': 'verbose'
         },
         'xmlHelperHandler': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'logs/xmlHelper.log',
+            'filename': '/code/src/logs/xmlHelper.log',
             'formatter': 'verbose'
         },
         'cronJobServicesHandler': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'logs/cronJobServices.log',
+            'filename': '/code/src/logs/cronJobServices.log',
             'formatter': 'verbose'
         },
         'xmlParserHandler': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'logs/xmlParser.log',
+            'filename': '/code/src/logs/xmlParser.log',
             'formatter': 'verbose'
         },
         'promiseHandler': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'logs/promise.log',
+            'filename': '/code/src/logs/promise.log',
             'formatter': 'verbose'
         },
 

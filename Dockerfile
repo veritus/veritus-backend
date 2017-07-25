@@ -10,7 +10,7 @@ RUN mkdir /code
 
 # Copy everything into the /code directory of the container
 ADD . /code/
-RUN mkdir /code/src/logs
+
 # Makes code dir the working directory
 # and we change directory into it
 WORKDIR /code
