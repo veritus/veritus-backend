@@ -22,6 +22,9 @@ services:
       - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
       - SECRET_KEY=$SECRET_KEY
       - DB_HOST=db
+      - DEBUG=false
+      - ALLOWED_HOSTS=["*"]
+      - CORS_ORIGIN_WHITELIST=('localhost:3000',)
     depends_on:
       db:
         condition: service_healthy

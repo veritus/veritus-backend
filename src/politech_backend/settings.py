@@ -23,9 +23,9 @@ TEST_DATA_FOLDER = os.path.join(BASE_DIR, 'case_gather', 'test_data/')
 SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ["DEBUG"]
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = os.environ["ALLOWED_HOSTS"]
 
 
 # Application definition
@@ -111,9 +111,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'politech_backend.wsgi.application'
 
-CORS_ORIGIN_WHITELIST = (
-    'localhost:3000',
-)
+CORS_ORIGIN_WHITELIST = os.environ["CORS_ORIGIN_WHITELIST"]
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases

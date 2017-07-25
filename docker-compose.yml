@@ -19,6 +19,9 @@ services:
       - POSTGRES_PASSWORD=kaninei3i3j94jginerign
       - SECRET_KEY=nin3on3inri3nnwoge
       - DB_HOST=db
+      - DEBUG=false
+      - ALLOWED_HOSTS=["*"]
+      - CORS_ORIGIN_WHITELIST=('localhost:3000',)
     volumes:
       - ./:/code
     command: "bash -c 'python3 src/manage.py migrate && python3 src/manage.py loaddata init_data.json && cron && cd src && gunicorn -b 0.0.0.0:8000 politech_backend.wsgi'"
