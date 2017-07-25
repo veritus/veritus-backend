@@ -23,8 +23,8 @@ services:
       - SECRET_KEY=$SECRET_KEY
       - DB_HOST=db
       - DEBUG=false
-      - ALLOWED_HOSTS=["*"]
-      - CORS_ORIGIN_WHITELIST=('localhost:3000',)
+      - ALLOWED_HOSTS=[]
+      - CORS_ORIGIN_WHITELIST=()
       - GATHER_CASES_CRON_TIME_SECONDS=1440
     depends_on:
       db:
