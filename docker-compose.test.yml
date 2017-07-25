@@ -25,6 +25,7 @@ services:
       - DEBUG=false
       - ALLOWED_HOSTS=["*"]
       - CORS_ORIGIN_WHITELIST=('localhost:3000',)
+      - GATHER_CASES_CRON_TIME_SECONDS=1440
     depends_on:
       db:
         condition: service_healthy

@@ -6,7 +6,7 @@ import case_gather.services as case_gathering_services
 CRONLOGGER = logging.getLogger('cronJobs')
 
 class GatherCases(CronJobBase):
-    RUN_EVERY_MINS = 1440 # One day
+    RUN_EVERY_MINS = os.environ["GATHER_CASES_CRON_TIME_SECONDS"]
 
     schedule = Schedule(run_every_mins=RUN_EVERY_MINS)
     code = 'case_gather.GatherCases'    # a unique code
