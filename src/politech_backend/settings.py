@@ -27,9 +27,7 @@ DEBUG = os.environ["DEBUG"]
 
 ALLOWED_HOSTS = os.environ["ALLOWED_HOSTS"]
 
-
 # Application definition
-
 INSTALLED_APPS = [
     #Django
     'django.contrib.admin',

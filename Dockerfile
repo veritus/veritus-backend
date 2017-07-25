@@ -2,8 +2,8 @@
 FROM python:3.6
 ENV PYTHONUNBUFFERED 1
 
+# Install cron
 RUN apt-get update && apt-get -y install cron
-
 
 # Creates src folder in container
 RUN mkdir /code
