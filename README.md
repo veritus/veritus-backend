@@ -83,14 +83,16 @@ After adding a new model or making a change in the model you should
 3. Write correct path
 
 # Docker
-The docker image here is NOT suppose to be run alone. As the backend requires a database, there is no use running it alone. See the docker-compose repository for how to run the backend and the whole stack.
+The docker image here is NOT suppose to be run alone. As the backend requires a database, there is no use running it alone. Use docker-compose to run the backend and database together.
 
 ## Docker commands
 ### Build image
-Builds a local image of the project with the tag ```latest```
+Builds a local image of the project with the tag ```latest```. 
 ```
-docker build -t veritus/backend .
+docker build -t veritus/backend:latest .
 ```
+This is automatically done by Docker Cloud in the build process and saved in the Docker image repository online.
+
 ###Login to docker cloud
 ```
 docker login
@@ -113,3 +115,5 @@ Docker compose can be used here to start the backend with a database. Simply run
 ```
 $ docker-compose up
 ```
+
+It also works to use this during development, as docker-compose mounts the source code directory into the docker container when run. Meaning you simply need to rerun ```docker-compose up``` after making code changes.

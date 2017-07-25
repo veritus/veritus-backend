@@ -8,7 +8,7 @@ CRONLOGGER = logging.getLogger('cronJobs')
 
 class ConnectBillsAndPromises(CronJobBase):
     ''' Connects bills and promises together using subjects that are related to both '''
-    RUN_EVERY_MINS = 1
+    RUN_EVERY_MINS = 30
 
     schedule = Schedule(run_every_mins=RUN_EVERY_MINS)
     code = 'promise.connect_bills_and_promises'
