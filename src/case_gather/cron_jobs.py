@@ -1,12 +1,13 @@
 import logging
 import traceback
+import os
 from django_cron import CronJobBase, Schedule
 import case_gather.services as case_gathering_services
 
 CRONLOGGER = logging.getLogger('cronJobs')
 
 class GatherCases(CronJobBase):
-    RUN_EVERY_MINS = 30
+    RUN_EVERY_MINS = os.environ["GATHER_CASES_CRON_TIME_SECONDS"]
 
     schedule = Schedule(run_every_mins=RUN_EVERY_MINS)
     code = 'case_gather.GatherCases'    # a unique code

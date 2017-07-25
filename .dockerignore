@@ -1,12 +1,6 @@
-.github/
-.vscode/
-env/
-logs/
-.coverage
-.coveragerc
-.gitignore
-.pylintrc
-.travis.yml
-
 #OSX
 .DS_Store
+docker-compose.test.yml
+docker-compose.yml
+Dockerfile
+README.md

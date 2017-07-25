@@ -4,8 +4,8 @@ import sys
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "politech_backend.settings")
-    if not os.path.exists("logs"):
-        os.makedirs("logs")
+    if not os.path.exists("src/logs"):
+        os.makedirs("src/logs")
     try:
         from django.core.management import execute_from_command_line
     except ImportError:

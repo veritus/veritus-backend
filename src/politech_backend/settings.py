@@ -23,13 +23,11 @@ TEST_DATA_FOLDER = os.path.join(BASE_DIR, 'case_gather', 'test_data/')
 SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ["DEBUG"]
 
-ALLOWED_HOSTS = ["*"]
-
+ALLOWED_HOSTS = os.environ["ALLOWED_HOSTS"]
 
 # Application definition
-
 INSTALLED_APPS = [
     #Django
     'django.contrib.admin',
@@ -111,9 +109,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'politech_backend.wsgi.application'
 
-CORS_ORIGIN_WHITELIST = (
-    'localhost:3000',
-)
+CORS_ORIGIN_WHITELIST = os.environ["CORS_ORIGIN_WHITELIST"]
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
@@ -169,31 +165,31 @@ LOGGING = {
         'cronJobHandler': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'logs/cronJobs.log',
+            'filename': '/code/src/logs/cronJobs.log',
             'formatter': 'verbose'
         },
         'xmlHelperHandler': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'logs/xmlHelper.log',
+            'filename': '/code/src/logs/xmlHelper.log',
             'formatter': 'verbose'
         },
         'cronJobServicesHandler': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'logs/cronJobServices.log',
+            'filename': '/code/src/logs/cronJobServices.log',
             'formatter': 'verbose'
         },
         'xmlParserHandler': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'logs/xmlParser.log',
+            'filename': '/code/src/logs/xmlParser.log',
             'formatter': 'verbose'
         },
         'promiseHandler': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'logs/promise.log',
+            'filename': '/code/src/logs/promise.log',
             'formatter': 'verbose'
         },
 
