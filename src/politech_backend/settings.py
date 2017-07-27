@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+import raven
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,13 +24,13 @@ TEST_DATA_FOLDER = os.path.join(BASE_DIR, 'case_gather', 'test_data/')
 SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ["DEBUG"]
+DEBUG = (os.environ["DEBUG"] == 'true')
 
 ALLOWED_HOSTS = os.environ["ALLOWED_HOSTS"]
 
 # Application definition
 INSTALLED_APPS = [
-    #Django
+    # Django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,7 +45,7 @@ INSTALLED_APPS = [
     'rest_auth',
     'rest_auth.registration',
 
-    #Auth
+    # Auth
     'allauth',
     'allauth.account',
 
@@ -63,6 +64,9 @@ INSTALLED_APPS = [
     'district',
     'politicians',
 ]
+# Sentry only active in production
+if not os.environ["DEBUG"] == 'true':
+    INSTALLED_APPS.append('raven.contrib.django.raven_compat',)
 
 # Use nose to run all tests
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
@@ -148,10 +152,14 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
 ]
+if not os.environ["DEBUG"] == 'true':
+    RAVEN_CONFIG = {
+        'dsn': os.environ["SENTRY_DSN"],
+    }
 
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': False,
+    'disable_existing_loggers': True,
     'formatters': {
         'verbose': {
             'format': "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
@@ -162,63 +170,58 @@ LOGGING = {
         },
     },
     'handlers': {
-        'cronJobHandler': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/code/src/logs/cronJobs.log',
+        'sentry': {
+            'level': 'ERROR', # To capture more than ERROR, change to WARNING, INFO, etc.
+            # Only want to log to sentry in production. Otherwise we log to console
+            'class': 'logging.StreamHandler' if os.environ["DEBUG"] else 'raven.contrib.django.raven_compat.handlers.SentryHandler',
             'formatter': 'verbose'
         },
-        'xmlHelperHandler': {
+        'console': {
             'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/code/src/logs/xmlHelper.log',
+            'class': 'logging.StreamHandler',
             'formatter': 'verbose'
         },
-        'cronJobServicesHandler': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/code/src/logs/cronJobServices.log',
-            'formatter': 'verbose'
-        },
-        'xmlParserHandler': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/code/src/logs/xmlParser.log',
-            'formatter': 'verbose'
-        },
-        'promiseHandler': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/code/src/logs/promise.log',
-            'formatter': 'verbose'
-        },
-
     },
     'loggers': {
         'cronJobs': {
-            'handlers': ['cronJobHandler'],
-            'propagate': True,
+            'handlers': ['console'],
+            'propagate': False,
             'level': 'DEBUG',
         },
         'xmlHelper': {
-            'handlers': ['xmlHelperHandler'],
-            'propagate': True,
+            'handlers': ['console'],
+            'propagate': False,
             'level': 'DEBUG'
         },
         'xmlParser': {
-            'handlers': ['xmlParserHandler'],
-            'propagate': True,
+            'handlers': ['console'],
+            'propagate': False,
             'level': 'DEBUG'
         },
         'cronJobServices': {
-            'handlers': ['cronJobServicesHandler'],
-            'propagate': True,
+            'handlers': ['console'],
+            'propagate': False,
             'level': 'DEBUG'
         },
         'promise': {
-            'handlers': ['promiseHandler'],
-            'propagate': True,
+            'handlers': ['console'],
+            'propagate': False,
             'level': 'DEBUG',
+        },
+        'django.db.backends': {
+            'level': 'ERROR',
+            'handlers': ['console'],
+            'propagate': False,
+        },
+        'raven': {
+            'level': 'DEBUG',
+            'handlers': ['console'],
+            'propagate': False,
+        },
+        'sentry.errors': {
+            'level': 'DEBUG',
+            'handlers': ['console'],
+            'propagate': False,
         },
     }
 }

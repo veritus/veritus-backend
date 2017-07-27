@@ -58,13 +58,3 @@ It also works to use this during development, as docker-compose mounts the sourc
 docker-compose up
 ``` 
 after making code changes.
-
-## Sentry
-### Setup
-Run 
-```
-docker-compose run --rm web upgrade
-```
-to setup Sentry locally and creating a user. 
-
-Run ```docker-compose up``` to start all the services and go to localhost:9000 to see sentry.

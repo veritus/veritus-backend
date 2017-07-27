@@ -7,8 +7,6 @@ RUN apt-get update && apt-get -y install cron
 
 # Creates src folder in container
 RUN mkdir /code
-# Create data folders for sentry and postgres for sentry
-RUN mkdir -p code/{sentry,postgresSentry}
 
 # Copy everything into the /code directory of the container
 ADD . /code/

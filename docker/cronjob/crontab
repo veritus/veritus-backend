@@ -3,4 +3,4 @@ POSTGRES_PASSWORD=$POSTGRES_USER
 SECRET_KEY=$SECRET_KEY
 DB_HOST=$DB_HOST
 
-*/5 * * * * root /usr/local/bin/python3 /code/src/manage.py runcrons >> /var/log/cron.log 2>&1
+*/1 * * * * root /usr/local/bin/python3 /code/src/manage.py runcrons >> /var/log/cron.log 2>&1
