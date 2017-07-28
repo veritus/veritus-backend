@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.conf.urls import url, include
 from rest_framework.urlpatterns import format_suffix_patterns
+from rest_framework.schemas import get_schema_view
+from rest_framework_swagger.renderers import SwaggerUIRenderer, OpenAPIRenderer
 from promises import views as promise_views
 from case_gather import views as case_views
 from parliament import views as parliament_views
@@ -9,7 +11,10 @@ from district import views as district_views
 from subjects import views as subject_views
 from politicians import views as politician_views
 
+schema_view = get_schema_view(title='Veritus API', renderer_classes=[OpenAPIRenderer, SwaggerUIRenderer])
+
 urlpatterns = [
+    url(r'^$', schema_view, name="docs"),
     url(r'^api/v1/admin/', admin.site.urls),
     url(r'^api/v1/api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api/v1/promises/$', promise_views.PromiseList.as_view()),
