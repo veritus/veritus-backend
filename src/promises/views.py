@@ -22,6 +22,13 @@ class PromiseFilter(django_filters.rest_framework.FilterSet):
             }
 
 class PromiseList(generics.ListAPIView):
+    '''
+    get:
+        Get a list of all promises.
+
+    post:
+        Add new promise.
+    '''
     queryset = Promise.objects.all()
     serializer_class = PromiseSerializerRead
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
@@ -105,7 +112,16 @@ class SuggestedPromiseCaseList(generics.ListAPIView):
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes((IsAuthenticatedOrReadOnly,))
 def suggested_promise_case_detail(request, suggested_promise_id):
-    ''' Get all suggested promise case '''
+    '''
+    get:
+        Get suggested promise cases by ID.
+
+    put:
+        Add new suggested promise cases with a given ID.
+
+    delete:
+        Delete suggested promise cases with a given ID.
+    '''
     try:
         suggested_promise_case = SuggestedPromiseCase.objects.get(pk=suggested_promise_id)
     except Promise.DoesNotExist:

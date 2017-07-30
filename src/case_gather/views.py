@@ -11,7 +11,13 @@ from .serializers import CaseSerializer
 @api_view(['GET', 'POST'])
 @permission_classes((IsAuthenticatedOrReadOnly,))
 def case_list(request):
+    '''
+    get:
+        Get a list of all cases.
 
+    post:
+        Add new cases.
+    '''
     if request.method == 'GET':
         cases = Case.objects.all()
         serializer = CaseSerializer(cases, many=True)
@@ -21,6 +27,16 @@ def case_list(request):
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes((IsAuthenticatedOrReadOnly,))
 def case_detail(request, pk):
+    '''
+    get:
+        Get case by ID.
+
+    put:
+        Add new case with a given ID.
+
+    delete:
+        Remove case with a given ID.
+    '''
     try:
         case = Case.objects.get(pk=pk)
     except Case.DoesNotExist:

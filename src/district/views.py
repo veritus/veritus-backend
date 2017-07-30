@@ -7,7 +7,7 @@ from .serializers import DistrictSerializerRead
 @api_view(['GET'])
 @permission_classes((IsAuthenticatedOrReadOnly,))
 def district_list(request):
-
+    ''' Get a detailed list of all districts '''
     if request.method == 'GET':
         districts = District.objects.all()
         serializer = DistrictSerializerRead(districts, many=True)

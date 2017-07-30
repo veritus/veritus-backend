@@ -12,7 +12,14 @@ from .serializers import ParliamentMemberSerializer
 @api_view(['GET', 'POST'])
 @permission_classes((IsAuthenticatedOrReadOnly,))
 def parliament_list(request):
+    '''
+    get:
+        Get a list of all parliments.
 
+    post:
+        Add new parliment with a given ID.
+
+    '''
     if request.method == 'GET':
         parliaments = Parliament.objects.all()
         serializer = ParliamentSerializer(parliaments, many=True)
@@ -29,6 +36,18 @@ def parliament_list(request):
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes((IsAuthenticatedOrReadOnly,))
 def parliament_detail(request, pk):
+    '''
+    get:
+        Get parliment by ID.
+
+    put:
+        Add new parliment with a given ID.
+
+    delete:
+        Remove parliment with a given ID.
+
+    '''
+
     try:
         parliament = Parliament.objects.get(pk=pk)
     except Parliament.DoesNotExist:
@@ -50,6 +69,14 @@ def parliament_detail(request, pk):
 @api_view(['GET', 'POST'])
 @permission_classes((IsAuthenticatedOrReadOnly,))
 def parliament_session_list(request):
+    '''
+    get:
+        Get a list of all parliment sessions.
+
+    post:
+        Add new parliment session.
+
+    '''
 
     if request.method == 'GET':
         parliament_sessions = ParliamentSession.objects.all()
@@ -67,6 +94,18 @@ def parliament_session_list(request):
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes((IsAuthenticatedOrReadOnly,))
 def parliament_session_detail(request, pk):
+    '''
+    get:
+        Get parliment session by ID.
+
+    put:
+        Add new parliment session with a given ID.
+
+    delete:
+        Remove parliment session with a given ID.
+
+    '''
+
     try:
         parliament_session = ParliamentSession.objects.get(pk=pk)
     except ParliamentSession.DoesNotExist:
@@ -89,7 +128,7 @@ def parliament_session_detail(request, pk):
 @api_view(['GET'])
 @permission_classes((IsAuthenticatedOrReadOnly,))
 def parliamentMember_list(request):
-
+    ''' Get detailed list of parliament members '''
     if request.method == 'GET':
         parliamentMembers = ParliamentMember.objects.all()
         serializer = ParliamentMemberSerializer(parliamentMembers, many=True)
