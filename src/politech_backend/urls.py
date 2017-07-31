@@ -45,4 +45,4 @@ urlpatterns = [
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
-urlpatterns += staticfiles_urlpatterns() # Needed to load static files for Swagger
+urlpatterns += staticfiles_urlpatterns()
