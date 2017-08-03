@@ -17,8 +17,7 @@ def parliament_list(request):
         Get a list of all parliments.
 
     post:
-        Add new parliment with a given ID.
-
+        Creates a new parliament.
     '''
     if request.method == 'GET':
         parliaments = Parliament.objects.all()
