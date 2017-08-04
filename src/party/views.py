@@ -8,7 +8,7 @@ from .serializers import PartySerializerRead
 @api_view(['GET'])
 @permission_classes((IsAuthenticatedOrReadOnly,))
 def party_list(request):
-
+    ''' Get a list of political parties '''
     if request.method == 'GET':
         parties = Party.objects.all()
         serializer = PartySerializerRead(parties, many=True)

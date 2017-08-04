@@ -35,6 +35,13 @@ class SubjectFilter(django_filters.rest_framework.FilterSet):
             }
 
 class SubjectList(generics.ListAPIView):
+    '''
+    get:
+        Get all subjects.
+
+    post:
+        Add new subjects.
+    '''
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)

@@ -8,19 +8,26 @@ from .models import Case
 from .serializers import CaseSerializer
 
 
-@api_view(['GET', 'POST'])
+@api_view(['GET'])
 @permission_classes((IsAuthenticatedOrReadOnly,))
 def case_list(request):
-
+    '''
+    get:
+        Get a list of all cases.
+    '''
     if request.method == 'GET':
         cases = Case.objects.all()
         serializer = CaseSerializer(cases, many=True)
         return Response(serializer.data)
 
 
-@api_view(['GET', 'PUT', 'DELETE'])
+@api_view(['GET'])
 @permission_classes((IsAuthenticatedOrReadOnly,))
 def case_detail(request, pk):
+    '''
+    get:
+        Get case by ID.
+    '''
     try:
         case = Case.objects.get(pk=pk)
     except Case.DoesNotExist:
