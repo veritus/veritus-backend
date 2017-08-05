@@ -29,11 +29,15 @@ class PromiseList(generics.ListAPIView):
     post:
         Add new promise.
     '''
+    print("promise");
+    print("promise");
+    print("promise");
+    print("promise");
     queryset = Promise.objects.all()
     serializer_class = PromiseSerializerRead
-    filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
-    filter_class = PromiseFilter
-    permission_classes = (IsAuthenticatedOrReadOnly,)
+    # filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
+    # filter_class = PromiseFilter
+    # permission_classes = (IsAuthenticatedOrReadOnly,)
 
     def post(self, request):
         PROMISE_LOGGER.info(request.user)
@@ -45,7 +49,7 @@ class PromiseList(generics.ListAPIView):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-@permission_classes((IsAuthenticatedOrReadOnly,))
+# @permission_classes((IsAuthenticatedOrReadOnly,))
 def promise_detail(request, promise_id):
     ''' Get by id, put and delete endpoints '''
     try:
@@ -81,7 +85,7 @@ class PromiseCaseList(generics.ListAPIView):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-@permission_classes((IsAuthenticatedOrReadOnly,))
+# @permission_classes((IsAuthenticatedOrReadOnly,))
 def promise_case_detail(request, promise_case_id):
     ''' Get by id endpoint '''
     try:
@@ -110,7 +114,7 @@ class SuggestedPromiseCaseList(generics.ListAPIView):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-@permission_classes((IsAuthenticatedOrReadOnly,))
+# @permission_classes((IsAuthenticatedOrReadOnly,))
 def suggested_promise_case_detail(request, suggested_promise_id):
     '''
     get:

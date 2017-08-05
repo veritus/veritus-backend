@@ -16,6 +16,8 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEST_DATA_FOLDER = os.path.join(BASE_DIR, 'case_gather', 'test_data/')
 
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
@@ -54,6 +56,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_nose',
 
+    'social_django',
+
     # Our apps
     'case_gather',
     'promises',
@@ -63,6 +67,8 @@ INSTALLED_APPS = [
     'party',
     'district',
     'politicians',
+
+    'core',
 ]
 
 # Use nose to run all tests
@@ -88,6 +94,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'politech_backend.urls'
@@ -95,7 +103,7 @@ ROOT_URLCONF = 'politech_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -103,6 +111,10 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -132,6 +144,10 @@ DATABASES = {
 
 AUTHENTICATION_BACKENDS = (
 
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2',
+
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
 
@@ -139,7 +155,6 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 
 )
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -237,16 +252,24 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
     ),
     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
 }
 
 SWAGGER_SETTINGS = {
     'SECURITY_DEFINITIONS': {
-        'api_key': {
-            'type': 'apiKey',
-            'in': 'header',
-            'name': 'Authorization'
+        # 'api_key': {
+        #     'type': 'apiKey',
+        #     'in': 'header',
+        #     'name': 'Authorization'
+        # },
+        "oauth": {
+            "type": "oauth2",
+            "authorizationUrl": "http://localhost:8000/oauth/login/facebook/",
+            # "authorizationUrl": "http://swagger.io/api/oauth/dialog",
+            "flow": "implicit",
+            "scopes": {}
         }
     },
 }
@@ -272,3 +295,18 @@ USE_TZ = True
 STATIC_URL = '/static/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 REST_SESSION_LOGIN = False
+
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+# LOGIN_REDIRECT_URL = 'home'
+
+SOCIAL_AUTH_GITHUB_KEY = 'ce5c53e530e32023c639'
+SOCIAL_AUTH_GITHUB_SECRET = 'c1acb137d17aa602cac0695203826f81d70f664e'
+
+SOCIAL_AUTH_FACEBOOK_KEY = '108193869861396'  # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '6c7e431f5dda1d4075f027fe0b667ee8'  # App Secret
+
+SOCIAL_AUTH_LOGIN_ERROR_URL = '/settings/'
+# SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/settings/'
+SOCIAL_AUTH_RAISE_EXCEPTIONS = False
+
