@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
-import raven
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -22,9 +21,6 @@ TEST_DATA_FOLDER = os.path.join(BASE_DIR, 'case_gather', 'test_data/')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ["SECRET_KEY"]
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (os.environ["DEBUG"] == 'true')
 
 ALLOWED_HOSTS = os.environ["ALLOWED_HOSTS"]
 
@@ -64,9 +60,6 @@ INSTALLED_APPS = [
     'district',
     'politicians',
 ]
-# Sentry only active in production
-if not os.environ["DEBUG"] == 'true':
-    INSTALLED_APPS.append('raven.contrib.django.raven_compat',)
 
 # Use nose to run all tests
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
@@ -152,10 +145,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
 ]
-if not os.environ["DEBUG"] == 'true':
-    RAVEN_CONFIG = {
-        'dsn': os.environ["SENTRY_DSN"],
-    }
 
 LOGGING = {
     'version': 1,
@@ -170,12 +159,6 @@ LOGGING = {
         },
     },
     'handlers': {
-        'sentry': {
-            'level': 'ERROR', # To capture more than ERROR, change to WARNING, INFO, etc.
-            # Only want to log to sentry in production. Otherwise we log to console
-            'class': 'logging.StreamHandler' if os.environ["DEBUG"] else 'raven.contrib.django.raven_compat.handlers.SentryHandler',
-            'formatter': 'verbose'
-        },
         'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
@@ -210,16 +193,6 @@ LOGGING = {
         },
         'django.db.backends': {
             'level': 'ERROR',
-            'handlers': ['console'],
-            'propagate': False,
-        },
-        'raven': {
-            'level': 'DEBUG',
-            'handlers': ['console'],
-            'propagate': False,
-        },
-        'sentry.errors': {
-            'level': 'DEBUG',
             'handlers': ['console'],
             'propagate': False,
         },

@@ -22,11 +22,11 @@ services:
       - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
       - SECRET_KEY=$SECRET_KEY
       - DB_HOST=db
-      - DEBUG=true
       - ALLOWED_HOSTS=[]
       - CORS_ORIGIN_WHITELIST=()
       - GATHER_CASES_CRON_TIME_SECONDS=1440
       - SENTRY_DSN=notNeededForDevelopment
+      - DJANGO_SETTINGS_MODULE=politech_backend.settings.production
     depends_on:
       db:
         condition: service_healthy
