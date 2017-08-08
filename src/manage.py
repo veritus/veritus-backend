@@ -3,7 +3,6 @@ import os
 import sys
 
 if __name__ == "__main__":
-    #os.environ.setdefault("DJANGO_SETTINGS_MODULE", "politech_backend.localSettings")
     if not os.path.exists("src/logs"):
         os.makedirs("src/logs")
     try:

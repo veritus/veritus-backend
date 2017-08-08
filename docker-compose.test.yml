@@ -25,8 +25,7 @@ services:
       - ALLOWED_HOSTS=[]
       - CORS_ORIGIN_WHITELIST=()
       - GATHER_CASES_CRON_TIME_SECONDS=1440
-      - SENTRY_DSN=notNeededForDevelopment
-      - DJANGO_SETTINGS_MODULE=politech_backend.settings.production
+      - DJANGO_SETTINGS_MODULE=politech_backend.settings.local
     depends_on:
       db:
         condition: service_healthy

@@ -12,22 +12,22 @@ RAVEN_CONFIG = {
     'dsn': os.environ["SENTRY_DSN"],
 }
 
-LOGGING['handlers']['sentry'] = {
+LOGGING['handlers'].update({'sentry': {
     'level': 'ERROR', # To capture more than ERROR, change to WARNING, INFO, etc.
     # Only want to log to sentry in production. Otherwise we log to console
     'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
     'formatter': 'verbose'
-},
+}}),
 
-LOGGING['loggers']['raven'] = {
+LOGGING['loggers'].update({'raven': {
     'level': 'DEBUG',
     'handlers': ['console'],
     'propagate': False,
-},
+}}),
 
 
-LOGGING['loggers']['sentry.errors'] = {
+LOGGING['loggers'].update({'sentry.errors' : {
     'level': 'DEBUG',
     'handlers': ['console'],
     'propagate': False,
-}
+}})
