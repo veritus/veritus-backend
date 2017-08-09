@@ -7,7 +7,7 @@ from .serializers import PoliticianSerializer
 @api_view(['GET'])
 @permission_classes((IsAuthenticatedOrReadOnly,))
 def politician_list(request):
-
+    ''' Get a detailed list of all politicians '''
     if request.method == 'GET':
         politicians = Politician.objects.all()
         serializer = PoliticianSerializer(politicians, many=True)
