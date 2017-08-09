@@ -164,25 +164,31 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'verbose'
         },
+        'cronJobHandler': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/code/src/logs/cronJobs.log',
+            'formatter': 'verbose'
+        },
     },
     'loggers': {
         'cronJobs': {
-            'handlers': ['console'],
+            'handlers': ['cronJobHandler'],
             'propagate': False,
             'level': 'DEBUG',
         },
         'xmlHelper': {
-            'handlers': ['console'],
+            'handlers': ['cronJobHandler'],
             'propagate': False,
             'level': 'DEBUG'
         },
         'xmlParser': {
-            'handlers': ['console'],
+            'handlers': ['cronJobHandler'],
             'propagate': False,
             'level': 'DEBUG'
         },
         'cronJobServices': {
-            'handlers': ['console'],
+            'handlers': ['cronJobHandler'],
             'propagate': False,
             'level': 'DEBUG'
         },

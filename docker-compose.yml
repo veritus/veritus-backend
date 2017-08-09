@@ -25,6 +25,7 @@ services:
       - DJANGO_SETTINGS_MODULE=politech_backend.settings.local
     volumes:
       - ./:/code
+      - ./logs:/code/src/logs
     command: sh .entrypoint.sh
     ports:
       - "8000:8000"
