@@ -16,7 +16,7 @@ services:
 
   sut:
     build: .
-    command: sh .entrypoint.sh
+    command: sh entrypoint.sh
     environment:
       - POSTGRES_USER=$POSTGRES_USER
       - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
