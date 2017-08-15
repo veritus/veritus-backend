@@ -18,7 +18,7 @@ class GatherCases(CronJobBase):
             CRONLOGGER.info('Starting case gathering')
             session_number = ParliamentSession.objects.latest('created').session_number
 
-            case_gathering_services.update_case_db(session_number)
+            case_gathering_services.update_cases_by_session_number(session_number)
             CRONLOGGER.info('Case gathering completed')
         except Exception as exception:
             CRONLOGGER.error(traceback.format_exc())

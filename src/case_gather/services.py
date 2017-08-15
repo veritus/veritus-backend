@@ -8,49 +8,47 @@ from subjects.models import CaseSubject
 
 CRONLOGGER = logging.getLogger('cronJobServices')
 
-def update_case_db(session_number):
-    CRONLOGGER.info('Updating case database started')
-    
-    try:
-        new_cases = xml_parser.get_case_data(session_number)
-    except Exception as e:
-        CRONLOGGER.error(e.message + '-' + traceback.format_exc())
-
-
-    parliament_session = ParliamentSession.objects.get(
-        session_number=session_number
-    )
-
-    # We retrieve all current cases to see if we need to create
-    # or update
-    cases_in_db = Case.objects.filter(
+def get_current_case_numbers_by_parliament_session(parliament_session):
+    # We retrieve all current cases connected to the inputted parliament session
+    current_cases = Case.objects.filter(
         parliament_session=parliament_session
     )
 
     case_numbers = []
-    for case in cases_in_db:
+    for case in current_cases:
         case_numbers.append(case.number)
+    return case_numbers
 
-    althingi_status_to_status_map = create_althingi_status_to_status_map()
+def update_cases_by_session_number(session_number):
+    try:
+        parliament_session = ParliamentSession.objects.get(
+            session_number=session_number
+        )
 
-    for case in new_cases:
-        #  Case has keys:
-        #  'number', 'name', 'case_type', 'althingi_status'
-        #  'rel_cases', 'subjects', 'session'
-        CRONLOGGER.info('Starting to create/update case: ')
-        CRONLOGGER.info(case)
-        if int(case['number']) in case_numbers:
-            CRONLOGGER.info('case is already in db')
-        else:
-            CRONLOGGER.info('Creating case')
+        case_numbers = get_current_case_numbers_by_parliament_session(parliament_session)
 
-            # We find the status from the althingi status
-            althingi_status = case['althingi_status']
-            status = 'Unknown'
-            if althingi_status in althingi_status_to_status_map:
-                status = althingi_status_to_status_map[althingi_status]
+        althingi_status_to_status_map = create_althingi_status_to_status_map()
 
-            try:
+        new_cases = xml_parser.get_case_data(session_number)
+        for case in new_cases:
+            #  Case has keys:
+            #  'number', 'name', 'case_type', 'althingi_status'
+            #  'rel_cases', 'subjects', 'session'
+            CRONLOGGER.info('Starting to create/update case: ')
+            CRONLOGGER.info(case)
+
+            if int(case['number']) not in case_numbers:
+                # If the case does not exist, we create it
+                CRONLOGGER.info('Creating case')
+
+                # We find the status from the althingi status
+                althingi_status = case['althingi_status']
+
+                # Default status if there is a status we are missing
+                status = 'Unknown'
+                if althingi_status in althingi_status_to_status_map:
+                    status = althingi_status_to_status_map[althingi_status]
+
                 new_case = Case.objects.create(
                     name=case['name'],
                     number=int(case['number']),
@@ -74,18 +72,19 @@ def update_case_db(session_number):
                         )
                     else:
                         CRONLOGGER.error('Parliament member not found: ' + case_creator_name)
-            except Exception as e:
-                CRONLOGGER.error(e.message)
-                CRONLOGGER.error('case creation failure')
-            CRONLOGGER.info('Case entry created')
+                
+                CRONLOGGER.info('Case entry created')
 
-    new_cases.close()
-    CRONLOGGER.info('update finished')
+        new_cases.close()
+
+    except Exception as e:
+        CRONLOGGER.error(traceback.format_exc())
+        raise
 
 
 def create_althingi_status_to_status_map():
     # Creates a map so that we can easily retrieve the status from the
-    # althingi_status. This is done as the althingi status is too complicated
+    # althingi_status. This is done as the althingi status is too complicated.
     # Key and Value are stored in database
     # Map will look something like:
     # {

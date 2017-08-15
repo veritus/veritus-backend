@@ -14,12 +14,10 @@ def get_attribute_value(soup, element, attribute):
 
     logger.info('looking for values: ' + element +"-" + attribute)
     d = {element: attribute}
-    try:
-        values = soup.findAll(d)
-        for value in values:
-            yield value[attribute]
-    except Exception as e:
-        logger.error(e.message)
+    values = soup.findAll(d)
+    for value in values:
+        yield value[attribute]
+
 
 
 def get_element_text(soup, element):
@@ -36,15 +34,9 @@ def get_element_text(soup, element):
     logger = logging.getLogger('xmlHelper')
 
     logger.info('looking for elements: ' + element)
-    try:
-        elements = soup.findAll(element)
-        try:
-            for element in elements:
-                yield element.text
-        except Exception as e:
-            logger.error(e)
-    except Exception as e:
-        logger.error(e.message)
+    elements = soup.findAll(element)
+    for element in elements:
+        yield element.text
 
 
 def get_case_details(soup):
