@@ -21,4 +21,5 @@ class ConnectBillsAndPromises(CronJobBase):
             promise_services.find_connected_bills_and_promises()
 
         except Exception as exp:
-            CRONLOGGER.error(exp.message + " - " + traceback.format_exc())
+            CRONLOGGER.error(traceback.format_exc())
+            raise

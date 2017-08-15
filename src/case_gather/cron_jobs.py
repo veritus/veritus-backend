@@ -14,12 +14,12 @@ class GatherCases(CronJobBase):
     code = 'case_gather.GatherCases'    # a unique code
 
     def do(self):
-        session_number = ParliamentSession.latest('created').session_number
-
         try:
             CRONLOGGER.info('Starting case gathering')
+            session_number = ParliamentSession.objects.latest('created').session_number
+
             case_gathering_services.update_case_db(session_number)
-        except Exception as exception:
-            CRONLOGGER.error(exception.message + " - " + traceback.format_exc())
-        finally:
             CRONLOGGER.info('Case gathering completed')
+        except Exception as exception:
+            CRONLOGGER.error(traceback.format_exc())
+            raise

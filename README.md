@@ -31,6 +31,14 @@ docker-compose exec backend python3 manage.py makemigrations
 ```
 3. Resolve anything Django asks you to resolve (non-nullable fields and such)
 4. Migration file should not be generated in the correct domain!
+5. Build the docker image again
+```
+docker build -t veritus/backend:latest .
+```
+6. Rerun and your changes should be live
+```
+docker-compose up
+```
 
 ## Docker
 The docker image here is NOT supposed to be run alone. As the backend requires a database, there is no use running it alone. Use docker-compose to run the backend and database together.
