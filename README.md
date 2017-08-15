@@ -18,6 +18,20 @@ $ docker-compose up
 ```
 5. Voila your change has been added.
 
+### Migrations
+When you are making changes to the data model, you have to generate the migration files
+
+1. Run
+```
+docker-compose up
+```
+2. Then run, in another terminal window,
+```
+docker-compose exec backend python3 manage.py makemigrations 
+```
+3. Resolve anything Django asks you to resolve (non-nullable fields and such)
+4. Migration file should not be generated in the correct domain!
+
 ## Docker
 The docker image here is NOT supposed to be run alone. As the backend requires a database, there is no use running it alone. Use docker-compose to run the backend and database together.
 

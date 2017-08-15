@@ -3,6 +3,7 @@ import traceback
 import os
 from django_cron import CronJobBase, Schedule
 import case_gather.services as case_gathering_services
+from parliament.models import ParliamentSession
 
 CRONLOGGER = logging.getLogger('cronJobs')
 
@@ -13,7 +14,7 @@ class GatherCases(CronJobBase):
     code = 'case_gather.GatherCases'    # a unique code
 
     def do(self):
-        session_number = 146
+        session_number = ParliamentSession.latest('created').session_number
 
         try:
             CRONLOGGER.info('Starting case gathering')
