@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 TEST_DATA_FOLDER = os.path.join(BASE_DIR, 'case_gather', 'test_data/')
 
 # Quick-start development settings - unsuitable for production
@@ -22,14 +22,11 @@ TEST_DATA_FOLDER = os.path.join(BASE_DIR, 'case_gather', 'test_data/')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ["SECRET_KEY"]
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ["DEBUG"]
-
 ALLOWED_HOSTS = os.environ["ALLOWED_HOSTS"]
 
 # Application definition
 INSTALLED_APPS = [
-    #Django
+    # Django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,7 +42,7 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'rest_framework_swagger',
 
-    #Auth
+    # Auth
     'allauth',
     'allauth.account',
 
@@ -152,7 +149,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': False,
+    'disable_existing_loggers': True,
     'formatters': {
         'verbose': {
             'format': "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
@@ -163,63 +160,48 @@ LOGGING = {
         },
     },
     'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        },
         'cronJobHandler': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
             'filename': '/code/src/logs/cronJobs.log',
             'formatter': 'verbose'
         },
-        'xmlHelperHandler': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/code/src/logs/xmlHelper.log',
-            'formatter': 'verbose'
-        },
-        'cronJobServicesHandler': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/code/src/logs/cronJobServices.log',
-            'formatter': 'verbose'
-        },
-        'xmlParserHandler': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/code/src/logs/xmlParser.log',
-            'formatter': 'verbose'
-        },
-        'promiseHandler': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/code/src/logs/promise.log',
-            'formatter': 'verbose'
-        },
-
     },
     'loggers': {
         'cronJobs': {
             'handlers': ['cronJobHandler'],
-            'propagate': True,
+            'propagate': False,
             'level': 'DEBUG',
         },
         'xmlHelper': {
-            'handlers': ['xmlHelperHandler'],
-            'propagate': True,
+            'handlers': ['cronJobHandler'],
+            'propagate': False,
             'level': 'DEBUG'
         },
         'xmlParser': {
-            'handlers': ['xmlParserHandler'],
-            'propagate': True,
+            'handlers': ['cronJobHandler'],
+            'propagate': False,
             'level': 'DEBUG'
         },
         'cronJobServices': {
-            'handlers': ['cronJobServicesHandler'],
-            'propagate': True,
+            'handlers': ['cronJobHandler'],
+            'propagate': False,
             'level': 'DEBUG'
         },
         'promise': {
-            'handlers': ['promiseHandler'],
-            'propagate': True,
+            'handlers': ['console'],
+            'propagate': False,
             'level': 'DEBUG',
+        },
+        'django.db.backends': {
+            'level': 'ERROR',
+            'handlers': ['console'],
+            'propagate': False,
         },
     }
 }

@@ -4,3 +4,4 @@ docker-compose.test.yml
 docker-compose.yml
 Dockerfile
 README.md
+logs/
