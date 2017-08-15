@@ -19,13 +19,14 @@ services:
       - POSTGRES_PASSWORD=kaninei3i3j94jginerign
       - SECRET_KEY=nin3on3inri3nnwoge
       - DB_HOST=db
-      - DEBUG=false
       - ALLOWED_HOSTS=["*"]
       - CORS_ORIGIN_WHITELIST=('localhost:3000',)
       - GATHER_CASES_CRON_TIME_SECONDS=1440
+      - DJANGO_SETTINGS_MODULE=politech_backend.settings.development
     volumes:
       - ./:/code
-    command: "bash -c 'python3 src/manage.py migrate && python3 src/manage.py loaddata init_data.json && cron && cd src && gunicorn -b 0.0.0.0:8000 politech_backend.wsgi'"
+      - ./logs:/code/src/logs
+    command: sh entrypoint.sh
     ports:
       - "8000:8000"
     depends_on:
