@@ -45,5 +45,3 @@ def get_element_text(soup, element):
     elements = soup.findAll(element)
     for element in elements:
         yield element.text
-
-
