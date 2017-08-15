@@ -4,7 +4,7 @@ from django.test import TestCase
 from django.conf import settings
 from bs4 import BeautifulSoup
 
-import case_gather.xml_helper as x_h
+import soupUtils as soupUtils
 import case_gather.xml_parser as x_p
 import case_gather.models as cgm
 import parliament.models as parliament_models
@@ -18,9 +18,9 @@ details_path = os.path.join(
 details3_path = os.path.join(
     settings.BASE_DIR, 'case_gather', 'test_data', 'case3details.txt')
 
-class XMLHelperGAVTestCase(TestCase):
+class SoupUtilsGAVTestCase(TestCase):
     """
-    Test GAV (get_attribute_value) from xml_helper.py
+    Test get_attribute_value from soupUtils.py
     """
 
     def setUp(self):
@@ -29,12 +29,12 @@ class XMLHelperGAVTestCase(TestCase):
             raw_xml = f.read()
         case_soup = BeautifulSoup(raw_xml, features='xml')
 
-        cases = x_h.get_attribute_value(case_soup, 'mál', 'málsnúmer')
+        cases = soupUtils.get_attribute_value(case_soup, 'mál', 'málsnúmer')
         self.case_number = next(cases)
         self.case_number = next(cases)
         self.case_number = next(cases)
 
-        case_types_sh = x_h.get_attribute_value(
+        case_types_sh = soupUtils.get_attribute_value(
             case_soup, "málstegund", "málstegund")
         self.case_type_sh = next(case_types_sh)
         self.case_type_sh = next(case_types_sh)
@@ -47,9 +47,9 @@ class XMLHelperGAVTestCase(TestCase):
         self.assertEqual(self.case_type_sh, 'a')
 
 
-class XMLHelperGETTestCase(TestCase):
+class SoupUtilsGETTestCase(TestCase):
     """
-    Test GET (get_element_text) from xml_helper.py
+    Test get_element_text from soupUtils.py
     """
 
     def setUp(self):
@@ -57,12 +57,12 @@ class XMLHelperGETTestCase(TestCase):
             raw_xml = f.read()
         case_soup = BeautifulSoup(raw_xml, features='xml')
 
-        case_names = x_h.get_element_text(case_soup, 'málsheiti')
+        case_names = soupUtils.get_element_text(case_soup, 'málsheiti')
         self.case_name = next(case_names)
         self.case_name = next(case_names)
         self.case_name = next(case_names)
 
-        case_types = x_h.get_element_text(case_soup, 'heiti')
+        case_types = soupUtils.get_element_text(case_soup, 'heiti')
         self.case_type = next(case_types)
         self.case_type = next(case_types)
         self.case_type = next(case_types)
@@ -74,9 +74,9 @@ class XMLHelperGETTestCase(TestCase):
         self.assertEqual(self.case_type, 'Tillaga til þingsályktunar')
 
 
-class XMLHelperGCDTestCase(TestCase):
+class SoupUtilsGCDTestCase(TestCase):
     """
-    Test get_case_details in xml_helper
+    Test get_case_details in soupUtils.py
     """
 
     def setUp(self):
@@ -85,15 +85,15 @@ class XMLHelperGCDTestCase(TestCase):
 
         details_soup = BeautifulSoup(details_xml, features='xml')
 
-        status_gen = x_h.get_element_text(details_soup, 'staðamáls')
-        rel_cases_gen = x_h.get_attribute_value(
+        status_gen = soupUtils.get_element_text(details_soup, 'staðamáls')
+        rel_cases_gen = soupUtils.get_attribute_value(
             details_soup, 'mál', 'málsnúmer')
-        # rel_cases_gen = x_h.get_attribute_value(
+        # rel_cases_gen = soupUtils.get_attribute_value(
         #     details_soup, 'þingskjal', 'málsnúmer')
-        subj_id_gen = x_h.get_attribute_value(
+        subj_id_gen = soupUtils.get_attribute_value(
             details_soup, 'efnisflokkur', 'id')
 
-        self.output = x_h.get_case_details(details_soup)
+        self.output = x_p.get_case_details(details_soup)
 
         self.status = next(status_gen)
 
@@ -123,9 +123,9 @@ class XMLHelperGCDTestCase(TestCase):
         self.assertEqual(rel_cases, ['2', "2"])
         self.assertEqual(subj_ids, ['6'])
 
-class XMLHelperGCDTestCase3(TestCase):
+class SoupUtilsGCDTestCase3(TestCase):
     """
-    Test get_case_details in xml_helper
+    Test get_case_details in soupUtils.py
     """
 
     def setUp(self):
@@ -135,14 +135,14 @@ class XMLHelperGCDTestCase3(TestCase):
         details_soup = BeautifulSoup(details_xml, features='xml')
 
         # status_gen = x_h.get_element_text(details_soup, 'staðamáls')
-        rel_cases_gen = x_h.get_attribute_value(
+        rel_cases_gen = soupUtils.get_attribute_value(
             details_soup, 'mál', 'málsnúmer')
-        # rel_cases_gen = x_h.get_attribute_value(
+        # rel_cases_gen = soupUtils.get_attribute_value(
         #     details_soup, 'þingskjal', 'málsnúmer')
-        subj_id_gen = x_h.get_attribute_value(
+        subj_id_gen = soupUtils.get_attribute_value(
             details_soup, 'efnisflokkur', 'id')
 
-        self.output = x_h.get_case_details(details_soup)
+        self.output = x_p.get_case_details(details_soup)
 
         self.status = ''
 

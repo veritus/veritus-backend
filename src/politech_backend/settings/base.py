@@ -178,7 +178,7 @@ LOGGING = {
             'propagate': False,
             'level': 'DEBUG',
         },
-        'xmlHelper': {
+        'soupUtils': {
             'handlers': ['cronJobHandler'],
             'propagate': False,
             'level': 'DEBUG'

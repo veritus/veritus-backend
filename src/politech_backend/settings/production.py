@@ -28,6 +28,6 @@ LOGGING['loggers'].update({'raven': {
 
 LOGGING['loggers'].update({'sentry.errors' : {
     'level': 'DEBUG',
-    'handlers': ['console'],
+    'handlers': ['sentry'],
     'propagate': False,
 }})
