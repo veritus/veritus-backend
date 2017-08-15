@@ -6,13 +6,6 @@ class AlthingiStatusToStatusMapper(models.Model):
     althingi_status = models.TextField()
     status = models.TextField()
 
-class Bill(Entity):
-    description_link = models.TextField()
-    althingi_created = models.DateField()
-    number = models.IntegerField()
-    parliament_session = models.ForeignKey(ParliamentSession)
-
-
 class Case(Entity):
     number = models.IntegerField()
     parliament_session = models.ForeignKey(ParliamentSession)

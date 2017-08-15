@@ -27,7 +27,7 @@ docker-compose up
 ```
 2. Then run, in another terminal window,
 ```
-docker-compose exec backend python3 manage.py makemigrations 
+docker-compose exec backend python3 src/manage.py makemigrations 
 ```
 3. Resolve anything Django asks you to resolve (non-nullable fields and such)
 4. Migration file should not be generated in the correct domain!
