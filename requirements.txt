@@ -12,6 +12,7 @@ django-filter==1.0.1
 django-nose==1.4.4
 django-rest-auth==0.9.0
 djangorestframework==3.5.3
+django-rest-swagger==2.1.2
 future==0.16.0
 isort==4.2.5
 lazy-object-proxy==1.2.2
@@ -35,3 +36,4 @@ requests==2.12.1
 requests-oauthlib==0.8.0
 six==1.10.0
 wrapt==1.10.8
+gunicorn==19.7.0
