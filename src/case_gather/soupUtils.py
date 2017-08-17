@@ -18,13 +18,13 @@ def get_attribute_value(soup, element, attribute):
     attribute: name of element attribute as a str
     yield attribute values as is (can be strings or ints, beware!)
 
-    Interesting elements : attribute pairs:
-        - mál : málsnúmer
+    <element here=there >yes<element>
+    Will return 'there' if 'element' and 'here' are the inputs
     """
 
-    SOUP_LOGGER.info('looking for values: ' + element +"-" + attribute)
-    d = {element: attribute}
-    values = soup.findAll(d)
+    SOUP_LOGGER.info('looking for values: ' + element + "-" + attribute)
+    pair = {element: attribute}
+    values = soup.findAll(pair)
     for value in values:
         yield value[attribute]
 
@@ -34,11 +34,8 @@ def get_element_text(soup, element_name):
     element: name of element as a str
     yield element text as is
 
-    interesting elements:
-        - málsheiti
-        - heiti
-        - heiti2
-        - xml
+    <element>yes<element>
+    Will return 'yes' if 'element' is the input
     """
 
     SOUP_LOGGER.info('looking for elements: ' + element_name)
