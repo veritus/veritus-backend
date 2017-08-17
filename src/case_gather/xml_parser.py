@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # pylint: disable=line-too-long, lost-exception
 import logging
-import soupUtils
+import case_gather.soupUtils as soupUtils
 
 XML_LOGGER = logging.getLogger('xmlParser')
 

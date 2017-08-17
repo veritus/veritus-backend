@@ -2,7 +2,7 @@ import logging
 import traceback
 import os
 
-import services as CaseGatheringService
+import case_gather.services as CaseGatheringService
 from django_cron import CronJobBase, Schedule
 from parliament.models import ParliamentSession
 

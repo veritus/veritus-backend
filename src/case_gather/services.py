@@ -77,9 +77,8 @@ def getCaseStatus(althingi_status):
 
     if althingi_status in althingi_status_to_status_map:
         return althingi_status_to_status_map[althingi_status]
-    else:
-        # Default status if the althingi status is not found in our database
-        return 'Unknown'
+    # Default status if the althingi status is not found in our database
+    return 'Unknown'
 
 
 def createCaseCreators(case_creator_names, case):

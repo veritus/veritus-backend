@@ -29,7 +29,7 @@ def get_attribute_value(soup, element, attribute):
         yield value[attribute]
 
 
-def get_element_text(soup, element):
+def get_element_text(soup, element_name):
     """
     element: name of element as a str
     yield element text as is
@@ -41,7 +41,7 @@ def get_element_text(soup, element):
         - xml
     """
 
-    SOUP_LOGGER.info('looking for elements: ' + element)
-    elements = soup.findAll(element)
+    SOUP_LOGGER.info('looking for elements: ' + element_name)
+    elements = soup.findAll(element_name)
     for element in elements:
         yield element.text

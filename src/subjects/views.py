@@ -62,7 +62,7 @@ class SubjectList(generics.ListAPIView):
                 # Then we simply return the already existing object with a 200.
                 exists_serializer = SubjectSerializer(subject_exists.get())
                 return Response(exists_serializer.data, status=status.HTTP_200_OK)
-            else:
-                serializer.save()
-                return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
