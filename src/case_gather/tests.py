@@ -118,10 +118,11 @@ class SoupUtilsGCDTestCase(TestCase):
         self.assertEqual(self.subj_ids, ['6'])
 
     def test_get_gase_details(self):
-        status, rel_cases, subj_ids = self.output
+        status, rel_cases, subj_ids, case_creator_names = self.output
         self.assertEqual(status, 'Samþykkt sem lög frá Alþingi.')
         self.assertEqual(rel_cases, ['2', "2"])
         self.assertEqual(subj_ids, ['6'])
+        self.assertEqual(case_creator_names, ['6'])
 
 class SoupUtilsGCDTestCase3(TestCase):
     """
@@ -167,10 +168,11 @@ class SoupUtilsGCDTestCase3(TestCase):
         self.assertEqual(self.subj_ids, ['6', '17', '20'])
 
     def test_get_gase_details(self):
-        status, rel_cases, subj_ids = self.output
+        status, rel_cases, subj_ids, case_creator_names = self.output
         self.assertEqual(status, '')
         self.assertEqual(rel_cases, ['629'])
         self.assertEqual(subj_ids, ['6', '17', '20'])
+        self.assertEqual(case_creator_names, ['6'])
 
 
 class XMLParserCaseCollectorTestCase(TestCase):

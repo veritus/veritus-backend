@@ -1,9 +1,6 @@
 #!/usr/bin/python
 # pylint: disable=line-too-long, lost-exception
 import logging
-import requests
-from bs4 import BeautifulSoup
-
 import soupUtils
 
 XML_LOGGER = logging.getLogger('xmlParser')
@@ -73,17 +70,14 @@ def get_subject(subject_id):
     subject_description = next(text)
 
     case_numbers = getCaseNumbers(soup)
-    
-    output = {
+
+    return {
         'id': subject_id,
         'group_name': group_name,
         'name': subject_name,
         "description": subject_description,
         "case_numbers": case_numbers
     }
-    finally:
-        text.close()
-        return output
 
 
 def getCaseNumbers(soup):
@@ -99,10 +93,7 @@ def getCaseNumbers(soup):
         case_numbers.append(number)
 
     # Sort the case numbers
-    case_numbers.sort()
-    finally:
-        cases.close()
-        return case_numbers
+    return case_numbers.sort()
 
 
 def get_cases(parliament_session_number):
@@ -182,7 +173,6 @@ def get_case_details(soup):
     return output
 
 def getStatus(soup):
-    status_flag = True
     try:
         status_gen_ = soupUtils.get_element_text(soup, "staðamáls")
         test = next(status_gen_)

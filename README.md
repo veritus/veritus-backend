@@ -68,7 +68,7 @@ docker-compose up
 ```
 and then in another terminal window run
 ```
-docker-compose exec backend pylint **/*.py
+docker-compose exec backend pylint src/**
 ```
 
 ## Docker

@@ -1,8 +1,8 @@
 #!/usr/bin/python
 import logging
-import traceback
-from case_gather.models import Case, CaseCreator, AlthingiStatusToStatusMapper, Subject
 import case_gather.xml_parser as xml_parser
+
+from case_gather.models import Case, CaseCreator, AlthingiStatusToStatusMapper, Subject
 from parliament.models import ParliamentSession, ParliamentMember
 from subjects.models import CaseSubject
 import main.sentryLogger as sentryLogger
@@ -19,8 +19,6 @@ def update_cases_by_session_number(session_number):
     )
 
     case_numbers = get_current_case_numbers_by_parliament_session(parliament_session)
-
-    althingi_status_to_status_map = create_althingi_status_to_status_map()
 
     new_cases = xml_parser.get_case_data(session_number)
     for case in new_cases:
@@ -49,8 +47,8 @@ def update_cases_by_session_number(session_number):
 
             create_subjects(parliament_session, new_case, case['subject_names'])
 
-            createCaseCreators(case['case_creator_names'], new_case)            
-            
+            createCaseCreators(case['case_creator_names'], new_case)
+
     new_cases.close()
 
 
@@ -72,19 +70,21 @@ def get_current_case_numbers_by_parliament_session(parliament_session):
 def getCaseStatus(althingi_status):
     """
     Takes in althingi_status (see: create_althingi_status_to_status_map())
-    and either returns the status we have defined to be equivalent 
+    and either returns the status we have defined to be equivalent
     or returns Unknown as a default
     """
+    althingi_status_to_status_map = create_althingi_status_to_status_map()
+
     if althingi_status in althingi_status_to_status_map:
         return althingi_status_to_status_map[althingi_status]
-    else
+    else:
         # Default status if the althingi status is not found in our database
         return 'Unknown'
 
 
 def createCaseCreators(case_creator_names, case):
     """
-    Takes in an array of strings which are names 
+    Takes in an array of strings which are names
     Takes in a case, which is a Case object
     It finds the ParliamentMember who has that name
     and creates a CaseCreator object from the ParliamentMember
