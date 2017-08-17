@@ -18,7 +18,7 @@ $ docker-compose up
 ```
 5. Voila your change has been added.
 
-### Migrations
+### Make Migrations
 When you are making changes to the data model, you have to generate the migration files
 
 1. Run
@@ -38,6 +38,37 @@ docker build -t veritus/backend:latest .
 6. Rerun and your changes should be live
 ```
 docker-compose up
+```
+
+### Migrate
+Sometimes you need to take some actions during the `migrate` command (you will see it in the console when running docker-compose).
+Then simply run
+```
+docker-compose up
+```
+and then in another terminal window run
+```
+docker-compose exec backend python3 src/manage.py migrate 
+```
+
+### Run tests manually
+To run tests manually then simply run
+```
+docker-compose up
+```
+and then in another terminal window run
+```
+docker-compose exec backend python3 src/manage.py test 
+```
+
+### Run pylint manually
+To run tests manually then simply run
+```
+docker-compose up
+```
+and then in another terminal window run
+```
+docker-compose exec backend pylint **/*.py
 ```
 
 ## Docker
