@@ -1,9 +1,6 @@
-import logging
 import requests
 
 from bs4 import BeautifulSoup
-
-SOUP_LOGGER = logging.getLogger('soupUtils')
 
 def getSoupFromLink(link):
     """
@@ -22,7 +19,6 @@ def get_attribute_value(soup, element, attribute):
     Will return 'there' if 'element' and 'here' are the inputs
     """
 
-    SOUP_LOGGER.info('looking for values: ' + element + "-" + attribute)
     values = []
     for value in soup.find_all(element):
         values.append(value[attribute])

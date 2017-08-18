@@ -1,10 +1,13 @@
 #!/usr/bin/python
+import logging
 import case_gather.xml_parser as XMLParser
 
 from case_gather.models import Case, CaseCreator, AlthingiStatusToStatusMapper, Subject
 from parliament.models import ParliamentMember
 from subjects.models import CaseSubject
 import main.sentryLogger as sentryLogger
+
+CRONLOGGER = logging.getLogger('cronJobs')
 
 def update_cases_by_session_number(parliament_session):
     """
@@ -18,8 +21,8 @@ def update_cases_by_session_number(parliament_session):
         #  Case has keys:
         #  'number', 'name', 'case_type', 'althingi_status'
         #  'rel_cases', 'subjects', 'session'
-
-        if int(case['number']) not in case_numbers:
+        case_number_int = int(case['number'])
+        if case_number_int not in case_numbers:
             # If the case does not exist, we create it
 
             # We find the status from the althingi status
@@ -27,7 +30,7 @@ def update_cases_by_session_number(parliament_session):
 
             new_case = Case.objects.create(
                 name=case['name'],
-                number=int(case['number']),
+                number=case_number_int,
                 parliament_session=parliament_session,
                 case_type=case['case_type'],
                 althingi_status=althingi_status,

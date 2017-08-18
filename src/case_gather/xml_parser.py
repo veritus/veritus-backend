@@ -15,19 +15,19 @@ def get_case_data(parliament_session_number):
 
     link_details = """http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=%i&malnr=""" % parliament_session_number
     cases_data = []
-    for number, name, case_type, althingi_link in cases:
+    for case in cases:
         # Go through cases and get more details from them
-        details_soup = soupUtils.getSoupFromLink(link_details + str(number))
+        details_soup = soupUtils.getSoupFromLink(link_details + str(case['number']))
 
         case = {
-            'number': number,
-            'name': name,
+            'number': case['number'],
+            'name': case['name'],
             'rel_cases': getRelatedCases(details_soup),
-            'case_type': case_type,
+            'case_type': case['case_type'],
             'session': parliament_session_number,
             'althingi_status': getStatus(details_soup),
             'subject_names': getSubjectNames(details_soup),
-            'althingi_link': althingi_link,
+            'althingi_link': case['althingi_link'],
             'case_creator_names': getCaseCreatorNames(details_soup)
         }
         cases_data.append(case)
@@ -94,7 +94,10 @@ def getStatus(soup):
     """
         Takes in a soup and returns the status of the case
     """
-    return soup.find("staðamáls").string
+    status = soup.find("staðamáls")
+    if status:
+        return status.string
+    return ""
 
 
 def getSubjectNames(soup):
@@ -116,7 +119,8 @@ def getRelatedCases(soup):
     related_cases = soupUtils.get_attribute_value(soup, "mál", "málsnúmer")
 
     # remove the first rel_case, as it is the actual case
-    related_cases.pop(0)
+    if related_cases:
+        related_cases.pop(0)
     return related_cases
 
 def getCaseCreatorNames(soup):

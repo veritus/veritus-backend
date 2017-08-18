@@ -178,11 +178,6 @@ LOGGING = {
             'propagate': False,
             'level': 'DEBUG',
         },
-        'soupUtils': {
-            'handlers': ['cronJobHandler'],
-            'propagate': False,
-            'level': 'DEBUG'
-        },
         'cronJobServices': {
             'handlers': ['cronJobHandler'],
             'propagate': False,
