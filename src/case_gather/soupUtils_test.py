@@ -23,4 +23,4 @@ class GetAttributeValue(TestCase):
 
     def test_case_number(self):
         cases = soupUtils.get_attribute_value(self.case_soup, 'mál', 'málsnúmer')
-        self.assertEqual(cases, ['1', '2', '3' ])
+        self.assertEqual(cases, ['1', '2', '3'])

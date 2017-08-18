@@ -7,8 +7,9 @@ XML_LOGGER = logging.getLogger('xmlParser')
 
 def get_case_data(parliament_session_number):
     """
-    Combines get_case_details and get_case_summary into a list
-    that will suffice to create a Case object for database
+        Returns relevant case data. First getting all cases from one link
+        and then finally visiting the details page of each case and
+        harvesting data there.
     """
     # Gets all cases with some limited data
     link = "http://www.althingi.is/altext/xml/thingmalalisti/?lthing="
@@ -39,18 +40,14 @@ def get_case_data(parliament_session_number):
     return cases_data
 
 def collectCases(soup):
-
     """
-    Function (generator) to retrieve a case from þingmálalisti
-    Interesting information:
-        - Case number
-        - Case name
-        - Case type ( single letter identifier)
-        - Althingi_link (link to case on athingi.is)
-
-    Output format: [case_number, case_name, case_type]
+        Collects cases from the soup
+        Interesting information:
+            - Case number
+            - Case name
+            - Case type ( single letter identifier)
+            - Althingi_link (link to case on athingi.is)
     """
-    XML_LOGGER.info('Starting get_cases')
 
     cases = []
     for case in getAllCases(soup):
@@ -65,32 +62,51 @@ def collectCases(soup):
             'althingi_link': althingi_link
         }
         cases.append(case)
-
     return cases
 
-
-
-def getCaseNumberFromCase(soup):
-    return soup["málsnúmer"]
-    
 def getAllCases(soup):
+    """
+        Takes in a soup and returns all <mál><mál> tags
+    """
     return soup.find_all('mál')
 
+def getCaseNumberFromCase(soup):
+    """
+        Takes in a soup with <mál><mál> as the
+        root tag and returns the málsnumer attribute
+    """
+    return soup["málsnúmer"]
+
 def getCaseName(soup):
+    """
+        Takes in a soup and finds the case name
+    """
     return soup.find("málsheiti").string
 
 def getAlthingiLink(soup):
+    """
+        Takes in a soup and returns the althingi link under the html tag
+    """
     return soup.find("html").string
 
 def getCaseType(soup):
+    """
+        Takes in a soup and finds the name of the case type
+    """
     return soup.find("málstegund").find('heiti').string
 
 def getStatus(soup):
+    """
+        Takes in a soup and returns the status of the case
+    """
     return soup.find("staðamáls").string
 
 
 def getSubjectNames(soup):
-    # Get case subjects
+    """
+        Takes in a soup, finds all subjects and returns
+        a list of their names
+    """
     subject_names = []
     for subject_element in soup.find_all('efnisflokkur'):
         subject_name = subject_element.find("heiti").string
@@ -98,6 +114,10 @@ def getSubjectNames(soup):
     return subject_names
 
 def getRelatedCases(soup):
+    """
+        Takes in a soup and finds all relevant cases and returns
+        their ids
+    """
     related_cases = soupUtils.get_attribute_value(soup, "mál", "málsnúmer")
 
     # remove the first rel_case, as it is the actual case
@@ -106,9 +126,9 @@ def getRelatedCases(soup):
 
 def getCaseCreatorNames(soup):
     """
-    Takes in a soup and finds the 'framsögumenn'
-    goes through them all, adds their names to a list
-    and returns said list
+        Takes in a soup and finds the 'framsögumenn'
+        goes through them all, adds their names to a list
+        and returns said list
     """
     case_creators_elements = soup.find_all("framsögumenn")
     #print(case_creators_elements)
@@ -138,10 +158,10 @@ def getCaseCreatorNames(soup):
 #    resolution = soupUtils.get_element_text(soup, "afgreiðsla")
 #
 #    return [
-#        goal, 
-#        changes, 
-#        law_changes, 
-#       costs, 
+#        goal,
+#        changes,
+#        law_changes,
+#       costs,
 #       resolution
 #   ]
 

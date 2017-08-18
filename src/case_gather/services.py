@@ -49,8 +49,6 @@ def update_cases_by_session_number(session_number):
 
             createCaseCreators(case['case_creator_names'], new_case)
 
-    new_cases.close()
-
 
 def get_current_case_numbers_by_parliament_session(parliament_session):
     """

@@ -4,10 +4,7 @@ from django.test import TestCase
 from django.conf import settings
 from bs4 import BeautifulSoup
 
-import case_gather.soupUtils as soupUtils
 import case_gather.xml_parser as xml_parser
-import case_gather.models as cgm
-import parliament.models as parliament_models
 
 case_creators_path = os.path.join(
     settings.BASE_DIR, 'case_gather', 'test_data', 'case_creators.xml')
