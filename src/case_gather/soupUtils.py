@@ -23,22 +23,7 @@ def get_attribute_value(soup, element, attribute):
     """
 
     SOUP_LOGGER.info('looking for values: ' + element + "-" + attribute)
-    pair = {element: attribute}
-    values = soup.findAll(pair)
-    for value in values:
-        yield value[attribute]
-
-
-def get_element_text(soup, element_name):
-    """
-    element: name of element as a str
-    yield element text as is
-
-    <element>yes<element>
-    Will return 'yes' if 'element' is the input
-    """
-
-    SOUP_LOGGER.info('looking for elements: ' + element_name)
-    elements = soup.findAll(element_name)
-    for element in elements:
-        yield element.text
+    values = []
+    for value in soup.find_all(element):
+        values.append(value[attribute])
+    return values
