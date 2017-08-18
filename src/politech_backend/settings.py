@@ -50,13 +50,12 @@ INSTALLED_APPS = [
     #Auth
     'allauth',
     'allauth.account',
+    'social_django',
 
     # Other django libraries
     'django_cron',
     'corsheaders',
     'django_nose',
-
-    'social_django',
 
     # Our apps
     'case_gather',
@@ -67,8 +66,6 @@ INSTALLED_APPS = [
     'party',
     'district',
     'politicians',
-
-    'core',
 ]
 
 # Use nose to run all tests
@@ -259,15 +256,14 @@ REST_FRAMEWORK = {
 
 SWAGGER_SETTINGS = {
     'SECURITY_DEFINITIONS': {
-        # 'api_key': {
-        #     'type': 'apiKey',
-        #     'in': 'header',
-        #     'name': 'Authorization'
-        # },
-        "oauth": {
+        'api_key': {
+            'type': 'apiKey',
+            'in': 'header',
+            'name': 'Authorization'
+        },
+        "oauth2": {
             "type": "oauth2",
             "authorizationUrl": "http://localhost:8000/oauth/login/facebook/",
-            # "authorizationUrl": "http://swagger.io/api/oauth/dialog",
             "flow": "implicit",
             "scopes": {}
         }
@@ -296,17 +292,9 @@ STATIC_URL = '/static/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 REST_SESSION_LOGIN = False
 
-LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
-# LOGIN_REDIRECT_URL = 'home'
-
-SOCIAL_AUTH_GITHUB_KEY = 'ce5c53e530e32023c639'
-SOCIAL_AUTH_GITHUB_SECRET = 'c1acb137d17aa602cac0695203826f81d70f664e'
-
 SOCIAL_AUTH_FACEBOOK_KEY = '108193869861396'  # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = '6c7e431f5dda1d4075f027fe0b667ee8'  # App Secret
-
-SOCIAL_AUTH_LOGIN_ERROR_URL = '/settings/'
-# SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/settings/'
-SOCIAL_AUTH_RAISE_EXCEPTIONS = False
-
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+  'fields': 'id, name, email'
+}

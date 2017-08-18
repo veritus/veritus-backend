@@ -29,10 +29,6 @@ class PromiseList(generics.ListAPIView):
     post:
         Add new promise.
     '''
-    print("promise");
-    print("promise");
-    print("promise");
-    print("promise");
     queryset = Promise.objects.all()
     serializer_class = PromiseSerializerRead
     # filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)

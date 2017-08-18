@@ -11,10 +11,7 @@ from party import views as party_views
 from district import views as district_views
 from subjects import views as subject_views
 from politicians import views as politician_views
-
-from django.contrib.auth import views as auth_views
-
-from core import views as core_views
+from oauth import views as oauth_views
 
 schema_view = get_schema_view(title='Veritus API', renderer_classes=[OpenAPIRenderer, SwaggerUIRenderer])
 
@@ -44,17 +41,10 @@ urlpatterns = [
     url(r'^api/v1/districts/$', district_views.district_list),
     url(r'^api/v1/subjects/$', subject_views.SubjectList.as_view()),
 
-    url(r'^home/$', core_views.home, name='home'),
-    url(r'^login/$', auth_views.login, name='login'),
-    url(r'^logout/$', auth_views.logout, name='logout'),
-    url(r'^signup/$', core_views.signup, name='signup'),
-    url(r'^settings/$', core_views.settings, name='settings'),
-    url(r'^settings/password/$', core_views.password, name='password'),
-    url(r'^oauth/', include('social_django.urls', namespace='social')),
-    url(r'^admin/', admin.site.urls),
-
-    # url(r'^api/v1/rest-auth/', include('rest_auth.urls')),
-    # url(r'^api/v1/rest-auth/registration/', include('rest_auth.registration.urls'))
+    url(r'^api/v1/rest-auth/', include('rest_auth.urls')),
+    url(r'^api/v1/rest-auth/registration/', include('rest_auth.registration.urls')),
+    url(r'^api/v1/oauth/', include('social_django.urls', namespace='social')),
+    url(r'^api/v1/oauth/(?P<backend>[^/]+)/$', oauth_views.login_with_access_token)
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
