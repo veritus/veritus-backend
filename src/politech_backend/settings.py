@@ -16,8 +16,6 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEST_DATA_FOLDER = os.path.join(BASE_DIR, 'case_gather', 'test_data/')
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
@@ -91,7 +89,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
     'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
@@ -100,7 +97,7 @@ ROOT_URLCONF = 'politech_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -108,8 +105,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-
-
                 'social_django.context_processors.backends',
                 'social_django.context_processors.login_redirect',
             ],
@@ -141,16 +136,14 @@ DATABASES = {
 
 AUTHENTICATION_BACKENDS = (
 
-    'social_core.backends.github.GithubOAuth2',
-    'social_core.backends.twitter.TwitterOAuth',
-    'social_core.backends.facebook.FacebookOAuth2',
-
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
 
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 
+    # Needed for facebook login
+    'social_core.backends.facebook.FacebookOAuth2',
 )
 
 # Password validation
