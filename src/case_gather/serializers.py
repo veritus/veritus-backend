@@ -22,6 +22,7 @@ class CaseSerializer(serializers.ModelSerializer):
             'number',
             'case_type',
             'althingi_status',
+            'status',
             'parliament_session',
             'created',
             'modified',

@@ -125,79 +125,14 @@ def getRelatedCases(soup):
 
 def getCaseCreatorNames(soup):
     """
-        Takes in a soup and finds the 'framsögumenn'
+        Takes in a soup and finds the 'framsögumaður'
         goes through them all, adds their names to a list
         and returns said list
     """
-    case_creators_elements = soup.find_all("framsögumenn")
+    case_creators_elements = soup.find_all("framsögumaður")
     #print(case_creators_elements)
     case_creators_names = []
     for case_creator_element in case_creators_elements:
         name = case_creator_element.find('nafn').string
         case_creators_names.append(name)
     return case_creators_names
-
-#def get_case_summary(soup):
-#    """
-#    Function to retrieve case information from samantekt
-#    Interesting information:
-#        - Goal (markmið)
-#        - Significant changes (helstuBreytingar)
-#        - law changes (breytingaráLögum)
-#        - costs and income (kostnaðurOgTekjur)
-#        - (afgreiðsla)
-#    output format [goal, sign_changes, law_changes, costs, resolution]
-#    """
-#    XML_LOGGER.info('starting get_case_summary')
-#
-#    goal = soupUtils.get_element_text(soup, "markmið")
-#    changes = soupUtils.get_element_text(soup, "helstuBreytingar")
-#    law_changes = soupUtils.get_element_text(soup, "breytingaráLögum")
-#    costs = soupUtils.get_element_text(soup, "kostnaðurOgTekjur")
-#    resolution = soupUtils.get_element_text(soup, "afgreiðsla")
-#
-#    return [
-#        goal,
-#        changes,
-#        law_changes,
-#       costs,
-#       resolution
-#   ]
-
-#def get_subject(subject_id):
-#    """
-#    Function to extract information about subjects (efnisflokkur)
-#    Interesting information:
-#      - Major group number
-#      - Major group name
-#      - subject number
-#      - subject name
-#      - subject description
-#      - case numbers associated with subject
-#    output keys: [subject_id, group_name, subject_name, subject_description, case_numbers]
-#    """
-#    link = 'http://www.althingi.is/altext/xml/efnisflokkar/efnisflokkur/?efnisflokkur='
-#    soup = soupUtils.getSoupFromLink(link + subject_id)
-#
-#    text = soup.find("heiti")
-#
-#    group_name = text[0]
-#    subject_name = text[1]
-#    subject_description = text[2]
-#
-#    return {
-#        'id': subject_id,
-#        'group_name': group_name,
-#        'name': subject_name,
-#        "description": subject_description,
-#        "case_numbers": getCaseNumbers(soup)
-#    }
-#def getCaseNumbers(soup):
-#    """
-#    Takes in a soup and finds the 'málsnúmer' field
-#    in the xml and returns a sorted list of them
-#    """
-#    case_numbers = soupUtils.get_attribute_value(soup, "mál", "málsnúmer")
-#
-    # Sort the case numbers
-#    return case_numbers.sort()

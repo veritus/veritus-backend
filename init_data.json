@@ -165,6 +165,11 @@
     "pk":1
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":1
+  },
+  {
     "fields":{
         "name":"Ari Trausti Guðmundsson",
         "party":3,
@@ -175,6 +180,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":2
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":2
   },
   {
@@ -191,6 +201,11 @@
     "pk":3
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":3
+  },
+  {
     "fields":{
         "name":"Ásmundur Friðriksson",
         "party":1,
@@ -201,6 +216,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":4
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":4
   },
   {
@@ -217,6 +237,11 @@
     "pk":5
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":5
+  },
+  {
     "fields":{
         "name":"Benedikt Jóhannesson",
         "party":7,
@@ -227,6 +252,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":6
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":6
   },
   {
@@ -243,6 +273,11 @@
     "pk":7
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":7
+  },
+  {
     "fields":{
         "name":"Birgitta Jónsdóttir",
         "party":5,
@@ -253,6 +288,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":8
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":8
   },
   {
@@ -269,6 +309,11 @@
     "pk":9
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":9
+  },
+  {
     "fields":{
         "name":"Bjarni Benediktsson",
         "party":1,
@@ -279,6 +324,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":10
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":10
   },
   {
@@ -295,6 +345,11 @@
     "pk":11
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":11
+  },
+  {
     "fields":{
         "name":"Björt Ólafsdóttir",
         "party":4,
@@ -305,6 +360,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":12
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":12
   },
   {
@@ -321,6 +381,11 @@
     "pk":13
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":13
+  },
+  {
     "fields":{
         "name":"Brynjar Níelsson",
         "party":1,
@@ -331,6 +396,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":14
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":14
   },
   {
@@ -347,6 +417,11 @@
     "pk":15
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":15
+  },
+  {
     "fields":{
         "name":"Elsa Lára Arnardóttir",
         "party":2,
@@ -357,6 +432,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":16
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":16
   },
   {
@@ -373,6 +453,11 @@
     "pk":17
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":17
+  },
+  {
     "fields":{
         "name":"Eygló Harðardóttir",
         "party":2,
@@ -383,6 +468,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":18
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":18
   },
   {
@@ -399,6 +489,11 @@
     "pk":19
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":19
+  },
+  {
     "fields":{
         "name":"Guðlaugur Þór Þórðarson",
         "party":1,
@@ -409,6 +504,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":20
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":20
   },
   {
@@ -425,6 +525,11 @@
     "pk":21
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":21
+  },
+  {
     "fields":{
         "name":"Gunnar Bragi Sveinsson",
         "party":2,
@@ -435,6 +540,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":22
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":22
   },
   {
@@ -451,6 +561,11 @@
     "pk":23
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":23
+  },
+  {
     "fields":{
         "name":"Hanna Katrín Friðriksson",
         "party":7,
@@ -461,6 +576,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":24
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":24
   },
   {
@@ -477,6 +597,11 @@
     "pk":25
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":25
+  },
+  {
     "fields":{
         "name":"Hildur Sverrisdóttir",
         "party":1,
@@ -487,6 +612,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":26
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":26
   },
   {
@@ -503,6 +633,11 @@
     "pk":27
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":27
+  },
+  {
     "fields":{
         "name":"Jón Þór Ólafsson",
         "party":5,
@@ -513,6 +648,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":28
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":28
   },
   {
@@ -529,6 +669,11 @@
     "pk":29
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":29
+  },
+  {
     "fields":{
         "name":"Jóna Sólveig Elínardóttir",
         "party":7,
@@ -539,6 +684,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":30
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":30
   },
   {
@@ -555,6 +705,11 @@
     "pk":31
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":31
+  },
+  {
     "fields":{
         "name":"Kolbeinn Óttarsson Proppé",
         "party":3,
@@ -565,6 +720,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":32
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":32
   },
   {
@@ -581,6 +741,11 @@
     "pk":33
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":33
+  },
+  {
     "fields":{
         "name":"Lilja Alfreðsdóttir",
         "party":2,
@@ -591,6 +756,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":34
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":34
   },
   {
@@ -607,6 +777,11 @@
     "pk":35
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":35
+  },
+  {
     "fields":{
         "name":"Logi Einarsson",
         "party":6,
@@ -617,6 +792,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":36
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":36
   },
   {
@@ -633,6 +813,11 @@
     "pk":37
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":37
+  },
+  {
     "fields":{
         "name":"Njáll Trausti Friðbertsson",
         "party":1,
@@ -643,6 +828,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":38
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":38
   },
   {
@@ -659,6 +849,11 @@
     "pk":39
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":39
+  },
+  {
     "fields":{
         "name":"Óli Björn Kárason",
         "party":1,
@@ -669,6 +864,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":40
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":40
   },
   {
@@ -685,6 +885,11 @@
     "pk":41
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":41
+  },
+  {
     "fields":{
         "name":"Pawel Bartoszek",
         "party":7,
@@ -695,6 +900,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":42
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":42
   },
   {
@@ -711,6 +921,11 @@
     "pk":43
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":43
+  },
+  {
     "fields":{
         "name":"Rósa Björk Brynjólfsdóttir",
         "party":3,
@@ -721,6 +936,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":44
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":44
   },
   {
@@ -737,6 +957,11 @@
     "pk":45
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":45
+  },
+  {
     "fields":{
         "name":"Sigríður Á. Andersen",
         "party":1,
@@ -750,17 +975,9 @@
     "pk":46
   },
   {
-    "fields":{
-        "name":"Sigríður Á. Andersen",
-        "party":1,
-        "initials":"SÁA",
-        "district":3,
-        "districtNumber":4,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
-    },
-    "model":"politicians.Politician",
-    "pk":47
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":46
   },
   {
     "fields":{
@@ -773,7 +990,12 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":48
+    "pk":47
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":47
   },
   {
     "fields":{
@@ -786,7 +1008,12 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":49
+    "pk":48
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":48
   },
   {
     "fields":{
@@ -799,7 +1026,12 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":50
+    "pk":49
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":49
   },
   {
     "fields":{
@@ -812,7 +1044,12 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":51
+    "pk":50
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":50
   },
   {
     "fields":{
@@ -825,7 +1062,12 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":52
+    "pk":51
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":51
   },
   {
     "fields":{
@@ -838,6 +1080,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":52
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":52
   },
   {
@@ -854,6 +1101,11 @@
     "pk":53
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":53
+  },
+  {
     "fields":{
         "name":"Theodóra S. Þorsteinsdóttir",
         "party":4,
@@ -864,6 +1116,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":54
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":54
   },
   {
@@ -880,6 +1137,11 @@
     "pk":55
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":55
+  },
+  {
     "fields":{
         "name":"Valgerður Gunnarsdóttir",
         "party":1,
@@ -890,6 +1152,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":56
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":56
   },
   {
@@ -906,6 +1173,11 @@
     "pk":57
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":57
+  },
+  {
     "fields":{
         "name":"Vilhjálmur Bjarnason",
         "party":1,
@@ -916,6 +1188,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":58
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":58
   },
   {
@@ -932,6 +1209,11 @@
     "pk":59
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":59
+  },
+  {
     "fields":{
         "name":"Þorsteinn Víglundsson",
         "party":7,
@@ -942,6 +1224,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":60
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":60
   },
   {
@@ -958,6 +1245,11 @@
     "pk":61
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":61
+  },
+  {
     "fields":{
         "name":"Þórhildur Sunna Ævarsdóttir",
         "party":5,
@@ -971,6 +1263,11 @@
     "pk":62
   },
   {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":62
+  },
+  {
     "fields":{
         "name":"Þórunn Egilsdóttir",
         "party":2,
@@ -981,6 +1278,11 @@
         "modified":"2017-04-25T17:41:28+00:00"
     },
     "model":"politicians.Politician",
+    "pk":63
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
     "pk":63
   },
   {

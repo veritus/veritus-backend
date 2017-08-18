@@ -84,6 +84,7 @@ def createCaseCreators(case_creator_names, case):
     """
     for case_creator_name in case_creator_names:
         parliament_member = ParliamentMember.objects.filter(name=case_creator_name)
+
         if parliament_member.exists():
             parliament_member = parliament_member.get()
             CaseCreator.objects.create(
