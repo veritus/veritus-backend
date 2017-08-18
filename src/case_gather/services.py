@@ -1,36 +1,26 @@
 #!/usr/bin/python
-import logging
-import case_gather.xml_parser as xml_parser
+import case_gather.xml_parser as XMLParser
 
 from case_gather.models import Case, CaseCreator, AlthingiStatusToStatusMapper, Subject
-from parliament.models import ParliamentSession, ParliamentMember
+from parliament.models import ParliamentMember
 from subjects.models import CaseSubject
 import main.sentryLogger as sentryLogger
 
-CRONLOGGER = logging.getLogger('cronJobServices')
-
-def update_cases_by_session_number(session_number):
+def update_cases_by_session_number(parliament_session):
     """
-    Takes in a session number Integer, scrapes the althingi.is website
-    and creates new Cases and relevant information from the data
+        Takes in a parliament session, scrapes the althingi.is website
+        and creates new Cases and relevant information from the data
     """
-    parliament_session = ParliamentSession.objects.get(
-        session_number=session_number
-    )
-
     case_numbers = get_current_case_numbers_by_parliament_session(parliament_session)
 
-    new_cases = xml_parser.get_case_data(session_number)
+    new_cases = XMLParser.get_case_data(parliament_session.session_number)
     for case in new_cases:
         #  Case has keys:
         #  'number', 'name', 'case_type', 'althingi_status'
         #  'rel_cases', 'subjects', 'session'
-        CRONLOGGER.info('Starting to create/update case: ')
-        CRONLOGGER.info(case)
 
         if int(case['number']) not in case_numbers:
             # If the case does not exist, we create it
-            CRONLOGGER.info('Creating case')
 
             # We find the status from the althingi status
             althingi_status = case['althingi_status']
@@ -52,8 +42,8 @@ def update_cases_by_session_number(session_number):
 
 def get_current_case_numbers_by_parliament_session(parliament_session):
     """
-    Takes in a parliament_session, retrieves the cases connected to it
-    from the database and returns their ids
+        Takes in a parliament_session, retrieves the cases connected to it
+        from the database and returns their ids
     """
     current_cases = Case.objects.filter(
         parliament_session=parliament_session
@@ -67,9 +57,9 @@ def get_current_case_numbers_by_parliament_session(parliament_session):
 
 def getCaseStatus(althingi_status):
     """
-    Takes in althingi_status (see: create_althingi_status_to_status_map())
-    and either returns the status we have defined to be equivalent
-    or returns Unknown as a default
+        Takes in althingi_status (see: create_althingi_status_to_status_map())
+        and either returns the status we have defined to be equivalent
+        or returns Unknown as a default
     """
     althingi_status_to_status_map = create_althingi_status_to_status_map()
 

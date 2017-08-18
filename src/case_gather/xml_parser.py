@@ -1,9 +1,6 @@
 #!/usr/bin/python
 # pylint: disable=line-too-long, lost-exception
-import logging
 import case_gather.soupUtils as soupUtils
-
-XML_LOGGER = logging.getLogger('xmlParser')
 
 def get_case_data(parliament_session_number):
     """
@@ -20,9 +17,7 @@ def get_case_data(parliament_session_number):
     cases_data = []
     for number, name, case_type, althingi_link in cases:
         # Go through cases and get more details from them
-        XML_LOGGER.info('Looking at case: ' + name)
         details_soup = soupUtils.getSoupFromLink(link_details + str(number))
-        XML_LOGGER.info('Got details soup for: ' + name)
 
         case = {
             'number': number,
