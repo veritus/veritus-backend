@@ -256,7 +256,7 @@ SWAGGER_SETTINGS = {
         },
         "oauth2": {
             "type": "oauth2",
-            "authorizationUrl": "http://localhost:8000/oauth/login/facebook/",
+            "authorizationUrl": "http://localhost:8000/api/v1/oauth/login/facebook/",
             "flow": "implicit",
             "scopes": {}
         }
@@ -291,3 +291,4 @@ SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
   'fields': 'id, name, email'
 }
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
