@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     'party',
     'district',
     'politicians',
+    'oauth',
 ]
 
 # Use nose to run all tests

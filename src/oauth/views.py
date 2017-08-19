@@ -7,6 +7,9 @@ from rest_framework.decorators import api_view
 @psa('social:complete')
 @api_view(['GET'])
 def login_with_access_token(request, backend):
+    """
+    Social media login
+    """
     token = request.GET.get('access_token')
     user = request.backend.do_auth(token)
     if user:
