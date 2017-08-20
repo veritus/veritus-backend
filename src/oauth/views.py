@@ -11,7 +11,12 @@ def login_with_access_token(request, backend):
     Social media login
     """
     token = request.GET.get('access_token')
-    user = request.backend.do_auth(token)
+
+    try:
+        user = request.backend.do_auth(token)
+    except Exception as e:
+        return Response(status=status.HTTP_400_BAD_REQUEST)
+
     if user:
         login(request, user)
         return Response(status=status.HTTP_204_NO_CONTENT)
