@@ -6,7 +6,7 @@ from rest_framework.decorators import api_view
 
 @psa('social:complete')
 @api_view(['GET'])
-def login_with_access_token(request, backend):
+def login_with_access_token(request, backends):
     """
     Social media login
     """
@@ -21,4 +21,4 @@ def login_with_access_token(request, backend):
         login(request, user)
         return Response(status=status.HTTP_204_NO_CONTENT)
     else:
-        return Response(status=status.HTTP_400_BAD_REQUEST)
+        return Response(status=status.HTTP_401_UNAUTHORIZED)
