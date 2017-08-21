@@ -130,7 +130,6 @@ def getCaseCreatorNames(soup):
         and returns said list
     """
     case_creators_elements = soup.find_all("framsögumaður")
-    #print(case_creators_elements)
     case_creators_names = []
     for case_creator_element in case_creators_elements:
         name = case_creator_element.find('nafn').string
