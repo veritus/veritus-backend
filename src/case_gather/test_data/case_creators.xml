@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testData>
-    <framsögumenn>
+    <framsögumaður>
         <nafn>John</nafn>
-    </framsögumenn>
-    <framsögumenn>
+    </framsögumaður>
+    <framsögumaður>
         <nafn>James</nafn>
-    </framsögumenn>
-    <framsögumenn>
+    </framsögumaður>
+    <framsögumaður>
         <nafn>Jonathan</nafn>
-    </framsögumenn>
+    </framsögumaður>
 </testData>
