@@ -12,7 +12,10 @@ from district import views as district_views
 from subjects import views as subject_views
 from politicians import views as politician_views
 
-schema_view = get_schema_view(title='Veritus API', renderer_classes=[OpenAPIRenderer, SwaggerUIRenderer])
+schema_view = get_schema_view(
+    title='Veritus API',
+    renderer_classes=[OpenAPIRenderer, SwaggerUIRenderer]
+)
 
 urlpatterns = [
     url(r'^$', schema_view, name="docs"),

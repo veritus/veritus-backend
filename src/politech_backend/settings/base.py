@@ -178,16 +178,6 @@ LOGGING = {
             'propagate': False,
             'level': 'DEBUG',
         },
-        'xmlHelper': {
-            'handlers': ['cronJobHandler'],
-            'propagate': False,
-            'level': 'DEBUG'
-        },
-        'xmlParser': {
-            'handlers': ['cronJobHandler'],
-            'propagate': False,
-            'level': 'DEBUG'
-        },
         'cronJobServices': {
             'handlers': ['cronJobHandler'],
             'propagate': False,

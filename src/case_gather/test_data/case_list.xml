@@ -1,0 +1,49 @@
+<málaskrá>
+    <mál málsnúmer="1" þingnúmer="146" málsflokkur="A">
+        <málsheiti>fjárlög 2017</málsheiti>
+        <efnisgreining/>
+        <málstegund málstegund="l">
+            <heiti>Frumvarp til laga</heiti>
+            <heiti2>lagafrumvarp</heiti2>
+        </málstegund>
+        <html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146mnr=1</html>
+        <xml>
+            http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146malnr=1
+        </xml>
+        <rss>
+            http://www.althingi.is/rss/frettir.rss?feed=ferillmalnr=1lthing=146
+        </rss>
+    </mál>
+    <mál málsnúmer="2" þingnúmer="146" málsflokkur="A">
+        <málsheiti>ýmsar forsendur fjárlagafrumvarps 2017</málsheiti>
+        <efnisgreining>breyting ýmissa laga</efnisgreining>
+        <málstegund málstegund="l">
+            <heiti>Frumvarp til laga</heiti>
+            <heiti2>lagafrumvarp</heiti2>
+        </málstegund>
+        <html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146mnr=2</html>
+        <xml>
+            http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146malnr=2
+        </xml>
+        <rss>
+            http://www.althingi.is/rss/frettir.rss?feed=ferillmalnr=2lthing=146
+        </rss>
+    </mál>
+    <mál málsnúmer="3" þingnúmer="146" málsflokkur="A">
+        <málsheiti>sálfræðiþjónusta í framhaldsskólum</málsheiti>
+        <efnisgreining/>
+        <málstegund málstegund="a">
+            <heiti>Tillaga til þingsályktunar</heiti>
+            <heiti2>þingsályktunartillaga</heiti2>
+        </málstegund>
+        <html>http://www.althingi.is/dba-bin/ferill.pl?ltg=146mnr=3</html>
+        <xml>
+            http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=146malnr=3
+        </xml>
+        <rss>
+            http://www.althingi.is/rss/frettir.rss?feed=ferillmalnr=3lthing=146
+        </rss>
+    </mál>
+</málaskrá>
+
+

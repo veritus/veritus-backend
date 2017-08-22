@@ -1,0 +1,36 @@
+<efnisflokkar>
+    <yfirflokkur id="3">
+        <heiti>Erlend samskipti</heiti>
+        <efnisflokkur id="32">
+            <heiti>Alþjóðasamningar og utanríkismál</heiti>
+            <lýsing>
+                þ.m.t. alþjóðlegir samningar og sáttmálar, alþjóðastofnanir, EES, EFTA, Evrópusambandið, skuldbindingar Íslands á alþjóðavettvangi
+            </lýsing>
+            <slóðir>
+                <html>
+                    http://www.althingi.is/thingstorf/listar-yfir-mal-a-yfirstandandi-thingi/thingmal-eftir-efnisflokkum/?efnisflokkur=32
+                </html>
+                <xml>
+                    http://www.althingi.is/altext/xml/efnisflokkar/efnisflokkur/?efnisflokkur=32
+                </xml>
+            </slóðir>
+        </efnisflokkur>
+    </yfirflokkur>
+    <yfirflokkur id="6">
+        <heiti>Lög og réttur</heiti>
+        <efnisflokkur id="21">
+            <heiti>Löggæsla og eftirlit</heiti>
+            <lýsing>
+                þ.m.t. almannavarnir, bifreiðaeftirlit, dómtúlkar og skjalaþýðendur, fangelsi, framkvæmd áfengislöggjafar, happdrætti og fjársafnanir, landhelgisgæsla, lögregla, lögsagnarumdæmi, skipulagsskrár, skotvopn, slysavarnir, umferðarmál, útlendingaeftirlit
+            </lýsing>
+            <slóðir>
+                <html>
+                    http://www.althingi.is/thingstorf/listar-yfir-mal-a-yfirstandandi-thingi/thingmal-eftir-efnisflokkum/?efnisflokkur=21
+                </html>
+                <xml>
+                    http://www.althingi.is/altext/xml/efnisflokkar/efnisflokkur/?efnisflokkur=21
+                </xml>
+            </slóðir>
+        </efnisflokkur>
+    </yfirflokkur>
+</efnisflokkar>

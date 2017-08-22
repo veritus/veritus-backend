@@ -1,8 +1,10 @@
 import logging
 import traceback
 import os
+
+import case_gather.services as CaseGatheringService
 from django_cron import CronJobBase, Schedule
-import case_gather.services as case_gathering_services
+from parliament.models import ParliamentSession
 
 CRONLOGGER = logging.getLogger('cronJobs')
 
@@ -13,13 +15,11 @@ class GatherCases(CronJobBase):
     code = 'case_gather.GatherCases'    # a unique code
 
     def do(self):
-        session_number = 146
-
         try:
-            CRONLOGGER.info('Starting case gathering')
-
-            case_gathering_services.update_case_db(session_number)
-        except Exception as exception:
-            CRONLOGGER.error(exception.message + " - " + traceback.format_exc())
-        finally:
-            CRONLOGGER.info('Case gathering completed')
+            CRONLOGGER.info('Starting case gather')
+            parliament_session = ParliamentSession.objects.latest('created')
+            CaseGatheringService.update_cases_by_session_number(parliament_session)
+            CRONLOGGER.info('Case gather done')
+        except BaseException:
+            CRONLOGGER.error(traceback.format_exc())
+            raise

@@ -18,7 +18,7 @@ WORKDIR /code
 RUN pip install -r requirements.txt
 
 # Run linter
-RUN pylint **/*.py
+RUN pylint src/**
 
 # Move crontab file to tmp as we need to add environment variables
 # before adding them to /etc/cron.d/

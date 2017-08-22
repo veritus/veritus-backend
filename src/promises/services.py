@@ -39,7 +39,7 @@ def find_connected_bills_and_promises():
                     # We take the promise suject ids to use later to compare to each case subject id
                     promise_subject_ids.append(promise_subject.subject.id)
 
-                if len(case_subject_ids) != 0 and len(promise_subject_ids) != 0:
+                if case_subject_ids and promise_subject_ids:
                     # We make sure the case and the promise have subjects
                     number_of_common_subjects = 0
                     # We determine the larger array

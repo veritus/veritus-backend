@@ -18,6 +18,59 @@ $ docker-compose up
 ```
 5. Voila your change has been added.
 
+### Make Migrations
+When you are making changes to the data model, you have to generate the migration files
+
+1. Run
+```
+docker-compose up
+```
+2. Then run, in another terminal window,
+```
+docker-compose exec backend python3 src/manage.py makemigrations 
+```
+3. Resolve anything Django asks you to resolve (non-nullable fields and such)
+4. Migration file should not be generated in the correct domain!
+5. Build the docker image again
+```
+docker build -t veritus/backend:latest .
+```
+6. Rerun and your changes should be live
+```
+docker-compose up
+```
+
+### Migrate
+Sometimes you need to take some actions during the `migrate` command (you will see it in the console when running docker-compose).
+Then simply run
+```
+docker-compose up
+```
+and then in another terminal window run
+```
+docker-compose exec backend python3 src/manage.py migrate 
+```
+
+### Run tests manually
+To run tests manually then simply run
+```
+docker-compose up
+```
+and then in another terminal window run
+```
+docker-compose exec backend python3 src/manage.py test 
+```
+
+### Run pylint manually
+To run tests manually then simply run
+```
+docker-compose up
+```
+and then in another terminal window run
+```
+docker-compose exec backend pylint src/**
+```
+
 ## Docker
 The docker image here is NOT supposed to be run alone. As the backend requires a database, there is no use running it alone. Use docker-compose to run the backend and database together.
 
