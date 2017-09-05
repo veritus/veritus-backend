@@ -3,7 +3,7 @@
 
 import logging
 
-from promises.models import Promise, PromiseCase, SuggestedPromiseCase
+from promises.models import Promise, PromiseCase
 from case_gather.models import Case
 from parliament.models import Parliament, ParliamentSession
 from subjects.models import CaseSubject, PromiseSubject
@@ -75,5 +75,5 @@ def find_connected_bills_and_promises():
                             CRONLOGGER.info('PromiseCase connection created')
                         # If the percent is between 50% and 79% we create a suggested connection
                         elif percent_of_common_subjects >= 0.5:
-                            SuggestedPromiseCase.objects.create(case=case, promise=promise)
+                            # SuggestedPromiseCase.objects.create(case=case, promise=promise)
                             CRONLOGGER.info('SuggestedPromiseBill connection created')
