@@ -8,7 +8,7 @@ CRONLOGGER = logging.getLogger('cronJobs')
 
 class ConnectBillsAndPromises(CronJobBase):
     ''' Connects bills and promises together using subjects that are related to both '''
-    RUN_EVERY_MINS = 30
+    RUN_EVERY_MINS = 600
 
     schedule = Schedule(run_every_mins=RUN_EVERY_MINS)
     code = 'promise.connect_bills_and_promises'
@@ -19,6 +19,7 @@ class ConnectBillsAndPromises(CronJobBase):
         try:
             CRONLOGGER.info('Starting bill and promise connection')
             promise_services.find_connected_bills_and_promises()
+            CRONLOGGER.info('Completed bill and promise connection')
 
         except BaseException:
             CRONLOGGER.error(traceback.format_exc())
