@@ -198,7 +198,7 @@ LOGGING = {
 
 CRON_CLASSES = [
     "case_gather.cron_jobs.GatherCases"
-    # "promises.cronJobs.connect_cases_and_promises"
+    "promises.cronJobs.connect_cases_and_promises"
 ]
 
 REST_FRAMEWORK = {

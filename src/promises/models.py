@@ -24,7 +24,10 @@ class PromiseCase(Entity):
     case = models.ForeignKey(Case)
     promise = models.ForeignKey(Promise)
     relationship_type = models.CharField(max_length=1, choices=RELATIONSHIP_TYPES)
-    percent_of_related_subjects = models.IntegerField()
+    # Percent of subjects the Promise shares with the Case
+    # If the Promise has 5 subjects, and shares 2 with the Case
+    # this number would be 2/5 or 40 (%)
+    percent_of_common_subjects = models.IntegerField()
 
     class Meta:
         # Dont want promise related to same tag multiple times
