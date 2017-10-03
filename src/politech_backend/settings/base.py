@@ -197,8 +197,8 @@ LOGGING = {
 }
 
 CRON_CLASSES = [
+    "promises.cron_jobs.ConnectBillsAndPromises",
     "case_gather.cron_jobs.GatherCases",
-    "promises.cron_jobs.ConnectBillsAndPromises"
 ]
 
 REST_FRAMEWORK = {
