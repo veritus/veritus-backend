@@ -27,9 +27,9 @@ services:
       - ./:/code
       - ./logs/backendLogs:/code/src/logs
       - ./logs/var:/var/log
-    command: sh entrypoint.prod.sh
+    command: sh entrypoint.sh
     ports:
-      - "80:80"
+      - "8000:8000"
     depends_on:
       db:
         condition: service_healthy
