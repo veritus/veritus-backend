@@ -11,7 +11,7 @@ class ConnectBillsAndPromises(CronJobBase):
     RUN_EVERY_MINS = 600
 
     schedule = Schedule(run_every_mins=RUN_EVERY_MINS)
-    code = 'promise.connect_bills_and_promises'
+    code = 'promises.cron_jobs.connect_cases_and_promises'
 
 
     def do(self):

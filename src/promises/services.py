@@ -10,23 +10,16 @@ def find_connected_bills_and_promises():
     current_parliament = Parliament.objects.latest('created')
     parliament_sessions_ids = ParliamentServices.parliament_session_ids_by_parliament(current_parliament)
     current_promises = Promise.objects.filter(parliament=current_parliament.id) 
-    cases_in_sessions = Case.objects.filter(session_id__in=parliament_sessions_ids)
+    cases_in_sessions = Case.objects.filter(parliament_session__in=parliament_sessions_ids)
 
     for case in cases_in_sessions:
-        case_subject_ids = CaseSubject.objects
-            .filter(case=case)
-            .values_list('id', flat=True)
+        case_subject_ids = CaseSubject.objects.filter(case=case).values_list('id', flat=True)
         
         # We look at each promise within the same parliament
         for promise in current_promises:
-            promise_subject_ids = PromiseSubject.objects
-                .filter(promise=promise)
-                .values_list('id', flat=True)
+            promise_subject_ids = PromiseSubject.objects.filter(promise=promise).values_list('id', flat=True)
 
-            if case_subject_ids 
-            and promise_subject_ids
-            and len(promise_subject_ids) > 4:
-                # We make sure the case and the promise have subjects
+            if len(promise_subject_ids) > 4:
                 # We want more than 4 subjects on the promise
 
                 case_subject_set = set(case_subject_ids)
