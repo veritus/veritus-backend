@@ -54,5 +54,14 @@ class PromiseCaseSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = PromiseCase
-        fields = ('name', 'case', 'promise', 'id', 'created', 'modified')
+        fields = (
+            'name',
+            'case',
+            'promise',
+            'id',
+            'created',
+            'modified',
+            'relationship_type',
+            'percent_of_common_subjects',
+        )
 
