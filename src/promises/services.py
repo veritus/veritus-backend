@@ -1,9 +1,9 @@
 # pylint: disable=line-too-long, too-many-locals, too-many-nested-blocks, too-many-branches
-from parliament.models import Parliament, ParliamentSession
+from parliament.models import Parliament
+import parliament.services as ParliamentServices
 from promises.models import Promise, PromiseCase
 from case_gather.models import Case
 from subjects.models import CaseSubject, PromiseSubject
-import parliament.services as ParliamentServices
 
 def find_connected_bills_and_promises():
     current_parliament = Parliament.objects.latest('created')
@@ -38,7 +38,7 @@ def find_connected_bills_and_promises():
                     relationship_type = 'Suggested'
                     if percent_of_common_subjects >= 80:
                         relationship_type = 'Connected'
-                    
+
                     # We check if the connection already exists
                     case_promise_connection = PromiseCase.objects.filter(case=case, promise=promise)
                     if case_promise_connection.exists():

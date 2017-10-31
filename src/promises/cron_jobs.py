@@ -1,6 +1,7 @@
 ''' Cronjobs for promises '''
 import logging
 import traceback
+import os
 from django_cron import CronJobBase, Schedule
 import promises.services as promise_services
 
