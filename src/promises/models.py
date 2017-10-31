@@ -32,4 +32,3 @@ class PromiseCase(Entity):
     class Meta:
         # Dont want promise related to same tag multiple times
         unique_together = ('promise', 'case',)
-

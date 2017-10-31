@@ -64,4 +64,3 @@ class PromiseCaseSerializer(serializers.ModelSerializer):
             'relationship_type',
             'percent_of_common_subjects',
         )
-
