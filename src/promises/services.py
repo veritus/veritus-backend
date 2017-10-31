@@ -41,10 +41,10 @@ def find_connected_bills_and_promises():
                     
                     # We check if the connection already exists
                     case_promise_connection = PromiseCase.objects.filter(case=case, promise=promise)
-                    if casePromiseConnection.exists():
+                    if case_promise_connection.exists():
                         # We update the percentage if the connection exists
-                        casePromiseConnection.percent_of_common_subjects = percent_of_common_subjects
-                        casePromiseConnection.save()
+                        case_promise_connection.percent_of_common_subjects = percent_of_common_subjects
+                        case_promise_connection.save()
                     else: 
                         # If the connection does not exist already, we create one
                         PromiseCase.objects.create(
