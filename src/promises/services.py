@@ -43,6 +43,7 @@ def find_connected_bills_and_promises():
                     case_promise_connection = PromiseCase.objects.filter(case=case, promise=promise)
                     if case_promise_connection.exists():
                         # We update the percentage if the connection exists
+                        case_promise_connection = case_promise_connection.get()
                         case_promise_connection.percent_of_common_subjects = percent_of_common_subjects
                         case_promise_connection.save()
                     else: 
