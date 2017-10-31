@@ -18,7 +18,12 @@ def find_connected_bills_and_promises():
         for promise in current_promises:
             promise_subject_ids = PromiseSubject.objects.filter(promise=promise).values_list('subject_id', flat=True)
             if len(promise_subject_ids) > 4:
-                # We want more than 4 subjects on the promise
+                # We only want to look at promises that have enough subjects
+                # This is because we want sufficient depth when looking at the relation
+                # between promise and case to improve the quality of each connection.
+                # This is because we dont want to match a case and a promise just because they share
+                # one subject, as they might still be very different and not related at all.
+                # However, a case and promise that share 5 subjects, are likely related.
                 case_subject_set = set(case_subject_ids)
                 promise_subject_set = set(promise_subject_ids)
                 # We use set intersection to determine the number of common subjects
@@ -35,7 +40,7 @@ def find_connected_bills_and_promises():
                         relationship_type = 'Connected'
                     
                     # We check if the connection already exists
-                    casePromiseConnection = PromiseCase.objects.filter(case=case, promise=promise)
+                    case_promise_connection = PromiseCase.objects.filter(case=case, promise=promise)
                     if casePromiseConnection.exists():
                         # We update the percentage if the connection exists
                         casePromiseConnection.percent_of_common_subjects = percent_of_common_subjects
