@@ -1,79 +1,56 @@
 # pylint: disable=line-too-long, too-many-locals, too-many-nested-blocks, too-many-branches
-
-
-import logging
-
-from promises.models import Promise, PromiseCase, SuggestedPromiseCase
+from parliament.models import Parliament
+import parliament.services as ParliamentServices
+from promises.models import Promise, PromiseCase
 from case_gather.models import Case
-from parliament.models import Parliament, ParliamentSession
 from subjects.models import CaseSubject, PromiseSubject
 
-CRONLOGGER = logging.getLogger('cronJobs')
-
-
 def find_connected_bills_and_promises():
-    current_parliament = Parliament.objects.all().order_by('-id')[0]
-    parliament_sessions = ParliamentSession.objects.filter(parliament=current_parliament)
-    parliament_session_ids = []
-    for parliament_session in parliament_sessions:
-        parliament_session_ids.append(parliament_session.id)
-    current_promises = Promise.objects.filter(parliament_session_id__in=parliament_session_ids)
+    current_parliament = Parliament.objects.latest('created')
+    parliament_sessions_ids = ParliamentServices.parliament_session_ids_by_parliament(current_parliament)
+    current_promises = Promise.objects.filter(parliament=current_parliament.id)
+    cases_in_sessions = Case.objects.filter(parliament_session__in=parliament_sessions_ids)
 
-    for parliament_session in parliament_sessions:
-        session_cases = Case.objects.filter(session=parliament_session)
-        # We look at all cases in each parliament session within the current parliament
-        for case in session_cases:
-            CRONLOGGER.info('Case Name: '+case.name)
-            case_subjects = CaseSubject.objects.filter(case=case)
-            case_subject_ids = []
-            for case_subject in case_subjects:
-                # We take the case subject ids to use later to compare to each promise subject id
-                case_subject_ids.append(case_subject.subject.id)
+    for case in cases_in_sessions:
+        case_subject_ids = CaseSubject.objects.filter(case=case).values_list('subject_id', flat=True)
 
-            # We look at each promise within the same parliament session
-            for promise in current_promises:
-                CRONLOGGER.info('Promise Name: '+promise.name)
-                promise_subjects = PromiseSubject.objects.filter(promise=promise)
-                promise_subject_ids = []
-                for promise_subject in promise_subjects:
-                    # We take the promise suject ids to use later to compare to each case subject id
-                    promise_subject_ids.append(promise_subject.subject.id)
+        # We look at each promise within the same parliament
+        for promise in current_promises:
+            promise_subject_ids = PromiseSubject.objects.filter(promise=promise).values_list('subject_id', flat=True)
+            if len(promise_subject_ids) > 4:
+                # We only want to look at promises that have enough subjects
+                # This is because we want sufficient depth when looking at the relation
+                # between promise and case to improve the quality of each connection.
+                # This is because we dont want to match a case and a promise just because they share
+                # one subject, as they might still be very different and not related at all.
+                # However, a case and promise that share 5 subjects, are likely related.
+                case_subject_set = set(case_subject_ids)
+                promise_subject_set = set(promise_subject_ids)
+                # We use set intersection to determine the number of common subjects
+                number_of_common_subjects = len(case_subject_set.intersection(promise_subject_set))
+                number_of_common_subjects_float = float(number_of_common_subjects)
+                number_of_promise_subjects_float = float(len(promise_subject_ids))
+                percent_of_common_subjects = (number_of_common_subjects_float / number_of_promise_subjects_float) * 100
 
-                if case_subject_ids and promise_subject_ids:
-                    # We make sure the case and the promise have subjects
-                    number_of_common_subjects = 0
-                    # We determine the larger array
-                    if len(case_subject_ids) >= len(promise_subject_ids):
-                        size_of_larger_subject_array = len(case_subject_ids)
+                # If the case and promise share a certain percentage of subjects
+                # then we create a connection between them
+                if percent_of_common_subjects >= 50:
+                    relationship_type = 'Suggested'
+                    if percent_of_common_subjects >= 80:
+                        relationship_type = 'Connected'
+
+                    # We check if the connection already exists
+                    case_promise_connection = PromiseCase.objects.filter(case=case, promise=promise)
+                    if case_promise_connection.exists():
+                        # We update the percentage if the connection exists
+                        case_promise_connection = case_promise_connection.get()
+                        case_promise_connection.percent_of_common_subjects = percent_of_common_subjects
+                        case_promise_connection.save()
                     else:
-                        size_of_larger_subject_array = len(promise_subject_ids)
-
-                    # We go through the case subject ids and find any common subjects
-                    # in the promise subject id array
-                    for case_subject_id in case_subject_ids:
-                        CRONLOGGER.info('case subject id: '+str(case_subject_id))
-                        CRONLOGGER.info('promise subject id: '+str(promise_subject_ids))
-                        CRONLOGGER.info(case_subject_id in promise_subject_ids)
-                        if case_subject_id in promise_subject_ids:
-                            number_of_common_subjects += 1
-
-                    CRONLOGGER.info(number_of_common_subjects)
-                    CRONLOGGER.info(size_of_larger_subject_array)
-
-                    # If the percent between common subjects and the largest array
-                    # reaches a certain point we want to connect the case and promise. If
-                    number_of_common_subjects_float = float(number_of_common_subjects)
-                    size_of_larger_subject_array_float = float(size_of_larger_subject_array)
-                    percent_of_common_subjects = number_of_common_subjects_float / size_of_larger_subject_array_float
-                    CRONLOGGER.info(percent_of_common_subjects)
-                    # We want at least 4 subjects on both the case and the promise
-                    if len(case_subject_ids) > 4 and len(promise_subject_ids) > 4:
-                        CRONLOGGER.info('case and promise have more than 4 subjects each')
-                        # If the percent is 80% or higher we make a connection
-                        if percent_of_common_subjects >= 0.8:
-                            PromiseCase.objects.create(case=case, promise=promise)
-                            CRONLOGGER.info('PromiseCase connection created')
-                        # If the percent is between 50% and 79% we create a suggested connection
-                        elif percent_of_common_subjects >= 0.5:
-                            SuggestedPromiseCase.objects.create(case=case, promise=promise)
-                            CRONLOGGER.info('SuggestedPromiseBill connection created')
+                        # If the connection does not exist already, we create one
+                        PromiseCase.objects.create(
+                            case=case,
+                            promise=promise,
+                            relationship_type=relationship_type,
+                            percent_of_common_subjects=percent_of_common_subjects,
+                        )

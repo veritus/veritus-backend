@@ -111,3 +111,19 @@ It also works to use this during development, as docker-compose mounts the sourc
 docker-compose up
 ``` 
 after making code changes.
+
+#### Connect to postgres using pgadmin
+Run this to get the id of the docker container
+```
+$ docker ps
+```
+Then run this command to get the IP address of the container (should be close to the bottom)
+```
+$ docker inspect <id>
+```
+
+Then open pgAdmin
+1. Click "Add a connection to a server" (claw at top)
+2. Insert IP address you found out
+3. Find the username and password in the docker-compose.yml file
+4. Voila!

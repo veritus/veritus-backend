@@ -3,7 +3,7 @@ from rest_framework import serializers
 from parliament.serializers import ParliamentSerializer
 from case_gather.serializers import CaseSerializer
 
-from .models import Promise
+from .models import Promise, PromiseCase
 
 
 class PromiseSerializerRead(serializers.ModelSerializer):
@@ -53,16 +53,14 @@ class PromiseCaseSerializer(serializers.ModelSerializer):
     promise = PromiseSerializerRead(read_only=True)
 
     class Meta:
-        model = Promise
-        fields = ('name', 'case', 'promise', 'id', 'created', 'modified')
-
-
-class SuggestedPromiseCaseSerializer(serializers.ModelSerializer):
-    ''' Serializer for suggested promise case connections '''
-
-    case = CaseSerializer(read_only=True)
-    promise = PromiseSerializerRead(read_only=True)
-
-    class Meta:
-        model = Promise
-        fields = ('name', 'case', 'promise', 'id', 'created', 'modified')
+        model = PromiseCase
+        fields = (
+            'name',
+            'case',
+            'promise',
+            'id',
+            'created',
+            'modified',
+            'relationship_type',
+            'percent_of_common_subjects',
+        )
