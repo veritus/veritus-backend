@@ -26,19 +26,27 @@ def find_connected_bills_and_promises():
                 number_of_common_subjects_float = float(number_of_common_subjects)
                 number_of_promise_subjects_float = float(len(promise_subject_ids))
                 percent_of_common_subjects = (number_of_common_subjects_float / number_of_promise_subjects_float) * 100
-                # If the percent is 80% or higher we make a connection
-                if percent_of_common_subjects >= 80:
-                    PromiseCase.objects.create(
-                        case=case,
-                        promise=promise,
-                        relationship_type='C',
-                        percent_of_common_subjects=percent_of_common_subjects,
-                    )
-                # If the percent is between 50% and 79% we create a suggested connection
-                elif percent_of_common_subjects >= 50:
-                    PromiseCase.objects.create(
-                        case=case,
-                        promise=promise,
-                        relationship_type='S',
-                        percent_of_common_subjects=percent_of_common_subjects,
-                    )
+                
+                # If the case and promise share a certain percentage of subjects
+                # then we create a connection between them
+                if percent_of_common_subjects >= 50:
+                    relationship_type = 'Suggested'
+                    if percent_of_common_subjects >= 80:
+                        relationship_type = 'Connected'
+                    
+                    # We check if the connection already exists
+                    casePromiseConnection = PromiseCase.objects.filter(case=case, promise=promise)
+                    if casePromiseConnection.exists():
+                        # We update the percentage if the connection exists
+                        casePromiseConnection.percent_of_common_subjects = percent_of_common_subjects
+                        casePromiseConnection.save()
+                    else: 
+                        # If the connection does not exist already, we create one
+                        PromiseCase.objects.create(
+                            case=case,
+                            promise=promise,
+                            relationship_type=relationship_type,
+                            percent_of_common_subjects=percent_of_common_subjects,
+                        )
+                
+                
