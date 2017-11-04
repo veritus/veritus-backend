@@ -31,8 +31,7 @@ class PoliticianSerializer(serializers.ModelSerializer):
 
 
 
-class DistrictSerializerRead(serializers.ModelSerializer):
-    ''' Serializer when reading districts (GET) '''
+class DistrictSerializer(serializers.ModelSerializer):
     politicians = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
     class Meta:
@@ -42,20 +41,6 @@ class DistrictSerializerRead(serializers.ModelSerializer):
             'id',
             'abbreviation',
             'politicians',
-            'created',
-            'modified'
-            )
-
-
-class DistrictSerializerWrite(serializers.ModelSerializer):
-    ''' Serializer when writing to districts (POST, PUT) '''
-
-    class Meta:
-        model = District
-        fields = (
-            'name',
-            'id',
-            'abbreviation',
             'created',
             'modified'
             )

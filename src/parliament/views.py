@@ -33,3 +33,8 @@ class ParliamentMemberList(generics.ListAPIView):
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
     filter_fields = ('party', 'district')
     permission_classes = (IsAuthenticatedOrReadOnly,)
+
+class ParliamentMemberDetails(generics.RetrieveAPIView):
+    queryset = ParliamentMember.objects.all()
+    serializer_class = ParliamentMemberSerializer
+
