@@ -10,21 +10,14 @@ class ParliamentSerializer(serializers.ModelSerializer):
             'id'
         )
 
+class ParliamentSessionSerializer(serializers.ModelSerializer):
 
-class ParliamentSessionSerializerRead(serializers.ModelSerializer):
-
-    parliament = ParliamentSerializer()
-
-    class Meta:
-        model = ParliamentSession
-        fields = ('session_number', 'parliament', 'name', 'created', 'modified')
-
-
-class ParliamentSessionSerializerWrite(serializers.ModelSerializer):
+    parliament = serializers.PrimaryKeyRelatedField(read_only=True)
 
     class Meta:
         model = ParliamentSession
         fields = ('session_number', 'parliament', 'name', 'created', 'modified')
+
 
 class ParliamentMemberSerializer(serializers.ModelSerializer):
 
