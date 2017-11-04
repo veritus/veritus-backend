@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from parliament.serializers import ParliamentSessionSerializerRead, ParliamentMemberSerializer
+from parliament.serializers import ParliamentMemberSerializer
 from .models import Case, CaseCreator
 
 class CaseCreatorSerializer(serializers.ModelSerializer):
@@ -13,9 +13,7 @@ class CaseCreatorSerializer(serializers.ModelSerializer):
 class CaseSerializer(serializers.ModelSerializer):
 
     parliament_session = serializers.PrimaryKeyRelatedField(read_only=True)
-    #ParliamentSessionSerializerRead()
     case_creators = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
-    #CaseCreatorSerializer(many=True, read_only=True)
     class Meta:
         model = Case
         fields = (
