@@ -1,4 +1,6 @@
-from rest_framework import status
+import django_filters
+
+from rest_framework import status, generics
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
@@ -124,11 +126,12 @@ def parliament_session_detail(request, pk):
             return Response(ps_write_serializer.data)
         return Response(ps_write_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-@api_view(['GET'])
-@permission_classes((IsAuthenticatedOrReadOnly,))
-def parliamentMember_list(request):
-    ''' Get detailed list of parliament members '''
-    if request.method == 'GET':
-        parliamentMembers = ParliamentMember.objects.all()
-        serializer = ParliamentMemberSerializer(parliamentMembers, many=True)
-        return Response(serializer.data)
+
+
+
+class ParliamentMemberList(generics.ListAPIView):
+    queryset = ParliamentMember.objects.all()
+    serializer_class = ParliamentMemberSerializer
+    filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
+    filter_fields = ('party', 'district')
+    permission_classes = (IsAuthenticatedOrReadOnly,)

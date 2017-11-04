@@ -33,7 +33,7 @@ urlpatterns = [
     url(r'^api/v1/parliamentSessions/$', parliament_views.parliament_session_list),
     url(r'^api/v1/parliamentSessions/(?P<pk>[0-9]+)$', parliament_views.parliament_session_detail),
     url(r'^api/v1/parties/$', party_views.party_list),
-    url(r'^api/v1/parliamentMembers/$', parliament_views.parliamentMember_list),
+    url(r'^api/v1/parliamentMembers/$', parliament_views.ParliamentMemberList.as_view()),
     url(r'^api/v1/politicians/$', politician_views.politician_list),
     url(r'^api/v1/districts/$', district_views.DistrictList.as_view()),
     url(r'^api/v1/subjects/$', subject_views.SubjectList.as_view()),
