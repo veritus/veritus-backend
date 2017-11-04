@@ -1,5 +1,4 @@
 from rest_framework import serializers
-from promises.serializers import PromiseSerializerRead
 from .models import Politician
 
 class PoliticianSerializer(serializers.ModelSerializer):

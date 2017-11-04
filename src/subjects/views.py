@@ -5,13 +5,12 @@ import django_filters
 
 from case_gather.models import Subject
 from .serializers import SubjectSerializer
-from .serializers import PromiseSubjectSerializerWrite
-from .serializers import PromiseSubjectSerializerRead
+from .serializers import PromiseSubjectSerializer
 from .models import PromiseSubject
 
 class PromiseSubjectList(generics.ListAPIView):
     queryset = PromiseSubject.objects.all()
-    serializer_class = PromiseSubjectSerializerRead
+    serializer_class = PromiseSubjectSerializer
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
     filter_fields = ('promise', 'subject')
     permission_classes = (IsAuthenticatedOrReadOnly,)
