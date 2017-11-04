@@ -6,7 +6,7 @@ class PoliticianSerializer(serializers.ModelSerializer):
 
     party = serializers.PrimaryKeyRelatedField(read_only=True)
     district = serializers.PrimaryKeyRelatedField(read_only=True)
-    promises = PromiseSerializerRead(many=True, read_only=True)
+    promises = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
     class Meta:
         model = Politician
