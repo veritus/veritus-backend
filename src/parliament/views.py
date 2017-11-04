@@ -10,7 +10,6 @@ from .serializers import ParliamentMemberSerializer
 class ParliamentList(generics.ListAPIView):
     queryset = Parliament.objects.all()
     serializer_class = ParliamentSerializer
-    permission_classes = (IsAuthenticatedOrReadOnly,)
 
 class ParliamentDetails(generics.RetrieveAPIView):
     queryset = Parliament.objects.all()
@@ -21,7 +20,6 @@ class ParliamentSessionList(generics.ListAPIView):
     serializer_class = ParliamentSessionSerializer
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
     filter_fields = ('parliament',)
-    permission_classes = (IsAuthenticatedOrReadOnly,)
 
 class ParliamentSessionDetails(generics.RetrieveAPIView):
     queryset = ParliamentSession.objects.all()
@@ -32,9 +30,7 @@ class ParliamentMemberList(generics.ListAPIView):
     serializer_class = ParliamentMemberSerializer
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
     filter_fields = ('party', 'district')
-    permission_classes = (IsAuthenticatedOrReadOnly,)
 
 class ParliamentMemberDetails(generics.RetrieveAPIView):
     queryset = ParliamentMember.objects.all()
     serializer_class = ParliamentMemberSerializer
-

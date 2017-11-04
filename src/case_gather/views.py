@@ -25,4 +25,3 @@ class CaseList(generics.ListAPIView):
 class CaseDetails(generics.RetrieveAPIView):
     queryset = Case.objects.all()
     serializer_class = CaseSerializer
-

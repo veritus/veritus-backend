@@ -36,7 +36,6 @@ class SubjectList(generics.ListAPIView):
     serializer_class = SubjectSerializer
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
     filter_class = SubjectFilter
-    permission_classes = (IsAuthenticatedOrReadOnly,)
 
     def post(self, request):
         serializer = SubjectSerializer(data=request.data)

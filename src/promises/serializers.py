@@ -1,8 +1,4 @@
 from rest_framework import serializers
-
-from parliament.serializers import ParliamentSerializer
-from case_gather.serializers import CaseSerializer
-
 from .models import Promise, PromiseCase
 
 class PromiseSerializer(serializers.ModelSerializer):

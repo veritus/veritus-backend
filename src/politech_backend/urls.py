@@ -31,11 +31,17 @@ urlpatterns = [
     url(r'^api/v1/parliaments/$', parliament_views.ParliamentList.as_view()),
     url(r'^api/v1/parliaments/(?P<pk>[0-9]+)$', parliament_views.ParliamentDetails.as_view()),
     url(r'^api/v1/parliamentSessions/$', parliament_views.ParliamentSessionList.as_view()),
-    url(r'^api/v1/parliamentSessions/(?P<pk>[0-9]+)$', parliament_views.ParliamentSessionDetails.as_view()),
+    url(
+        r'^api/v1/parliamentSessions/(?P<pk>[0-9]+)$',
+        parliament_views.ParliamentSessionDetails.as_view()
+    ),
     url(r'^api/v1/parties/$', party_views.PartyList.as_view()),
     url(r'^api/v1/parties/(?P<pk>[0-9]+)$', party_views.PartyDetails.as_view()),
     url(r'^api/v1/parliamentMembers/$', parliament_views.ParliamentMemberList.as_view()),
-    url(r'^api/v1/parliamentMembers/(?P<pk>[0-9]+)$', parliament_views.ParliamentMemberDetails.as_view()),
+    url(
+        r'^api/v1/parliamentMembers/(?P<pk>[0-9]+)$',
+        parliament_views.ParliamentMemberDetails.as_view()
+    ),
     url(r'^api/v1/politicians/$', politician_views.PoliticianList.as_view()),
     url(r'^api/v1/politicians/(?P<pk>[0-9]+)$', politician_views.PoliticianDetails.as_view()),
     url(r'^api/v1/districts/$', district_views.DistrictList.as_view()),
