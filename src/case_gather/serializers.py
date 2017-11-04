@@ -12,8 +12,10 @@ class CaseCreatorSerializer(serializers.ModelSerializer):
 
 class CaseSerializer(serializers.ModelSerializer):
 
-    parliament_session = ParliamentSessionSerializerRead()
-    case_creators = CaseCreatorSerializer(many=True, read_only=True)
+    parliament_session = serializers.PrimaryKeyRelatedField(read_only=True)
+    #ParliamentSessionSerializerRead()
+    case_creators = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    #CaseCreatorSerializer(many=True, read_only=True)
     class Meta:
         model = Case
         fields = (
