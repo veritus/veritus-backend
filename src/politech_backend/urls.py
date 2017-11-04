@@ -35,7 +35,7 @@ urlpatterns = [
     url(r'^api/v1/parties/$', party_views.party_list),
     url(r'^api/v1/parliamentMembers/$', parliament_views.parliamentMember_list),
     url(r'^api/v1/politicians/$', politician_views.politician_list),
-    url(r'^api/v1/districts/$', district_views.district_list),
+    url(r'^api/v1/districts/$', district_views.DistrictList.as_view()),
     url(r'^api/v1/subjects/$', subject_views.SubjectList.as_view()),
 
     url(r'^api/v1/rest-auth/', include('rest_auth.urls')),

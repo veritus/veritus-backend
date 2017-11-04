@@ -34,7 +34,7 @@ class PoliticianSerializer(serializers.ModelSerializer):
 
 class DistrictSerializerRead(serializers.ModelSerializer):
     ''' Serializer when reading districts (GET) '''
-    politicians = PoliticianSerializer(many=True, read_only=True)
+    politicians = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
     class Meta:
         model = District
