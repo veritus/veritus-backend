@@ -79,15 +79,6 @@ class PromiseCaseList(generics.ListAPIView):
     filter_class = PromiseCaseFilter
 
 
-@api_view(['GET', 'PUT', 'DELETE'])
-@permission_classes((IsAuthenticatedOrReadOnly,))
-def promise_case_detail(request, promise_case_id):
-    ''' Get by id endpoint '''
-    try:
-        promise_case = PromiseCase.objects.get(pk=promise_case_id)
-    except Promise.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
-
-    if request.method == 'GET':
-        serializer = PromiseCaseSerializer(promise_case)
-        return Response(serializer.data)
+class PromiseCaseDetails(generics.RetrieveAPIView):
+    queryset = PromiseCase.objects.all()
+    serializer_class = PromiseCaseSerializer
