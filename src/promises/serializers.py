@@ -49,8 +49,8 @@ class PromiseSerializerWrite(serializers.ModelSerializer):
 class PromiseCaseSerializer(serializers.ModelSerializer):
     ''' Serializer for promise case connections '''
 
-    case = CaseSerializer(read_only=True)
-    promise = PromiseSerializerRead(read_only=True)
+    case = serializers.PrimaryKeyRelatedField(read_only=True)
+    promise = serializers.PrimaryKeyRelatedField(read_only=True)
 
     class Meta:
         model = PromiseCase
