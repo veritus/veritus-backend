@@ -1,6 +1,5 @@
 from rest_framework import serializers
 
-from party.serializers import PartySerializerRead
 from politicians.models import Politician
 from promises.models import Promise
 
@@ -17,7 +16,7 @@ class PromiseField(serializers.ModelSerializer):
 
 class PoliticianSerializer(serializers.ModelSerializer):
 
-    party = PartySerializerRead()
+    party = serializers.PrimaryKeyRelatedField(read_only=True)
     promises = PromiseField(many=True, read_only=True)
 
     class Meta:
