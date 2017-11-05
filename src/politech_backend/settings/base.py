@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'party',
     'district',
     'politicians',
+    'votes',
 ]
 
 # Use nose to run all tests
