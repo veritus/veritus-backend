@@ -1,7 +1,6 @@
 import django_filters
 
 from rest_framework import generics
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .models import ParliamentSession, Parliament, ParliamentMember
 from .serializers import ParliamentSessionSerializer
 from .serializers import ParliamentSerializer

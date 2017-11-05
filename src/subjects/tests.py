@@ -94,7 +94,7 @@ class PartyAPI(APITestCase):
         response = self.client.get('/api/v1/promises/subjects/')
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.data['count'], 2)
-        
+
     def test_get_all_promise_subjects_filter_by_promise(self):
         promise = Promise.objects.filter(name='Promise 1').get()
         response = self.client.get('/api/v1/promises/subjects/?promise='+str(promise.pk))

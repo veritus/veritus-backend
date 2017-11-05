@@ -1,7 +1,6 @@
 from rest_framework import serializers
 from case_gather.models import Subject
 from .models import CaseSubject, PromiseSubject
-from promises.serializers import PromiseSerializer
 
 class SubjectSerializer(serializers.ModelSerializer):
 
