@@ -1,24 +1,30 @@
-""" Webservice endpoints for bills """
-
-from rest_framework import status
+""" Webservice endpoints for cases """
+import django_filters
+from rest_framework import status, generics
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from .models import Case
 from .serializers import CaseSerializer
 
+class CaseFilter(django_filters.rest_framework.FilterSet):
+    ''' filter for cases '''
+    class Meta:
+        model = Case
+        fields = [
+            'parliament_session',
+            'case_type',
+            'status',
+            'althingi_status',
+        ]
 
-@api_view(['GET'])
-@permission_classes((IsAuthenticatedOrReadOnly,))
-def case_list(request):
-    '''
-    get:
-        Get a list of all cases.
-    '''
-    if request.method == 'GET':
-        cases = Case.objects.all()
-        serializer = CaseSerializer(cases, many=True)
-        return Response(serializer.data)
+class CaseList(generics.ListAPIView):
+    ''' PromiseCaseList endpoint '''
+    queryset = Case.objects.all()
+    serializer_class = CaseSerializer
+    filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
+    filter_class = CaseFilter
+
 
 
 @api_view(['GET'])
