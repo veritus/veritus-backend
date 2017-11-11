@@ -6,17 +6,9 @@ def error(message):
     It only exists in production so if we are in development
     we do not want to send the message to sentry
     """
-    try:
-        sentry = logging.getLogger('sentry.error')
-        sentry.error(message)
-    except BaseException:
-        console = logging.getLogger('console')
-        console.error(message)
+    sentry = logging.getLogger('sentry.error')
+    sentry.error(message)
 
-def info(message):
-    try:
-        sentry = logging.getLogger('sentry.error')
-        sentry.info(message)
-    except BaseException:
-        console = logging.getLogger('console')
-        console.info(message)
+def warning(message):
+    sentry = logging.getLogger('sentry.error')
+    sentry.warning(message)

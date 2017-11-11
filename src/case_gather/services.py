@@ -4,9 +4,6 @@ import case_gather.xml_parser as XMLParser
 from case_gather.models import Case, CaseCreator, AlthingiStatusToStatusMapper, Subject
 from parliament.models import ParliamentMember
 from subjects.models import CaseSubject
-import main.sentryLogger as sentryLogger
-
-import main.sentryLogger as SentryLogger
 
 def update_cases_by_session_number(parliament_session):
     """
@@ -64,16 +61,21 @@ def createCaseCreators(case_creator_names, case):
     a new one has to be created in the database
     """
     for case_creator_name in case_creator_names:
-        parliament_member = ParliamentMember.objects.filter(name=case_creator_name)
+        parliament_member = ParliamentMember.objects.filter(
+            name=case_creator_name
+        )
 
-        if parliament_member.exists():
-            parliament_member = parliament_member.get()
-            CaseCreator.objects.create(
-                case=case,
-                parliament_member=parliament_member
+        if not parliament_member.exists():
+            parliament_member = ParliamentMember.objects.create(
+                name=case_creator_name
             )
         else:
-            sentryLogger.error('Parliament member not found: ' + case_creator_name)
+            parliament_member = parliament_member.get()
+
+        CaseCreator.objects.create(
+            case=case,
+            parliament_member=parliament_member
+        )
 
 def create_althingi_status_to_status_map():
     """

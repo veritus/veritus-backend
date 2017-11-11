@@ -1,5 +1,3 @@
-import logging
-import main.sentryLogger as SentryLogger
 import case_gather.soupUtils as soupUtils
 from case_gather.models import Case
 from parliament.models import ParliamentMember
@@ -20,7 +18,7 @@ def get_votes_by_parliament_session(parliament_session):
         vote_record_althingi_id = vote_record['althingi_id']
         vote_record_exits = VoteRecord.objects.filter(
             althingi_id=vote_record_althingi_id
-        ).exists
+        ).exists()
         if not vote_record_exits:
             created_vote_record = VoteRecord.objects.create(
                 case=vote_record['case'],
@@ -33,7 +31,9 @@ def get_votes_by_parliament_session(parliament_session):
             vote_details_soup = soupUtils.getSoupFromLink(
                 details_link + str(vote_record['althingi_id'])
             )
-            parliament_member_votes = get_parliament_member_votes(vote_details_soup)
+            parliament_member_votes = get_parliament_member_votes(
+                vote_details_soup
+            )
             for parliament_member_vote in parliament_member_votes:
                 parliament_member_name = get_parliament_member_name_from_vote(
                     parliament_member_vote
@@ -41,18 +41,20 @@ def get_votes_by_parliament_session(parliament_session):
                 parliament_member = ParliamentMember.objects.filter(
                     name=parliament_member_name
                 )
-                if parliament_member.exists():
-                    vote_result = get_parliament_member_result_from_vote(parliament_member_vote)
-                    Vote.objects.create(
-                        parliament_member=parliament_member.get(),
-                        althingi_result=vote_result,
-                        vote_record=created_vote_record
+                # Create parliamentMember if he does not exist
+                if not parliament_member.exists():
+                    parliament_member = ParliamentMember.objects.create(
+                        name=parliament_member_name
                     )
                 else:
-                    SentryLogger.error(
-                        'ParliamentMember not found: '
-                        + parliament_member_name
-                    )
+                    parliament_member = parliament_member.get()
+
+                vote_result = get_parliament_member_result_from_vote(parliament_member_vote)
+                Vote.objects.create(
+                    parliament_member=parliament_member,
+                    althingi_result=vote_result,
+                    vote_record=created_vote_record
+                )
 
 def collect_vote_records(soup, parliament_session):
     vote_records = []

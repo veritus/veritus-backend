@@ -13,7 +13,8 @@ RAVEN_CONFIG = {
 }
 
 LOGGING['handlers'].update({'sentry': {
-    'level': 'INFO', # To capture more than ERROR, change to WARNING, INFO, etc.
+    'level': 'INFO', 
+    # To capture more than ERROR, change to WARNING, INFO, etc.
     # Only want to log to sentry in production. Otherwise we log to console
     'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
     'formatter': 'verbose'

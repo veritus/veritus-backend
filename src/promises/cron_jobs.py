@@ -1,5 +1,4 @@
 ''' Cronjobs for promises '''
-import logging
 import traceback
 import os
 from django_cron import CronJobBase, Schedule
@@ -18,9 +17,9 @@ class ConnectBillsAndPromises(CronJobBase):
     def do(self):
         ''' Executes the cron job '''
         try:
-            SentryLogger.info('Starting bill and promise connection')
+            SentryLogger.warning('Starting bill and promise connection')
             promise_services.find_connected_bills_and_promises()
-            SentryLogger.info('Completed bill and promise connection')
+            SentryLogger.warning('Completed bill and promise connection')
 
         except BaseException:
             SentryLogger.error(traceback.format_exc())

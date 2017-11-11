@@ -1,4 +1,3 @@
-import logging
 import traceback
 import os
 
@@ -15,10 +14,10 @@ class GatherVotes(CronJobBase):
 
     def do(self):
         try:
-            SentryLogger.info('Starting votes gather')
+            SentryLogger.warning('Starting votes gather')
             parliament_session = ParliamentSession.objects.latest('created')
             VoteServices.get_votes_by_parliament_session(parliament_session)
-            SentryLogger.info('Votes gather done')
+            SentryLogger.warning('Votes gather done')
         except BaseException:
             SentryLogger.error(traceback.format_exc())
             raise
