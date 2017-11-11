@@ -24,6 +24,8 @@ services:
       - GATHER_CASES_CRON_TIME_SECONDS=1440
       - LINK_CASES_AND_PROMISES_CRON_TIME_SECONDS=1440
       - DJANGO_SETTINGS_MODULE=politech_backend.settings.development
+      - VIRTUAL_HOST=politech.backend
+      - VIRTUAL_PORT=8000
     volumes:
       - ./:/code
       - ./logs/backendLogs:/code/src/logs
@@ -34,3 +36,12 @@ services:
     depends_on:
       db:
         condition: service_healthy
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    environment:
+     - DEFAULT_HOST=politech.backend
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
