@@ -1,22 +1,22 @@
 [
   {
     "fields":{
-        "name":"Test-Parliament",
-        "start_date":"2016-8-1",
-        "end_date":"2020-1-1",
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "name":"2017-2021",
+        "start_date":"2017-10-28",
+        "end_date":"2021-10-28",
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"parliament.parliament",
     "pk":1
   },
   {
     "fields":{
-        "name":"Test-Parliament-Session",
-        "session_number":"146",
+        "name":"148",
+        "session_number":"148",
         "parliament":1,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"parliament.parliamentsession",
     "pk":1
@@ -24,8 +24,8 @@
   {
     "fields":{
         "name":"Sjálfstæðisflokkur",
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00",
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00",
         "website":"http://xd.is/"
     },
     "model":"party.party",
@@ -34,8 +34,8 @@
   {
     "fields":{
         "name":"Framsóknarflokkurinn",
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00",
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00",
         "website":"https://framsokn.is/"
     },
     "model":"party.party",
@@ -44,8 +44,8 @@
   {
     "fields":{
         "name":"Vinstri Hreyfingin - Grænt Framboð",
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00",
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00",
         "website":"http://vg.is/"
     },
     "model":"party.party",
@@ -53,9 +53,9 @@
   },
   {
     "fields":{
-        "name":"Björt Framtíð",
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00",
+        "name":"Miðflokkurinn",
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00",
         "website":"http://www.bjortframtid.is/"
     },
     "model":"party.party",
@@ -64,8 +64,8 @@
   {
     "fields":{
         "name":"Píratar",
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00",
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00",
         "website":"https://piratar.is/"
     },
     "model":"party.party",
@@ -74,8 +74,8 @@
   {
     "fields":{
         "name":"Samfylkingin",
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00",
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00",
         "website":"http://xs.is/"
     },
     "model":"party.party",
@@ -84,8 +84,18 @@
   {
     "fields":{
         "name":"Viðreisn",
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00",
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00",
+        "website":"https://www.vidreisn.is/"
+    },
+    "model":"party.party",
+    "pk":7
+  },
+  {
+    "fields":{
+        "name":"Flokkur fólksins",
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00",
         "website":"https://www.vidreisn.is/"
     },
     "model":"party.party",
@@ -95,8 +105,8 @@
     "fields":{
         "name":"Reykjavik Norður",
         "abbreviation":"Reykv. N.",
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"district.district",
     "pk":1
@@ -105,8 +115,8 @@
     "fields":{
         "name":"Suðurkjördæmi",
         "abbreviation":"Suðurk",
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"district.district",
     "pk":2
@@ -115,8 +125,8 @@
     "fields":{
         "name":"Reykjavík Suður",
         "abbreviation":"Reykv. S.",
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"district.district",
     "pk":3
@@ -125,8 +135,8 @@
     "fields":{
         "name":"Suðvesturkjördæmi",
         "abbreviation":"Suðvest.",
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"district.district",
     "pk":4
@@ -135,8 +145,8 @@
     "fields":{
         "name":"Norðausturkjördæmi",
         "abbreviation":"Norðaust.",
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"district.district",
     "pk":5
@@ -145,11 +155,29 @@
     "fields":{
         "name":"Norðvesturkjördæmi",
         "abbreviation":"Norðvest.",
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"district.district",
     "pk":6
+  },
+  {
+    "fields":{
+        "name":"Albertína Friðbjörg Elías­dóttir ",
+        "party":6,
+        "initials":"AFE",
+        "district":5,
+        "districtNumber":10,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
+    },
+    "model":"politicians.Politician",
+    "pk":1
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":1
   },
   {
     "fields":{
@@ -157,17 +185,35 @@
         "party":3,
         "initials":"AIJ",
         "district":1,
-        "districtNumber":10,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":9,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":1
+    "pk":2
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":1
+    "pk":2
+  },
+  {
+    "fields":{
+        "name":"Anna Kolbrún Árna­dóttir ",
+        "party":4,
+        "initials":"AKÁ",
+        "district":5,
+        "districtNumber":8,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
+    },
+    "model":"politicians.Politician",
+    "pk":3
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":3
   },
   {
     "fields":{
@@ -175,35 +221,71 @@
         "party":3,
         "initials":"ATG",
         "district":2,
-        "districtNumber":6,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":5,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":2
+    "pk":4
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":2
+    "pk":4
+  },
+  {
+    "fields":{
+        "name":"Ágúst Ólafur Ágústs­son",
+        "party":6,
+        "initials":"ÁÓÁ",
+        "district":3,
+        "districtNumber":3,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
+    },
+    "model":"politicians.Politician",
+    "pk":5
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":5
   },
   {
     "fields":{
         "name":"Áslaug Arna Sigurbjörnsdóttir",
         "party":1,
-        "initials":"Ásls",
+        "initials":"ÁslS",
         "district":2,
-        "districtNumber":4,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":5,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":3
+    "pk":6
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":3
+    "pk":6
+  },
+  {
+    "fields":{
+        "name":"Ásmundur Einar Daða­son ",
+        "party":2,
+        "initials":"ÁsmD",
+        "district":6,
+        "districtNumber":2,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
+    },
+    "model":"politicians.Politician",
+    "pk":7
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":7
   },
   {
     "fields":{
@@ -211,53 +293,35 @@
         "party":1,
         "initials":"ÁsF",
         "district":2,
-        "districtNumber":3,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":4,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":4
+    "pk":8
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":4
+    "pk":8
   },
   {
     "fields":{
-        "name":"Ásta Guðrún Helgadóttir",
-        "party":5,
-        "initials":"ÁstaH",
-        "district":3,
-        "districtNumber":3,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "name":"Bergþór Óla­son",
+        "party":4,
+        "initials":"BergÓ",
+        "district":6,
+        "districtNumber":4,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":5
+    "pk":9
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":5
-  },
-  {
-    "fields":{
-        "name":"Benedikt Jóhannesson",
-        "party":7,
-        "initials":"BenJ",
-        "district":5,
-        "districtNumber":10,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
-    },
-    "model":"politicians.Politician",
-    "pk":6
-  },
-  {
-    "fields":{},
-    "model":"parliament.ParliamentMember",
-    "pk":6
+    "pk":9
   },
   {
     "fields":{
@@ -266,34 +330,34 @@
         "initials":"BÁ",
         "district":1,
         "districtNumber":8,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":7
+    "pk":10
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":7
+    "pk":10
   },
   {
     "fields":{
-        "name":"Birgitta Jónsdóttir",
-        "party":5,
-        "initials":"BirgJ",
-        "district":1,
+        "name":"Birgir Þórarins­son",
+        "party":4,
+        "initials":"BirgÞ",
+        "district":2,
         "districtNumber":3,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":8
+    "pk":11
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":8
+    "pk":11
   },
   {
     "fields":{
@@ -301,17 +365,17 @@
         "party":3,
         "initials":"BjG",
         "district":5,
-        "districtNumber":6,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":7,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":9
+    "pk":12
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":9
+    "pk":12
   },
   {
     "fields":{
@@ -320,52 +384,34 @@
         "initials":"BjarnB",
         "district":4,
         "districtNumber":1,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":10
+    "pk":13
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":10
+    "pk":13
   },
   {
     "fields":{
         "name":"Björn Leví Gunnarsson",
         "party":5,
         "initials":"BLG",
-        "district":1,
-        "districtNumber":7,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "district":3,
+        "districtNumber":11,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":11
+    "pk":14
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":11
-  },
-  {
-    "fields":{
-        "name":"Björt Ólafsdóttir",
-        "party":4,
-        "initials":"BjÓ",
-        "district":1,
-        "districtNumber":9,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
-    },
-    "model":"politicians.Politician",
-    "pk":12
-  },
-  {
-    "fields":{},
-    "model":"parliament.ParliamentMember",
-    "pk":12
+    "pk":14
   },
   {
     "fields":{
@@ -374,16 +420,16 @@
         "initials":"BHar",
         "district":4,
         "districtNumber":2,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":13
+    "pk":15
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":13
+    "pk":15
   },
   {
     "fields":{
@@ -391,107 +437,35 @@
         "party":1,
         "initials":"BN",
         "district":3,
-        "districtNumber":1,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
-    },
-    "model":"politicians.Politician",
-    "pk":14
-  },
-  {
-    "fields":{},
-    "model":"parliament.ParliamentMember",
-    "pk":14
-  },
-  {
-    "fields":{
-        "name":"Einar Brynjólfsson",
-        "party":5,
-        "initials":"EB",
-        "district":5,
-        "districtNumber":7,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
-    },
-    "model":"politicians.Politician",
-    "pk":15
-  },
-  {
-    "fields":{},
-    "model":"parliament.ParliamentMember",
-    "pk":15
-  },
-  {
-    "fields":{
-        "name":"Elsa Lára Arnardóttir",
-        "party":2,
-        "initials":"ELA",
-        "district":6,
-        "districtNumber":6,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
-    },
-    "model":"politicians.Politician",
-    "pk":16
-  },
-  {
-    "fields":{},
-    "model":"parliament.ParliamentMember",
-    "pk":16
-  },
-  {
-    "fields":{
-        "name":"Eva Pandora Baldursdóttir",
-        "party":5,
-        "initials":"EPB",
-        "district":6,
         "districtNumber":5,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":17
+    "pk":16
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":17
+    "pk":16
   },
   {
     "fields":{
-        "name":"Eygló Harðardóttir",
-        "party":2,
-        "initials":"EyH",
-        "district":4,
-        "districtNumber":9,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
-    },
-    "model":"politicians.Politician",
-    "pk":18
-  },
-  {
-    "fields":{},
-    "model":"parliament.ParliamentMember",
-    "pk":18
-  },
-  {
-    "fields":{
-        "name":"Guðjón S. Brjánsson",
+        "name":"Guðjón S. Brjáns­son",
         "party":6,
         "initials":"GBr",
         "district":6,
-        "districtNumber":8,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":6,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":19
+    "pk":17
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":19
+    "pk":17
   },
   {
     "fields":{
@@ -500,44 +474,80 @@
         "initials":"GÞÞ",
         "district":1,
         "districtNumber":1,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":20
+    "pk":18
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":20
+    "pk":18
   },
   {
     "fields":{
-        "name":"Gunnar Hrafn Jónsson",
-        "party":5,
-        "initials":"GHJ",
-        "district":3,
-        "districtNumber":7,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "name":"Guðmundur Andri Thors­son",
+        "party":6,
+        "initials":"GuðmT",
+        "district":4,
+        "districtNumber":4,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":21
+    "pk":19
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":21
+    "pk":19
+  },
+  {
+    "fields":{
+        "name":"Guðmundur Ingi Kristins­son ",
+        "party":8,
+        "initials":"GIK",
+        "district":4,
+        "districtNumber":12,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
+    },
+    "model":"politicians.Politician",
+    "pk":20
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":20
   },
   {
     "fields":{
         "name":"Gunnar Bragi Sveinsson",
-        "party":2,
+        "party":4,
         "initials":"GBS",
+        "district":4,
+        "districtNumber":6,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
+    },
+    "model":"politicians.Politician",
+    "pk":21
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":21
+  },
+  {
+    "fields":{
+        "name":"Halla Signý Kristjáns­dóttir ",
+        "party":2,
+        "initials":"HSK",
         "district":6,
-        "districtNumber":2,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":7,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
     "pk":22
@@ -554,8 +564,8 @@
         "initials":"HallM",
         "district":1,
         "districtNumber":11,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
     "pk":23
@@ -571,9 +581,9 @@
         "party":7,
         "initials":"HKF",
         "district":3,
-        "districtNumber":5,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":7,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
     "pk":24
@@ -590,8 +600,8 @@
         "initials":"HarB",
         "district":6,
         "districtNumber":1,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
     "pk":25
@@ -603,13 +613,13 @@
   },
   {
     "fields":{
-        "name":"Hildur Sverrisdóttir",
-        "party":1,
-        "initials":"HildS",
-        "district":3,
-        "districtNumber":8,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "name":"Helga Vala Helga­dóttir",
+        "party":6,
+        "initials":"HVH",
+        "district":1,
+        "districtNumber":4,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
     "pk":26
@@ -618,6 +628,42 @@
     "fields":{},
     "model":"parliament.ParliamentMember",
     "pk":26
+  },
+  {
+    "fields":{
+        "name":"Helgi Hrafn Gunnars­son",
+        "party":5,
+        "initials":"HHG",
+        "district":1,
+        "districtNumber":3,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
+    },
+    "model":"politicians.Politician",
+    "pk":27
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":27
+  },
+  {
+    "fields":{
+        "name":"Inga Sæland",
+        "party":8,
+        "initials":"IngS",
+        "district":3,
+        "districtNumber":8,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
+    },
+    "model":"politicians.Politician",
+    "pk":28
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":28
   },
   {
     "fields":{
@@ -625,17 +671,35 @@
         "party":1,
         "initials":"JónG",
         "district":4,
-        "districtNumber":6,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":5,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":27
+    "pk":29
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":27
+    "pk":29
+  },
+  {
+    "fields":{
+        "name":"Jón Steindór Valdimars­son ",
+        "party":7,
+        "initials":"JSV",
+        "district":4,
+        "districtNumber":13,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
+    },
+    "model":"politicians.Politician",
+    "pk":30
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":30
   },
   {
     "fields":{
@@ -643,71 +707,53 @@
         "party":5,
         "initials":"JÞÓ",
         "district":4,
-        "districtNumber":3,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":8,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":28
+    "pk":31
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":28
+    "pk":31
   },
   {
     "fields":{
-        "name":"Jón Steindór Valdimarsson",
-        "party":7,
-        "initials":"JSV",
-        "district":4,
-        "districtNumber":13,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
-    },
-    "model":"politicians.Politician",
-    "pk":29
-  },
-  {
-    "fields":{},
-    "model":"parliament.ParliamentMember",
-    "pk":29
-  },
-  {
-    "fields":{
-        "name":"Jóna Sólveig Elínardóttir",
-        "party":7,
-        "initials":"JSE",
+        "name":"Karl Gauti Hjalta­son",
+        "party":8,
+        "initials":"KGH",
         "district":2,
-        "districtNumber":9,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":8,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":30
+    "pk":32
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":30
+    "pk":32
   },
   {
     "fields":{
         "name":"Katrín Jakobsdóttir",
         "party":3,
-        "initials":"Kjak",
+        "initials":"KJak",
         "district":1,
         "districtNumber":2,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":31
+    "pk":33
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":31
+    "pk":33
   },
   {
     "fields":{
@@ -716,16 +762,16 @@
         "initials":"KÓP",
         "district":3,
         "districtNumber":6,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":32
+    "pk":34
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":32
+    "pk":34
   },
   {
     "fields":{
@@ -733,17 +779,17 @@
         "party":1,
         "initials":"KÞJ",
         "district":5,
-        "districtNumber":5,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":1,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":33
+    "pk":35
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":33
+    "pk":35
   },
   {
     "fields":{
@@ -752,16 +798,16 @@
         "initials":"LA",
         "district":3,
         "districtNumber":9,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":34
+    "pk":36
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":34
+    "pk":36
   },
   {
     "fields":{
@@ -770,16 +816,34 @@
         "initials":"LRM",
         "district":6,
         "districtNumber":3,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":35
+    "pk":37
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":35
+    "pk":37
+  },
+  {
+    "fields":{
+        "name":"Líneik Anna Sævars­dóttir ",
+        "party":2,
+        "initials":"LínS",
+        "district":5,
+        "districtNumber":9,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
+    },
+    "model":"politicians.Politician",
+    "pk":38
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":38
   },
   {
     "fields":{
@@ -787,35 +851,17 @@
         "party":6,
         "initials":"LE",
         "district":5,
-        "districtNumber":9,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":5,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":36
+    "pk":39
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":36
-  },
-  {
-    "fields":{
-        "name":"Nichole Leigh Mosty",
-        "party":4,
-        "initials":"NicM",
-        "district":3,
-        "districtNumber":10,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
-    },
-    "model":"politicians.Politician",
-    "pk":37
-  },
-  {
-    "fields":{},
-    "model":"parliament.ParliamentMember",
-    "pk":37
+    "pk":39
   },
   {
     "fields":{
@@ -823,17 +869,17 @@
         "party":1,
         "initials":"NF",
         "district":5,
-        "districtNumber":4,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":6,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":38
+    "pk":40
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":38
+    "pk":40
   },
   {
     "fields":{
@@ -841,17 +887,53 @@
         "party":6,
         "initials":"OH",
         "district":2,
-        "districtNumber":10,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":6,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":39
+    "pk":41
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":39
+    "pk":41
+  },
+  {
+    "fields":{
+        "name":"Ólafur Ísleifs­son",
+        "party":8,
+        "initials":"ÓÍ",
+        "district":1,
+        "districtNumber":10,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
+    },
+    "model":"politicians.Politician",
+    "pk":42
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":42
+  },
+  {
+    "fields":{
+        "name":"Ólafur Þór Gunnars­son",
+        "party":3,
+        "initials":"ÓGunn",
+        "district":4,
+        "districtNumber":11,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
+    },
+    "model":"politicians.Politician",
+    "pk":43
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":43
   },
   {
     "fields":{
@@ -859,53 +941,17 @@
         "party":1,
         "initials":"ÓBK",
         "district":4,
-        "districtNumber":8,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":10,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":40
+    "pk":44
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":40
-  },
-  {
-    "fields":{
-        "name":"Óttarr Proppé",
-        "party":4,
-        "initials":"ÓP",
-        "district":4,
-        "districtNumber":7,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
-    },
-    "model":"politicians.Politician",
-    "pk":41
-  },
-  {
-    "fields":{},
-    "model":"parliament.ParliamentMember",
-    "pk":41
-  },
-  {
-    "fields":{
-        "name":"Pawel Bartoszek",
-        "party":7,
-        "initials":"PawB",
-        "district":3,
-        "districtNumber":11,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
-    },
-    "model":"politicians.Politician",
-    "pk":42
-  },
-  {
-    "fields":{},
-    "model":"parliament.ParliamentMember",
-    "pk":42
+    "pk":44
   },
   {
     "fields":{
@@ -914,16 +960,16 @@
         "initials":"PállM",
         "district":2,
         "districtNumber":1,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":43
+    "pk":45
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":43
+    "pk":45
   },
   {
     "fields":{
@@ -931,35 +977,35 @@
         "party":3,
         "initials":"RBB",
         "district":4,
-        "districtNumber":5,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":3,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":44
+    "pk":46
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":44
+    "pk":46
   },
   {
     "fields":{
         "name":"Sigmundur Davíð Gunnlaugsson",
-        "party":2,
+        "party":4,
         "initials":"SDG",
         "district":5,
-        "districtNumber":2,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":3,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":45
+    "pk":47
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":45
+    "pk":47
   },
   {
     "fields":{
@@ -967,17 +1013,17 @@
         "party":1,
         "initials":"SÁA",
         "district":3,
-        "districtNumber":4,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":1,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":46
+    "pk":48
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":46
+    "pk":48
   },
   {
     "fields":{
@@ -986,16 +1032,34 @@
         "initials":"SIJ",
         "district":2,
         "districtNumber":2,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":47
+    "pk":49
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":47
+    "pk":49
+  },
+  {
+    "fields":{
+        "name":"Sigurður Páll Jóns­son",
+        "party":4,
+        "initials":"SPJ",
+        "district":6,
+        "districtNumber":8,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
+    },
+    "model":"politicians.Politician",
+    "pk":50
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":50
   },
   {
     "fields":{
@@ -1003,17 +1067,17 @@
         "party":2,
         "initials":"SilG",
         "district":2,
-        "districtNumber":7,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":10,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":48
+    "pk":51
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":48
+    "pk":51
   },
   {
     "fields":{
@@ -1021,17 +1085,17 @@
         "party":5,
         "initials":"SMc",
         "district":2,
-        "districtNumber":4,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":10,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":49
+    "pk":52
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":49
+    "pk":52
   },
   {
     "fields":{
@@ -1039,17 +1103,17 @@
         "party":3,
         "initials":"SJS",
         "district":5,
-        "districtNumber":3,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":2,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":50
+    "pk":53
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":50
+    "pk":53
   },
   {
     "fields":{
@@ -1058,16 +1122,16 @@
         "initials":"SÞÁ",
         "district":1,
         "districtNumber":6,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":51
+    "pk":54
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":51
+    "pk":54
   },
   {
     "fields":{
@@ -1076,62 +1140,8 @@
         "initials":"SSv",
         "district":3,
         "districtNumber":2,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
-    },
-    "model":"politicians.Politician",
-    "pk":52
-  },
-  {
-    "fields":{},
-    "model":"parliament.ParliamentMember",
-    "pk":52
-  },
-  {
-    "fields":{
-        "name":"Teitur Björn Einarsson",
-        "party":1,
-        "initials":"TBE",
-        "district":6,
-        "districtNumber":7,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
-    },
-    "model":"politicians.Politician",
-    "pk":53
-  },
-  {
-    "fields":{},
-    "model":"parliament.ParliamentMember",
-    "pk":53
-  },
-  {
-    "fields":{
-        "name":"Theodóra S. Þorsteinsdóttir",
-        "party":4,
-        "initials":"ThÞ",
-        "district":4,
-        "districtNumber":12,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
-    },
-    "model":"politicians.Politician",
-    "pk":54
-  },
-  {
-    "fields":{},
-    "model":"parliament.ParliamentMember",
-    "pk":54
-  },
-  {
-    "fields":{
-        "name":"Unnur Brá Konráðsdóttir",
-        "party":1,
-        "initials":"UBK",
-        "district":2,
-        "districtNumber":8,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
     "pk":55
@@ -1140,24 +1150,6 @@
     "fields":{},
     "model":"parliament.ParliamentMember",
     "pk":55
-  },
-  {
-    "fields":{
-        "name":"Valgerður Gunnarsdóttir",
-        "party":1,
-        "initials":"ValG",
-        "district":5,
-        "districtNumber":8,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
-    },
-    "model":"politicians.Politician",
-    "pk":56
-  },
-  {
-    "fields":{},
-    "model":"parliament.ParliamentMember",
-    "pk":56
   },
   {
     "fields":{
@@ -1165,35 +1157,35 @@
         "party":1,
         "initials":"VilÁ",
         "district":2,
-        "districtNumber":5,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":9,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":57
+    "pk":56
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":57
+    "pk":56
   },
   {
     "fields":{
-        "name":"Vilhjálmur Bjarnason",
-        "party":1,
-        "initials":"VilB",
+        "name":"Willum Þór Þórs­son",
+        "party":2,
+        "initials":"WÞÞ",
         "district":4,
-        "districtNumber":11,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":9,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
-    "pk":58
+    "pk":57
   },
   {
     "fields":{},
     "model":"parliament.ParliamentMember",
-    "pk":58
+    "pk":57
   },
   {
     "fields":{
@@ -1201,9 +1193,27 @@
         "party":7,
         "initials":"ÞKG",
         "district":4,
-        "districtNumber":4,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":7,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
+    },
+    "model":"politicians.Politician",
+    "pk":58
+  },
+  {
+    "fields":{},
+    "model":"parliament.ParliamentMember",
+    "pk":58
+  },
+  {
+    "fields":{
+        "name":"Þorsteinn Sæmundsson",
+        "party":4,
+        "initials":"ÞorS",
+        "district":3,
+        "districtNumber":10,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
     "pk":59
@@ -1219,9 +1229,9 @@
         "party":7,
         "initials":"ÞorstV",
         "district":1,
-        "districtNumber":5,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":7,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
     "pk":60
@@ -1237,9 +1247,9 @@
         "party":1,
         "initials":"ÞórdG",
         "district":6,
-        "districtNumber":4,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":5,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
     "pk":61
@@ -1253,11 +1263,11 @@
     "fields":{
         "name":"Þórhildur Sunna Ævarsdóttir",
         "party":5,
-        "initials":"ÞÆ",
-        "district":4,
-        "districtNumber":10,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "initials":"ÞSÆ",
+        "district":3,
+        "districtNumber":4,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
     "pk":62
@@ -1273,9 +1283,9 @@
         "party":2,
         "initials":"ÞórE",
         "district":5,
-        "districtNumber":5,
-        "created":"2017-04-25T17:41:28+00:00",
-        "modified":"2017-04-25T17:41:28+00:00"
+        "districtNumber":4,
+        "created":"2017-11-11T17:41:28+00:00",
+        "modified":"2017-11-11T17:41:28+00:00"
     },
     "model":"politicians.Politician",
     "pk":63
