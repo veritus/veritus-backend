@@ -68,9 +68,9 @@ def save_votes(vote_record):
         parliament_member_name = get_parliament_member_name_from_vote(
             vote
         )
-        parliament_member, created = ParliamentMember.objects.get_or_create(
+        parliament_member = ParliamentMember.objects.get_or_create(
             name=parliament_member_name
-        )
+        )[0]
 
         vote_result = get_parliament_member_result_from_vote(vote)
         Vote.objects.create(
