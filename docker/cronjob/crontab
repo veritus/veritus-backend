@@ -1,1 +1,1 @@
-*/1 * * * * root /usr/local/bin/python3 /code/src/manage.py runcrons >> /var/log/cron.log 2>&1
+0 * * * * root /usr/local/bin/python3 /code/src/manage.py runcrons >> /var/log/cron.log 2>&1

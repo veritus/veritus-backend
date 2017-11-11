@@ -7,7 +7,7 @@ class AlthingiStatusToStatusMapper(models.Model):
     status = models.TextField()
 
 class Case(Entity):
-    number = models.IntegerField()
+    number = models.IntegerField(unique=True)
     parliament_session = models.ForeignKey(ParliamentSession)
     case_type = models.TextField()
     althingi_status = models.TextField()

@@ -11,6 +11,7 @@ from party import views as party_views
 from district import views as district_views
 from subjects import views as subject_views
 from politicians import views as politician_views
+from votes import views as vote_views
 
 schema_view = get_schema_view(
     title='Veritus API',
@@ -47,6 +48,8 @@ urlpatterns = [
     url(r'^api/v1/districts/$', district_views.DistrictList.as_view()),
     url(r'^api/v1/districts/(?P<pk>[0-9]+)$', district_views.DistrictDetails.as_view()),
     url(r'^api/v1/subjects/$', subject_views.SubjectList.as_view()),
+    url(r'^api/v1/voteRecord/$', vote_views.VoteRecordList.as_view()),
+    url(r'^api/v1/vote/$', vote_views.VoteList.as_view()),
 
     url(r'^api/v1/rest-auth/', include('rest_auth.urls')),
     url(r'^api/v1/rest-auth/registration/', include('rest_auth.registration.urls'))
