@@ -1,14 +1,11 @@
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework import generics
 from .models import District
-from .serializers import DistrictSerializerRead
+from .serializers import DistrictSerializer
 
-@api_view(['GET'])
-@permission_classes((IsAuthenticatedOrReadOnly,))
-def district_list(request):
-    ''' Get a detailed list of all districts '''
-    if request.method == 'GET':
-        districts = District.objects.all()
-        serializer = DistrictSerializerRead(districts, many=True)
-        return Response(serializer.data)
+class DistrictList(generics.ListAPIView):
+    queryset = District.objects.all()
+    serializer_class = DistrictSerializer
+
+class DistrictDetails(generics.RetrieveAPIView):
+    queryset = District.objects.all()
+    serializer_class = DistrictSerializer

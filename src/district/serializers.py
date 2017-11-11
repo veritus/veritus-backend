@@ -1,6 +1,5 @@
 from rest_framework import serializers
 
-from party.serializers import PartySerializerRead
 from politicians.models import Politician
 from promises.models import Promise
 
@@ -17,7 +16,7 @@ class PromiseField(serializers.ModelSerializer):
 
 class PoliticianSerializer(serializers.ModelSerializer):
 
-    party = PartySerializerRead()
+    party = serializers.PrimaryKeyRelatedField(read_only=True)
     promises = PromiseField(many=True, read_only=True)
 
     class Meta:
@@ -32,9 +31,8 @@ class PoliticianSerializer(serializers.ModelSerializer):
 
 
 
-class DistrictSerializerRead(serializers.ModelSerializer):
-    ''' Serializer when reading districts (GET) '''
-    politicians = PoliticianSerializer(many=True, read_only=True)
+class DistrictSerializer(serializers.ModelSerializer):
+    politicians = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
     class Meta:
         model = District
@@ -43,20 +41,6 @@ class DistrictSerializerRead(serializers.ModelSerializer):
             'id',
             'abbreviation',
             'politicians',
-            'created',
-            'modified'
-            )
-
-
-class DistrictSerializerWrite(serializers.ModelSerializer):
-    ''' Serializer when writing to districts (POST, PUT) '''
-
-    class Meta:
-        model = District
-        fields = (
-            'name',
-            'id',
-            'abbreviation',
             'created',
             'modified'
             )

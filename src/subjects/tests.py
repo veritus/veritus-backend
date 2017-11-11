@@ -33,40 +33,40 @@ class PartyAPI(APITestCase):
     def test_get_all_subjects(self):
         response = self.client.get('/api/v1/subjects/')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 2)
-        self.assertEqual(response.data[0]['name'], 'Hagstjórn')
-        self.assertEqual(response.data[1]['name'], 'Fjárreiður ríkisins')
+        self.assertEqual(response.data['count'], 2)
+        self.assertEqual(response.data['results'][0]['name'], 'Hagstjórn')
+        self.assertEqual(response.data['results'][1]['name'], 'Fjárreiður ríkisins')
 
     def test_name_full_search(self):
         response = self.client.get('/api/v1/subjects/?name=Hagstjórn')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 1)
-        self.assertEqual(response.data[0]['name'], 'Hagstjórn')
+        self.assertEqual(response.data['count'], 1)
+        self.assertEqual(response.data['results'][0]['name'], 'Hagstjórn')
 
     def test_name_startswith_search(self):
         response = self.client.get('/api/v1/subjects/?name__startswith=Hag')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 1)
-        self.assertEqual(response.data[0]['name'], 'Hagstjórn')
+        self.assertEqual(response.data['count'], 1)
+        self.assertEqual(response.data['results'][0]['name'], 'Hagstjórn')
 
     def test_name_contains_search(self):
         response = self.client.get('/api/v1/subjects/?name__contains=agstj')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 1)
-        self.assertEqual(response.data[0]['name'], 'Hagstjórn')
+        self.assertEqual(response.data['count'], 1)
+        self.assertEqual(response.data['results'][0]['name'], 'Hagstjórn')
 
     def test_name_parent_search(self):
         hagstjorn = Subject.objects.filter(name='Hagstjórn').get()
         response = self.client.get('/api/v1/subjects/?parent='+str(hagstjorn.pk))
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 1)
-        self.assertEqual(response.data[0]['name'], 'Fjárreiður ríkisins')
+        self.assertEqual(response.data['count'], 1)
+        self.assertEqual(response.data['results'][0]['name'], 'Fjárreiður ríkisins')
 
     def test_number_search(self):
         response = self.client.get('/api/v1/subjects/?number=1')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 1)
-        self.assertEqual(response.data[0]['name'], 'Hagstjórn')
+        self.assertEqual(response.data['count'], 1)
+        self.assertEqual(response.data['results'][0]['name'], 'Hagstjórn')
 
     def test_post_subject(self):
         token = Token.objects.get(user__username='lauren')
@@ -93,27 +93,19 @@ class PartyAPI(APITestCase):
     def test_get_all_promise_subjects(self):
         response = self.client.get('/api/v1/promises/subjects/')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 2)
-        self.assertEqual(response.data[0]['subject']['name'], 'Hagstjórn')
-        self.assertEqual(response.data[1]['subject']['name'], 'Fjárreiður ríkisins')
-        self.assertEqual(response.data[0]['promise']['name'], 'Promise 1')
-        self.assertEqual(response.data[1]['promise']['name'], 'Promise 2')
+        self.assertEqual(response.data['count'], 2)
 
     def test_get_all_promise_subjects_filter_by_promise(self):
         promise = Promise.objects.filter(name='Promise 1').get()
         response = self.client.get('/api/v1/promises/subjects/?promise='+str(promise.pk))
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 1)
-        self.assertEqual(response.data[0]['subject']['name'], 'Hagstjórn')
-        self.assertEqual(response.data[0]['promise']['name'], 'Promise 1')
+        self.assertEqual(response.data['count'], 1)
 
     def test_get_all_promise_subjects_filter_by_subject(self):
         subject = Subject.objects.filter(name='Hagstjórn').get()
         response = self.client.get('/api/v1/promises/subjects/?subject='+str(subject.pk))
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 1)
-        self.assertEqual(response.data[0]['subject']['name'], 'Hagstjórn')
-        self.assertEqual(response.data[0]['promise']['name'], 'Promise 1')
+        self.assertEqual(response.data['count'], 1)
 
     def test_post_promise_subject(self):
         promise = Promise.objects.filter(name='Promise 2').get()

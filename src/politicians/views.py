@@ -1,14 +1,11 @@
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework import generics
 from .models import Politician
 from .serializers import PoliticianSerializer
 
-@api_view(['GET'])
-@permission_classes((IsAuthenticatedOrReadOnly,))
-def politician_list(request):
-    ''' Get a detailed list of all politicians '''
-    if request.method == 'GET':
-        politicians = Politician.objects.all()
-        serializer = PoliticianSerializer(politicians, many=True)
-        return Response(serializer.data)
+class PoliticianList(generics.ListAPIView):
+    queryset = Politician.objects.all()
+    serializer_class = PoliticianSerializer
+
+class PoliticianDetails(generics.RetrieveAPIView):
+    queryset = Politician.objects.all()
+    serializer_class = PoliticianSerializer
