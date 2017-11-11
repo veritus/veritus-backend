@@ -1,10 +1,11 @@
 import logging
 import traceback
 import os
+import logging
 
 from django_cron import CronJobBase, Schedule
 from parliament.models import ParliamentSession
-import .services as VoteServices
+import votes.services as VoteServices
 
 CRONLOGGER = logging.getLogger('cronJobs')
 

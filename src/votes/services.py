@@ -1,8 +1,11 @@
+import logging
 import case_gather.soupUtils as soupUtils
 from case_gather.models import Case
 from parliament.models import ParliamentMember
 from .models import VoteRecord, Vote
 import main.sentryLogger as SentryLogger
+
+CRONLOGGER = logging.getLogger('cronJobs')
 
 def get_votes_by_parliament_session(parliament_session_number):
     '''
@@ -11,6 +14,7 @@ def get_votes_by_parliament_session(parliament_session_number):
         Then we go to the details page to see what each individual
         parliament member voted and save them as a Vote
     '''
+    CRONLOGGER.info(parliament_session_number)
     link = "http://www.althingi.is/altext/xml/atkvaedagreidslur/?lthing="
     details_link = "http://www.althingi.is/altext/xml/atkvaedagreidslur/atkvaedagreidsla/?numer="
     votes_soup = soupUtils.getSoupFromLink(link + str(parliament_session_number))
@@ -83,7 +87,6 @@ def get_number_of_votes(kind, vote_overview_soup):
 
 def get_althingi_result(vote_overview_soup):
     return vote_overview_soup.find('greiðirekkiatkvæði').string
-
 
 def get_parliament_member_votes(vote_details_soup):
     return vote_details_soup.find('atkvæðaskrá').find_all('þingmaður')
