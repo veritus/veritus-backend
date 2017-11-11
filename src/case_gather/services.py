@@ -1,5 +1,4 @@
 #!/usr/bin/python
-import logging
 import case_gather.xml_parser as XMLParser
 
 from case_gather.models import Case, CaseCreator, AlthingiStatusToStatusMapper, Subject
@@ -7,22 +6,20 @@ from parliament.models import ParliamentMember
 from subjects.models import CaseSubject
 import main.sentryLogger as sentryLogger
 
-CRONLOGGER = logging.getLogger('cronJobs')
+import main.sentryLogger as SentryLogger
 
 def update_cases_by_session_number(parliament_session):
     """
         Takes in a parliament session, scrapes the althingi.is website
         and creates new Cases and relevant information from the data
     """
-    case_numbers = get_current_case_numbers_by_parliament_session(parliament_session)
-
     new_cases = XMLParser.get_case_data(parliament_session.session_number)
     for case in new_cases:
         #  Case has keys:
         #  'number', 'name', 'case_type', 'althingi_status'
         #  'rel_cases', 'subjects', 'session'
         case_number_int = int(case['number'])
-        if case_number_int not in case_numbers:
+        if not Case.objects.filter(number=case_number_int).exists():
             # If the case does not exist, we create it
 
             # We find the status from the althingi status
@@ -41,22 +38,6 @@ def update_cases_by_session_number(parliament_session):
             create_subjects(parliament_session, new_case, case['subject_names'])
 
             createCaseCreators(case['case_creator_names'], new_case)
-
-
-def get_current_case_numbers_by_parliament_session(parliament_session):
-    """
-        Takes in a parliament_session, retrieves the cases connected to it
-        from the database and returns their ids
-    """
-    current_cases = Case.objects.filter(
-        parliament_session=parliament_session
-    )
-
-    case_numbers = []
-    for case in current_cases:
-        case_numbers.append(case.number)
-    return case_numbers
-
 
 def getCaseStatus(althingi_status):
     """
@@ -92,7 +73,7 @@ def createCaseCreators(case_creator_names, case):
                 parliament_member=parliament_member
             )
         else:
-            sentryLogger.logToSentry('Parliament member not found: ' + case_creator_name)
+            sentryLogger.error('Parliament member not found: ' + case_creator_name)
 
 def create_althingi_status_to_status_map():
     """

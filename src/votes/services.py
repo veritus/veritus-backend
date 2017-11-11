@@ -1,59 +1,69 @@
 import logging
+import main.sentryLogger as SentryLogger
 import case_gather.soupUtils as soupUtils
 from case_gather.models import Case
 from parliament.models import ParliamentMember
 from .models import VoteRecord, Vote
-import main.sentryLogger as SentryLogger
 
-CRONLOGGER = logging.getLogger('cronJobs')
-
-def get_votes_by_parliament_session(parliament_session_number):
+def get_votes_by_parliament_session(parliament_session):
     '''
         We scrape the overall vote records for the parliament session
         and save them as a VoteRecord.
         Then we go to the details page to see what each individual
         parliament member voted and save them as a Vote
     '''
-    CRONLOGGER.info(parliament_session_number)
     link = "http://www.althingi.is/altext/xml/atkvaedagreidslur/?lthing="
     details_link = "http://www.althingi.is/altext/xml/atkvaedagreidslur/atkvaedagreidsla/?numer="
-    votes_soup = soupUtils.getSoupFromLink(link + str(parliament_session_number))
-    vote_records = collect_vote_records(votes_soup)
+    votes_soup = soupUtils.getSoupFromLink(link + str(parliament_session.session_number))
+    vote_records = collect_vote_records(votes_soup, parliament_session)
     for vote_record in vote_records:
-        VoteRecord.objects.create(
-            case = vote_record.case,
-            althingi_id = vote_record.althingi_id,
-            yes = vote_record.number_of_yes,
-            no = vote_record.number_of_no,
-            didNotVote = vote_record.number_of_did_not_vote,
-            althingi_result = vote_record.althingi_result,
-        )
-        vote_details_soup = soupUtils.getSoupFromLink(details_link + str(vote_record.althingi_id))
-        parliament_member_votes = get_parliament_member_votes(vote_details_soup)
-        for parliament_member_vote in parliament_member_votes:
-            try: 
-                parliament_member = ParliamentMember.objects.get(
-                    name = parliament_member_vote['nafn']
+        vote_record_althingi_id = vote_record['althingi_id']
+        vote_record_exits = VoteRecord.objects.filter(
+            althingi_id=vote_record_althingi_id
+        ).exists
+        if not vote_record_exits:
+            created_vote_record = VoteRecord.objects.create(
+                case=vote_record['case'],
+                althingi_id=vote_record_althingi_id,
+                yes=vote_record['number_of_yes'],
+                no=vote_record['number_of_no'],
+                didNotVote=vote_record['number_of_did_not_vote'],
+                althingi_result=vote_record['althingi_result'],
+            )
+            vote_details_soup = soupUtils.getSoupFromLink(
+                details_link + str(vote_record['althingi_id'])
+            )
+            parliament_member_votes = get_parliament_member_votes(vote_details_soup)
+            for parliament_member_vote in parliament_member_votes:
+                parliament_member_name = get_parliament_member_name_from_vote(
+                    parliament_member_vote
                 )
-                Vote.objects.create(
-                    parliament_member=parliament_member,
-                    althingi_result=parliament_member_vote['atkvæði']
+                parliament_member = ParliamentMember.objects.filter(
+                    name=parliament_member_name
                 )
-            except DoesNotExist:
-                SentryLogger.logToSentry('ParliamentMember not found: ' + parliament_member_vote['nafn'])
-                raise
+                if parliament_member.exists():
+                    vote_result = get_parliament_member_result_from_vote(parliament_member_vote)
+                    Vote.objects.create(
+                        parliament_member=parliament_member.get(),
+                        althingi_result=vote_result,
+                        vote_record=created_vote_record
+                    )
+                else:
+                    SentryLogger.error(
+                        'ParliamentMember not found: '
+                        + parliament_member_name
+                    )
 
-
-def collect_vote_records(soup):
+def collect_vote_records(soup, parliament_session):
     vote_records = []
     for vote_record in get_all_votes(soup):
         case_number = get_case_number(vote_record)
         case = Case.objects.get(
             number=case_number,
-            parliament_session=parliament_session_number,
+            parliament_session=parliament_session,
         )
         vote_overview = get_vote_overview(vote_record)
-        
+
         vote = {
             'case': case,
             'althingi_id': get_althingi_id(vote_record),
@@ -63,9 +73,9 @@ def collect_vote_records(soup):
             'althingi_result': get_althingi_result(vote_overview),
         }
         vote_records.append(vote)
-        
+
     return vote_records
-        
+
 
 def get_all_votes(soup):
     """
@@ -83,10 +93,25 @@ def get_vote_overview(vote_record_soup):
     return vote_record_soup.find('samantekt')
 
 def get_number_of_votes(kind, vote_overview_soup):
-    return vote_overview_soup.find(kind).find("fjöldi").string
+    kind_tag = vote_overview_soup.find(kind)
+    if kind_tag is not None:
+        return kind_tag.find("fjöldi").string
+    return None
 
 def get_althingi_result(vote_overview_soup):
-    return vote_overview_soup.find('greiðirekkiatkvæði').string
+    did_not_vote_tag = vote_overview_soup.find('greiðirekkiatkvæði')
+    if did_not_vote_tag is not None:
+        return did_not_vote_tag.string
+    return None
 
 def get_parliament_member_votes(vote_details_soup):
-    return vote_details_soup.find('atkvæðaskrá').find_all('þingmaður')
+    votes_tag = vote_details_soup.find('atkvæðaskrá')
+    if votes_tag is not None:
+        return votes_tag.find_all('þingmaður')
+    return []
+
+def get_parliament_member_name_from_vote(vote_soup):
+    return vote_soup.find('nafn').string
+
+def get_parliament_member_result_from_vote(vote_soup):
+    return vote_soup.find('atkvæði').string

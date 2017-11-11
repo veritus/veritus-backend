@@ -166,31 +166,15 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'verbose'
         },
-        'cronJobHandler': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/code/src/logs/cronJobs.log',
-            'formatter': 'verbose'
-        },
     },
     'loggers': {
-        'cronJobs': {
-            'handlers': ['cronJobHandler'],
-            'propagate': False,
-            'level': 'DEBUG',
-        },
-        'cronJobServices': {
-            'handlers': ['cronJobHandler'],
+        'console': {
+            'handlers': ['console'],
             'propagate': False,
             'level': 'DEBUG'
         },
-        'promise': {
-            'handlers': ['console'],
-            'propagate': False,
-            'level': 'DEBUG',
-        },
         'django.db.backends': {
-            'level': 'ERROR',
+            'level': 'DEBUG',
             'handlers': ['console'],
             'propagate': False,
         },
@@ -198,8 +182,8 @@ LOGGING = {
 }
 
 CRON_CLASSES = [
-    "promises.cron_jobs.ConnectBillsAndPromises",
     "case_gather.cron_jobs.GatherCases",
+    "promises.cron_jobs.ConnectBillsAndPromises",
     "votes.cron_jobs.GatherVotes",
 ]
 

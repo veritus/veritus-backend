@@ -9,7 +9,7 @@ class VoteRecord(Entity):
     The voting record of each case
     '''
     case = models.ForeignKey(Case)
-    althingi_id = models.IntegerField()
+    althingi_id = models.IntegerField(unique=True)
     '''
     Number of people who voted yes
     '''
@@ -30,3 +30,4 @@ class VoteRecord(Entity):
 class Vote(Entity):
     parliament_member = models.ForeignKey(ParliamentMember)
     althingi_result = models.TextField()
+    vote_record = models.ForeignKey(VoteRecord, null=True)

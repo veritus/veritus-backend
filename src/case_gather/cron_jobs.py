@@ -5,21 +5,20 @@ import os
 import case_gather.services as CaseGatheringService
 from django_cron import CronJobBase, Schedule
 from parliament.models import ParliamentSession
-
-CRONLOGGER = logging.getLogger('cronJobs')
+import main.sentryLogger as SentryLogger
 
 class GatherCases(CronJobBase):
-    RUN_EVERY_MINS = os.environ["GATHER_CASES_CRON_TIME_SECONDS"]
+    RUN_EVERY_MINS = int(os.environ["GATHER_CASES_CRON_TIME_SECONDS"])
 
     schedule = Schedule(run_every_mins=RUN_EVERY_MINS)
     code = 'case_gather.GatherCases'    # a unique code
 
     def do(self):
         try:
-            CRONLOGGER.info('Starting case gather')
+            SentryLogger.info('Starting case gather')
             parliament_session = ParliamentSession.objects.latest('created')
             CaseGatheringService.update_cases_by_session_number(parliament_session)
-            CRONLOGGER.info('Case gather done')
+            SentryLogger.info('Case gather done')
         except BaseException:
-            CRONLOGGER.error(traceback.format_exc())
+            SentryLogger.error(traceback.format_exc())
             raise

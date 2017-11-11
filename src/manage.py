@@ -3,8 +3,6 @@ import os
 import sys
 
 if __name__ == "__main__":
-    if not os.path.exists("src/logs"):
-        os.makedirs("src/logs")
     try:
         from django.core.management import execute_from_command_line
     except ImportError:
