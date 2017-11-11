@@ -30,4 +30,4 @@ class VoteRecord(Entity):
 class Vote(Entity):
     parliament_member = models.ForeignKey(ParliamentMember)
     althingi_result = models.TextField()
-    vote_record = models.ForeignKey(VoteRecord, null=True)
+    vote_record = models.ForeignKey(VoteRecord, related_name="votes", null=True)
