@@ -22,6 +22,7 @@ services:
       - ALLOWED_HOSTS=["*"]
       - CORS_ORIGIN_WHITELIST=('localhost:3000',)
       - GATHER_CASES_CRON_TIME_SECONDS=1440
+      - GATHER_VOTES_CRON_TIME_SECONDS=1
       - LINK_CASES_AND_PROMISES_CRON_TIME_SECONDS=1440
       - DJANGO_SETTINGS_MODULE=politech_backend.settings.development
     volumes:
