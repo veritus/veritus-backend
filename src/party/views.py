@@ -1,15 +1,11 @@
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework import generics
 from .models import Party
-from .serializers import PartySerializerRead
+from .serializers import PartySerializer
 
+class PartyList(generics.ListAPIView):
+    queryset = Party.objects.all()
+    serializer_class = PartySerializer
 
-@api_view(['GET'])
-@permission_classes((IsAuthenticatedOrReadOnly,))
-def party_list(request):
-    ''' Get a list of political parties '''
-    if request.method == 'GET':
-        parties = Party.objects.all()
-        serializer = PartySerializerRead(parties, many=True)
-        return Response(serializer.data)
+class PartyDetails(generics.RetrieveAPIView):
+    queryset = Party.objects.all()
+    serializer_class = PartySerializer

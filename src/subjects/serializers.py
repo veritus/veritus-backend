@@ -1,5 +1,4 @@
 from rest_framework import serializers
-from promises.serializers import PromiseSerializerRead
 from case_gather.models import Subject
 from .models import CaseSubject, PromiseSubject
 
@@ -21,24 +20,12 @@ class SubjectSerializer(serializers.ModelSerializer):
 
 class CaseSubjectSerializer(serializers.ModelSerializer):
 
-    subject = SubjectSerializer()
-
     class Meta:
         model = CaseSubject
         fields = ('id', 'subject', 'created', 'modified')
 
 
-class PromiseSubjectSerializerWrite(serializers.ModelSerializer):
-
-    class Meta:
-        model = PromiseSubject
-        fields = ('id', 'subject', 'promise', 'created', 'modified')
-
-
-class PromiseSubjectSerializerRead(serializers.ModelSerializer):
-
-    subject = SubjectSerializer()
-    promise = PromiseSerializerRead()
+class PromiseSubjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = PromiseSubject
