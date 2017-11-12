@@ -31,3 +31,6 @@ class Vote(Entity):
     parliament_member = models.ForeignKey(ParliamentMember)
     althingi_result = models.TextField()
     vote_record = models.ForeignKey(VoteRecord, related_name="votes", null=True)
+    class Meta:
+        # Only one vote per parliament member
+        unique_together = ('parliament_member', 'vote_record',)
