@@ -68,9 +68,15 @@ def save_votes(vote_record, parliament_session):
         parliament_member_name = get_parliament_member_name_from_vote(
             vote
         )
-        parliament_member = ParliamentMember.objects.get_or_create(
-            name=parliament_member_name
-        )[0]
+        try:
+            parliament_member = ParliamentMember.objects.get(
+                name=parliament_member_name
+            )
+        except ParliamentMember.DoesNotExist:
+            parliament_member = ParliamentMember.objects.create(
+                name=parliament_member_name
+            )
+
         parliament_session.parliament.parliament_members.add(parliament_member)
 
         vote_result = get_parliament_member_result_from_vote(vote)
