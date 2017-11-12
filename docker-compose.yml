@@ -25,6 +25,10 @@ services:
       - GATHER_VOTES_CRON_TIME_SECONDS=1440
       - LINK_CASES_AND_PROMISES_CRON_TIME_SECONDS=1440
       - DJANGO_SETTINGS_MODULE=politech_backend.settings.development
+      - VIRTUAL_HOST=codebee.me
+      - VIRTUAL_PORT=8000
+      - LETSENCRYPT_HOST=codebee.me
+      - LETSENCRYPT_EMAIL=ragnarhardarson90@gmail.com
     volumes:
       - ./:/code
       - ./logs/var:/var/log
@@ -34,3 +38,23 @@ services:
     depends_on:
       db:
         condition: service_healthy
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    environment:
+     - DEFAULT_HOST=codebee.me
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/etc/nginx/vhost.d"
+      - "/usr/share/nginx/html"
+      - "/var/run/docker.sock:/tmp/docker.sock:ro"
+      - "/etc/nginx/certs"
+
+  letsencrypt-nginx-proxy-companion:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    volumes_from:
+      - "nginx-proxy"
