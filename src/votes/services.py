@@ -15,7 +15,7 @@ def get_votes_by_parliament_session(parliament_session):
     '''
     votes_soup = soupUtils.getSoupFromLink(link + str(parliament_session.session_number))
     vote_records = collect_vote_records(votes_soup, parliament_session)
-    save_vote_records(vote_records)
+    save_vote_records(vote_records, parliament_session)
 
 def collect_vote_records(soup, parliament_session):
     vote_records = []
@@ -40,7 +40,7 @@ def collect_vote_records(soup, parliament_session):
             vote_records.append(vote)
     return vote_records
 
-def save_vote_records(vote_records):
+def save_vote_records(vote_records, parliament_session):
     for vote_record in vote_records:
         vote_record_althingi_id = vote_record['althingi_id']
         vote_record_exists = VoteRecord.objects.filter(
@@ -55,9 +55,9 @@ def save_vote_records(vote_records):
                 didNotVote=vote_record['number_of_did_not_vote'],
                 althingi_result=vote_record['althingi_result'],
             )
-            save_votes(created_vote_record)
+            save_votes(created_vote_record, parliament_session)
 
-def save_votes(vote_record):
+def save_votes(vote_record, parliament_session):
     vote_details_soup = soupUtils.getSoupFromLink(
         details_link + str(vote_record.althingi_id)
     )
@@ -71,6 +71,7 @@ def save_votes(vote_record):
         parliament_member = ParliamentMember.objects.get_or_create(
             name=parliament_member_name
         )[0]
+        parliament_session.parliament.parliament_members.add(parliament_member)
 
         vote_result = get_parliament_member_result_from_vote(vote)
         Vote.objects.create(

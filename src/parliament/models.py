@@ -13,4 +13,3 @@ class Parliament(Entity):
 class ParliamentSession(Entity):
     session_number = models.IntegerField()
     parliament = models.ForeignKey(Parliament)
-

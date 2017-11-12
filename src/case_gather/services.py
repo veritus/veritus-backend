@@ -61,16 +61,11 @@ def createCaseCreators(case_creator_names, case):
     a new one has to be created in the database
     """
     for case_creator_name in case_creator_names:
-        parliament_member = ParliamentMember.objects.filter(
+        parliament_member = ParliamentMember.objects.get_or_create(
             name=case_creator_name
-        )
-
-        if not parliament_member.exists():
-            parliament_member = ParliamentMember.objects.create(
-                name=case_creator_name
-            )
-        else:
-            parliament_member = parliament_member.get()
+        )[0]
+        # Add parliament member to parliament
+        case.parliament_session.parliament.parliament_members.add(parliament_member)
 
         CaseCreator.objects.create(
             case=case,
