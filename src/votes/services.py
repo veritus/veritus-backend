@@ -101,9 +101,9 @@ def get_number_of_votes(kind, vote_overview_soup):
     return None
 
 def get_althingi_result(vote_overview_soup):
-    did_not_vote_tag = vote_overview_soup.find('greiðirekkiatkvæði')
-    if did_not_vote_tag is not None:
-        return did_not_vote_tag.string
+    result_tag = vote_overview_soup.find('afgreiðsla')
+    if result_tag is not None:
+        return result_tag.string
     return None
 
 def get_parliament_member_votes(vote_details_soup):
