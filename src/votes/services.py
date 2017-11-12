@@ -18,6 +18,10 @@ def get_votes_by_parliament_session(parliament_session):
     save_vote_records(vote_records)
 
 def collect_vote_records(soup, parliament_session):
+    '''
+        We go through the soup and gather vote records into a
+        dictionary that we return.
+    '''
     vote_records = []
     for vote_record in get_all_votes(soup):
         case_number = get_case_number(vote_record)
@@ -26,6 +30,7 @@ def collect_vote_records(soup, parliament_session):
             parliament_session=parliament_session,
         )
         if case.exists():
+            # We only save the vote if we have the case in our system
             case = case.get()
             vote_overview = get_vote_overview(vote_record)
 
@@ -41,13 +46,30 @@ def collect_vote_records(soup, parliament_session):
     return vote_records
 
 def save_vote_records(vote_records):
+    '''
+        Take in a dictionary of vote records and either create or update
+        depending on whether it exists already. We then also save each
+        individual vote
+    '''
     for vote_record in vote_records:
         vote_record_althingi_id = vote_record['althingi_id']
-        vote_record_exists = VoteRecord.objects.filter(
+
+        vote_record_object = VoteRecord.objects.filter(
             althingi_id=vote_record_althingi_id
-        ).exists()
-        if not vote_record_exists:
-            created_vote_record = VoteRecord.objects.create(
+        )
+        if vote_record_object.exists():
+            # If it already exists we update the vote results
+            # if they are present.
+            vote_record_object.update(
+                yes=vote_record['number_of_yes'],
+                no=vote_record['number_of_no'],
+                didNotVote=vote_record['number_of_did_not_vote'],
+                althingi_result=vote_record['althingi_result'],
+            )
+            vote_record_object = vote_record_object.get()
+        else:
+            # If we dont have the vote record, we create it
+            vote_record_object = VoteRecord.objects.create(
                 case=vote_record['case'],
                 althingi_id=vote_record_althingi_id,
                 yes=vote_record['number_of_yes'],
@@ -55,9 +77,15 @@ def save_vote_records(vote_records):
                 didNotVote=vote_record['number_of_did_not_vote'],
                 althingi_result=vote_record['althingi_result'],
             )
-            save_votes(created_vote_record)
+        save_votes(vote_record_object)
 
 def save_votes(vote_record):
+    '''
+        We take in the newly create vote record and look at its details page.
+        There we can find each individual vote made by each parliament member,
+        if a vote has taken place. We then create a new vote or update the existing
+        one.
+    '''
     vote_details_soup = soupUtils.getSoupFromLink(
         details_link + str(vote_record.althingi_id)
     )
@@ -68,16 +96,28 @@ def save_votes(vote_record):
         parliament_member_name = get_parliament_member_name_from_vote(
             vote
         )
+        # If the parliament member doesnt exist, we create him.
         parliament_member = ParliamentMember.objects.get_or_create(
             name=parliament_member_name
         )[0]
 
         vote_result = get_parliament_member_result_from_vote(vote)
-        Vote.objects.create(
+        vote = Vote.objects.filter(
             parliament_member=parliament_member,
-            althingi_result=vote_result,
             vote_record=vote_record
         )
+        if vote.exists():
+            # Update the result if the vote exists
+            vote.update(
+                althingi_result=vote_result,
+            )
+        else:
+            # Create new vote if it does not exist
+            Vote.objects.create(
+                parliament_member=parliament_member,
+                althingi_result=vote_result,
+                vote_record=vote_record
+            )
 
 def get_all_votes(soup):
     """
