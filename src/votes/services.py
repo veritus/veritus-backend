@@ -1,5 +1,6 @@
 import case_gather.soupUtils as soupUtils
 from case_gather.models import Case
+import main.sentryLogger as SentryLogger
 from parliament.models import ParliamentMember
 from .models import VoteRecord, Vote
 
@@ -15,7 +16,7 @@ def get_votes_by_parliament_session(parliament_session):
     '''
     votes_soup = soupUtils.getSoupFromLink(link + str(parliament_session.session_number))
     vote_records = collect_vote_records(votes_soup, parliament_session)
-    save_vote_records(vote_records)
+    save_vote_records(vote_records, parliament_session)
 
 def collect_vote_records(soup, parliament_session):
     '''
@@ -45,7 +46,7 @@ def collect_vote_records(soup, parliament_session):
             vote_records.append(vote)
     return vote_records
 
-def save_vote_records(vote_records):
+def save_vote_records(vote_records, parliament_session):
     '''
         Take in a dictionary of vote records and either create or update
         depending on whether it exists already. We then also save each
@@ -77,9 +78,9 @@ def save_vote_records(vote_records):
                 didNotVote=vote_record['number_of_did_not_vote'],
                 althingi_result=vote_record['althingi_result'],
             )
-        save_votes(vote_record_object)
+        save_votes(vote_record_object, parliament_session)
 
-def save_votes(vote_record):
+def save_votes(vote_record, parliament_session):
     '''
         We take in the newly create vote record and look at its details page.
         There we can find each individual vote made by each parliament member,
@@ -96,10 +97,17 @@ def save_votes(vote_record):
         parliament_member_name = get_parliament_member_name_from_vote(
             vote
         )
-        # If the parliament member doesnt exist, we create him.
-        parliament_member = ParliamentMember.objects.get_or_create(
-            name=parliament_member_name
-        )[0]
+        try:
+            parliament_member = ParliamentMember.objects.get(
+                name=parliament_member_name
+            )
+        except ParliamentMember.DoesNotExist:
+            parliament_member = ParliamentMember.objects.create(
+                name=parliament_member_name
+            )
+            SentryLogger.warning('Parliament member created: ' + parliament_member_name)
+
+        parliament_session.parliament.parliament_members.add(parliament_member)
 
         vote_result = get_parliament_member_result_from_vote(vote)
         vote = Vote.objects.filter(

@@ -28,6 +28,7 @@ services:
       - GATHER_VOTES_CRON_TIME_SECONDS=1440
       - LINK_CASES_AND_PROMISES_CRON_TIME_SECONDS=1440
       - DJANGO_SETTINGS_MODULE=politech_backend.settings.development
+      - PARLIAMENT_SESSIONS_TO_LOOK_AT=3
     depends_on:
       db:
         condition: service_healthy

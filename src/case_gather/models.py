@@ -17,6 +17,9 @@ class Case(Entity):
 class CaseCreator(Entity):
     parliament_member = models.ForeignKey(ParliamentMember)
     case = models.ForeignKey(Case, related_name='case_creators')
+    class Meta:
+        # Dont want promise related to same tag multiple times
+        unique_together = ('parliament_member', 'case',)
 
 class Subject(Entity):
     parliament_session = models.ForeignKey(ParliamentSession, null=True, blank=True)
