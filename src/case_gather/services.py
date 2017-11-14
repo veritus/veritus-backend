@@ -1,9 +1,10 @@
 #!/usr/bin/python
 import case_gather.xml_parser as XMLParser
-
 from case_gather.models import Case, CaseCreator, AlthingiStatusToStatusMapper, Subject
+import main.sentryLogger as SentryLogger
 from parliament.models import ParliamentMember
 from subjects.models import CaseSubject
+
 
 def update_cases_by_session_number(parliament_session):
     """
@@ -69,6 +70,7 @@ def createCaseCreators(case_creator_names, case):
             parliament_member = ParliamentMember.objects.create(
                 name=case_creator_name
             )
+            SentryLogger.warning('Parliament member created: ' + case_creator_name)
         # Add parliament member to parliament
         case.parliament_session.parliament.parliament_members.add(parliament_member)
 

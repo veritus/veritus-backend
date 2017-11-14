@@ -1,5 +1,6 @@
 import case_gather.soupUtils as soupUtils
 from case_gather.models import Case
+import main.sentryLogger as SentryLogger
 from parliament.models import ParliamentMember
 from .models import VoteRecord, Vote
 
@@ -104,6 +105,7 @@ def save_votes(vote_record, parliament_session):
             parliament_member = ParliamentMember.objects.create(
                 name=parliament_member_name
             )
+            SentryLogger.warning('Parliament member created: ' + parliament_member_name)
 
         parliament_session.parliament.parliament_members.add(parliament_member)
 
