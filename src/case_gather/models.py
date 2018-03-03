@@ -7,12 +7,14 @@ class AlthingiStatusToStatusMapper(models.Model):
     status = models.TextField()
 
 class Case(Entity):
-    number = models.IntegerField(unique=True)
+    number = models.IntegerField()
     parliament_session = models.ForeignKey(ParliamentSession)
     case_type = models.TextField()
     althingi_status = models.TextField()
     althingi_link = models.TextField()
     status = models.TextField()
+    class Meta:
+        unique_together = ('parliament_session', 'number',)
 
 class CaseCreator(Entity):
     parliament_member = models.ForeignKey(ParliamentMember)

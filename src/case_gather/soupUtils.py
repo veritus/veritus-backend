@@ -7,7 +7,13 @@ def getSoupFromLink(link):
     Takes in a URL link that returns XML
     and returns a BeautifulSoup object
     """
-    return BeautifulSoup(requests.get(link).content, features="xml")
+    print('before request')
+    print(link)
+    request = requests.get(link, timeout=5)
+    print('after request')
+    print(request)
+    content = request.content
+    return BeautifulSoup(content, features="xml")
 
 def get_attribute_value(soup, element, attribute):
     """

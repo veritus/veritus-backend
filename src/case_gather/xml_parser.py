@@ -10,28 +10,36 @@ def get_case_data(parliament_session_number):
     """
     # Gets all cases with some limited data
     link = "http://www.althingi.is/altext/xml/thingmalalisti/?lthing="
+    print('before soup')
     cases_soup = soupUtils.getSoupFromLink(link + str(parliament_session_number))
+    print('after soup')
     cases = collectCases(cases_soup)
 
     link_details = """http://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=%i&malnr=""" % parliament_session_number
     cases_data = []
     for case in cases:
         # Go through cases and get more details from them
-        details_soup = soupUtils.getSoupFromLink(link_details + str(case['number']))
-
-        case = {
-            'number': case['number'],
-            'name': case['name'],
-            'rel_cases': getRelatedCases(details_soup),
-            'case_type': case['case_type'],
-            'session': parliament_session_number,
-            'althingi_status': getStatus(details_soup),
-            'subject_names': getSubjectNames(details_soup),
-            'althingi_link': case['althingi_link'],
-            'case_creator_names': getCaseCreatorNames(details_soup)
-        }
-        cases_data.append(case)
-
+        try:
+            print('lookin at '+case['number'])
+            details_soup = soupUtils.getSoupFromLink(link_details + str(case['number']))
+            print('after soup lookin at')
+            case = {
+                'number': case['number'],
+                'name': case['name'],
+                'rel_cases': getRelatedCases(details_soup),
+                'case_type': case['case_type'],
+                'session': parliament_session_number,
+                'althingi_status': getStatus(details_soup),
+                'subject_names': getSubjectNames(details_soup),
+                'althingi_link': case['althingi_link'],
+                'case_creator_names': getCaseCreatorNames(details_soup)
+            }
+            print(case['name'])
+            cases_data.append(case)
+        except: 
+            print('error')
+            pass
+    print(cases_data)
     return cases_data
 
 def collectCases(soup):
@@ -95,6 +103,7 @@ def getStatus(soup):
         Takes in a soup and returns the status of the case
     """
     status = soup.find("staðamáls")
+    print(status)
     if status:
         return status.string
     return ""
@@ -109,6 +118,8 @@ def getSubjectNames(soup):
     for subject_element in soup.find_all('efnisflokkur'):
         subject_name = subject_element.find("heiti").string
         subject_names.append(subject_name)
+    print('subjectnames')
+    print(subject_names)
     return subject_names
 
 def getRelatedCases(soup):
@@ -117,7 +128,8 @@ def getRelatedCases(soup):
         their ids
     """
     related_cases = soupUtils.get_attribute_value(soup, "mál", "málsnúmer")
-
+    print('related_cases')
+    print(related_cases)
     # remove the first rel_case, as it is the actual case
     if related_cases:
         related_cases.pop(0)
@@ -134,4 +146,6 @@ def getCaseCreatorNames(soup):
     for case_creator_element in case_creators_elements:
         name = case_creator_element.find('nafn').string
         case_creators_names.append(name)
+    print('casecreatornames')
+    print(case_creators_names)
     return case_creators_names
