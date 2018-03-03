@@ -1,4 +1,4 @@
-from rest_framework import status, generics
+from rest_framework import status, generics, viewsets
 from rest_framework.response import Response
 import django_filters
 
@@ -7,11 +7,13 @@ from .serializers import SubjectSerializer
 from .serializers import PromiseSubjectSerializer
 from .models import PromiseSubject
 
-class PromiseSubjectList(generics.ListCreateAPIView):
+
+class PromiseSubjectList(viewsets.ModelViewSet):
     queryset = PromiseSubject.objects.all()
     serializer_class = PromiseSubjectSerializer
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
     filter_fields = ('promise', 'subject')
+
 
 class SubjectFilter(django_filters.rest_framework.FilterSet):
     class Meta:
@@ -21,7 +23,8 @@ class SubjectFilter(django_filters.rest_framework.FilterSet):
             'parent': ['exact'],
             'number': ['exact'],
             'parliament_session': ['exact']
-            }
+        }
+
 
 class SubjectList(generics.ListAPIView):
     '''
@@ -40,10 +43,12 @@ class SubjectList(generics.ListAPIView):
         serializer = SubjectSerializer(data=request.data)
         if serializer.is_valid():
             # We capitalize the subject as we only want to have capitalized subjects
-            serializer.validated_data['name'] = serializer.validated_data['name'].capitalize()
+            serializer.validated_data['name'] = serializer.validated_data['name'].capitalize(
+            )
 
             validated_subject = serializer.validated_data
-            subject_exists = Subject.objects.filter(name=validated_subject['name'])
+            subject_exists = Subject.objects.filter(
+                name=validated_subject['name'])
 
             if subject_exists.exists():
                 # If the subject already exists, we dont want to create a duplicate.
