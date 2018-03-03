@@ -19,7 +19,10 @@ def update_cases_by_session_number(parliament_session):
         case_number_int = int(case['number'])
         print(case_number_int)
         print(case['name'])
-        case_exists = Case.objects.filter(number=case_number_int, parliament_session=parliament_session)
+        case_exists = Case.objects.filter(
+            number=case_number_int,
+            parliament_session=parliament_session
+        )
         # We find the status from the althingi status
         althingi_status = case['althingi_status']
         print(case_exists.exists())
@@ -29,7 +32,7 @@ def update_cases_by_session_number(parliament_session):
             update_case.althingi_status = althingi_status
             update_case.status = getCaseStatus(althingi_status)
             update_case.save()
-        else: 
+        else:
             # If the case does not exist, we create it
 
             new_case = Case.objects.create(

@@ -130,7 +130,7 @@ def save_votes(vote_record, parliament_session):
                     althingi_result=vote_result,
                     vote_record=vote_record
                 )
-    except: 
+    except:
         pass
 
 def get_all_votes(soup):

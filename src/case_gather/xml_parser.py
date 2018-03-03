@@ -36,9 +36,8 @@ def get_case_data(parliament_session_number):
             }
             print(case['name'])
             cases_data.append(case)
-        except: 
+        except:
             print('error')
-            pass
     print(cases_data)
     return cases_data
 
