@@ -19,7 +19,7 @@ def get_votes_by_parliament_session(parliament_session):
         vote_records = collect_vote_records(votes_soup, parliament_session)
         save_vote_records(vote_records, parliament_session)
     except:
-        pass
+        print('Failed to get votes by parliament')
 
 def collect_vote_records(soup, parliament_session):
     '''
