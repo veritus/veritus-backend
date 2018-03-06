@@ -25,7 +25,9 @@ def update_cases_by_session_number(parliament_session):
         )
 
         althingi_status = case['althingi_status']
-        print(case_exists.exists())
+        print('Althingi case number: ' + case_number_int)
+        print('Althingi case name : ' + case['name'])
+        print('Did we already have this case? -> ' case_exists.exists())
         if case_exists.exists():
             # If the case exists we update
             update_case = case_exists.get()
