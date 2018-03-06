@@ -7,10 +7,9 @@ def getSoupFromLink(link):
     Takes in a URL link that returns XML
     and returns a BeautifulSoup object
     """
-    print('before request')
-    print(link)
+    print('before calling requests with: ' + link)
     request = requests.get(link, timeout=5)
-    print('after request')
+    print('after request has executed')
     print(request)
     content = request.content
     return BeautifulSoup(content, features="xml")
