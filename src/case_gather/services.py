@@ -23,7 +23,7 @@ def update_cases_by_session_number(parliament_session):
             number=case_number_int,
             parliament_session=parliament_session
         )
-        # We find the status from the althingi status
+
         althingi_status = case['althingi_status']
         print(case_exists.exists())
         if case_exists.exists():
