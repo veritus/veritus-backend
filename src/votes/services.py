@@ -131,7 +131,7 @@ def save_votes(vote_record, parliament_session):
                     vote_record=vote_record
                 )
     except:
-        pass
+        print('Saving votes failed')
 
 def get_all_votes(soup):
     """
