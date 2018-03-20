@@ -1,6 +1,6 @@
 from rest_framework import serializers
-from .models import Vote, VoteRecord
 from parliament.serializers import ParliamentMemberSerializer
+from .models import Vote, VoteRecord
 
 class VoteSerializer(serializers.ModelSerializer):
     vote_record = serializers.PrimaryKeyRelatedField(read_only=True)
@@ -26,4 +26,3 @@ class VoteRecordSerializer(serializers.ModelSerializer):
             'althingi_result',
             'votes',
         )
-
