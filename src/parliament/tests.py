@@ -3,6 +3,7 @@ from party.models import Party
 from district.models import District
 from .models import ParliamentMember
 
+
 class ParliamentMemberAPI(APITestCase):
 
     def setUp(self):

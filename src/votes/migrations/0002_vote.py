@@ -17,12 +17,14 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Vote',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
                 ('althingi_result', models.TextField()),
-                ('parliament_member', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='parliament.ParliamentMember')),
+                ('parliament_member', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='parliament.ParliamentMember')),
             ],
             options={
                 'abstract': False,

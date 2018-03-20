@@ -2,6 +2,7 @@ import requests
 
 from bs4 import BeautifulSoup
 
+
 def getSoupFromLink(link):
     """
     Takes in a URL link that returns XML
@@ -13,6 +14,7 @@ def getSoupFromLink(link):
     print(request)
     content = request.content
     return BeautifulSoup(content, features="xml")
+
 
 def get_attribute_value(soup, element, attribute):
     """

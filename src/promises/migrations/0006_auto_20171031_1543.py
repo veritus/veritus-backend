@@ -15,6 +15,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='promisecase',
             name='relationship_type',
-            field=models.CharField(choices=[('Connected', 'Connected'), ('Suggested', 'Suggested')], max_length=100),
+            field=models.CharField(
+                choices=[('Connected', 'Connected'), ('Suggested', 'Suggested')], max_length=100),
         ),
     ]

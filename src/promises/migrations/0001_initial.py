@@ -21,16 +21,20 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Promise',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
                 ('fulfilled', models.BooleanField(default=False)),
                 ('small_description', models.TextField()),
                 ('long_description', models.TextField()),
-                ('parliament', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='parliament.Parliament')),
-                ('party', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='party.Party')),
-                ('politician', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='promises', to='politicians.Politician')),
+                ('parliament', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='parliament.Parliament')),
+                ('party', models.ForeignKey(
+                    null=True, on_delete=django.db.models.deletion.CASCADE, to='party.Party')),
+                ('politician', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE,
+                                                 related_name='promises', to='politicians.Politician')),
             ],
             options={
                 'abstract': False,
@@ -39,23 +43,29 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='PromiseCase',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
-                ('case', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='case_gather.Case')),
-                ('promise', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='promises.Promise')),
+                ('case', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='case_gather.Case')),
+                ('promise', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='promises.Promise')),
             ],
         ),
         migrations.CreateModel(
             name='SuggestedPromiseCase',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
-                ('case', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='case_gather.Case')),
-                ('promise', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='promises.Promise')),
+                ('case', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='case_gather.Case')),
+                ('promise', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='promises.Promise')),
             ],
         ),
         migrations.AlterUniqueTogether(

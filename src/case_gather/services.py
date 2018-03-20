@@ -47,8 +47,10 @@ def update_cases_by_session_number(parliament_session):
                 status=getCaseStatus(althingi_status)
             )
 
-            create_subjects(parliament_session, new_case, case['subject_names'])
+            create_subjects(parliament_session, new_case,
+                            case['subject_names'])
             createCaseCreators(case['case_creator_names'], new_case)
+
 
 def getCaseStatus(althingi_status):
     """
@@ -83,14 +85,17 @@ def createCaseCreators(case_creator_names, case):
             parliament_member = ParliamentMember.objects.create(
                 name=case_creator_name
             )
-            SentryLogger.warning('Parliament member created: ' + case_creator_name)
+            SentryLogger.warning(
+                'Parliament member created: ' + case_creator_name)
         # Add parliament member to parliament
-        case.parliament_session.parliament.parliament_members.add(parliament_member)
+        case.parliament_session.parliament.parliament_members.add(
+            parliament_member)
 
         CaseCreator.objects.create(
             case=case,
             parliament_member=parliament_member
         )
+
 
 def create_althingi_status_to_status_map():
     """

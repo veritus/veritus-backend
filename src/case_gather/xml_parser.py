@@ -2,6 +2,7 @@
 # pylint: disable=line-too-long, lost-exception
 import case_gather.soupUtils as soupUtils
 
+
 def get_case_data(parliament_session_number):
     """
         Returns relevant case data. First getting all cases from one link
@@ -11,7 +12,8 @@ def get_case_data(parliament_session_number):
     # Gets all cases with some limited data
     link = "http://www.althingi.is/altext/xml/thingmalalisti/?lthing="
     print('before soup')
-    cases_soup = soupUtils.getSoupFromLink(link + str(parliament_session_number))
+    cases_soup = soupUtils.getSoupFromLink(
+        link + str(parliament_session_number))
     print('after soup')
     cases = collectCases(cases_soup)
 
@@ -21,7 +23,8 @@ def get_case_data(parliament_session_number):
         # Go through cases and get more details from them
         try:
             print('lookin at '+case['number'])
-            details_soup = soupUtils.getSoupFromLink(link_details + str(case['number']))
+            details_soup = soupUtils.getSoupFromLink(
+                link_details + str(case['number']))
             print('after soup lookin at')
             case = {
                 'number': case['number'],
@@ -40,6 +43,7 @@ def get_case_data(parliament_session_number):
             print('error')
     print(cases_data)
     return cases_data
+
 
 def collectCases(soup):
     """
@@ -66,11 +70,13 @@ def collectCases(soup):
         cases.append(case)
     return cases
 
+
 def getAllCases(soup):
     """
         Takes in a soup and returns all <mál><mál> tags
     """
     return soup.find_all('mál')
+
 
 def getCaseNumberFromCase(soup):
     """
@@ -79,11 +85,13 @@ def getCaseNumberFromCase(soup):
     """
     return soup["málsnúmer"]
 
+
 def getCaseName(soup):
     """
         Takes in a soup and finds the case name
     """
     return soup.find("málsheiti").string
+
 
 def getAlthingiLink(soup):
     """
@@ -91,11 +99,13 @@ def getAlthingiLink(soup):
     """
     return soup.find("html").string
 
+
 def getCaseType(soup):
     """
         Takes in a soup and finds the name of the case type
     """
     return soup.find("málstegund").find('heiti').string
+
 
 def getStatus(soup):
     """
@@ -121,6 +131,7 @@ def getSubjectNames(soup):
     print(subject_names)
     return subject_names
 
+
 def getRelatedCases(soup):
     """
         Takes in a soup and finds all relevant cases and returns
@@ -133,6 +144,7 @@ def getRelatedCases(soup):
     if related_cases:
         related_cases.pop(0)
     return related_cases
+
 
 def getCaseCreatorNames(soup):
     """

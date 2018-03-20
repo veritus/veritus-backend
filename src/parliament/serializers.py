@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import ParliamentSession, Parliament, ParliamentMember
 
+
 class ParliamentSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -10,13 +11,15 @@ class ParliamentSerializer(serializers.ModelSerializer):
             'id'
         )
 
+
 class ParliamentSessionSerializer(serializers.ModelSerializer):
 
     parliament = serializers.PrimaryKeyRelatedField(read_only=True)
 
     class Meta:
         model = ParliamentSession
-        fields = ('session_number', 'parliament', 'name', 'created', 'modified')
+        fields = ('session_number', 'parliament',
+                  'name', 'created', 'modified')
 
 
 class ParliamentMemberSerializer(serializers.ModelSerializer):
@@ -26,4 +29,5 @@ class ParliamentMemberSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ParliamentMember
-        fields = ('name', 'id', 'initials', 'districtNumber', 'party', 'district')
+        fields = ('name', 'id', 'initials',
+                  'districtNumber', 'party', 'district')

@@ -2,6 +2,7 @@ from rest_framework import serializers
 from case_gather.models import Subject
 from .models import CaseSubject, PromiseSubject
 
+
 class SubjectSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -15,7 +16,7 @@ class SubjectSerializer(serializers.ModelSerializer):
             'parliament_session',
             'number',
             'parent'
-            )
+        )
 
 
 class CaseSubjectSerializer(serializers.ModelSerializer):
