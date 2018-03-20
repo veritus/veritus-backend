@@ -17,11 +17,25 @@ def update_cases_by_session_number(parliament_session):
         #  'number', 'name', 'case_type', 'althingi_status'
         #  'rel_cases', 'subjects', 'session'
         case_number_int = int(case['number'])
-        if not Case.objects.filter(number=case_number_int).exists():
-            # If the case does not exist, we create it
+        print(case_number_int)
+        print(case['name'])
+        case_exists = Case.objects.filter(
+            number=case_number_int,
+            parliament_session=parliament_session
+        )
 
-            # We find the status from the althingi status
-            althingi_status = case['althingi_status']
+        althingi_status = case['althingi_status']
+        print('Althingi case number: ' + str(case_number_int))
+        print('Althingi case name : ' + case['name'])
+        print('Did we already have this case? -> ' + str(case_exists.exists()))
+        if case_exists.exists():
+            # If the case exists we update
+            update_case = case_exists.get()
+            update_case.althingi_status = althingi_status
+            update_case.status = getCaseStatus(althingi_status)
+            update_case.save()
+        else:
+            # If the case does not exist, we create it
 
             new_case = Case.objects.create(
                 name=case['name'],
@@ -34,7 +48,6 @@ def update_cases_by_session_number(parliament_session):
             )
 
             create_subjects(parliament_session, new_case, case['subject_names'])
-
             createCaseCreators(case['case_creator_names'], new_case)
 
 def getCaseStatus(althingi_status):

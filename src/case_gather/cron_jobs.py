@@ -17,6 +17,7 @@ class GatherCases(CronJobBase):
             SentryLogger.warning('Starting case gather')
             parliament_sessions = ParliamentServices.get_parliament_sessions_to_look_at()
             for parliament_session in parliament_sessions:
+                print(parliament_session.session_number)
                 CaseGatheringService.update_cases_by_session_number(parliament_session)
             SentryLogger.warning('Case gather done')
         except BaseException:

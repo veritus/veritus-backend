@@ -127,3 +127,8 @@ Then open pgAdmin
 2. Insert IP address you found out
 3. Find the username and password in the docker-compose.yml file
 4. Voila!
+
+#### Run cron jobs in docker container
+```
+docker-compose exec backend python3 src/manage.py runcrons 
+```
