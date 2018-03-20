@@ -16,6 +16,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='vote',
             name='vote_record',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='votes.VoteRecord'),
+            field=models.ForeignKey(
+                null=True, on_delete=django.db.models.deletion.CASCADE, to='votes.VoteRecord'),
         ),
     ]

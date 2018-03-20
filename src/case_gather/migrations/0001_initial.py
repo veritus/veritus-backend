@@ -18,14 +18,16 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Bill',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
                 ('description_link', models.TextField()),
                 ('althingi_created', models.DateField()),
                 ('number', models.IntegerField()),
-                ('parliament_session', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='parliament.ParliamentSession')),
+                ('parliament_session', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='parliament.ParliamentSession')),
             ],
             options={
                 'abstract': False,
@@ -34,14 +36,16 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Case',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
                 ('number', models.IntegerField()),
                 ('case_type', models.TextField()),
                 ('case_status', models.TextField()),
-                ('parliament_session', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='parliament.ParliamentSession')),
+                ('parliament_session', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='parliament.ParliamentSession')),
             ],
             options={
                 'abstract': False,
@@ -50,14 +54,17 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Subject',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
                 ('number', models.IntegerField(blank=True, null=True)),
                 ('description', models.TextField(blank=True, null=True)),
-                ('parent', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='case_gather.Subject')),
-                ('parliament_session', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='parliament.ParliamentSession')),
+                ('parent', models.ForeignKey(blank=True, null=True,
+                                             on_delete=django.db.models.deletion.CASCADE, to='case_gather.Subject')),
+                ('parliament_session', models.ForeignKey(blank=True, null=True,
+                                                         on_delete=django.db.models.deletion.CASCADE, to='parliament.ParliamentSession')),
             ],
             options={
                 'abstract': False,

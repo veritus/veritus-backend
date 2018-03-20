@@ -16,7 +16,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='politician',
             name='district',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='politicians', to='district.District'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE,
+                                    related_name='politicians', to='district.District'),
         ),
         migrations.AlterField(
             model_name='politician',
@@ -31,6 +32,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='politician',
             name='party',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='party.Party'),
+            field=models.ForeignKey(
+                null=True, on_delete=django.db.models.deletion.CASCADE, to='party.Party'),
         ),
     ]

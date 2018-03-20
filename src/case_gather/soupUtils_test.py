@@ -22,5 +22,6 @@ class GetAttributeValue(TestCase):
         self.case_soup = BeautifulSoup(raw_xml, features='xml')
 
     def test_case_number(self):
-        cases = soupUtils.get_attribute_value(self.case_soup, 'mál', 'málsnúmer')
+        cases = soupUtils.get_attribute_value(
+            self.case_soup, 'mál', 'málsnúmer')
         self.assertEqual(cases, ['1', '2', '3'])

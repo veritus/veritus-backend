@@ -33,7 +33,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='promisecase',
             name='relationship_type',
-            field=models.CharField(choices=[('C', 'Connected'), ('S', 'Suggested')], default='C', max_length=1),
+            field=models.CharField(
+                choices=[('C', 'Connected'), ('S', 'Suggested')], default='C', max_length=1),
             preserve_default=False,
         ),
         migrations.DeleteModel(

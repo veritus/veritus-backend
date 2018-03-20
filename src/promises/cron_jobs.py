@@ -6,13 +6,14 @@ import promises.services as promise_services
 
 import main.sentryLogger as SentryLogger
 
+
 class ConnectBillsAndPromises(CronJobBase):
     ''' Connects bills and promises together using subjects that are related to both '''
-    RUN_EVERY_MINS = int(os.environ["LINK_CASES_AND_PROMISES_CRON_TIME_SECONDS"])
+    RUN_EVERY_MINS = int(
+        os.environ["LINK_CASES_AND_PROMISES_CRON_TIME_SECONDS"])
 
     schedule = Schedule(run_every_mins=RUN_EVERY_MINS)
     code = 'promises.cron_jobs.connect_cases_and_promises'
-
 
     def do(self):
         ''' Executes the cron job '''

@@ -11,7 +11,8 @@ class Promise(Entity):
     small_description = models.TextField()
     long_description = models.TextField()
     parliament = models.ForeignKey(Parliament)
-    politician = models.ForeignKey(Politician, null=True, related_name='promises')
+    politician = models.ForeignKey(
+        Politician, null=True, related_name='promises')
     party = models.ForeignKey(Party, null=True)
 
 
@@ -20,10 +21,12 @@ RELATIONSHIP_TYPES = (
     ('Suggested', 'Suggested'),
 )
 
+
 class PromiseCase(Entity):
     case = models.ForeignKey(Case)
     promise = models.ForeignKey(Promise)
-    relationship_type = models.CharField(max_length=100, choices=RELATIONSHIP_TYPES)
+    relationship_type = models.CharField(
+        max_length=100, choices=RELATIONSHIP_TYPES)
     # Percent of subjects the Promise shares with the Case
     # If the Promise has 5 subjects, and shares 2 with the Case
     # this number would be 2/5 or 40 (%)

@@ -5,18 +5,23 @@ from promises.models import Promise, PromiseCase
 from case_gather.models import Case
 from subjects.models import CaseSubject, PromiseSubject
 
+
 def find_connected_bills_and_promises():
     current_parliament = Parliament.objects.latest('created')
-    parliament_sessions_ids = ParliamentServices.parliament_session_ids_by_parliament(current_parliament)
+    parliament_sessions_ids = ParliamentServices.parliament_session_ids_by_parliament(
+        current_parliament)
     current_promises = Promise.objects.filter(parliament=current_parliament.id)
-    cases_in_sessions = Case.objects.filter(parliament_session__in=parliament_sessions_ids)
+    cases_in_sessions = Case.objects.filter(
+        parliament_session__in=parliament_sessions_ids)
 
     for case in cases_in_sessions:
-        case_subject_ids = CaseSubject.objects.filter(case=case).values_list('subject_id', flat=True)
+        case_subject_ids = CaseSubject.objects.filter(
+            case=case).values_list('subject_id', flat=True)
 
         # We look at each promise within the same parliament
         for promise in current_promises:
-            promise_subject_ids = PromiseSubject.objects.filter(promise=promise).values_list('subject_id', flat=True)
+            promise_subject_ids = PromiseSubject.objects.filter(
+                promise=promise).values_list('subject_id', flat=True)
             if len(promise_subject_ids) > 4:
                 # We only want to look at promises that have enough subjects
                 # This is because we want sufficient depth when looking at the relation
@@ -27,10 +32,14 @@ def find_connected_bills_and_promises():
                 case_subject_set = set(case_subject_ids)
                 promise_subject_set = set(promise_subject_ids)
                 # We use set intersection to determine the number of common subjects
-                number_of_common_subjects = len(case_subject_set.intersection(promise_subject_set))
-                number_of_common_subjects_float = float(number_of_common_subjects)
-                number_of_promise_subjects_float = float(len(promise_subject_ids))
-                percent_of_common_subjects = (number_of_common_subjects_float / number_of_promise_subjects_float) * 100
+                number_of_common_subjects = len(
+                    case_subject_set.intersection(promise_subject_set))
+                number_of_common_subjects_float = float(
+                    number_of_common_subjects)
+                number_of_promise_subjects_float = float(
+                    len(promise_subject_ids))
+                percent_of_common_subjects = (
+                    number_of_common_subjects_float / number_of_promise_subjects_float) * 100
 
                 # If the case and promise share a certain percentage of subjects
                 # then we create a connection between them
@@ -40,7 +49,8 @@ def find_connected_bills_and_promises():
                         relationship_type = 'Connected'
 
                     # We check if the connection already exists
-                    case_promise_connection = PromiseCase.objects.filter(case=case, promise=promise)
+                    case_promise_connection = PromiseCase.objects.filter(
+                        case=case, promise=promise)
                     if case_promise_connection.exists():
                         # We update the percentage if the connection exists
                         case_promise_connection = case_promise_connection.get()

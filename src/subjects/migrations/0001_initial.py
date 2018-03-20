@@ -19,23 +19,29 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='CaseSubject',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
-                ('case', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='case_gather.Case')),
-                ('subject', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='case_gather.Subject')),
+                ('case', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='case_gather.Case')),
+                ('subject', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='case_gather.Subject')),
             ],
         ),
         migrations.CreateModel(
             name='PromiseSubject',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
-                ('promise', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='promises.Promise')),
-                ('subject', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='case_gather.Subject')),
+                ('promise', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='promises.Promise')),
+                ('subject', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='case_gather.Subject')),
             ],
         ),
         migrations.AlterUniqueTogether(

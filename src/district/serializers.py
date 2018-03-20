@@ -5,6 +5,7 @@ from promises.models import Promise
 
 from .models import District
 
+
 class PromiseField(serializers.ModelSerializer):
     class Meta:
         model = Promise
@@ -13,6 +14,7 @@ class PromiseField(serializers.ModelSerializer):
             'id',
             'fulfilled'
         )
+
 
 class PoliticianSerializer(serializers.ModelSerializer):
 
@@ -27,8 +29,7 @@ class PoliticianSerializer(serializers.ModelSerializer):
             'initials',
             'party',
             'promises'
-            )
-
+        )
 
 
 class DistrictSerializer(serializers.ModelSerializer):
@@ -43,4 +44,4 @@ class DistrictSerializer(serializers.ModelSerializer):
             'politicians',
             'created',
             'modified'
-            )
+        )

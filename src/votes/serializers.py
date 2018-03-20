@@ -1,8 +1,10 @@
 from rest_framework import serializers
 from .models import Vote, VoteRecord
 
+
 class VoteRecordSerializer(serializers.ModelSerializer):
     votes = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+
     class Meta:
         model = VoteRecord
         fields = (
@@ -15,8 +17,10 @@ class VoteRecordSerializer(serializers.ModelSerializer):
             'votes',
         )
 
+
 class VoteSerializer(serializers.ModelSerializer):
     vote_record = serializers.PrimaryKeyRelatedField(read_only=True)
+
     class Meta:
         model = Vote
         fields = (

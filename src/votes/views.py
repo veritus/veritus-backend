@@ -4,6 +4,7 @@ from rest_framework import generics
 from .models import Vote, VoteRecord
 from .serializers import VoteSerializer, VoteRecordSerializer
 
+
 class VoteRecordList(generics.ListAPIView):
     '''
     get:
@@ -13,6 +14,7 @@ class VoteRecordList(generics.ListAPIView):
     serializer_class = VoteRecordSerializer
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
     filter_fields = ('case',)
+
 
 class VoteList(generics.ListAPIView):
     '''
