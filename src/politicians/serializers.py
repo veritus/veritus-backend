@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Politician
 
+
 class PoliticianSerializer(serializers.ModelSerializer):
 
     party = serializers.PrimaryKeyRelatedField(read_only=True)
@@ -9,4 +10,5 @@ class PoliticianSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Politician
-        fields = ('name', 'id', 'initials', 'districtNumber', 'party', 'district', 'promises')
+        fields = ('name', 'id', 'initials', 'districtNumber',
+                  'party', 'district', 'promises')

@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Promise, PromiseCase
 
+
 class PromiseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Promise
@@ -15,7 +16,7 @@ class PromiseSerializer(serializers.ModelSerializer):
             'politician',
             'party',
             'fulfilled'
-            )
+        )
 
 
 class PromiseCaseSerializer(serializers.ModelSerializer):

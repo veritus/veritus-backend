@@ -9,6 +9,7 @@ import case_gather.xml_parser as xml_parser
 case_creators_path = os.path.join(
     settings.BASE_DIR, 'case_gather', 'test_data', 'case_creators.xml')
 
+
 class GetCaseCreatorNames(TestCase):
     """
     Test getCaseCreatorNames in xml_parser.py
@@ -17,7 +18,8 @@ class GetCaseCreatorNames(TestCase):
     def setUp(self):
         with open(case_creators_path, 'rb') as f:
             case_creators_xml = f.read()
-        self.case_creators_soup = BeautifulSoup(case_creators_xml, features='xml')
+        self.case_creators_soup = BeautifulSoup(
+            case_creators_xml, features='xml')
 
     def test_get_case_creators(self):
         case_creators = xml_parser.getCaseCreatorNames(
@@ -27,8 +29,10 @@ class GetCaseCreatorNames(TestCase):
 
         self.assertEqual(expected, case_creators)
 
+
 related_cases_path = os.path.join(
     settings.BASE_DIR, 'case_gather', 'test_data', 'case_list.xml')
+
 
 class GetRelatedCases(TestCase):
     """
@@ -38,7 +42,8 @@ class GetRelatedCases(TestCase):
     def setUp(self):
         with open(related_cases_path, 'rb') as f:
             related_cases_xml = f.read()
-        self.related_cases_soup = BeautifulSoup(related_cases_xml, features='xml')
+        self.related_cases_soup = BeautifulSoup(
+            related_cases_xml, features='xml')
 
     def test_get_case_creators(self):
         related_cases = xml_parser.getRelatedCases(
@@ -48,8 +53,10 @@ class GetRelatedCases(TestCase):
 
         self.assertEqual(expected, related_cases)
 
+
 subject_names_path = os.path.join(
     settings.BASE_DIR, 'case_gather', 'test_data', 'subject_names.xml')
+
 
 class GetSubjectNames(TestCase):
     """
@@ -59,7 +66,8 @@ class GetSubjectNames(TestCase):
     def setUp(self):
         with open(subject_names_path, 'rb') as f:
             subject_names_xml = f.read()
-        self.subject_names_soup = BeautifulSoup(subject_names_xml, features='xml')
+        self.subject_names_soup = BeautifulSoup(
+            subject_names_xml, features='xml')
 
     def test_get_case_creators(self):
         subject_names = xml_parser.getSubjectNames(
@@ -75,6 +83,7 @@ class GetSubjectNames(TestCase):
 
 status_path = os.path.join(
     settings.BASE_DIR, 'case_gather', 'test_data', 'status.xml')
+
 
 class GetStatus(TestCase):
     """
@@ -94,8 +103,10 @@ class GetStatus(TestCase):
 
         self.assertEqual(expected, status)
 
+
 cases_path = os.path.join(
     settings.BASE_DIR, 'case_gather', 'test_data', 'case_list.xml')
+
 
 class CollectCases(TestCase):
     """

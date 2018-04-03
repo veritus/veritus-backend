@@ -6,6 +6,7 @@ import parliament.services as ParliamentServices
 import votes.services as VoteServices
 import main.sentryLogger as SentryLogger
 
+
 class GatherVotes(CronJobBase):
     RUN_EVERY_MINS = int(os.environ["GATHER_VOTES_CRON_TIME_SECONDS"])
 
@@ -17,7 +18,8 @@ class GatherVotes(CronJobBase):
             SentryLogger.warning('Starting votes gather')
             parliament_sessions = ParliamentServices.get_parliament_sessions_to_look_at()
             for parliament_session in parliament_sessions:
-                VoteServices.get_votes_by_parliament_session(parliament_session)
+                VoteServices.get_votes_by_parliament_session(
+                    parliament_session)
             SentryLogger.warning('Votes gather done')
         except BaseException:
             SentryLogger.error(traceback.format_exc())

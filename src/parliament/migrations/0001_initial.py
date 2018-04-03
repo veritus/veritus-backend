@@ -18,7 +18,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Parliament',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
@@ -32,7 +33,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='ParliamentMember',
             fields=[
-                ('politician_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='politicians.Politician')),
+                ('politician_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE,
+                                                        parent_link=True, primary_key=True, serialize=False, to='politicians.Politician')),
             ],
             options={
                 'abstract': False,
@@ -42,12 +44,14 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='ParliamentSession',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
                 ('session_number', models.IntegerField()),
-                ('parliament', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='parliament.Parliament')),
+                ('parliament', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='parliament.Parliament')),
             ],
             options={
                 'abstract': False,

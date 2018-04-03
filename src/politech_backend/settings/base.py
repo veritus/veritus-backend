@@ -14,7 +14,8 @@ import os
 import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+BASE_DIR = os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))))
 TEST_DATA_FOLDER = os.path.join(BASE_DIR, 'case_gather', 'test_data/')
 
 # Quick-start development settings - unsuitable for production
@@ -120,7 +121,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': os.environ["POSTGRES_USER"],
         'PASSWORD': os.environ["POSTGRES_PASSWORD"],
-        'HOST': os.environ["DB_HOST"], #f.x. 'db' OR '127.0.0.1',
+        'HOST': os.environ["DB_HOST"],  # f.x. 'db' OR '127.0.0.1',
         'PORT': '5432',
         'ATOMIC_REQUESTS': True,
         'OPTIONS': {

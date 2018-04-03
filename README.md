@@ -71,6 +71,16 @@ and then in another terminal window run
 docker-compose exec backend pylint src/**
 ```
 
+
+### Run autopep8 manually
+```
+docker-compose up
+```
+and then in another terminal window run
+```
+docker-compose exec backend autopep8 --in-place --recursive . 
+```
+
 ## Docker
 The docker image here is NOT supposed to be run alone. As the backend requires a database, there is no use running it alone. Use docker-compose to run the backend and database together.
 
@@ -127,3 +137,8 @@ Then open pgAdmin
 2. Insert IP address you found out
 3. Find the username and password in the docker-compose.yml file
 4. Voila!
+
+#### Run cron jobs in docker container
+```
+docker-compose exec backend python3 src/manage.py runcrons 
+```

@@ -26,3 +26,18 @@ class VoteRecordSerializer(serializers.ModelSerializer):
             'althingi_result',
             'votes',
         )
+<<<<<<< HEAD
+=======
+
+
+class VoteSerializer(serializers.ModelSerializer):
+    vote_record = serializers.PrimaryKeyRelatedField(read_only=True)
+
+    class Meta:
+        model = Vote
+        fields = (
+            'parliament_member',
+            'althingi_result',
+            'vote_record',
+        )
+>>>>>>> master

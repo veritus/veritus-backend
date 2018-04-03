@@ -18,7 +18,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='VoteRecord',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
@@ -27,7 +28,8 @@ class Migration(migrations.Migration):
                 ('no', models.IntegerField(blank=True, null=True)),
                 ('didNotVote', models.IntegerField(blank=True, null=True)),
                 ('althingi_result', models.TextField(blank=True, null=True)),
-                ('case', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='case_gather.Case')),
+                ('case', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='case_gather.Case')),
             ],
             options={
                 'abstract': False,

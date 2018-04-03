@@ -1,5 +1,6 @@
 import logging
 
+
 def error(message):
     """
     Wrapper for the sentry logger to make sure it exists.
@@ -8,6 +9,7 @@ def error(message):
     """
     sentry = logging.getLogger('sentry.error')
     sentry.error(message)
+
 
 def warning(message):
     sentry = logging.getLogger('sentry.error')

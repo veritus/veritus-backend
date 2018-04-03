@@ -1,6 +1,7 @@
 from rest_framework.test import APITestCase
 from .models import Party
 
+
 class PartyAPI(APITestCase):
 
     def setUp(self):

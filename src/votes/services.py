@@ -7,6 +7,7 @@ from .models import VoteRecord, Vote
 link = "http://www.althingi.is/altext/xml/atkvaedagreidslur/?lthing="
 details_link = "http://www.althingi.is/altext/xml/atkvaedagreidslur/atkvaedagreidsla/?numer="
 
+
 def get_votes_by_parliament_session(parliament_session):
     '''
         We scrape the overall vote records for the parliament session
@@ -14,9 +15,14 @@ def get_votes_by_parliament_session(parliament_session):
         Then we go to the details page to see what each individual
         parliament member voted and save them as a Vote
     '''
-    votes_soup = soupUtils.getSoupFromLink(link + str(parliament_session.session_number))
-    vote_records = collect_vote_records(votes_soup, parliament_session)
-    save_vote_records(vote_records, parliament_session)
+    try:
+        votes_soup = soupUtils.getSoupFromLink(
+            link + str(parliament_session.session_number))
+        vote_records = collect_vote_records(votes_soup, parliament_session)
+        save_vote_records(vote_records, parliament_session)
+    except:
+        print('Failed to get votes by parliament')
+
 
 def collect_vote_records(soup, parliament_session):
     '''
@@ -45,6 +51,7 @@ def collect_vote_records(soup, parliament_session):
             }
             vote_records.append(vote)
     return vote_records
+
 
 def save_vote_records(vote_records, parliament_session):
     '''
@@ -80,6 +87,7 @@ def save_vote_records(vote_records, parliament_session):
             )
         save_votes(vote_record_object, parliament_session)
 
+
 def save_votes(vote_record, parliament_session):
     '''
         We take in the newly create vote record and look at its details page.
@@ -87,45 +95,51 @@ def save_votes(vote_record, parliament_session):
         if a vote has taken place. We then create a new vote or update the existing
         one.
     '''
-    vote_details_soup = soupUtils.getSoupFromLink(
-        details_link + str(vote_record.althingi_id)
-    )
-    votes = get_parliament_member_votes(
-        vote_details_soup
-    )
-    for vote in votes:
-        parliament_member_name = get_parliament_member_name_from_vote(
-            vote
+    try:
+        vote_details_soup = soupUtils.getSoupFromLink(
+            details_link + str(vote_record.althingi_id)
         )
-        try:
-            parliament_member = ParliamentMember.objects.get(
-                name=parliament_member_name
-            )
-        except ParliamentMember.DoesNotExist:
-            parliament_member = ParliamentMember.objects.create(
-                name=parliament_member_name
-            )
-            SentryLogger.warning('Parliament member created: ' + parliament_member_name)
-
-        parliament_session.parliament.parliament_members.add(parliament_member)
-
-        vote_result = get_parliament_member_result_from_vote(vote)
-        vote = Vote.objects.filter(
-            parliament_member=parliament_member,
-            vote_record=vote_record
+        votes = get_parliament_member_votes(
+            vote_details_soup
         )
-        if vote.exists():
-            # Update the result if the vote exists
-            vote.update(
-                althingi_result=vote_result,
+        for vote in votes:
+            parliament_member_name = get_parliament_member_name_from_vote(
+                vote
             )
-        else:
-            # Create new vote if it does not exist
-            Vote.objects.create(
+            try:
+                parliament_member = ParliamentMember.objects.get(
+                    name=parliament_member_name
+                )
+            except ParliamentMember.DoesNotExist:
+                parliament_member = ParliamentMember.objects.create(
+                    name=parliament_member_name
+                )
+                SentryLogger.warning(
+                    'Parliament member created: ' + parliament_member_name)
+
+            parliament_session.parliament.parliament_members.add(
+                parliament_member)
+
+            vote_result = get_parliament_member_result_from_vote(vote)
+            vote = Vote.objects.filter(
                 parliament_member=parliament_member,
-                althingi_result=vote_result,
                 vote_record=vote_record
             )
+            if vote.exists():
+                # Update the result if the vote exists
+                vote.update(
+                    althingi_result=vote_result,
+                )
+            else:
+                # Create new vote if it does not exist
+                Vote.objects.create(
+                    parliament_member=parliament_member,
+                    althingi_result=vote_result,
+                    vote_record=vote_record
+                )
+    except:
+        print('Saving votes failed')
+
 
 def get_all_votes(soup):
     """
@@ -133,14 +147,18 @@ def get_all_votes(soup):
     """
     return soup.find_all('atkvæðagreiðsla')
 
+
 def get_case_number(vote_record_soup):
     return vote_record_soup['málsnúmer']
+
 
 def get_althingi_id(vote_record_soup):
     return vote_record_soup['atkvæðagreiðslunúmer']
 
+
 def get_vote_overview(vote_record_soup):
     return vote_record_soup.find('samantekt')
+
 
 def get_number_of_votes(kind, vote_overview_soup):
     kind_tag = vote_overview_soup.find(kind)
@@ -148,11 +166,13 @@ def get_number_of_votes(kind, vote_overview_soup):
         return kind_tag.find("fjöldi").string
     return None
 
+
 def get_althingi_result(vote_overview_soup):
     result_tag = vote_overview_soup.find('afgreiðsla')
     if result_tag is not None:
         return result_tag.string
     return None
+
 
 def get_parliament_member_votes(vote_details_soup):
     votes_tag = vote_details_soup.find('atkvæðaskrá')
@@ -160,8 +180,10 @@ def get_parliament_member_votes(vote_details_soup):
         return votes_tag.find_all('þingmaður')
     return []
 
+
 def get_parliament_member_name_from_vote(vote_soup):
     return vote_soup.find('nafn').string
+
 
 def get_parliament_member_result_from_vote(vote_soup):
     return vote_soup.find('atkvæði').string
